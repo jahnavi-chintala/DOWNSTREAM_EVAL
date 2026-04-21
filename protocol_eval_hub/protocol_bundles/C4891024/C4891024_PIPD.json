@@ -1,0 +1,1412 @@
+{
+  "protocol_id": "C4891024",
+  "protocol_title": "TACTIVE-U: AN INTERVENTIONAL SAFETY AND EFFICACY PHASE 1B/2, OPEN-LABEL UMBRELLA STUDY TO INVESTIGATE TOLERABILITY, PK, AND ANTITUMOR ACTIVITY OF VEPDEGESTRANT (ARV-471/PF-07850327), AN ORAL PROTEOLYSIS TARGETING CHIMERA, IN COMBINATION WITH OTHER ANTICANCER TREATMENTS IN PARTICIPANTS AGED 18 AND OLDER WITH ER+ ADVANCED OR METASTATIC BREAST CANCER, SUB-STUDY C (ARV-471 IN COMBINATION WITH SAMURACICLIB)",
+  "study_drug": "PF-07850327",
+  "therapeutic_area": "Oncology - Cancer and malignant neoplasms",
+  "phase": "Ph 1b2",
+  "version": "1.0",
+  "version_date": "2026-04-06",
+  "generated_by": "Protocol Digitalization Platform - USDM 4.0",
+  "reviewed_by": {
+    "clinician": "--",
+    "statistician": "--"
+  },
+  "benchmark_segment": {
+    "therapeutic_area": "Oncology - Cancer and malignant neoplasms",
+    "phase": "Ph 1b2",
+    "train_studies_total": 31,
+    "train_studies_in_segment": 9
+  },
+  "categories": [
+    {
+      "category_num": 1,
+      "category_name": "Inclusion/Exclusion Criteria",
+      "guidance": "Per International Conference on Harmonisation (ICH) guidance, include protocol deviation (PD) sub-categories where subject(s) entered the study even though they did not satisfy the entry criteria. Also include any PDs that could impact subject safety, efficacy, or immunogenicity analysis.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Participant did not meet one or more inclusion criteria but was allocated to the study treatment",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Inclusion Criteria",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 4,
+              "total": 31,
+              "rate": 0.129
+            },
+            "segment": {
+              "present": 2,
+              "total": 9,
+              "rate": 0.222
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant met one or more exclusion criteria but was allocated to the study treatment",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Exclusion Criteria",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 9,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Participant met all eligibility criteria but source documentation is incomplete or missing",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Eligibility Criteria",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 9,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Participant met all eligibility criteria but was allocated to study treatment prior to assessment of all eligibility criteria",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Eligibility Criteria",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 9,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Pending Site Monitor Action Inc/Excl",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Eligibility Criteria",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "auto_confirmed",
+          "benchmark": {
+            "all_studies": {
+              "present": 30,
+              "total": 31,
+              "rate": 0.968
+            },
+            "segment": {
+              "present": 9,
+              "total": 9,
+              "rate": 1.0
+            },
+            "yes_rate": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 2,
+      "category_name": "Investigational Product",
+      "guidance": "Per ICH guidance, include PD sub-categories related to a subject receiving the wrong treatment or incorrect dose. Also include any PDs that could impact subject safety, efficacy, or immunogenicity analysis such as under dosing, overdosing, or storage/preparation issues.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Subject received wrong treatment",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Arms and Interventions",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 3,
+              "total": 31,
+              "rate": 0.097
+            },
+            "segment": {
+              "present": 3,
+              "total": 9,
+              "rate": 0.333
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Subject took incorrect dose of ARV-471 or samuraciclib",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Study Interventions",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 9,
+              "total": 31,
+              "rate": 0.29
+            },
+            "segment": {
+              "present": 5,
+              "total": 9,
+              "rate": 0.556
+            },
+            "yes_rate": 0.2
+          }
+        },
+        {
+          "subcategory_text": "Participant received less than 75% of the planned dose of ARV-471 or samuraciclib during the Cycle 1 DLT observation period for reasons other than treatment-related toxicity",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Primary Estimand",
+          "usdm_entity": "Estimand",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 9,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Incorrectly stored product administered to patient",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Study Interventions",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 3,
+              "total": 31,
+              "rate": 0.097
+            },
+            "segment": {
+              "present": 3,
+              "total": 9,
+              "rate": 0.333
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Study drug not held despite AE that required dose to be held per protocol",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Study Interventions",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 2,
+              "total": 31,
+              "rate": 0.065
+            },
+            "segment": {
+              "present": 2,
+              "total": 9,
+              "rate": 0.222
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Study drug not reduced as per protocol",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Study Interventions",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 2,
+              "total": 31,
+              "rate": 0.065
+            },
+            "segment": {
+              "present": 2,
+              "total": 9,
+              "rate": 0.222
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Dispensing error",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Study Interventions",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 11,
+              "total": 31,
+              "rate": 0.355
+            },
+            "segment": {
+              "present": 5,
+              "total": 9,
+              "rate": 0.556
+            },
+            "yes_rate": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 3,
+      "category_name": "Concomitant Medications (CCMeds)",
+      "guidance": "Include PD sub-categories related to use of prohibited concomitant medications that could impact safety or efficacy analysis.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Participant took prohibited concomitant medication, such as strong CYP3A inhibitors/inducers, strong CYP2D6 inhibitors, or drugs known to prolong the QT interval",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Exclusion Criterion 9",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "auto_confirmed",
+          "benchmark": {
+            "all_studies": {
+              "present": 22,
+              "total": 31,
+              "rate": 0.71
+            },
+            "segment": {
+              "present": 8,
+              "total": 9,
+              "rate": 0.889
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant received prohibited anti-cancer therapy, such as chemotherapy, mTOR inhibitors, PI3K inhibitors, or other investigational agents",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Exclusion Criterion 7",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "auto_confirmed",
+          "benchmark": {
+            "all_studies": {
+              "present": 22,
+              "total": 31,
+              "rate": 0.71
+            },
+            "segment": {
+              "present": 8,
+              "total": 9,
+              "rate": 0.889
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant received a live-virus vaccination during the study",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Exclusion Criterion 11",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "auto_confirmed",
+          "benchmark": {
+            "all_studies": {
+              "present": 22,
+              "total": 31,
+              "rate": 0.71
+            },
+            "segment": {
+              "present": 8,
+              "total": 9,
+              "rate": 0.889
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant took systemic corticosteroids at a prohibited dose (>10 mg prednisone/day or equivalent)",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Exclusion Criterion 11",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "auto_confirmed",
+          "benchmark": {
+            "all_studies": {
+              "present": 22,
+              "total": 31,
+              "rate": 0.71
+            },
+            "segment": {
+              "present": 8,
+              "total": 9,
+              "rate": 0.889
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Mandatory GnRH or LHRH agonist was not administered as specified per protocol for male or pre-/peri-menopausal female participants",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 7,
+              "total": 31,
+              "rate": 0.226
+            },
+            "segment": {
+              "present": 2,
+              "total": 9,
+              "rate": 0.222
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant received radiation therapy during the study drug treatment period",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Exclusion Criterion 7",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 9,
+              "rate": 0.111
+            },
+            "yes_rate": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 4,
+      "category_name": "Labs",
+      "guidance": "Include PD sub-categories related to laboratory assessment deviations including missed lab collections, out-of-window collections, and sample handling issues.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Study participant dosed with ARV-471 or samuraciclib without required pregnancy test done",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 4,
+              "total": 31,
+              "rate": 0.129
+            },
+            "segment": {
+              "present": 2,
+              "total": 9,
+              "rate": 0.222
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Clinical laboratory assessments (e.g., Hematology, Blood Chemistry, Coagulation) required for safety monitoring or DLT assessment not done",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 11,
+              "total": 31,
+              "rate": 0.355
+            },
+            "segment": {
+              "present": 5,
+              "total": 9,
+              "rate": 0.556
+            },
+            "yes_rate": 0.2
+          }
+        },
+        {
+          "subcategory_text": "Pharmacokinetic (PK) blood samples for ARV-471, ARV-473, or samuraciclib not done",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 8,
+              "total": 31,
+              "rate": 0.258
+            },
+            "segment": {
+              "present": 5,
+              "total": 9,
+              "rate": 0.556
+            },
+            "yes_rate": 0.4
+          }
+        },
+        {
+          "subcategory_text": "Pharmacokinetic (PK) blood samples for ARV-471, ARV-473, or samuraciclib not properly collected, stored or handled",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 8,
+              "total": 31,
+              "rate": 0.258
+            },
+            "segment": {
+              "present": 5,
+              "total": 9,
+              "rate": 0.556
+            },
+            "yes_rate": 0.4
+          }
+        },
+        {
+          "subcategory_text": "Biomarker samples (e.g., Tumor Tissue, Blood Sample for ctDNA) not collected per protocol",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 9,
+              "rate": 0.111
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Abnormal laboratory result not followed up appropriately",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 14,
+              "total": 31,
+              "rate": 0.452
+            },
+            "segment": {
+              "present": 5,
+              "total": 9,
+              "rate": 0.556
+            },
+            "yes_rate": 0.4
+          }
+        },
+        {
+          "subcategory_text": "Laboratory results were not reviewed by an Investigator in a timely manner",
+          "include_in_csr": false,
+          "rationale_if_no": "Minor operational deviation unless it results in a missed safety signal or dosing error, which would be captured under other categories.",
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 8,
+              "total": 31,
+              "rate": 0.258
+            },
+            "segment": {
+              "present": 5,
+              "total": 9,
+              "rate": 0.556
+            },
+            "yes_rate": 0.4
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 5,
+      "category_name": "Visit Schedule",
+      "guidance": "Include PD sub-categories for visits conducted outside the protocol-specified visit window.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Study visit not done",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Schedule of Activities",
+          "usdm_entity": "Encounter",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 6,
+              "total": 31,
+              "rate": 0.194
+            },
+            "segment": {
+              "present": 4,
+              "total": 9,
+              "rate": 0.444
+            },
+            "yes_rate": 0.5
+          }
+        },
+        {
+          "subcategory_text": "Study visit not performed per protocol",
+          "include_in_csr": false,
+          "rationale_if_no": "Minor deviations in visit conduct do not typically impact safety or efficacy unless critical assessments are missed.",
+          "protocol_source": "Schedule of Activities",
+          "usdm_entity": "Encounter",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 7,
+              "total": 31,
+              "rate": 0.226
+            },
+            "segment": {
+              "present": 4,
+              "total": 9,
+              "rate": 0.444
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Screening visit assessments performed outside the protocol-specified window of ≤ 28 days prior to first dose",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Schedule of Activities",
+          "usdm_entity": "Encounter",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 9,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Combination Treatment Period Day 1 or Day 15 visit conducted outside the protocol-specified visit window",
+          "include_in_csr": false,
+          "rationale_if_no": "Minor scheduling deviations for treatment visits do not typically impact safety or efficacy unless they result in significant dosing delays.",
+          "protocol_source": "Schedule of Activities",
+          "usdm_entity": "Encounter",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 9,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Study visit conducted outside of the protocol-specified visit window",
+          "include_in_csr": false,
+          "rationale_if_no": "General out-of-window visits are considered minor operational deviations unless they impact critical safety or efficacy assessments.",
+          "protocol_source": "Schedule of Activities",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 9,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 6,
+      "category_name": "Procedures/Tests",
+      "guidance": "Include PD sub-categories for protocol-specified procedures or tests not performed or performed incorrectly.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Disease assessment (CT/MRI of Chest, Abdomen, Pelvis, or Bone Scan) not done or incomplete",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities (Disease Assessment)",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 4,
+              "total": 31,
+              "rate": 0.129
+            },
+            "segment": {
+              "present": 2,
+              "total": 9,
+              "rate": 0.222
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Pharmacokinetic (PK) blood samples for ARV-471, ARV-473, or samuraciclib not collected or collected incorrectly",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities (Pharmacokinetic Assessment)",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 12,
+              "total": 31,
+              "rate": 0.387
+            },
+            "segment": {
+              "present": 4,
+              "total": 9,
+              "rate": 0.444
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Procedures for contraception counseling or contraception requirements not followed for male or female participants",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities (Contraception Check)",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 9,
+              "total": 31,
+              "rate": 0.29
+            },
+            "segment": {
+              "present": 3,
+              "total": 9,
+              "rate": 0.333
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Tumor tissue for biomarker or blood sample for ctDNA not collected per protocol",
+          "include_in_csr": false,
+          "rationale_if_no": "Biomarker and ctDNA samples are for exploratory objectives; missing them does not significantly impact primary safety or efficacy endpoints.",
+          "protocol_source": "Activities (Other Sample Collections)",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 12,
+              "total": 31,
+              "rate": 0.387
+            },
+            "segment": {
+              "present": 4,
+              "total": 9,
+              "rate": 0.444
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "12-Lead ECG not performed or performed out of window",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities (12-Lead ECG)",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 7,
+              "total": 31,
+              "rate": 0.226
+            },
+            "segment": {
+              "present": 4,
+              "total": 9,
+              "rate": 0.444
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Clinical laboratory assessments (Hematology, Blood Chemistry, Coagulation, Pregnancy test) not performed or performed incorrectly",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities (Clinical Laboratory Assessments)",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 12,
+              "total": 31,
+              "rate": 0.387
+            },
+            "segment": {
+              "present": 4,
+              "total": 9,
+              "rate": 0.444
+            },
+            "yes_rate": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 7,
+      "category_name": "Randomization",
+      "guidance": "Include PD sub-categories related to randomization errors including IRT errors, eligibility bypass, and stratification errors.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Participant allocated to study intervention out of protocol defined window",
+          "include_in_csr": false,
+          "rationale_if_no": "Minor operational deviation regarding timing of allocation that does not typically impact participant safety or data integrity.",
+          "protocol_source": "Schedule of Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 6,
+              "total": 31,
+              "rate": 0.194
+            },
+            "segment": {
+              "present": 3,
+              "total": 9,
+              "rate": 0.333
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Participant allocated in IRT in error",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Section 5.1",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 9,
+              "rate": 0.111
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant did not receive the study interventions (ARV-471 and samuraciclib) they were allocated to",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Section 6.1",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 9,
+              "rate": 0.111
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant allocated to an incorrect cohort or phase (e.g., Phase 1b, Phase 2, or DDI Assessment Cohort)",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Section 3.1",
+          "usdm_entity": "StudyDesign",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 9,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 8,
+      "category_name": "Safety Reporting",
+      "guidance": "Per SOP, include PD sub-categories that could impact subject safety, efficacy, or immunogenicity analysis as relevant to the compound and study design. Consider safety reporting deviations where serious adverse event reported late by study site and impacts safety or efficacy analysis.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "SAE/EIU not reported to Sponsor within specified timeframe",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "AE Reporting Activity",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 19,
+              "total": 31,
+              "rate": 0.613
+            },
+            "segment": {
+              "present": 6,
+              "total": 9,
+              "rate": 0.667
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "SAE Not reported by investigator to Ethics Committee / IRB per local regulations",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "AE Reporting Activity",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 9,
+              "rate": 0.111
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "SAE/EIU not reported to Sponsor",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "AE Reporting Activity",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 4,
+              "total": 31,
+              "rate": 0.129
+            },
+            "segment": {
+              "present": 1,
+              "total": 9,
+              "rate": 0.111
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Dose-limiting toxicity (DLT) not reported or reported late to the Sponsor during the Cycle 1 DLT observation period",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Primary Endpoint EP_PR_01_DLT",
+          "usdm_entity": "Endpoint",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 9,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Exposure during pregnancy (EDP) not reported to Sponsor within specified timeframe",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Contraception Check for WOCBP and males",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 9,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 9,
+      "category_name": "Protocol Specific Discontinuation Criteria",
+      "guidance": "Include PD sub-categories related to subjects not being discontinued when meeting protocol-specified discontinuation criteria.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Participant developed withdrawal criteria during the study but was not withdrawn",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "General Protocol",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "auto_confirmed",
+          "benchmark": {
+            "all_studies": {
+              "present": 30,
+              "total": 31,
+              "rate": 0.968
+            },
+            "segment": {
+              "present": 9,
+              "total": 9,
+              "rate": 1.0
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Subject was discontinued but did not meet discontinuation criteria",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "General Protocol",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "auto_confirmed",
+          "benchmark": {
+            "all_studies": {
+              "present": 17,
+              "total": 31,
+              "rate": 0.548
+            },
+            "segment": {
+              "present": 7,
+              "total": 9,
+              "rate": 0.778
+            },
+            "yes_rate": 0.714
+          }
+        },
+        {
+          "subcategory_text": "Participant experienced documented objective disease progression per RECIST v1.1 but was not discontinued from study treatment",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Objectives and Endpoints",
+          "usdm_entity": "Endpoint",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 9,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Participant experienced a dose-limiting toxicity (DLT) or unacceptable adverse event requiring permanent discontinuation but continued study treatment",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Objectives and Endpoints",
+          "usdm_entity": "Endpoint",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 9,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Participant became pregnant during the study but was not discontinued from study treatment",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Eligibility Criteria",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 9,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 10,
+      "category_name": "Other",
+      "guidance": "Include any other protocol-specific PD sub-categories that do not fit in categories 1-9 and 11.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Participant confidentiality compromised during the conduct of the study",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "General Protocol / GCP",
+          "usdm_entity": "Metadata",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 2,
+              "total": 31,
+              "rate": 0.065
+            },
+            "segment": {
+              "present": 1,
+              "total": 9,
+              "rate": 0.111
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant or legally acceptable representative did not sign the Informed Consent Document and did not give verbal consent prior to initiation of ARV-471 and samuraciclib or any study-specific procedures",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "General Protocol / GCP",
+          "usdm_entity": "Metadata",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 27,
+              "total": 31,
+              "rate": 0.871
+            },
+            "segment": {
+              "present": 1,
+              "total": 9,
+              "rate": 0.111
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant or legally acceptable representative signed and dated the Informed Consent Document after the screening or enrollment date",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "General Protocol / GCP",
+          "usdm_entity": "Encounter",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 16,
+              "total": 31,
+              "rate": 0.516
+            },
+            "segment": {
+              "present": 1,
+              "total": 9,
+              "rate": 0.111
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Informed Consent Document signed by the participant or legally acceptable representative had not received IRB/IEC approval for this sub-study",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "General Protocol / GCP",
+          "usdm_entity": "Metadata",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 16,
+              "total": 31,
+              "rate": 0.516
+            },
+            "segment": {
+              "present": 1,
+              "total": 9,
+              "rate": 0.111
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "The signed Informed Consent Document was lost and no copy is available at the site",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "General Protocol / GCP",
+          "usdm_entity": "Metadata",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 16,
+              "total": 31,
+              "rate": 0.516
+            },
+            "segment": {
+              "present": 1,
+              "total": 9,
+              "rate": 0.111
+            },
+            "yes_rate": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 11,
+      "category_name": "Informed Consent Deviations",
+      "guidance": "Include PD sub-categories related to informed consent process deviations including missing consent, expired consent, and consent obtained after study procedures.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Participant did not sign the Informed Consent Document (ICD) and did not give verbal consent prior to study participation",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "General Protocol",
+          "usdm_entity": "Study",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 27,
+              "total": 31,
+              "rate": 0.871
+            },
+            "segment": {
+              "present": 8,
+              "total": 9,
+              "rate": 0.889
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant signed the ICD after study-specified screening procedures (e.g., CT/MRI scans, clinical laboratory assessments, 12-Lead ECG) had been performed",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Schedule of Activities",
+          "usdm_entity": "Encounter",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 5,
+              "total": 31,
+              "rate": 0.161
+            },
+            "segment": {
+              "present": 2,
+              "total": 9,
+              "rate": 0.222
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant signed an ICD that had not received IRB/IEC approval",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "General Protocol",
+          "usdm_entity": "Study",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 16,
+              "total": 31,
+              "rate": 0.516
+            },
+            "segment": {
+              "present": 8,
+              "total": 9,
+              "rate": 0.889
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant did not sign the additional consent for optional procedures (e.g., Retained Research Sample for Genetics) but biologic samples were collected",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Schedule of Activities",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 5,
+              "total": 31,
+              "rate": 0.161
+            },
+            "segment": {
+              "present": 2,
+              "total": 9,
+              "rate": 0.222
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "The signed ICD was lost and no copy is available at the site",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "General Protocol",
+          "usdm_entity": "Study",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 16,
+              "total": 31,
+              "rate": 0.516
+            },
+            "segment": {
+              "present": 7,
+              "total": 9,
+              "rate": 0.778
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant signed a superseded or outdated version of the ICD",
+          "include_in_csr": false,
+          "rationale_if_no": "Considered a minor operational deviation unless the updated ICD contained critical safety information that the participant was not made aware of.",
+          "protocol_source": "General Protocol",
+          "usdm_entity": "Study",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 12,
+              "total": 31,
+              "rate": 0.387
+            },
+            "segment": {
+              "present": 3,
+              "total": 9,
+              "rate": 0.333
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "ICD was not translated to the participant's native language",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "General Protocol",
+          "usdm_entity": "Study",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 17,
+              "total": 31,
+              "rate": 0.548
+            },
+            "segment": {
+              "present": 8,
+              "total": 9,
+              "rate": 0.889
+            },
+            "yes_rate": 0.875
+          }
+        }
+      ]
+    }
+  ]
+}

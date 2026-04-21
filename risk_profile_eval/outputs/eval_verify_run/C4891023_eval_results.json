@@ -1,0 +1,184 @@
+{
+  "study_id": "C4891023",
+  "scenario": 1,
+  "timestamp": "2026-04-20T00:32:35.997429Z",
+  "verdict": "NO-GO",
+  "generator_version": "1.0",
+  "ta": "ONCOLOGY",
+  "phase": "PHASE II",
+  "metrics": {
+    "m1_risk_name_recall": {
+      "study_id": "C4891023",
+      "score": 0.0,
+      "matched": 0,
+      "ground_truth_total": 0,
+      "ground_truth_risk_rows_full": 0,
+      "m1_scored_gt_indices": [],
+      "no_risk_gt_rows": true,
+      "benchmark_expects_zero_risks": true,
+      "matched_names": [],
+      "matched_pairs": [],
+      "missed_names": [],
+      "hallucination_candidates": [
+        "Concomitant Medication Management",
+        "Enrollment Criteria",
+        "Sample Management",
+        "AE / SAE Management",
+        "Medicinal Product Administration"
+      ],
+      "extra_generated_risks": [
+        "Concomitant Medication Management",
+        "Enrollment Criteria",
+        "Sample Management",
+        "AE / SAE Management",
+        "Medicinal Product Administration"
+      ],
+      "near_misses": [],
+      "passed": false
+    },
+    "m2_rpn_tier_accuracy": {
+      "score": null,
+      "matched_rpn": 0,
+      "total_matched_risks": 0,
+      "ground_truth_risk_rows": 0,
+      "per_risk": [],
+      "passed": false,
+      "skipped": true,
+      "skip_reason": "no_benchmark_risk_rows"
+    },
+    "m3_critical_factor_match": {
+      "score": 1.0,
+      "f1": 0.8889,
+      "precision": 0.8,
+      "recall": 1.0,
+      "matched_factors": 4,
+      "ground_truth_total": 4,
+      "generated_factor_count": 5,
+      "matched_names": [
+        "Endpoints",
+        "Data Integrity and Reliability of Trial Results",
+        "Eligibility criteria",
+        "Adverse Event (AE) / Serious Adverse Event (SAE)"
+      ],
+      "missing_names": [],
+      "extra_names": [
+        "Investigational Product Management"
+      ],
+      "content_violations": [
+        {
+          "factor_name": "Endpoints",
+          "field": "critical_process",
+          "detail": "Ground truth marks critical_process as empty; generator supplied content."
+        },
+        {
+          "factor_name": "Data Integrity and Reliability of Trial Results",
+          "field": "critical_process",
+          "detail": "Ground truth marks critical_process as empty; generator supplied content."
+        },
+        {
+          "factor_name": "Eligibility criteria",
+          "field": "critical_process",
+          "detail": "Ground truth marks critical_process as empty; generator supplied content."
+        }
+      ],
+      "factor_name_only_mode": false,
+      "passed": true,
+      "skipped": false,
+      "benchmark_expects_zero_factors": false,
+      "factor_hallucination_candidates": []
+    },
+    "m4_hallucination_detection": {
+      "provenance_defect_count": 5,
+      "semantic_hallucination_count": 5,
+      "hallucinations_found": 5,
+      "flagged_fields": [
+        {
+          "field_path": "risks[0]",
+          "value": "Concomitant Medication Management",
+          "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+        },
+        {
+          "field_path": "risks[1]",
+          "value": "Enrollment Criteria",
+          "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+        },
+        {
+          "field_path": "risks[2]",
+          "value": "Sample Management",
+          "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+        },
+        {
+          "field_path": "risks[3]",
+          "value": "AE / SAE Management",
+          "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+        },
+        {
+          "field_path": "risks[4]",
+          "value": "Medicinal Product Administration",
+          "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+        }
+      ],
+      "passed": false,
+      "risk_existence_check": {
+        "gt_risk_exists": false,
+        "generated_risk_count": 5,
+        "passed": false
+      },
+      "cf_existence_check": {
+        "gt_cf_exists": true,
+        "generated_cf_count": 5,
+        "passed": true
+      },
+      "note": "hallucinations_found counts **provenance / schema defect checks** per risk field, not semantic hallucinations. Use semantic_hallucination_count (from M1) for generated risks with no GT match."
+    }
+  },
+  "targets": {
+    "m1_risk_name_recall": 0.85,
+    "m2_rpn_tier_accuracy": 0.9,
+    "m3_critical_factor_match": 0.8,
+    "m4_hallucinations": 0.0
+  },
+  "near_misses": [],
+  "metadata_validation": {
+    "passed": true,
+    "issues": [],
+    "actual_total_risks": 5,
+    "actual_risks_above_196": 0
+  },
+  "hallucination_report": {
+    "study_id": "C4891023",
+    "provenance_defect_count": 5,
+    "semantic_hallucination_count": 5,
+    "hallucinations_found": 5,
+    "flagged_fields": [
+      {
+        "field_path": "risks[0]",
+        "value": "Concomitant Medication Management",
+        "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+      },
+      {
+        "field_path": "risks[1]",
+        "value": "Enrollment Criteria",
+        "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+      },
+      {
+        "field_path": "risks[2]",
+        "value": "Sample Management",
+        "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+      },
+      {
+        "field_path": "risks[3]",
+        "value": "AE / SAE Management",
+        "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+      },
+      {
+        "field_path": "risks[4]",
+        "value": "Medicinal Product Administration",
+        "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+      }
+    ],
+    "pass": false
+  },
+  "gt_risk_exists": false,
+  "gt_cf_exists": true
+}

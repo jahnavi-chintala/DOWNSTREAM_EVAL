@@ -1,0 +1,34 @@
+{
+  "study_id": "C4891023",
+  "provenance_defect_count": 5,
+  "semantic_hallucination_count": 5,
+  "hallucinations_found": 5,
+  "flagged_fields": [
+    {
+      "field_path": "risks[0]",
+      "value": "Concomitant Medication Management",
+      "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+    },
+    {
+      "field_path": "risks[1]",
+      "value": "Enrollment Criteria",
+      "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+    },
+    {
+      "field_path": "risks[2]",
+      "value": "Sample Management",
+      "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+    },
+    {
+      "field_path": "risks[3]",
+      "value": "AE / SAE Management",
+      "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+    },
+    {
+      "field_path": "risks[4]",
+      "value": "Medicinal Product Administration",
+      "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+    }
+  ],
+  "pass": false
+}

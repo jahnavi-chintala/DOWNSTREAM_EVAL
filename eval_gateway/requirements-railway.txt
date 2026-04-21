@@ -1,0 +1,5 @@
+-r requirements.txt
+-r ../ppid_py/requirements.txt
+-r ../risk_profile_eval/requirements.txt
+-r ../cmd_py/requirements.txt
+-r ../DMP_py/requirements.txt

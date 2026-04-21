@@ -1,0 +1,8 @@
+# Optional extras for PIPD composite eval (/eval/composite).
+# Install after base requirements:
+#   pip install -r requirements.txt -r requirements-composite.txt
+#
+# BERTScore pulls PyTorch; use --no-bertscore / use_bertscore=False for CPU-only Levenshtein proxy.
+
+bert-score>=0.3.13
+torch>=2.0.0

@@ -1,0 +1,120 @@
+{
+  "study_id": "B7981027",
+  "scenario": 1,
+  "timestamp": "2026-04-15T16:03:23.279328Z",
+  "verdict": "NO-GO",
+  "generator_version": "1.0",
+  "ta": "IMMUNOLOGY",
+  "phase": "PHASE III",
+  "metrics": {
+    "m1_risk_name_recall": {
+      "study_id": "B7981027",
+      "score": 0.6667,
+      "matched": 2,
+      "ground_truth_total": 3,
+      "matched_names": [
+        "Participant / Caregiver Trial Conduct",
+        "Concomitant Medication Management"
+      ],
+      "missed_names": [
+        "Enrollment Criteria"
+      ],
+      "hallucination_candidates": [
+        "AE / SAE Management",
+        "Data / Data Reliability",
+        "Sample Management"
+      ],
+      "near_misses": [],
+      "passed": false
+    },
+    "m2_rpn_tier_accuracy": {
+      "score": 0.5,
+      "matched_rpn": 1,
+      "total_matched_risks": 2,
+      "per_risk": [
+        {
+          "risk_name": "Participant / Caregiver Trial Conduct",
+          "generated_rpn": 196,
+          "generated_tier": 3,
+          "truth_rpn": 160,
+          "truth_tier": 2,
+          "tier_distance": 1,
+          "passed": true
+        },
+        {
+          "risk_name": "Concomitant Medication Management",
+          "generated_rpn": 196,
+          "generated_tier": 3,
+          "truth_rpn": 112,
+          "truth_tier": 1,
+          "tier_distance": 2,
+          "passed": false
+        }
+      ],
+      "passed": false
+    },
+    "m3_critical_factor_match": {
+      "score": 1.0,
+      "matched_factors": 5,
+      "ground_truth_total": 5,
+      "matched_names": [
+        "Endpoints",
+        "Adverse Event (AE) / Serious Adverse Event (SAE)",
+        "Data Integrity and Reliability of Trial Results",
+        "Eligibility criteria",
+        "Investigational Product Management"
+      ],
+      "missing_names": [],
+      "extra_names": [],
+      "factor_name_only_mode": false,
+      "passed": true,
+      "skipped": false
+    },
+    "m4_hallucination_detection": {
+      "hallucinations_found": 0,
+      "flagged_fields": [],
+      "passed": true
+    }
+  },
+  "targets": {
+    "m1_risk_name_recall": 0.85,
+    "m2_rpn_tier_accuracy": 0.9,
+    "m3_critical_factor_match": 0.8,
+    "m4_hallucinations": 0.0
+  },
+  "near_misses": [],
+  "hallucination_report": {
+    "study_id": "B7981027",
+    "hallucinations_found": 0,
+    "flagged_fields": [],
+    "pass": true
+  },
+  "eval_metadata": {
+    "study_id": "B7981027",
+    "scenario": 1,
+    "eval_date": "2026-04-15",
+    "eval_timestamp_utc": "2026-04-15T16:03:23.279328Z",
+    "config_version": "1.0",
+    "config_file": "risk_profile_eval_config.yaml",
+    "generator_version": "1.0",
+    "ta": "IMMUNOLOGY",
+    "phase": "PHASE III",
+    "ground_truth_sources": [
+      "risk_profile_ground_truth.csv",
+      "critical_factors_ground_truth.csv"
+    ],
+    "generator_json_reference": "B7981027_RiskProfile.json",
+    "generator_json_path": "C:\\Users\\jahna\\OneDrive\\Desktop\\Pfizer\\risk_profile_eval\\data\\B7981027_RiskProfile.json",
+    "risk_ground_truth_csv_path": "C:\\Users\\jahna\\OneDrive\\Desktop\\Pfizer\\risk_profile_eval\\data\\risk_profile_ground_truth.csv",
+    "critical_factors_ground_truth_csv_path": "C:\\Users\\jahna\\OneDrive\\Desktop\\Pfizer\\risk_profile_eval\\data\\critical_factors_ground_truth.csv",
+    "out_of_scope_exclusions": [
+      "general_information.risk_manager",
+      "general_information.approved_by",
+      "general_information.approval_date",
+      "risk_id"
+    ],
+    "risk_profile_form_reference": "B7981027_RiskProfile_Form.docx",
+    "risk_profile_form_resolved_path": "C:\\Users\\jahna\\OneDrive\\Desktop\\Pfizer\\risk_profile_eval\\reference_spec\\B7981027_RiskProfile_Form.docx",
+    "risk_profile_form_present": true
+  }
+}

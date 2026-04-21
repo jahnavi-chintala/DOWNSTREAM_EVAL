@@ -1,0 +1,159 @@
+:root {
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f3f5f8;
+  color: #1c2430;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #d8dee8;
+  background: white;
+}
+
+.topbar nav {
+  display: flex;
+  gap: 12px;
+}
+
+.topbar a {
+  text-decoration: none;
+  color: #315fa4;
+}
+
+.topbar a.active {
+  font-weight: 700;
+}
+
+.layout {
+  padding: 18px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #d8dee8;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.centered {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.login {
+  width: 320px;
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  font-size: 13px;
+  color: #4f5b6d;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid #c5cedc;
+  border-radius: 6px;
+}
+
+button {
+  background: #1c57a5;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+button.ghost {
+  background: #eef3fb;
+  color: #1b4f94;
+  border: 1px solid #c5d3e8;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th,
+td {
+  border: 1px solid #e2e7f0;
+  padding: 7px 8px;
+  text-align: left;
+}
+
+thead {
+  background: #f7f9fd;
+}
+
+tr.clickable {
+  cursor: pointer;
+}
+
+tr.clickable:hover {
+  background: #f7faff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.error {
+  color: #9b1d1d;
+}
+
+.muted {
+  color: #667489;
+}
+
+pre {
+  background: #111722;
+  color: #e6edf7;
+  border-radius: 8px;
+  padding: 10px;
+  max-height: 320px;
+  overflow: auto;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.chip {
+  border: 1px solid #d8dee8;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  background: #fbfcfe;
+}

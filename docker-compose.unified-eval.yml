@@ -1,0 +1,48 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: unified-eval-postgres
+    environment:
+      POSTGRES_DB: evaldb
+      POSTGRES_USER: evaluser
+      POSTGRES_PASSWORD: evalpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - unified_eval_pgdata:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: .
+      dockerfile: eval_gateway/Dockerfile.backend
+    container_name: unified-eval-backend
+    environment:
+      PFIZER_ROOT: /app
+      BUNDLES_PARENT: /data/protocol_bundles
+      HUB_RUNNER: /app/protocol_eval_hub/run_protocol_eval_bundle.py
+      DATABASE_URL: postgresql+psycopg2://evaluser:evalpass@postgres:5432/evaldb
+      JWT_SECRET: change-this-to-a-long-random-secret
+      APP_USERNAME: admin
+      APP_PASSWORD: change-me
+      CORS_ALLOW_ORIGINS: http://localhost:8080
+    ports:
+      - "9001:9001"
+    depends_on:
+      - postgres
+    volumes:
+      - ./protocol_eval_hub/protocol_bundles:/data/protocol_bundles
+
+  frontend:
+    build:
+      context: ./eval_gateway/ui
+      dockerfile: Dockerfile.ui
+      args:
+        VITE_API_BASE_URL: http://localhost:9001
+    container_name: unified-eval-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+volumes:
+  unified_eval_pgdata:

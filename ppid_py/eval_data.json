@@ -1,0 +1,205 @@
+{
+  "template": {
+    "none_identified_note": "None identified — both generator and ground truth set none_identified for this category. Full credit per scoring config (reference.yaml → none_identified.both_true_score).\n",
+    "empty_subcats_label": "Empty ✓",
+    "see_detail_pointer": "see Section 3",
+    "scorecard_chart_caption": "Category scores (weighted contribution)",
+    "section_actions_intro": "Actions derived from eval scoring. Prioritised for generator developer.",
+    "near_miss_line_prefix": "NEAR MISS (semantic):",
+    "miss_line_prefix": "MISS:",
+    "out_of_scope_intro": "Out of scope — not penalised"
+  },
+  "header": {
+    "study_id": "B7981027",
+    "study_name": "Ritlecitinib (PF-06651600) Phase 3 Alopecia Areata",
+    "eval_date": "2026-04-05",
+    "generator_version": "v4.0",
+    "config": "1.0",
+    "study_type": "I&I / Ph III — ii_phase3"
+  },
+  "document_score": {
+    "score": 83.6,
+    "threshold": 75,
+    "target": 80,
+    "pass": true
+  },
+  "metrics": [
+    {
+      "id": "M1",
+      "name": "M1 Subcategory Recall (B7981027)",
+      "score": "88%",
+      "target": "85%",
+      "pass": true,
+      "source": "pipd_ground_truth_clean.csv"
+    },
+    {
+      "id": "M2",
+      "name": "M2 YES/NO Flag Accuracy",
+      "score": "93%",
+      "target": "90%",
+      "pass": true,
+      "source": "pipd_ground_truth_clean.csv"
+    },
+    {
+      "id": "M3",
+      "name": "M3 Empty Category Accuracy",
+      "score": "100%",
+      "target": "80%",
+      "pass": true,
+      "source": "pipd_ground_truth_clean.csv"
+    },
+    {
+      "id": "M4",
+      "name": "M4 USDM traceability gaps",
+      "score": "0",
+      "target": "0",
+      "pass": true,
+      "source": "usdm_entity_id validation"
+    },
+    {
+      "id": "M5",
+      "name": "M5 Severity Match",
+      "score": "78%",
+      "target": "75%",
+      "pass": true,
+      "source": "pipd_qe_ground_truth.csv"
+    },
+    {
+      "id": "M6",
+      "name": "M6 GSOP Coverage",
+      "score": "75%",
+      "target": "70%",
+      "pass": true,
+      "source": "pipd_qe_ground_truth.csv"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Inclusion/Exclusion Criteria",
+      "weight": 0.12,
+      "score": 91.2,
+      "weighted": 10.94,
+      "subcats_matched": 5,
+      "subcats_total": 5,
+      "none_identified": false,
+      "scorecard_status": "All subcategories matched",
+      "scorecard_status_level": "ok",
+      "rows": [
+        {
+          "text": "Participant did not meet one or more inclusion criteria but was randomized to the study treatment",
+          "score": 100,
+          "match": "Verbatim",
+          "yes_no": true,
+          "usdm": "resolved",
+          "conf": "resolved",
+          "gsop": "CT40"
+        },
+        {
+          "text": "Participant took prohibited medication that could potentially impact efficacy assessments",
+          "score": 95,
+          "match": "Semantic",
+          "yes_no": true,
+          "usdm": "resolved",
+          "conf": "review",
+          "gsop": "—"
+        }
+      ],
+      "near_misses": [
+        {
+          "generated": "Participant met all eligibility criteria but was randomised prior to assessment of all eligibility criteria.",
+          "gt": "Participant met all eligibility criteria but was randomized prior to assessment of all eligibility criteria.",
+          "cosine": 0.87
+        }
+      ],
+      "misses": []
+    },
+    {
+      "id": 10,
+      "name": "Other",
+      "weight": 0.12,
+      "score": 72.0,
+      "weighted": 8.64,
+      "subcats_matched": 3,
+      "subcats_total": 5,
+      "none_identified": false,
+      "scorecard_status": "1 miss(es) — see Section 3",
+      "scorecard_status_level": "warn",
+      "rows": [
+        {
+          "text": "WISC-V requirement gap — protocol assessment",
+          "score": 0,
+          "match": "Miss",
+          "yes_no": false,
+          "usdm": "fail",
+          "conf": "review",
+          "gsop": "—"
+        },
+        {
+          "text": "Additional PD listed under other (non-protocol)",
+          "score": 100,
+          "match": "Extra",
+          "yes_no": true,
+          "usdm": "warn",
+          "conf": "resolved",
+          "gsop": "CT05"
+        }
+      ],
+      "near_misses": [],
+      "misses": [
+        {
+          "text": "Inadequate/Incorrect WISC-V data transfer to central vendor per protocol.",
+          "reason": "USDM entity WISC_V_REQUIREMENT exists. Check extract_cat10()."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Visit Schedule",
+      "weight": 0.04,
+      "score": 100,
+      "weighted": 4.0,
+      "subcats_matched": 0,
+      "subcats_total": 0,
+      "none_identified": true,
+      "scorecard_status": "None identified — both agree",
+      "scorecard_status_level": "ok",
+      "rows": [],
+      "near_misses": [],
+      "misses": []
+    }
+  ],
+  "improvement_actions": [
+    {
+      "priority": "HIGH",
+      "category": "Cat 10",
+      "type": "miss",
+      "action": "WISC-V and related assessment subcategories: consolidate extraction from StudyDesign / assessment-specific USDM entities; validate against extract_cat10() coverage.",
+      "fix_location": "usdm_extractor.py → extract_cat10()"
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "Cat 10",
+      "type": "extra",
+      "action": "Tighten post-validation to reduce Extra rows where USDM yields ambiguous hits.",
+      "fix_location": "post_gen_validation.py"
+    },
+    {
+      "priority": "LOW",
+      "category": "Cat 1",
+      "type": "near_miss",
+      "action": "Normalize British/US spelling in eligibility strings for verbatim Tier-1 matching.",
+      "fix_location": "normalization_utils.py"
+    }
+  ],
+  "out_of_scope": {
+    "count": 7,
+    "reason": "IT Systems rows — not predictable from protocol text",
+    "detail": "Generator is not expected to predict these from protocol text."
+  },
+  "footer": {
+    "source": "eval_data.yml",
+    "source_json": "pipd_eval_B7981027.json",
+    "config": "pipd_eval_config.yaml"
+  }
+}

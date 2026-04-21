@@ -1,0 +1,138 @@
+{
+  "study_id": "B7981027",
+  "scenario": 1,
+  "timestamp": "2026-04-17T21:54:27.679986Z",
+  "verdict": "NO-GO",
+  "generator_version": "1.0",
+  "ta": "IMMUNOLOGY",
+  "phase": "PHASE III",
+  "metrics": {
+    "m1_risk_name_recall": {
+      "study_id": "B7981027",
+      "score": 0.6667,
+      "matched": 2,
+      "ground_truth_total": 3,
+      "matched_names": [
+        "Participant / Caregiver Trial Conduct",
+        "Concomitant Medication Management"
+      ],
+      "matched_pairs": [
+        {
+          "gt_risk_name": "Participant / Caregiver Trial Conduct",
+          "gt_risk_id": "SR-02224",
+          "gt_rpn": 160,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Participant / Caregiver Trial Conduct",
+          "generated_rpn": 196,
+          "generated_json_key": "risks",
+          "generated_domain": "study risks"
+        },
+        {
+          "gt_risk_name": "Concomitant Medication Management",
+          "gt_risk_id": "SR-02216",
+          "gt_rpn": 112,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Concomitant Medication Management",
+          "generated_rpn": 196,
+          "generated_json_key": "risks",
+          "generated_domain": "study risks"
+        }
+      ],
+      "missed_names": [
+        "Enrollment Criteria"
+      ],
+      "hallucination_candidates": [
+        "AE / SAE Management",
+        "Data / Data Reliability",
+        "Sample Management"
+      ],
+      "near_misses": [],
+      "passed": false
+    },
+    "m2_rpn_tier_accuracy": {
+      "score": 0.0,
+      "matched_rpn": 0,
+      "total_matched_risks": 2,
+      "per_risk": [
+        {
+          "risk_name": "Participant / Caregiver Trial Conduct",
+          "generated_rpn": 196,
+          "generated_tier": 3,
+          "truth_rpn": 160,
+          "truth_tier": 2,
+          "tier_distance": 1,
+          "passed": false,
+          "match_mode": "exact_rpn"
+        },
+        {
+          "risk_name": "Concomitant Medication Management",
+          "generated_rpn": 196,
+          "generated_tier": 3,
+          "truth_rpn": 112,
+          "truth_tier": 1,
+          "tier_distance": 2,
+          "passed": false,
+          "match_mode": "exact_rpn"
+        }
+      ],
+      "passed": false
+    },
+    "m3_critical_factor_match": {
+      "score": 1.0,
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "matched_factors": 5,
+      "ground_truth_total": 5,
+      "generated_factor_count": 5,
+      "matched_names": [
+        "Endpoints",
+        "Adverse Event (AE) / Serious Adverse Event (SAE)",
+        "Data Integrity and Reliability of Trial Results",
+        "Eligibility criteria",
+        "Investigational Product Management"
+      ],
+      "missing_names": [],
+      "extra_names": [],
+      "content_violations": [],
+      "factor_name_only_mode": false,
+      "passed": true,
+      "skipped": false
+    },
+    "m4_hallucination_detection": {
+      "provenance_defect_count": 0,
+      "semantic_hallucination_count": 3,
+      "hallucinations_found": 0,
+      "flagged_fields": [],
+      "passed": true,
+      "risk_existence_check": {
+        "gt_risk_exists": true,
+        "generated_risk_count": 5,
+        "passed": true
+      },
+      "note": "hallucinations_found counts **provenance / schema defect checks** per risk field, not semantic hallucinations. Use semantic_hallucination_count (from M1) for generated risks with no GT match."
+    }
+  },
+  "targets": {
+    "m1_risk_name_recall": 0.85,
+    "m2_rpn_tier_accuracy": 0.9,
+    "m3_critical_factor_match": 0.8,
+    "m4_hallucinations": 0.0
+  },
+  "near_misses": [],
+  "metadata_validation": {
+    "passed": true,
+    "issues": [],
+    "actual_total_risks": 5,
+    "actual_risks_above_196": 1
+  },
+  "hallucination_report": {
+    "study_id": "B7981027",
+    "provenance_defect_count": 0,
+    "semantic_hallucination_count": 3,
+    "hallucinations_found": 0,
+    "flagged_fields": [],
+    "pass": true
+  },
+  "gt_risk_exists": true
+}

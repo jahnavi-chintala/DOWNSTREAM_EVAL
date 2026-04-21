@@ -1,0 +1,43 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Node / frontend
+node_modules/
+**/node_modules/
+**/.vite/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs & local responses
+*.log
+*_resp.json
+_upload_*.json
+
+# Confidential / large assets at repo root (do not publish)
+Pfizerconfidential*/
+*.zip
+pipd_ground_truth.csv
+generator_eval_outputs/
+
+# Optional: uncomment if those trees should stay local-only
+# Protocls_USDM/
+# USDM_EVAL/

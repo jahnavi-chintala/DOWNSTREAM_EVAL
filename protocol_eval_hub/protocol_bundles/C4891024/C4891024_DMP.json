@@ -1,0 +1,591 @@
+{
+  "document_id": "87ccc44b-a527-4179-b418-48d7e2797ed2",
+  "study_folder": "C4891024",
+  "therapeutic_area": "Oncology - Cancer and malignant neoplasms",
+  "phase": "1b2",
+  "compound": "PF-07850327",
+  "indication": "IND1",
+  "dmp_version": "1.0",
+  "dmp_date": "06-Apr-2026",
+  "template_version": "DMB07-GSOP-RF27 10.0",
+  "generated_by": "Protocol Intelligence Platform",
+  "generation_date": "2026-04-06",
+  "S1_revision_history": {
+    "generation_method": "BLANK",
+    "confidence": "N/A",
+    "note": "Human fill - populated on DMP approval",
+    "revisions": [
+      {
+        "version": "1.0",
+        "effective_date": "",
+        "author": "",
+        "summary": "Initial Version"
+      }
+    ]
+  },
+  "S2_purpose_scope": {
+    "generation_method": "USDM_DERIVED",
+    "confidence": "AUTO_YES",
+    "source": "USDM study metadata",
+    "text": "The Data Management Plan (DMP) documents how the study data will be managed to ensure high-quality fit for purpose data. The DMP specifies clinical trial data management tasks including how the data are collected and validated. The DMP is owned and maintained by Data Management and provides the Study Teams with information on data management responsibilities. This plan is a living document that will be created during the study start-up and maintained throughout the lifecycle of the study.",
+    "study_context": {
+      "study_id": "C4891024",
+      "compound": "PF-07850327",
+      "indication": "IND1",
+      "phase": "1b2",
+      "therapeutic_area": "Oncology - Cancer and malignant neoplasms"
+    }
+  },
+  "S3_process_documentation": {
+    "generation_method": "BOILERPLATE",
+    "confidence": "AUTO_YES",
+    "text": "DMB07-GSOP Study Data Set Design and Setup and DMB08-GSOP Study Data Set Review, Release, and Archive outlines the data management process documentation to be created. CT01-GSOP Trial Master Files outlines the Trial Master Filing requirements for this study."
+  },
+  "S4_roles_responsibilities": {
+    "generation_method": "BOILERPLATE",
+    "confidence": "AUTO_YES",
+    "text": "Data Management activities will be performed by Pfizer Data Management. The full study team roster can be found on the Study Team on Demand (SToD).",
+    "study_team_location": "Study Team on Demand (SToD)"
+  },
+  "S5_systems_tools": {
+    "generation_method": "YAML_BENCHMARK",
+    "confidence": "AUTO_YES",
+    "source": "dmp_systems_benchmarks.yaml - ONCOLOGY_PHASE_III segment + cross-TA standards",
+    "S5_1_data_reporting_sources": {
+      "generation_method": "BOILERPLATE",
+      "text": "Data Reporting Sources are tools/systems used for gathering data from one or multiple sources and presenting it to end-users in a way that is understandable and useable to validate data for protocol compliance and review of data for logic and consistency. Examples include RCC, DMW, InForm Data Viewer, JReview, SAS Listings. The specific tools/systems, outputs and roles are detailed in the Data Review Plan."
+    },
+    "S5_2_other_systems": {
+      "crf_system": {
+        "value": "InForm",
+        "version": null,
+        "hosted_by": null,
+        "url": null,
+        "vendor": null,
+        "method": null,
+        "applicable": null,
+        "confidence": "AUTO_YES",
+        "source": "Standard - 100% of all Pfizer studies",
+        "note": null
+      },
+      "cdms": {
+        "value": "Data Management Workbench (DMW)",
+        "version": null,
+        "hosted_by": null,
+        "url": null,
+        "vendor": null,
+        "method": null,
+        "applicable": null,
+        "confidence": "AUTO_YES",
+        "source": "Standard - 100% of all Pfizer studies",
+        "note": null
+      },
+      "ecrf_config_tool": {
+        "value": "Central Designer",
+        "version": null,
+        "hosted_by": null,
+        "url": null,
+        "vendor": null,
+        "method": null,
+        "applicable": null,
+        "confidence": "AUTO_YES",
+        "source": "Standard - 100% of all Pfizer studies",
+        "note": null
+      },
+      "ctms": {
+        "value": "Siebel CTMS",
+        "version": null,
+        "hosted_by": null,
+        "url": null,
+        "vendor": null,
+        "method": null,
+        "applicable": null,
+        "confidence": "AUTO_YES",
+        "source": "Standard - 100% of all Pfizer studies",
+        "note": null
+      },
+      "randomization_system": {
+        "value": "Sapphire",
+        "version": null,
+        "hosted_by": null,
+        "url": null,
+        "vendor": null,
+        "method": null,
+        "applicable": null,
+        "confidence": "AUTO_YES",
+        "source": "Standard Pfizer randomization system",
+        "note": null
+      },
+      "safety_db": {
+        "value": "Argus",
+        "version": null,
+        "hosted_by": null,
+        "url": null,
+        "vendor": null,
+        "method": null,
+        "applicable": null,
+        "confidence": "AUTO_YES",
+        "source": "Standard - 100% of all Pfizer studies",
+        "note": null
+      },
+      "coding_dictionary": {
+        "value": [
+          "Pfizer MedDRA",
+          "Pfizer WHO-Drug"
+        ],
+        "version": null,
+        "hosted_by": null,
+        "url": null,
+        "vendor": null,
+        "method": "Oracle Thesaurus Management System (TMS)",
+        "applicable": null,
+        "confidence": "AUTO_YES",
+        "source": "Standard - 100% of all Pfizer studies",
+        "note": null
+      },
+      "lab_normal_ranges": {
+        "value": "Lab Normals Management Tool (LNMT) (InForm)",
+        "version": null,
+        "hosted_by": null,
+        "url": null,
+        "vendor": null,
+        "method": null,
+        "applicable": null,
+        "confidence": "AUTO_YES",
+        "source": "Standard for InForm studies",
+        "note": null
+      },
+      "pd_mgmt_system": {
+        "value": "Clinical Oversight Review Dashboard (CORD)",
+        "version": null,
+        "hosted_by": null,
+        "url": null,
+        "vendor": null,
+        "method": null,
+        "applicable": null,
+        "confidence": "AUTO_YES",
+        "source": "Standard - 100% of all Pfizer studies",
+        "note": null
+      },
+      "tmf_system": {
+        "value": "Pfizer Trial Master File (PTMF)",
+        "version": null,
+        "hosted_by": null,
+        "url": null,
+        "vendor": null,
+        "method": null,
+        "applicable": null,
+        "confidence": "AUTO_YES",
+        "source": "Standard - 100% of all Pfizer studies",
+        "note": null
+      },
+      "sdq_system": {
+        "value": "Smart Data Query (SDQ)",
+        "version": null,
+        "hosted_by": null,
+        "url": null,
+        "vendor": null,
+        "method": null,
+        "applicable": true,
+        "confidence": "AUTO_YES",
+        "source": "Standard for all InForm studies",
+        "note": null
+      },
+      "irt_system": {
+        "value": "Pfizer Study Manager",
+        "version": null,
+        "hosted_by": null,
+        "url": null,
+        "vendor": null,
+        "method": null,
+        "applicable": null,
+        "confidence": "AUTO_YES",
+        "source": "dmp_systems_benchmarks.yaml - ONCOLOGY_PHASE_III: 100% frequency",
+        "note": null
+      },
+      "rbm_system": {
+        "value": "Pfizer Central Monitor",
+        "version": null,
+        "hosted_by": null,
+        "url": null,
+        "vendor": null,
+        "method": null,
+        "applicable": null,
+        "confidence": "AUTO_YES",
+        "source": "dmp_systems_benchmarks.yaml - ONCOLOGY_PHASE_III: 100% frequency",
+        "note": null
+      }
+    }
+  },
+  "S6_data_flow": {
+    "S6_1_crf_data": {
+      "generation_method": "BOILERPLATE",
+      "type": "Electronic Data Capture (EDC)",
+      "originator": "Investigator",
+      "data_file_name": "BA_C4891024_SRDMT_PROD",
+      "final_location": "LSH https://lshprd-cal.pfizer.com/"
+    },
+    "S6_2_esource_edata": {
+      "generation_method": "SDS_CSV_PRIMARY",
+      "confidence": "AUTO_YES",
+      "source": "sds_non_crf_ground_truth_clean.csv - C4891024 rows",
+      "fallback_used": false,
+      "vendors": [
+        {
+          "data_type": "PK- ARV-471 and ARV-473",
+          "vendor": "Labcorp Singapore",
+          "tier": "Critical"
+        },
+        {
+          "data_type": "PK- Samuraciclib",
+          "vendor": "Alderley Analytical",
+          "tier": "Critical"
+        },
+        {
+          "data_type": "Biomarker – Blood (ctDNA)",
+          "vendor": "Guardant Health",
+          "tier": "Critical"
+        },
+        {
+          "data_type": "Biomarker - Tissue",
+          "vendor": "Foundation Medicine Inc.",
+          "tier": "Critical"
+        },
+        {
+          "data_type": "PGx",
+          "vendor": "TBD",
+          "tier": "Critical"
+        },
+        {
+          "data_type": "eCoA",
+          "vendor": "IQVIA",
+          "tier": "Supportive"
+        }
+      ]
+    },
+    "S6_3_adjudication": {
+      "generation_method": "YAML_BENCHMARK",
+      "confidence": "AUTO_YES",
+      "source": "dmp_systems_benchmarks.yaml - ONCOLOGY_PHASE_III adjudication",
+      "applicable": false,
+      "vendor": "",
+      "adjudication_system": "",
+      "committees": []
+    },
+    "S6_4_edmc": {
+      "generation_method": "BOILERPLATE",
+      "applicable": true,
+      "confidence": "REVIEW",
+      "note": "E-DMC details TBD - human fill required",
+      "placeholder": {
+        "contact": "TBD",
+        "data_type": "TBD",
+        "blinded": true,
+        "file_location": "TBD"
+      }
+    }
+  },
+  "S7_data_dictionary_coding": {
+    "generation_method": "BOILERPLATE",
+    "confidence": "AUTO_YES",
+    "text": "The Pfizer Corporate Coding Conventions are utilized for this study. All active studies are versioned until final database release. The Data Review Plan outlines the details of the coding data review activities."
+  },
+  "S8_critical_data": {
+    "generation_method": "USDM_DERIVED + STANDARD_RULES + TA_SPECIFIC",
+    "not_applicable": false,
+    "source": {
+      "layer_1": "USDM JSON endpoints (primary/secondary)",
+      "layer_2": "Standard safety rules (hardcoded)",
+      "layer_3": "dmp_critical_data_benchmarks.yaml - ONCOLOGY_PHASE_III segment"
+    },
+    "modules": [
+      {
+        "data_module": "Dose-Limiting Toxicity (DLT)",
+        "rationale": "Supports the primary safety endpoint evaluating the occurrence of dose-limiting toxicities during the Cycle 1 observation period.",
+        "confidence": "AUTO_YES",
+        "layer": 1,
+        "source": "USDM USDM endpoint"
+      },
+      {
+        "data_module": "Tumor Assessment (RECIST v1.1)",
+        "rationale": "Supports the primary and secondary efficacy endpoints including Objective Response Rate (ORR), Duration of Response (DoR), Clinical Benefit Rate (CBR), and Progression-Free Survival (PFS) by investigator assessment.",
+        "confidence": "AUTO_YES",
+        "layer": 1,
+        "source": "USDM USDM endpoint"
+      },
+      {
+        "data_module": "Electrocardiogram (ECG)",
+        "rationale": "Supports the secondary safety endpoint evaluating the incidence of ECG abnormalities.",
+        "confidence": "AUTO_YES",
+        "layer": 1,
+        "source": "USDM USDM endpoint"
+      },
+      {
+        "data_module": "Pharmacokinetics (PK)",
+        "rationale": "Supports the secondary pharmacokinetic endpoint evaluating plasma concentrations of ARV-471, ARV-473, and samuraciclib.",
+        "confidence": "AUTO_YES",
+        "layer": 1,
+        "source": "USDM USDM endpoint"
+      },
+      {
+        "data_module": "Biomarkers",
+        "rationale": "Supports exploratory endpoints evaluating tumor biology, mutational status, and genomic alterations from peripheral blood and tumor tissue.",
+        "confidence": "AUTO_YES",
+        "layer": 1,
+        "source": "USDM USDM endpoint"
+      },
+      {
+        "data_module": "Adverse event",
+        "rationale": "Safety, secondary endpoint",
+        "confidence": "AUTO_YES",
+        "layer": 2,
+        "source": "Standard safety rule"
+      },
+      {
+        "data_module": "Vital Signs",
+        "rationale": "Safety, secondary endpoint",
+        "confidence": "AUTO_YES",
+        "layer": 2,
+        "source": "Standard safety rule"
+      },
+      {
+        "data_module": "Clinical Lab",
+        "rationale": "Safety, secondary endpoint",
+        "confidence": "AUTO_YES",
+        "layer": 2,
+        "source": "Standard safety rule"
+      },
+      {
+        "data_module": "Concomitant Medications",
+        "rationale": "Safety",
+        "confidence": "AUTO_YES",
+        "layer": 2,
+        "source": "Standard safety rule"
+      },
+      {
+        "data_module": "Dosing",
+        "rationale": "Critical process",
+        "confidence": "AUTO_YES",
+        "layer": 2,
+        "source": "Standard safety rule"
+      },
+      {
+        "data_module": "ICD, Demography, and disposition data",
+        "rationale": "Core enrollment variables",
+        "confidence": "AUTO_YES",
+        "layer": 2,
+        "source": "Standard enrollment rule"
+      },
+      {
+        "data_module": "Molecular Biology of Disease –",
+        "rationale": "Eligibility Risk IDs: 2072, 2274, 3133, 4103",
+        "confidence": "AUTO_YES",
+        "layer": 3,
+        "source": "dmp_critical_data_benchmarks.yaml - ONCOLOGY_PHASE_III"
+      },
+      {
+        "data_module": "Molecular Biology of Disease – Local",
+        "rationale": "Eligibility Risk IDs: 2072, 2274, 3133, 4103",
+        "confidence": "AUTO_YES",
+        "layer": 3,
+        "source": "dmp_critical_data_benchmarks.yaml - ONCOLOGY_PHASE_III"
+      },
+      {
+        "data_module": "Central Lab Sample Collection",
+        "rationale": "Safety Eligibility Risk IDs: 2116, 2072, 2274, 3133, 4103",
+        "confidence": "REVIEW",
+        "layer": 3,
+        "source": "dmp_critical_data_benchmarks.yaml - ONCOLOGY_PHASE_III"
+      },
+      {
+        "data_module": "AEs and SAEs",
+        "rationale": "Safety Secondary Endpoint",
+        "confidence": "REVIEW",
+        "layer": 3,
+        "source": "dmp_critical_data_benchmarks.yaml - ONCOLOGY_PHASE_III"
+      },
+      {
+        "data_module": "Death",
+        "rationale": "Primary and Secondary Endpoints Safety",
+        "confidence": "REVIEW",
+        "layer": 3,
+        "source": "dmp_critical_data_benchmarks.yaml - ONCOLOGY_PHASE_III"
+      },
+      {
+        "data_module": "Inclusion/Exclusion",
+        "rationale": "Eligibility",
+        "confidence": "REVIEW",
+        "layer": 3,
+        "source": "dmp_critical_data_benchmarks.yaml - ONCOLOGY_PHASE_III"
+      }
+    ]
+  },
+  "S9_risk_based_monitoring": {
+    "generation_method": "YAML_BENCHMARK",
+    "confidence": "AUTO_YES",
+    "source": "dmp_systems_benchmarks.yaml - rbm_system: 100% all studies",
+    "applicable": true,
+    "rbm_system": "CluePoints",
+    "sdv_pct": {
+      "value": 8,
+      "confidence": "REVIEW",
+      "source": "ONCOLOGY_PHASE_III segment average"
+    },
+    "approach": [
+      "Percent of Onsite Monitoring in relation to Source Data Verification (SDV)",
+      "Central Monitoring Analytics including Key Risk Indicators and Data Quality Assessments",
+      "Quality Tolerance Limits",
+      "Edit Checks",
+      "Targeted Clinical Review",
+      "Data Management Reviews",
+      "Metrics Reviews"
+    ]
+  },
+  "S10_data_surveillance_meeting": {
+    "generation_method": "BOILERPLATE",
+    "confidence": "AUTO_YES",
+    "frequency": "Quarterly (minimum every 3 months)",
+    "documentation": "Study Decision Log in Study Team on Demand (SToD)"
+  },
+  "S11_data_review_validation": {
+    "S11_1_discrepancy_management": {
+      "generation_method": "BOILERPLATE",
+      "clinical_queries": "Clinician and/or Clinical Scientist enters queries directly into InForm",
+      "sdq_applicable": true,
+      "sdq_note": "Smart Data Query (SDQ) - AI-based cross-panel discrepancy detection"
+    },
+    "S11_2_listings_visualizations": {
+      "generation_method": "BOILERPLATE",
+      "text": "Review of data that cannot be programmed as automated edit checks are reviewed using listings or visualizations. The Data Review Plan contains the study specific listings and visualizations."
+    },
+    "S11_3_protocol_deviations": {
+      "generation_method": "BOILERPLATE",
+      "reference": "CT40-DMB07-DMB08-GSOP-SD-GL01 Identification of Protocol Deviations from Clinical Database(s)"
+    },
+    "S11_4_reconciliation": {
+      "generation_method": "INFERENCE_RULES",
+      "source": "dmp_reconciliation_benchmarks.yaml + eSource vendor presence",
+      "sections": {
+        "irt_reconciliation": {
+          "applicable": true,
+          "confidence": "AUTO_YES",
+          "rule": "IMPALA IRT system present in S5"
+        },
+        "ctms_reconciliation": {
+          "applicable": false,
+          "confidence": "AUTO_YES",
+          "rule": "CTMS always N/A - Siebel not reconciled via DMP"
+        },
+        "sae_reconciliation": {
+          "applicable": true,
+          "confidence": "AUTO_YES",
+          "rule": "SAE always applicable - every Pfizer study"
+        },
+        "central_lab_reconciliation": {
+          "applicable": false,
+          "confidence": "AUTO_YES",
+          "rule": "No central lab in S6"
+        },
+        "ecoa_reconciliation": {
+          "applicable": false,
+          "confidence": "AUTO_YES",
+          "rule": "No eCOA vendor"
+        },
+        "pkpd_reconciliation": {
+          "applicable": true,
+          "confidence": "AUTO_YES",
+          "rule": "Biomarker/PK vendors in S6_esource"
+        },
+        "adjudication_reconciliation": {
+          "applicable": false,
+          "confidence": "AUTO_YES",
+          "rule": "No adjudication system"
+        },
+        "local_lab_review": {
+          "applicable": false,
+          "confidence": "AUTO_YES",
+          "rule": "No central lab"
+        }
+      }
+    },
+    "S11_5_local_lab_review": {
+      "generation_method": "BOILERPLATE",
+      "applicable": true
+    },
+    "S11_6_subject_data_handling": {
+      "generation_method": "BOILERPLATE",
+      "screen_failure_data": [
+        "Demography",
+        "Main Informed Consent",
+        "Trigger Form",
+        "Inclusion/Exclusion Criteria",
+        "Disposition - Screening",
+        "Adverse Event (If applicable)",
+        "Prior/Concomitant Medications (if related to reported AE)",
+        "Non-Drug Treatment (if related to reported AE)",
+        "Death Details (If applicable)",
+        "Withdrawal of Consent (If applicable)"
+      ],
+      "freeze_lock_strategy": "Freeze form -> Lock per Data Review Plan"
+    },
+    "S11_7_tiered_data_review": {
+      "generation_method": "BOILERPLATE",
+      "tiers": {
+        "Critical": "Required for analysis of study endpoints - efficacy, safety, enrollment",
+        "Supportive": "May contribute to interpretation of critical data",
+        "Minimal": "Not needed to interpret or support results"
+      }
+    },
+    "S11_8_audit_trail_review": {
+      "generation_method": "BOILERPLATE",
+      "applicable_to": [
+        "CRF",
+        "IRT",
+        "eSource/eData"
+      ]
+    }
+  },
+  "S12_metrics_oversight": {
+    "generation_method": "BOILERPLATE",
+    "text": "Metrics review and oversight will be performed by DM. Expected metrics and oversight tools are defined by the Core Study Team and outlined in the Data Review Plan."
+  },
+  "S13_quality_control": {
+    "generation_method": "BOILERPLATE",
+    "references": [
+      "DMB07-DMB08-WI-GL03 Quality Control of Data Management Activities",
+      "DMB07-GSOP and DMB08-GSOP Data Quality Control Plan"
+    ]
+  },
+  "S14_data_deliverables": {
+    "generation_method": "YAML_BENCHMARK",
+    "confidence": "REVIEW",
+    "source": "Default template deliverables - ONCOLOGY_PHASE_III",
+    "note": "S14 is template-version dependent - not reliably predicted from TA/phase alone",
+    "deliverables": [
+      {
+        "deliverable": "Study Data Set Release",
+        "cleaning_level": "Level 1"
+      },
+      {
+        "deliverable": "Draft Tables Review",
+        "cleaning_level": "Level 3"
+      },
+      {
+        "deliverable": "eDMC",
+        "cleaning_level": "Level 1"
+      }
+    ]
+  },
+  "S15_data_archiving": {
+    "generation_method": "BOILERPLATE",
+    "text": "DMB08-GSOP Study Data Set Review, Release and Archive and DMB08-GSOP-SD-DMM09 Data Management Study Data Set Archival outline the Study Data Set and archival processes.",
+    "crf_submission_tool": "InForm CRF Submit"
+  },
+  "S16_reviewers_approvers": {
+    "generation_method": "BLANK",
+    "confidence": "N/A",
+    "note": "Human fill - named individuals not generatable",
+    "reviewers": [],
+    "approvers": []
+  }
+}

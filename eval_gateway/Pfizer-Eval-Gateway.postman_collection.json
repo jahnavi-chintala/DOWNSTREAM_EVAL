@@ -1,0 +1,133 @@
+{
+  "info": {
+    "name": "Pfizer Eval Gateway",
+    "description": "Single integration surface: gateway proxies to PIPD (D2) and Risk Profile (D1). Start stack with: python run_stack.py",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "gatewayUrl", "value": "http://127.0.0.1:9000" },
+    { "key": "pipdBase", "value": "{{gatewayUrl}}/pipd" },
+    { "key": "riskBase", "value": "{{gatewayUrl}}/risk-profile" }
+  ],
+  "item": [
+    {
+      "name": "Gateway",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{gatewayUrl}}/health"
+          }
+        },
+        {
+          "name": "OpenAPI JSON (gateway)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{gatewayUrl}}/openapi.json"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PIPD (D2)",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{pipdBase}}/health"
+          }
+        },
+        {
+          "name": "Health ready",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{pipdBase}}/health/ready"
+          }
+        },
+        {
+          "name": "Eval – detect scenario",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"study_id\": \"B7981027\",\n  \"ground_truth_csv\": \"pipd_ground_truth_clean.csv\"\n}"
+            },
+            "url": "{{pipdBase}}/eval/detect"
+          }
+        },
+        {
+          "name": "Eval – run (unified)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"study_id\": \"B7981027\",\n  \"generator_json_path\": \"./generator_outputs/B7981027_PIPD.json\",\n  \"ground_truth_csv\": \"pipd_ground_truth_clean.csv\",\n  \"deviation_benchmarks\": \"deviation_subcategories_clean.csv\"\n}"
+            },
+            "url": "{{pipdBase}}/eval/run"
+          }
+        },
+        {
+          "name": "Results – full",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{pipdBase}}/results/B7981027"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Risk Profile (D1)",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{riskBase}}/health"
+          }
+        },
+        {
+          "name": "Eval – detect scenario",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"study_id\": \"B7981027\",\n  \"ground_truth_risks\": \"../risk_profile/risk_profile_ground_truth.csv\"\n}"
+            },
+            "url": "{{riskBase}}/eval/detect"
+          }
+        },
+        {
+          "name": "Eval – run (unified)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"generator_json\": \"../risk_profile/B7981027_RiskProfile.json\",\n  \"study_id\": \"B7981027\",\n  \"ground_truth_risks\": \"../risk_profile/risk_profile_ground_truth.csv\",\n  \"ground_truth_factors\": \"../risk_profile/critical_factors_ground_truth.csv\"\n}"
+            },
+            "url": "{{riskBase}}/eval/run"
+          }
+        },
+        {
+          "name": "Results – full",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{riskBase}}/results/B7981027"
+          }
+        }
+      ]
+    }
+  ]
+}

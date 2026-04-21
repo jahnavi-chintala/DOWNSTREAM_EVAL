@@ -1,0 +1,728 @@
+{
+  "study_id": "C4891023",
+  "scenario": 1,
+  "timestamp": "2026-04-20T18:49:14.479132Z",
+  "verdict": "NO-GO",
+  "generator_version": "1.0",
+  "ta": "ONCOLOGY",
+  "phase": "PHASE II",
+  "metrics": {
+    "m1_risk_name_recall": {
+      "study_id": "C4891023",
+      "score": 0.0,
+      "matched": 0,
+      "ground_truth_total": 0,
+      "ground_truth_risk_rows_full": 0,
+      "m1_scored_gt_indices": [],
+      "no_risk_gt_rows": true,
+      "benchmark_expects_zero_risks": true,
+      "matched_names": [],
+      "matched_pairs": [],
+      "missed_names": [],
+      "hallucination_candidates": [
+        "Concomitant Medication Management",
+        "Samples incorrectly obtained, analyzed, stored or handled (inclusive of transportation and import/export)",
+        "Non-compliance with ICH or local country regulatory requirements",
+        "ICH Compliance",
+        "Investigator / Staff Conduct",
+        "Data / Data Reliability",
+        "Protocol Compliance",
+        "Informed Consent"
+      ],
+      "extra_generated_risks": [
+        "Concomitant Medication Management",
+        "Samples incorrectly obtained, analyzed, stored or handled (inclusive of transportation and import/export)",
+        "Non-compliance with ICH or local country regulatory requirements",
+        "ICH Compliance",
+        "Investigator / Staff Conduct",
+        "Data / Data Reliability",
+        "Protocol Compliance",
+        "Informed Consent"
+      ],
+      "near_misses": [],
+      "passed": false
+    },
+    "m2_rpn_tier_accuracy": {
+      "score": null,
+      "matched_rpn": 0,
+      "total_matched_risks": 0,
+      "ground_truth_risk_rows": 0,
+      "per_risk": [],
+      "passed": false,
+      "skipped": true,
+      "skip_reason": "no_benchmark_risk_rows"
+    },
+    "m3_critical_factor_match": {
+      "score": 1.0,
+      "f1": 0.8889,
+      "precision": 0.8,
+      "recall": 1.0,
+      "matched_factors": 4,
+      "ground_truth_total": 4,
+      "generated_factor_count": 5,
+      "matched_names": [
+        "Endpoints",
+        "Data Integrity and Reliability of Trial Results",
+        "Eligibility criteria",
+        "Adverse Event (AE) / Serious Adverse Event (SAE)"
+      ],
+      "missing_names": [],
+      "extra_names": [
+        "Investigational Product Management"
+      ],
+      "content_violations": [
+        {
+          "factor_name": "Endpoints",
+          "field": "critical_process",
+          "detail": "Ground truth marks critical_process as empty; generator supplied content."
+        },
+        {
+          "factor_name": "Data Integrity and Reliability of Trial Results",
+          "field": "critical_process",
+          "detail": "Ground truth marks critical_process as empty; generator supplied content."
+        },
+        {
+          "factor_name": "Eligibility criteria",
+          "field": "critical_process",
+          "detail": "Ground truth marks critical_process as empty; generator supplied content."
+        }
+      ],
+      "factor_name_only_mode": false,
+      "passed": true,
+      "skipped": false,
+      "benchmark_expects_zero_factors": false,
+      "factor_hallucination_candidates": []
+    },
+    "m4_hallucination_detection": {
+      "provenance_defect_count": 28,
+      "semantic_hallucination_count": 8,
+      "hallucinations_found": 28,
+      "flagged_fields": [
+        {
+          "field_path": "risks_monitored[0]",
+          "value": "Concomitant Medication Management",
+          "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+        },
+        {
+          "field_path": "vendor_risks[0]",
+          "value": "Samples incorrectly obtained, analyzed, stored or handled (inclusive of transportation and import/export)",
+          "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+        },
+        {
+          "field_path": "vendor_risks[1]",
+          "value": "Non-compliance with ICH or local country regulatory requirements",
+          "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+        },
+        {
+          "field_path": "study_site_risks[0]",
+          "value": "ICH Compliance",
+          "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+        },
+        {
+          "field_path": "study_site_risks[1]",
+          "value": "Investigator / Staff Conduct",
+          "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+        },
+        {
+          "field_path": "study_site_risks[2]",
+          "value": "Data / Data Reliability",
+          "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+        },
+        {
+          "field_path": "study_site_risks[3]",
+          "value": "Protocol Compliance",
+          "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+        },
+        {
+          "field_path": "study_site_risks[4]",
+          "value": "Informed Consent",
+          "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+        },
+        {
+          "field_path": "risks_monitored[0] ('Concomitant Medication Management').usdm_drivers[0]",
+          "value": {
+            "entity": "EligibilityCriterion",
+            "signal": "Excl 9 - Prohibited CYP3A inhibitors/inducers and QT-prolonging drugs",
+            "usdm_id": "10"
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "type_only",
+          "matched_node_id": null,
+          "candidates": [
+            {
+              "id": "ec-9",
+              "name": " Refractory nausea and vomiting, chronic GI disease, GI ulcer, GI bleed"
+            },
+            {
+              "id": "ec-12",
+              "name": "Prior procedures and treatment:  Major surgery, radiotherapy, prior endoc"
+            },
+            {
+              "id": "ec-3",
+              "name": "Prior anticancer therapies:  At least one and no more than 2 lines of prio"
+            }
+          ],
+          "reason": "instanceType=EligibilityCriterion exists in USDM but no node name matched signal."
+        },
+        {
+          "field_path": "risks_monitored[0] ('Concomitant Medication Management').associated_causes[0].usdm_trigger",
+          "value": {
+            "entity": "EligibilityCriterion",
+            "signal": "Excl 9 - Prohibited CYP3A inhibitors/inducers",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "type_only",
+          "matched_node_id": null,
+          "candidates": [
+            {
+              "id": "ec-5",
+              "name": "Other Inclusion criteria: . ECOG PS ≤1."
+            },
+            {
+              "id": "ec-8",
+              "name": " Participants with newly diagnosed brain metastases, or symptomatic C"
+            },
+            {
+              "id": "ec-7",
+              "name": " Participants with a known history of drug-induced pneumonitis or othe"
+            }
+          ],
+          "reason": "instanceType=EligibilityCriterion exists in USDM but no node name matched signal."
+        },
+        {
+          "field_path": "vendor_risks[0] ('Samples incorrectly obtained, analyzed, stored or handled (inclusive of transportation and import/export)').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[0] ('Samples incorrectly obtained, analyzed, stored or handled (inclusive of transportation and import/export)').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "vendor_risks[1] ('Non-compliance with ICH or local country regulatory requirements').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[1] ('Non-compliance with ICH or local country regulatory requirements').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "study_site_risks[0] ('ICH Compliance').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "study_site_risks[0] ('ICH Compliance').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "study_site_risks[1] ('Investigator / Staff Conduct').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "study_site_risks[1] ('Investigator / Staff Conduct').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "study_site_risks[2] ('Data / Data Reliability').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "study_site_risks[2] ('Data / Data Reliability').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "study_site_risks[3] ('Protocol Compliance').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "study_site_risks[3] ('Protocol Compliance').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "study_site_risks[4] ('Informed Consent').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "study_site_risks[4] ('Informed Consent').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "critical_factors[2] ('Data Integrity and Reliability of Trial Results').usdm_sources.critical_process[0]",
+          "value": {
+            "entity": "EligibilityCriterion",
+            "signal": "Excl 9 - Prohibited CYP3A inhibitors/inducers",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "type_only",
+          "matched_node_id": null,
+          "candidates": [
+            {
+              "id": "ec-5",
+              "name": "Other Inclusion criteria: . ECOG PS ≤1."
+            },
+            {
+              "id": "ec-8",
+              "name": " Participants with newly diagnosed brain metastases, or symptomatic C"
+            },
+            {
+              "id": "ec-7",
+              "name": " Participants with a known history of drug-induced pneumonitis or othe"
+            }
+          ],
+          "reason": "instanceType=EligibilityCriterion exists in USDM but no node name matched signal."
+        },
+        {
+          "field_path": "critical_factors[3] ('Eligibility criteria').usdm_sources.critical_data[0]",
+          "value": {
+            "entity": "EligibilityCriterion",
+            "signal": "Incl 5 - Exactly 1 prior CDK4/6 inhibitor",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "type_only",
+          "matched_node_id": null,
+          "candidates": [
+            {
+              "id": "ec-13",
+              "name": "Any unresolved toxicities from prior surgeries or therapies Grade >1 at t"
+            },
+            {
+              "id": "ec-12",
+              "name": "Prior procedures and treatment:  Major surgery, radiotherapy, prior endoc"
+            },
+            {
+              "id": "ec-3",
+              "name": "Prior anticancer therapies:  At least one and no more than 2 lines of prio"
+            }
+          ],
+          "reason": "instanceType=EligibilityCriterion exists in USDM but no node name matched signal."
+        },
+        {
+          "field_path": "critical_factors[3] ('Eligibility criteria').usdm_sources.critical_process[0]",
+          "value": {
+            "entity": "EligibilityCriterion",
+            "signal": "Excl 4 - Washout periods for prior therapies",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "type_only",
+          "matched_node_id": null,
+          "candidates": [
+            {
+              "id": "ec-13",
+              "name": "Any unresolved toxicities from prior surgeries or therapies Grade >1 at t"
+            },
+            {
+              "id": "ec-3",
+              "name": "Prior anticancer therapies:  At least one and no more than 2 lines of prio"
+            },
+            {
+              "id": "ec-12",
+              "name": "Prior procedures and treatment:  Major surgery, radiotherapy, prior endoc"
+            }
+          ],
+          "reason": "instanceType=EligibilityCriterion exists in USDM but no node name matched signal."
+        },
+        {
+          "field_path": "critical_factors[4] ('Investigational Product Management').usdm_sources.critical_process[0]",
+          "value": {
+            "entity": "NarrativeSection",
+            "signal": "6.6.1.3. Recommended ARV-471 and Ribociclib Dose Modifications",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'NarrativeSection' not present in USDM (available: Activity, Address, AdministrableProduct, AliasCode, BiomedicalConcept, Characteristic, Code, CommentAnnotation…)."
+        }
+      ],
+      "passed": false,
+      "risk_existence_check": {
+        "gt_risk_exists": false,
+        "generated_risk_count": 8,
+        "passed": false
+      },
+      "cf_existence_check": {
+        "gt_cf_exists": true,
+        "generated_cf_count": 5,
+        "passed": true
+      },
+      "note": "hallucinations_found counts **provenance / schema defect checks** per risk field, not semantic hallucinations. Use semantic_hallucination_count (from M1) for generated risks with no GT match."
+    }
+  },
+  "targets": {
+    "m1_risk_name_recall": 0.85,
+    "m2_rpn_tier_accuracy": 0.9,
+    "m3_critical_factor_match": 0.8,
+    "m4_hallucinations": 0.0
+  },
+  "near_misses": [],
+  "metadata_validation": {
+    "passed": false,
+    "issues": [
+      {
+        "code": "total_risks_mismatch",
+        "message": "risk_profile_summary.total_risks is 7 but the union of risk arrays contains 8 risk objects."
+      },
+      {
+        "code": "risks_above_196_mismatch",
+        "message": "risk_profile_summary.risks_above_196 is 0 but 3 risks have RPN > 196."
+      }
+    ],
+    "actual_total_risks": 8,
+    "actual_risks_above_196": 3
+  },
+  "hallucination_report": {
+    "study_id": "C4891023",
+    "provenance_defect_count": 28,
+    "semantic_hallucination_count": 8,
+    "hallucinations_found": 28,
+    "flagged_fields": [
+      {
+        "field_path": "risks_monitored[0]",
+        "value": "Concomitant Medication Management",
+        "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+      },
+      {
+        "field_path": "vendor_risks[0]",
+        "value": "Samples incorrectly obtained, analyzed, stored or handled (inclusive of transportation and import/export)",
+        "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+      },
+      {
+        "field_path": "vendor_risks[1]",
+        "value": "Non-compliance with ICH or local country regulatory requirements",
+        "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+      },
+      {
+        "field_path": "study_site_risks[0]",
+        "value": "ICH Compliance",
+        "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+      },
+      {
+        "field_path": "study_site_risks[1]",
+        "value": "Investigator / Staff Conduct",
+        "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+      },
+      {
+        "field_path": "study_site_risks[2]",
+        "value": "Data / Data Reliability",
+        "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+      },
+      {
+        "field_path": "study_site_risks[3]",
+        "value": "Protocol Compliance",
+        "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+      },
+      {
+        "field_path": "study_site_risks[4]",
+        "value": "Informed Consent",
+        "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+      },
+      {
+        "field_path": "risks_monitored[0] ('Concomitant Medication Management').usdm_drivers[0]",
+        "value": {
+          "entity": "EligibilityCriterion",
+          "signal": "Excl 9 - Prohibited CYP3A inhibitors/inducers and QT-prolonging drugs",
+          "usdm_id": "10"
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "type_only",
+        "matched_node_id": null,
+        "candidates": [
+          {
+            "id": "ec-9",
+            "name": " Refractory nausea and vomiting, chronic GI disease, GI ulcer, GI bleed"
+          },
+          {
+            "id": "ec-12",
+            "name": "Prior procedures and treatment:  Major surgery, radiotherapy, prior endoc"
+          },
+          {
+            "id": "ec-3",
+            "name": "Prior anticancer therapies:  At least one and no more than 2 lines of prio"
+          }
+        ],
+        "reason": "instanceType=EligibilityCriterion exists in USDM but no node name matched signal."
+      },
+      {
+        "field_path": "risks_monitored[0] ('Concomitant Medication Management').associated_causes[0].usdm_trigger",
+        "value": {
+          "entity": "EligibilityCriterion",
+          "signal": "Excl 9 - Prohibited CYP3A inhibitors/inducers",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "type_only",
+        "matched_node_id": null,
+        "candidates": [
+          {
+            "id": "ec-5",
+            "name": "Other Inclusion criteria: . ECOG PS ≤1."
+          },
+          {
+            "id": "ec-8",
+            "name": " Participants with newly diagnosed brain metastases, or symptomatic C"
+          },
+          {
+            "id": "ec-7",
+            "name": " Participants with a known history of drug-induced pneumonitis or othe"
+          }
+        ],
+        "reason": "instanceType=EligibilityCriterion exists in USDM but no node name matched signal."
+      },
+      {
+        "field_path": "vendor_risks[0] ('Samples incorrectly obtained, analyzed, stored or handled (inclusive of transportation and import/export)').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[0] ('Samples incorrectly obtained, analyzed, stored or handled (inclusive of transportation and import/export)').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "vendor_risks[1] ('Non-compliance with ICH or local country regulatory requirements').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[1] ('Non-compliance with ICH or local country regulatory requirements').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "study_site_risks[0] ('ICH Compliance').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "study_site_risks[0] ('ICH Compliance').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "study_site_risks[1] ('Investigator / Staff Conduct').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "study_site_risks[1] ('Investigator / Staff Conduct').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "study_site_risks[2] ('Data / Data Reliability').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "study_site_risks[2] ('Data / Data Reliability').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "study_site_risks[3] ('Protocol Compliance').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "study_site_risks[3] ('Protocol Compliance').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "study_site_risks[4] ('Informed Consent').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "study_site_risks[4] ('Informed Consent').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "critical_factors[2] ('Data Integrity and Reliability of Trial Results').usdm_sources.critical_process[0]",
+        "value": {
+          "entity": "EligibilityCriterion",
+          "signal": "Excl 9 - Prohibited CYP3A inhibitors/inducers",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "type_only",
+        "matched_node_id": null,
+        "candidates": [
+          {
+            "id": "ec-5",
+            "name": "Other Inclusion criteria: . ECOG PS ≤1."
+          },
+          {
+            "id": "ec-8",
+            "name": " Participants with newly diagnosed brain metastases, or symptomatic C"
+          },
+          {
+            "id": "ec-7",
+            "name": " Participants with a known history of drug-induced pneumonitis or othe"
+          }
+        ],
+        "reason": "instanceType=EligibilityCriterion exists in USDM but no node name matched signal."
+      },
+      {
+        "field_path": "critical_factors[3] ('Eligibility criteria').usdm_sources.critical_data[0]",
+        "value": {
+          "entity": "EligibilityCriterion",
+          "signal": "Incl 5 - Exactly 1 prior CDK4/6 inhibitor",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "type_only",
+        "matched_node_id": null,
+        "candidates": [
+          {
+            "id": "ec-13",
+            "name": "Any unresolved toxicities from prior surgeries or therapies Grade >1 at t"
+          },
+          {
+            "id": "ec-12",
+            "name": "Prior procedures and treatment:  Major surgery, radiotherapy, prior endoc"
+          },
+          {
+            "id": "ec-3",
+            "name": "Prior anticancer therapies:  At least one and no more than 2 lines of prio"
+          }
+        ],
+        "reason": "instanceType=EligibilityCriterion exists in USDM but no node name matched signal."
+      },
+      {
+        "field_path": "critical_factors[3] ('Eligibility criteria').usdm_sources.critical_process[0]",
+        "value": {
+          "entity": "EligibilityCriterion",
+          "signal": "Excl 4 - Washout periods for prior therapies",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "type_only",
+        "matched_node_id": null,
+        "candidates": [
+          {
+            "id": "ec-13",
+            "name": "Any unresolved toxicities from prior surgeries or therapies Grade >1 at t"
+          },
+          {
+            "id": "ec-3",
+            "name": "Prior anticancer therapies:  At least one and no more than 2 lines of prio"
+          },
+          {
+            "id": "ec-12",
+            "name": "Prior procedures and treatment:  Major surgery, radiotherapy, prior endoc"
+          }
+        ],
+        "reason": "instanceType=EligibilityCriterion exists in USDM but no node name matched signal."
+      },
+      {
+        "field_path": "critical_factors[4] ('Investigational Product Management').usdm_sources.critical_process[0]",
+        "value": {
+          "entity": "NarrativeSection",
+          "signal": "6.6.1.3. Recommended ARV-471 and Ribociclib Dose Modifications",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'NarrativeSection' not present in USDM (available: Activity, Address, AdministrableProduct, AliasCode, BiomedicalConcept, Characteristic, Code, CommentAnnotation…)."
+      }
+    ],
+    "pass": false
+  },
+  "gt_risk_exists": false,
+  "gt_cf_exists": true,
+  "usdm_trace": {
+    "usdm_loaded": true,
+    "usdm_path": "C:\\Users\\jahna\\AppData\\Local\\Temp\\rp_eval_4ribnj9j\\usdm.json",
+    "usdm_node_count": 984,
+    "usdm_instance_types": [
+      "Activity",
+      "Address",
+      "AdministrableProduct",
+      "AliasCode",
+      "BiomedicalConcept",
+      "Characteristic",
+      "Code",
+      "CommentAnnotation",
+      "DocumentContentReference",
+      "EligibilityCriterion",
+      "Encounter",
+      "Endpoint",
+      "Estimand",
+      "GovernanceDate",
+      "Indication",
+      "Ingredient",
+      "IntercurrentEvent",
+      "InterventionalStudyDesign",
+      "NarrativeContent",
+      "Objective",
+      "Organization",
+      "Quantity",
+      "ScheduleTimeline",
+      "ScheduleTimelineExit",
+      "ScheduledActivityInstance",
+      "Study",
+      "StudyAmendment",
+      "StudyAmendmentReason",
+      "StudyArm",
+      "StudyCell",
+      "StudyChange",
+      "StudyCohort",
+      "StudyDesignPopulation",
+      "StudyElement",
+      "StudyEpoch",
+      "StudyIdentifier",
+      "StudyIntervention",
+      "StudyRole",
+      "StudyTitle",
+      "StudyVersion"
+    ]
+  },
+  "eval_metadata": {
+    "study_id": "C4891023",
+    "scenario": 1,
+    "eval_date": "2026-04-20",
+    "eval_timestamp_utc": "2026-04-20T18:49:14.479132Z",
+    "config_version": "1.0",
+    "config_file": "risk_profile_eval_config.yaml",
+    "generator_version": "1.0",
+    "ta": "ONCOLOGY",
+    "phase": "PHASE II",
+    "ground_truth_sources": [
+      "risk_profile_ground_truth.csv",
+      "critical_factors_ground_truth.csv"
+    ],
+    "generator_json_reference": "generator.json",
+    "generator_json_path": "C:\\Users\\jahna\\AppData\\Local\\Temp\\rp_eval_4ribnj9j\\generator.json",
+    "risk_ground_truth_csv_path": "C:\\Users\\jahna\\OneDrive\\Desktop\\Pfizer\\risk_profile_eval\\data\\risk_profile_ground_truth.csv",
+    "critical_factors_ground_truth_csv_path": "C:\\Users\\jahna\\OneDrive\\Desktop\\Pfizer\\risk_profile_eval\\data\\critical_factors_ground_truth.csv",
+    "out_of_scope_exclusions": [
+      "general_information.risk_manager",
+      "general_information.approved_by",
+      "general_information.approval_date",
+      "risk_id"
+    ],
+    "usdm_protocol_json_path": "C:\\Users\\jahna\\AppData\\Local\\Temp\\rp_eval_4ribnj9j\\usdm.json"
+  }
+}

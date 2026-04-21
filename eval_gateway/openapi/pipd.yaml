@@ -1,0 +1,586 @@
+openapi: 3.1.0
+info:
+  title: PIPD Eval Framework API
+  description: D2 PIPD Evaluation Microservice – Pfizer DDF Hackathon
+  version: 1.0.0
+paths:
+  /health:
+    get:
+      tags:
+      - Health
+      summary: Health Check
+      description: "Liveness check – confirms the API process is running.\n\nReturns:\n    { status: \"healthy\", timestamp:\
+        \ ISO8601 }"
+      operationId: health_check_health_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                type: object
+                title: Response Health Check Health Get
+  /health/ready:
+    get:
+      tags:
+      - Health
+      summary: Readiness Check
+      description: "Readiness check – verifies that default data files are accessible.\n\nReturns:\n    { status: \"ready\"\
+        |\"not_ready\", checks: { file: bool } }"
+      operationId: readiness_check_health_ready_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                type: object
+                title: Response Readiness Check Health Ready Get
+  /eval/detect:
+    post:
+      tags:
+      - Evaluation
+      summary: Detect Eval Scenario
+      description: "Detect which evaluation scenario applies to a study without running eval.\n\nReturns:\n    { study_id,\
+        \ scenario (1 or 2), description }"
+      operationId: detect_eval_scenario_eval_detect_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DetectRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                type: object
+                title: Response Detect Eval Scenario Eval Detect Post
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /eval/scenario1:
+    post:
+      tags:
+      - Evaluation
+      summary: Eval Scenario1
+      description: "Run Scenario 1 evaluation (ground truth available).\n\nComputes all 4 metrics (M1–M4) using exact string\
+        \ matching against\npipd_ground_truth_clean.csv.  Returns structured results and classified\nfailures for the generator\
+        \ developer.\n\nArgs (body):\n    study_id            : Study identifier e.g. 'B7981027'\n    generator_json_path\
+        \ : Path to {study_id}_PIPD.json\n    ground_truth_csv    : Path to pipd_ground_truth_clean.csv\n    deviation_benchmarks:\
+        \ (not used in S1 but accepted for API consistency)\n    output_json         : Optional path to persist results\n\n\
+        Returns:\n    EvalResponse with full results dict and classified_failures list"
+      operationId: eval_scenario1_eval_scenario1_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Scenario1Request'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EvalResponse'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /eval/scenario2:
+    post:
+      tags:
+      - Evaluation
+      summary: Eval Scenario2
+      description: "Run Scenario 2 evaluation (no ground truth, proxy quality signals).\n\nRuns 7 proxy signals on the generator\
+        \ JSON output.  Returns a GREEN /\nAMBER / RED overall verdict plus a mandatory human review list.\n\nThis endpoint\
+        \ is the primary endpoint for the May 18 live test window.\n\nArgs (body):\n    study_id              : Study identifier\n\
+        \    generator_json_path   : Path to {study_id}_PIPD.json\n    deviation_benchmarks  : Path to deviation_subcategories_clean.csv\n\
+        \    output_json           : Optional path to persist results\n\nReturns:\n    { status, study_id, scenario, verdict,\
+        \ go_no_go, eval_date,\n      results, human_review_count }"
+      operationId: eval_scenario2_eval_scenario2_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Scenario2Request'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                type: object
+                title: Response Eval Scenario2 Eval Scenario2 Post
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /eval/run:
+    post:
+      tags:
+      - Evaluation
+      summary: Eval Run
+      description: "Unified evaluation endpoint – auto-detects scenario from ground truth CSV.\n\nLogic:\n  If study_id found\
+        \ in ground_truth_csv (split=verify) → Scenario 1\n  Otherwise → Scenario 2\n\nThis is the recommended endpoint for\
+        \ all standard eval runs.\n\nArgs (body):\n    study_id            : Study identifier\n    generator_json_path : Path\
+        \ to {study_id}_PIPD.json\n    ground_truth_csv    : Path to pipd_ground_truth_clean.csv\n    deviation_benchmarks:\
+        \ Path to deviation_subcategories_clean.csv\n    output_json         : Optional path for main results JSON\n    output_dir\
+        \          : Optional dir for auxiliary outputs\n\nReturns:\n    { status, study_id, scenario, go_no_go, eval_date,\
+        \ results }"
+      operationId: eval_run_eval_run_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UnifiedEvalRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                type: object
+                title: Response Eval Run Eval Run Post
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /eval/batch:
+    post:
+      tags:
+      - Evaluation
+      summary: Eval Batch
+      description: "Batch evaluation across all 8 verify studies.\n\nFinds {study_id}_PIPD.json for each verify study in generator_output_dir,\n\
+        runs Scenario 1 on each, and writes all aggregate outputs to output_dir.\n\nThis endpoint is synchronous.  For the\
+        \ May 18 window, all 8 studies\nshould complete in < 2 minutes.\n\nArgs (body):\n    generator_output_dir : Dir containing\
+        \ {study_id}_PIPD.json files\n    ground_truth_csv     : Path to pipd_ground_truth_clean.csv\n    deviation_benchmarks\
+        \ : Path to deviation_subcategories_clean.csv\n    output_dir           : Dir for all outputs\n\nReturns:\n    { status,\
+        \ go_no_go, summary: eval_summary dict,\n      output_dir, files_written: [str] }"
+      operationId: eval_batch_eval_batch_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                type: object
+                title: Response Eval Batch Eval Batch Post
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /results/{study_id}:
+    get:
+      tags:
+      - Results
+      summary: Get Results
+      description: "Retrieve cached evaluation results for a previously evaluated study.\n\nResults are cached in-memory per\
+        \ API process lifetime.  For persistence\nacross restarts, pass an output_json path when calling /eval/run and\nread\
+        \ the file directly.\n\nArgs:\n    study_id : Study identifier (path parameter)\n\nReturns:\n    Cached results dict\
+        \ or 404 if not found in this session"
+      operationId: get_results_results__study_id__get
+      parameters:
+      - name: study_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Study Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                title: Response Get Results Results  Study Id  Get
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+    delete:
+      tags:
+      - Results
+      summary: Clear Results
+      description: "Remove cached results for a study from in-memory cache.\n\nUseful for forcing a re-evaluation without\
+        \ restarting the service.\n\nArgs:\n    study_id : Study identifier (path parameter)\n\nReturns:\n    { status, message\
+        \ }"
+      operationId: clear_results_results__study_id__delete
+      parameters:
+      - name: study_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Study Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                title: Response Clear Results Results  Study Id  Delete
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /results/{study_id}/scorecard:
+    get:
+      tags:
+      - Results
+      summary: Get Scorecard
+      description: "Return a concise scorecard for a previously evaluated study.\n\nExtracts only the metric-level pass/fail\
+        \ summary – suitable for dashboards\nand downstream services that don't need the full results payload.\n\nArgs:\n\
+        \    study_id : Study identifier (path parameter)\n\nReturns:\n    { study_id, scenario, go_no_go, metrics: { M1:\
+        \ {score, pass}, ... } }"
+      operationId: get_scorecard_results__study_id__scorecard_get
+      parameters:
+      - name: study_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Study Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                title: Response Get Scorecard Results  Study Id  Scorecard Get
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /results/{study_id}/failures:
+    get:
+      tags:
+      - Results
+      summary: Get Failures
+      description: "Return classified failures for a previously evaluated study.\n\nOnly available for Scenario 1 results.\
+        \  Returns the failure list\ngrouped by type for direct use by the generator developer.\n\nArgs:\n    study_id : Study\
+        \ identifier (path parameter)\n\nReturns:\n    { study_id, failures_by_type, total_failures, all_failures }"
+      operationId: get_failures_results__study_id__failures_get
+      parameters:
+      - name: study_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Study Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                title: Response Get Failures Results  Study Id  Failures Get
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /results/{study_id}/review_list:
+    get:
+      tags:
+      - Results
+      summary: Get Review List
+      description: "Return the human review list for a previously evaluated study.\n\nFor Scenario 1: subcategories with wrong\
+        \ YES/NO flags or near misses.\nFor Scenario 2: all review/low_confidence subcategories + all Cat 10.\n\nArgs:\n \
+        \   study_id : Study identifier (path parameter)\n\nReturns:\n    { study_id, review_count, review_items }"
+      operationId: get_review_list_results__study_id__review_list_get
+      parameters:
+      - name: study_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Study Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                title: Response Get Review List Results  Study Id  Review List Get
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /:
+    get:
+      tags:
+      - Info
+      summary: Root
+      description: API root – returns service info and available endpoints.
+      operationId: root__get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                type: object
+                title: Response Root  Get
+components:
+  schemas:
+    BatchRequest:
+      properties:
+        generator_output_dir:
+          type: string
+          title: Generator Output Dir
+          description: Directory containing {study_id}_PIPD.json files
+          default: ./generator_outputs
+        ground_truth_csv:
+          type: string
+          title: Ground Truth Csv
+          description: Path to pipd_ground_truth_clean.csv
+          default: pipd_ground_truth_clean.csv
+        deviation_benchmarks:
+          type: string
+          title: Deviation Benchmarks
+          description: Path to deviation_subcategories_clean.csv
+          default: deviation_subcategories_clean.csv
+        output_dir:
+          type: string
+          title: Output Dir
+          description: Directory for all output files
+          default: ./eval_outputs
+      type: object
+      title: BatchRequest
+      description: Request body for batch verification across all 8 verify studies.
+    DetectRequest:
+      properties:
+        study_id:
+          type: string
+          title: Study Id
+          description: Study identifier
+        ground_truth_csv:
+          type: string
+          title: Ground Truth Csv
+          description: Path to pipd_ground_truth_clean.csv
+          default: pipd_ground_truth_clean.csv
+      type: object
+      required:
+      - study_id
+      title: DetectRequest
+      description: Request body for scenario detection only.
+    EvalResponse:
+      properties:
+        status:
+          type: string
+          title: Status
+          default: success
+        study_id:
+          type: string
+          title: Study Id
+        scenario:
+          type: integer
+          title: Scenario
+        go_no_go:
+          type: string
+          title: Go No Go
+        eval_date:
+          type: string
+          title: Eval Date
+        results:
+          additionalProperties: true
+          type: object
+          title: Results
+        classified_failures:
+          anyOf:
+          - items:
+              additionalProperties: true
+              type: object
+            type: array
+          - type: 'null'
+          title: Classified Failures
+      type: object
+      required:
+      - study_id
+      - scenario
+      - go_no_go
+      - eval_date
+      - results
+      title: EvalResponse
+      description: Standard envelope wrapping evaluation results.
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    Scenario1Request:
+      properties:
+        study_id:
+          type: string
+          title: Study Id
+          description: Study identifier, e.g. 'B7981027'
+        generator_json_path:
+          type: string
+          title: Generator Json Path
+          description: Filesystem path to {study_id}_PIPD.json
+        ground_truth_csv:
+          type: string
+          title: Ground Truth Csv
+          description: Path to pipd_ground_truth_clean.csv
+          default: pipd_ground_truth_clean.csv
+        deviation_benchmarks:
+          type: string
+          title: Deviation Benchmarks
+          description: Path to deviation_subcategories_clean.csv
+          default: deviation_subcategories_clean.csv
+        output_json:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Output Json
+          description: Optional path to persist results JSON; auto-generated if omitted
+      type: object
+      required:
+      - study_id
+      - generator_json_path
+      title: Scenario1Request
+      description: Request body for explicit Scenario 1 (ground truth) evaluation.
+    Scenario2Request:
+      properties:
+        study_id:
+          type: string
+          title: Study Id
+          description: Study identifier
+        generator_json_path:
+          type: string
+          title: Generator Json Path
+          description: Path to {study_id}_PIPD.json
+        deviation_benchmarks:
+          type: string
+          title: Deviation Benchmarks
+          description: Path to deviation_subcategories_clean.csv
+          default: deviation_subcategories_clean.csv
+        output_json:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Output Json
+          description: Optional output path
+      type: object
+      required:
+      - study_id
+      - generator_json_path
+      title: Scenario2Request
+      description: Request body for explicit Scenario 2 (proxy signal) evaluation.
+    UnifiedEvalRequest:
+      properties:
+        study_id:
+          type: string
+          title: Study Id
+          description: Study identifier, e.g. 'B7981027'
+        generator_json_path:
+          type: string
+          title: Generator Json Path
+          description: Filesystem path to {study_id}_PIPD.json
+        ground_truth_csv:
+          type: string
+          title: Ground Truth Csv
+          description: Path to pipd_ground_truth_clean.csv
+          default: pipd_ground_truth_clean.csv
+        deviation_benchmarks:
+          type: string
+          title: Deviation Benchmarks
+          description: Path to deviation_subcategories_clean.csv
+          default: deviation_subcategories_clean.csv
+        output_json:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Output Json
+          description: Optional path to persist results JSON; auto-generated if omitted
+        output_dir:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Output Dir
+          description: Directory for auxiliary outputs (near_misses, hallucination_report)
+          default: ./eval_outputs
+      type: object
+      required:
+      - study_id
+      - generator_json_path
+      title: UnifiedEvalRequest
+      description: Request body for the unified auto-detect endpoint.
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+servers:
+- url: http://127.0.0.1:9000/pipd
+  description: Gateway (recommended)
+tags: []

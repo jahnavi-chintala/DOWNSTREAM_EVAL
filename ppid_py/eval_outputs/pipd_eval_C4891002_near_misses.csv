@@ -1,0 +1,12 @@
+study_id,category_num,tier,root_cause,credit,generated_text,gt_text
+C4891002,1,P,PARAPHRASE,0.45,Participant did not meet one or more inclusion criteria but was randomized to the study treatment,Subject did not meet inclusion criteria 6 [ECOG performance status less than or equal to 2.]
+C4891002,1,P,PARAPHRASE,0.45,Participant met one or more exclusion criteria but was randomized to the study treatment,Subject met exclusion criteria 8 [Any unresolved toxicities from prior surgeries or therapies or other toxicities as per protocol.]
+C4891002,3,P,PARAPHRASE,0.45,"Participant took permitted concomitant medication, but not as specified per protocol",Took prohibited concomitant medication/vaccine
+C4891002,7,B,TRUNCATION,0.5,Participant randomized under wrong stratification factors,Randomized under wrong stratification
+C4891002,9,B,TRUNCATION,0.5,Participant was discontinued from study treatment or the study but did not meet any protocol-specified discontinuation criteria,Participant developed withdrawal criteria during the study but was not withdrawn
+C4891002,11,P,PARAPHRASE,0.45,"Participant did not sign the additional consent for optional procedures (e.g., Retained Research Blood Sample for Genetics) but these biologic samples were collected.",Subject did not sign the additional consent for optional procedure(s) but biologic samples were collected
+C4891002,11,P,PARAPHRASE,0.45,The Informed Consent Document (ICD) signed by the participant had not received IRB/IEC approval.,ICD signed by subject/LAR had not received IRB/IEC approval
+C4891002,11,P,PARAPHRASE,0.45,"Participant signed the Informed Consent Document (ICD) after study-specified screening procedures (e.g., tumor biopsy, blood samples, ECG) had been performed.",Subject signed ICD after study-specified procedures had been performed
+C4891002,11,P,PARAPHRASE,0.45,The Informed Consent Document (ICD) was not translated into the participant's native language.,ICD not translated to subject's/LAR native language
+C4891002,11,P,PARAPHRASE,0.45,"The signed Informed Consent Document (ICD) was lost, and no copy is available at the site.","ICD was lost, no copy available"
+C4891002,11,P,PARAPHRASE,0.45,Participant did not sign the Informed Consent Document (ICD) and did not give verbal consent prior to randomization or any study procedures.,Subject/LAR did not sign ICD & did not give verbal consent

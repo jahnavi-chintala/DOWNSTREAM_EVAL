@@ -1,0 +1,252 @@
+{
+  "study_id": "C5091017",
+  "scenario": 1,
+  "timestamp": "2026-04-20T00:10:15.806807Z",
+  "verdict": "NO-GO",
+  "generator_version": "1.0",
+  "ta": "INFECTIOUS",
+  "phase": "PHASE III",
+  "metrics": {
+    "m1_risk_name_recall": {
+      "study_id": "C5091017",
+      "score": 0.2,
+      "matched": 4,
+      "ground_truth_total": 20,
+      "matched_names": [
+        "Data / Data Reliability",
+        "Participant / Caregiver Trial Conduct",
+        "Sample Management",
+        "Enrollment Criteria"
+      ],
+      "matched_pairs": [
+        {
+          "gt_risk_name": "Data / Data Reliability",
+          "gt_risk_id": "SR-03125",
+          "gt_rpn": 280,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Data / Data Reliability",
+          "generated_rpn": 196,
+          "generated_json_key": "risks",
+          "generated_domain": "study risks"
+        },
+        {
+          "gt_risk_name": "Participant / Caregiver Trial Conduct",
+          "gt_risk_id": "SR-03131",
+          "gt_rpn": 112,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Participant / Caregiver Trial Conduct",
+          "generated_rpn": 196,
+          "generated_json_key": "risks",
+          "generated_domain": "study risks"
+        },
+        {
+          "gt_risk_name": "Sample Management",
+          "gt_risk_id": "SR-03134",
+          "gt_rpn": 112,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Sample Management",
+          "generated_rpn": 280,
+          "generated_json_key": "risks",
+          "generated_domain": "study risks"
+        },
+        {
+          "gt_risk_name": "Enrollment Criteria",
+          "gt_risk_id": "SR-03126",
+          "gt_rpn": 112,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Enrollment Criteria",
+          "generated_rpn": 112,
+          "generated_json_key": "risks",
+          "generated_domain": "study risks"
+        }
+      ],
+      "missed_names": [
+        "Investigator / Staff Conduct",
+        "AE / SAE Management",
+        "Participant Safety",
+        "Protocol Compliance",
+        "Timelines / Resources",
+        "Informed Consent",
+        "Sample Management",
+        "Data / Data Reliability",
+        "ICH Compliance",
+        "Data Privacy",
+        "Payments",
+        "Information Security / IP",
+        "Participant / Caregiver Trial Conduct",
+        "Investigator / Staff Conduct",
+        "Investigator / Staff Conduct",
+        "Protocol Compliance"
+      ],
+      "hallucination_candidates": [
+        "Concomitant Medication Management"
+      ],
+      "near_misses": [],
+      "passed": false,
+      "no_risk_gt_rows": false,
+      "benchmark_expects_zero_risks": false,
+      "extra_generated_risks": [
+        "Concomitant Medication Management"
+      ]
+    },
+    "m2_rpn_tier_accuracy": {
+      "score": 0.25,
+      "matched_rpn": 1,
+      "total_matched_risks": 4,
+      "per_risk": [
+        {
+          "risk_name": "Data / Data Reliability",
+          "generated_rpn": 196,
+          "generated_tier": 3,
+          "truth_rpn": 280,
+          "truth_tier": 4,
+          "tier_distance": 1,
+          "passed": false,
+          "gt_risk_id": "SR-03125",
+          "match_mode": "exact_rpn"
+        },
+        {
+          "risk_name": "Participant / Caregiver Trial Conduct",
+          "generated_rpn": 196,
+          "generated_tier": 3,
+          "truth_rpn": 112,
+          "truth_tier": 1,
+          "tier_distance": 2,
+          "passed": false,
+          "gt_risk_id": "SR-03131",
+          "match_mode": "exact_rpn"
+        },
+        {
+          "risk_name": "Sample Management",
+          "generated_rpn": 280,
+          "generated_tier": 4,
+          "truth_rpn": 112,
+          "truth_tier": 1,
+          "tier_distance": 3,
+          "passed": false,
+          "gt_risk_id": "SR-03134",
+          "match_mode": "exact_rpn"
+        },
+        {
+          "risk_name": "Enrollment Criteria",
+          "generated_rpn": 112,
+          "generated_tier": 1,
+          "truth_rpn": 112,
+          "truth_tier": 1,
+          "tier_distance": 0,
+          "passed": true,
+          "gt_risk_id": "SR-03126",
+          "match_mode": "exact_rpn"
+        }
+      ],
+      "passed": false,
+      "ground_truth_risk_rows": 20,
+      "skipped": false
+    },
+    "m3_critical_factor_match": {
+      "score": 0.75,
+      "f1": 0.75,
+      "precision": 0.6,
+      "recall": 1.0,
+      "matched_factors": 3,
+      "ground_truth_total": 3,
+      "generated_factor_count": 5,
+      "matched_names": [
+        "Endpoints",
+        "Data Integrity and Reliability of Trial Results",
+        "Adverse Event (AE) / Serious Adverse Event (SAE)"
+      ],
+      "missing_names": [],
+      "extra_names": [
+        "Eligibility criteria",
+        "Investigational Product Management"
+      ],
+      "content_violations": [
+        {
+          "factor_name": "Adverse Event (AE) / Serious Adverse Event (SAE)",
+          "field": "critical_process",
+          "detail": "Ground truth marks critical_process as empty; generator supplied content."
+        },
+        {
+          "factor_name": "Data Integrity and Reliability of Trial Results",
+          "field": "critical_data",
+          "detail": "Ground truth marks critical_data as empty; generator supplied content."
+        }
+      ],
+      "factor_name_only_mode": false,
+      "passed": false,
+      "skipped": false,
+      "benchmark_expects_zero_factors": false,
+      "factor_hallucination_candidates": []
+    },
+    "m4_hallucination_detection": {
+      "provenance_defect_count": 0,
+      "semantic_hallucination_count": 1,
+      "hallucinations_found": 0,
+      "flagged_fields": [],
+      "passed": true,
+      "risk_existence_check": {
+        "gt_risk_exists": true,
+        "generated_risk_count": 5,
+        "passed": true
+      },
+      "note": "hallucinations_found counts **provenance / schema defect checks** per risk field, not semantic hallucinations. Use semantic_hallucination_count (from M1) for generated risks with no GT match.",
+      "cf_existence_check": {
+        "gt_cf_exists": true,
+        "generated_cf_count": 5,
+        "passed": true
+      }
+    }
+  },
+  "targets": {
+    "m1_risk_name_recall": 0.85,
+    "m2_rpn_tier_accuracy": 0.9,
+    "m3_critical_factor_match": 0.8,
+    "m4_hallucinations": 0.0
+  },
+  "near_misses": [],
+  "metadata_validation": {
+    "passed": true,
+    "issues": [],
+    "actual_total_risks": 5,
+    "actual_risks_above_196": 1
+  },
+  "hallucination_report": {
+    "study_id": "C5091017",
+    "provenance_defect_count": 0,
+    "semantic_hallucination_count": 1,
+    "hallucinations_found": 0,
+    "flagged_fields": [],
+    "pass": true
+  },
+  "eval_metadata": {
+    "study_id": "C5091017",
+    "scenario": 1,
+    "eval_date": "2026-04-20",
+    "eval_timestamp_utc": "2026-04-20T00:10:15.806807Z",
+    "config_version": "1.0",
+    "config_file": "risk_profile_eval_config.yaml",
+    "generator_version": "1.0",
+    "ta": "INFECTIOUS",
+    "phase": "PHASE III",
+    "ground_truth_sources": [
+      "risk_profile_ground_truth.csv",
+      "critical_factors_ground_truth.csv"
+    ],
+    "generator_json_reference": "C5091017_RiskProfile.json",
+    "generator_json_path": "C:\\Users\\jahna\\OneDrive\\Desktop\\Pfizer\\protocol_eval_hub\\protocol_bundles\\C5091017\\C5091017_RiskProfile.json",
+    "risk_ground_truth_csv_path": "C:\\Users\\jahna\\OneDrive\\Desktop\\Pfizer\\risk_profile_eval\\data\\risk_profile_ground_truth.csv",
+    "critical_factors_ground_truth_csv_path": "C:\\Users\\jahna\\OneDrive\\Desktop\\Pfizer\\risk_profile_eval\\data\\critical_factors_ground_truth.csv",
+    "out_of_scope_exclusions": [
+      "general_information.risk_manager",
+      "general_information.approved_by",
+      "general_information.approval_date",
+      "risk_id"
+    ],
+    "risk_profile_form_reference": "B7981027_RiskProfile_Form.docx",
+    "risk_profile_form_resolved_path": "C:\\Users\\jahna\\OneDrive\\Desktop\\Pfizer\\risk_profile_eval\\reference_spec\\B7981027_RiskProfile_Form.docx",
+    "risk_profile_form_present": true
+  },
+  "gt_risk_exists": true,
+  "gt_cf_exists": true
+}

@@ -1,0 +1,349 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# DMP Eval Configuration — dmp_eval_config.yaml
+# Version: 1.0
+# Date: 6 April 2026
+# Project: Pfizer DDF Challenge — Protocol Intelligence Platform
+#
+# PURPOSE:
+#   This file controls how the DMP eval script scores generator output.
+#   Four sections:
+#     1. attributes   — match type and weight per field (applies across all DMP sections)
+#     2. sections     — weight per DMP eval section within the document score
+#     3. scoring      — thresholds, pass/fail targets, config
+#     4. fallback     — handling for RCC template studies (SDS non-CRF tab absent)
+#
+# HIERARCHY:
+#   document_score (0-100)
+#     └── section_score × section_weight
+#           └── item_score × (1 / max(generated, ground_truth))
+#                 └── attribute_score × attribute_weight
+#
+# KEY DIFFERENCE FROM CMP EVAL:
+#   DMP eval does not score KRI thresholds or QTLs.
+#   It scores: system checkboxes (S5), vendor tables (S6), critical data
+#   modules (S8), and reconciliation flags (S11.4).
+#   Numeric scoring applies to data_review_tier and s8 tier (ordered scale),
+#   not to threshold percentages.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── 1. ATTRIBUTES ─────────────────────────────────────────────────────────────
+# match_type options:
+#   verbatim_with_semantic_fallback  — exact string = 1.0, near-miss/semantic = partial
+#   exact                            — exact value on controlled vocabulary = 1.0 else 0.0
+#   boolean                          — field populated and non-null = 1.0 else 0.0
+#   tier                             — ordered scale, within-N-tiers = partial score
+#   jaccard                          — set overlap: |intersection| / |union|
+#
+# weights per attribute group are defined per section below
+# because S5, S6, S8, S11 attributes differ in kind
+
+attributes:
+
+  # ── S5 System Checkbox Attributes ──────────────────────────────────────────
+  s5_system_name:
+    match_type: verbatim_with_semantic_fallback
+    weight: 0.50
+    description: >
+      System vendor/product name as it appears in DMP S5.2 checkboxes.
+      Verbatim match = 1.0. Near-miss (Levenshtein ≤ 5) = 0.80.
+      Semantic similarity ≥ 0.85 = 0.60. No match = 0.0.
+      Example: 'Signant Health' vs 'Signant' → Levenshtein 7 → semantic path.
+    verbatim_fallback:
+      levenshtein_max: 5
+      levenshtein_score: 0.80
+    semantic_fallback:
+      high_threshold: 0.85
+      high_score: 0.60
+      medium_threshold: 0.70
+      medium_score: 0.30
+      low_score: 0.00
+
+  s5_checkbox_state:
+    match_type: exact
+    weight: 0.30
+    description: >
+      Whether system checkbox is ticked (true) or unticked (false).
+      Exact match only — a ticked system that should be unticked is
+      treated the same as a miss. Vocabulary: [true, false].
+    vocabulary: [true, false]
+
+  s5_confidence_tier:
+    match_type: tier
+    weight: 0.20
+    description: >
+      Confidence tier from dmp_systems_benchmarks.yaml (auto_yes / review / omit).
+      Exact match = 1.0. auto_yes vs review (adjacent) = 0.5. Beyond = 0.0.
+    tiers:
+      - auto_yes   # frequency >= 70% in training TA/phase segment
+      - review     # frequency 40-69%
+      - omit       # frequency < 40%
+    tier_scores:
+      exact_match: 1.00
+      adjacent_tier: 0.50
+      beyond_adjacent: 0.00
+
+  # ── S6 Vendor Table Attributes ─────────────────────────────────────────────
+  s6_vendor_name:
+    match_type: verbatim_with_semantic_fallback
+    weight: 0.40
+    description: >
+      Vendor name as it appears in DMP S6.2 eSource/eData table.
+      Verbatim = 1.0. Near-miss (Levenshtein ≤ 5) = 0.80.
+      Semantic ≥ 0.85 = 0.60. Primary source: sds_non_crf_ground_truth_clean.csv.
+    verbatim_fallback:
+      levenshtein_max: 5
+      levenshtein_score: 0.80
+    semantic_fallback:
+      high_threshold: 0.85
+      high_score: 0.60
+      medium_threshold: 0.70
+      medium_score: 0.30
+      low_score: 0.00
+
+  s6_data_type:
+    match_type: verbatim_with_semantic_fallback
+    weight: 0.25
+    description: >
+      Data description column in S6.2 table. Verbatim = 1.0.
+      Semantic near-match acceptable (e.g. 'ePRO: SALT' vs 'SALT ePRO data' → semantic).
+    verbatim_fallback:
+      levenshtein_max: 8
+      levenshtein_score: 0.75
+    semantic_fallback:
+      high_threshold: 0.80
+      high_score: 0.60
+      medium_threshold: 0.65
+      medium_score: 0.30
+      low_score: 0.00
+
+  s6_data_review_tier:
+    match_type: exact
+    weight: 0.25
+    description: >
+      Data Review Tier column in S6.2 table. Controlled vocabulary only.
+      Propagated verbatim from sds_non_crf_ground_truth_clean.csv column
+      data_review_tier. Exact match required — no partial credit.
+    vocabulary: [Critical, Supportive, Minimal]
+
+  s6_source_tag:
+    match_type: boolean
+    weight: 0.10
+    description: >
+      Traceability gate. Score 1.0 if source_tag is non-null and identifies
+      a valid origin: sds_csv, yaml_vendor_pattern, or dmp_json_s6_fallback.
+      Score 0.0 if source_tag is null or 'unknown'.
+
+  # ── S8 Critical Data Attributes ────────────────────────────────────────────
+  s8_module_name:
+    match_type: verbatim_with_semantic_fallback
+    weight: 0.35
+    description: >
+      Data module name in the Critical Data table (S8). Verbatim = 1.0.
+      Near-miss acceptable: 'SALT Assessment' vs 'SALT Response' → semantic.
+      Clinical equivalence is sufficient — exact instrument label not required
+      if semantic similarity >= 0.85.
+    verbatim_fallback:
+      levenshtein_max: 5
+      levenshtein_score: 0.80
+    semantic_fallback:
+      high_threshold: 0.85
+      high_score: 0.60
+      medium_threshold: 0.70
+      medium_score: 0.30
+      low_score: 0.00
+
+  s8_tier:
+    match_type: exact
+    weight: 0.25
+    description: >
+      Critical / Supportive / Minimal tier assigned to each S8 module.
+      Exact match required — a module placed in wrong tier is a classification
+      error even if the module name matches. Vocabulary: [Critical, Supportive, Minimal].
+    vocabulary: [Critical, Supportive, Minimal]
+
+  s8_source_tag:
+    match_type: boolean
+    weight: 0.20
+    description: >
+      No-fabrication gate. Score 1.0 if source_tag is non-null and valid:
+      usdm_endpoint, yaml_l2_standard, yaml_l3_conditional, sds_csv.
+      Score 0.0 if null — triggers hallucination flag regardless of module correctness.
+
+  s8_layer:
+    match_type: exact
+    weight: 0.10
+    description: >
+      Generation layer: L1 (endpoint-derived), L2 (TA-standard), L3 (signal-conditional).
+      Scored for generator transparency — does not affect module recall scoring.
+      Exact match with ground truth layer annotation = 1.0.
+    vocabulary: [L1, L2, L3]
+
+  s8_confidence_tier:
+    match_type: tier
+    weight: 0.10
+    description: >
+      Confidence tier assigned to each S8 module. L1 = high, L2 = high,
+      L3 = medium (signal-dependent). Exact = 1.0. Adjacent = 0.5. Beyond = 0.0.
+    tiers: [high, medium, low]
+    tier_scores:
+      exact_match: 1.00
+      adjacent_tier: 0.50
+      beyond_adjacent: 0.00
+
+  # ── S11.4 Reconciliation Attributes ────────────────────────────────────────
+  s11_flag:
+    match_type: exact
+    weight: 0.70
+    description: >
+      Applicable / N/A flag per reconciliation subsection.
+      Exact match required. Controlled vocabulary: [Applicable, N/A].
+      Any misclassification (wrong flag) scores 0.0 regardless of inference rule.
+    vocabulary: [Applicable, "N/A"]
+
+  s11_inference_rule:
+    match_type: boolean
+    weight: 0.20
+    description: >
+      Inference rule used to determine the flag (e.g. irt_activity_in_usdm_soa,
+      hardcoded_sae_always_applicable). Score 1.0 if rule field is non-null
+      and matches expected rule for the subsection. Traceability check.
+
+  s11_confidence:
+    match_type: exact
+    weight: 0.10
+    description: >
+      Confidence level of the flag: high (hardcoded or unambiguous signal),
+      medium (signal detected but borderline), low (no signal — defaulted).
+      Exact match = 1.0.
+    vocabulary: [high, medium, low]
+
+# ── 2. SECTIONS ───────────────────────────────────────────────────────────────
+# Weights reflect eval metric importance and DMP section complexity.
+# Weights must sum to 1.0.
+
+sections:
+
+  s5_systems:
+    name: "S5 Systems & Tools Checkboxes"
+    metric: M1
+    weight: 0.25
+    description: >
+      Accuracy of system checkbox population in S5.2 (Other Systems & Tools).
+      Driven by dmp_systems_benchmarks.yaml — TA/phase frequency analysis.
+      AUTO YES systems (>=70%) and REVIEW systems (40-69%) both scored.
+    near_deterministic: false     # vendor names can vary within TA
+
+  s8_critical_data:
+    name: "S8 Critical Data Table"
+    metric: M3
+    weight: 0.40
+    description: >
+      Recall and accuracy of Critical Data modules. Highest weight — S8 is
+      the most study-specific, highest-value section in the DMP.
+      Three-layer rule set: L1 endpoint-derived (AUTO), L2 TA-standard (REVIEW),
+      L3 signal-conditional (AUTO/REVIEW). 508 unique modules in training data —
+      frequency approach rejected; rule-based architecture required.
+    near_deterministic: false
+
+  s6_vendors:
+    name: "S6.2 eSource/eData Vendor Table"
+    metric: M2
+    weight: 0.25
+    description: >
+      Recall and accuracy of vendor table in S6.2. Primary source: SDS Non-CRF
+      CSV. Fallback: dmp_ground_truth_clean.json S6 (RCC template studies).
+      Adjudication rows scored in S6.3 separately (not included in S6.2 score).
+    near_deterministic: true      # when SDS CSV available — direct table copy
+
+  s11_reconciliation:
+    name: "S11.4 Reconciliation Flags"
+    metric: M4
+    weight: 0.10
+    description: >
+      Accuracy of Applicable/N-A flags across 7 reconciliation subsections.
+      Rule-based: 2 hardcoded (CTMS always N/A, SAE always Applicable);
+      5 USDM signal-driven. Near-deterministic when USDM signals are clear.
+    near_deterministic: true
+
+# ── 3. SCORING ────────────────────────────────────────────────────────────────
+
+scoring:
+
+  config_version: "1.0"
+
+  # Document-level pass threshold
+  document_pass_threshold: 75       # score out of 100
+  document_target: 80               # aspirational target for demo
+
+  # Per-metric pass thresholds (aligned with DMP design document Section 13)
+  metric_targets:
+    m1_s5_system_accuracy:          0.90  # checkbox accuracy — HIGH priority
+    m2_s6_vendor_recall:            0.90  # vendor table recall — HIGH priority
+    m3_s8_module_recall:            0.85  # critical data module recall — HIGH priority
+    m4_s11_reconciliation_accuracy: 0.95  # reconciliation flag accuracy — HIGH priority
+    m4_hallucination:               0.00  # zero tolerance — null source_tag = fail
+
+  # Semantic similarity settings (for module/vendor name matching)
+  semantic:
+    enable: true
+    model: sentence-transformers/all-MiniLM-L6-v2
+    batch_size: 64
+    cache_embeddings: true
+
+  # Item scoring — how to handle misses and hallucinations
+  item_scoring:
+    denominator: max_of_generated_and_ground_truth
+    # penalises both misses AND hallucinated content
+    miss_score: 0.00
+    hallucination_score: 0.00      # source_tag = null → hallucination flag
+
+  # S8 module count sanity check
+  s8_sanity:
+    min_modules: 8                 # minimum expected modules (L1 primary + L2 standard)
+    max_modules: 35                # above this = possible field-level anomaly (flag only, not fail)
+    outlier_studies: [C4221015, C3671013]   # excluded from frequency analysis — field-level
+
+  # S11 reconciliation subsections (all 7 scored)
+  s11_subsections:
+    - s11_4_1_irt
+    - s11_4_2_ctms
+    - s11_4_3_sae
+    - s11_4_4_central_lab
+    - s11_4_5_ecoa
+    - s11_4_6_pk_pd
+    - s11_4_7_adjudication
+
+  # Near-miss logging threshold
+  near_miss_log_threshold: 10
+
+# ── 4. FALLBACK HANDLING ──────────────────────────────────────────────────────
+# RCC template studies (11 of 39) do not have a SDS Non-CRF tab.
+# These studies use fallback_mode = RCC_template for S6.2 scoring.
+
+fallback:
+
+  rcc_template_studies:
+    # These study IDs are expected to use fallback_mode
+    # S6.2 is scored against dmp_ground_truth_clean.json S6 section
+    # rather than sds_non_crf_ground_truth_clean.csv
+    # Eval script must detect fallback_used=true in generation_metadata
+    # and switch ground truth source accordingly
+    fallback_flag: fallback_used
+    fallback_source: dmp_ground_truth_clean.json
+    fallback_section: s6_data_flow
+    score_penalty: 0.00            # no score penalty for using fallback
+    flag_in_output: true           # flag fallback_used in eval JSON output
+
+  # Out of scope — never penalised
+  out_of_scope_exclusions:
+    - S1 Revision History          # static metadata — not scored
+    - S3 DM Process Documentation  # boilerplate SOP text — not scored
+    - S4 Roles & Responsibilities  # boilerplate — not scored
+    - S7 Dictionary Coding         # boilerplate — not scored
+    - S9 Risk-Based Monitoring     # hardcoded CluePoints — not scored
+    - S10 Data Surveillance        # boilerplate — not scored
+    - S11_1_through_11_3_and_11_5_through_11_8  # boilerplate subsections
+    - S12 Metrics & Oversight      # boilerplate — not scored
+    - S13 Quality Control          # boilerplate — not scored
+    - S15 Data Archiving           # boilerplate — not scored
+    - S16 Reviewers & Approvers    # named individuals — not scored

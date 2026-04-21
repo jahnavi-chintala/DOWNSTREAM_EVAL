@@ -1,0 +1,15 @@
+# Copy to protocol_bundles/<STUDY_ID>/protocol_manifest.yaml (see protocol_bundles/_template/).
+# Paths are relative to the bundle folder (copy or symlink generator JSONs there).
+
+study_id: B7981027
+
+files:
+  pipd: B7981027_PIPD.json
+  risk_profile: B7981027_RiskProfile.json
+  cmp: B7981027_CMP.json
+  # Optional extra USDM copies for id cross-check (not passed into eval CLI today)
+  usdm: USDM_B7981027.json
+  # Or multiple:
+  # usdm_files:
+  #   - USDM_part1.json
+  #   - USDM_part2.json

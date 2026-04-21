@@ -1,0 +1,31 @@
+{
+  "run_date": "2026-04-17",
+  "evaluated_studies": 1,
+  "failure_counts_by_metric": {
+    "M1": 1,
+    "M2": 1,
+    "M3": 0,
+    "M4": 0
+  },
+  "failed_studies_by_metric": {
+    "M1": [
+      "B7981027"
+    ],
+    "M2": [
+      "B7981027"
+    ],
+    "M3": [],
+    "M4": []
+  },
+  "top_3_missed_risks": [
+    {
+      "risk_name": "Enrollment Criteria",
+      "miss_count": 1
+    }
+  ],
+  "all_missed_risk_names": [
+    "Enrollment Criteria"
+  ],
+  "total_hallucinations": 0,
+  "hallucination_details": []
+}

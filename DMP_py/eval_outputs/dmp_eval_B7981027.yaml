@@ -1,0 +1,2025 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# DMP Eval Configuration — dmp_eval_config.yaml
+# Version: 1.0
+# Date: 6 April 2026
+# Project: Pfizer DDF Challenge — Protocol Intelligence Platform
+#
+# PURPOSE:
+#   This file controls how the DMP eval script scores generator output.
+#   Four sections:
+#     1. attributes   — match type and weight per field (applies across all DMP sections)
+#     2. sections     — weight per DMP eval section within the document score
+#     3. scoring      — thresholds, pass/fail targets, config
+#     4. fallback     — handling for RCC template studies (SDS non-CRF tab absent)
+#
+# HIERARCHY:
+#   document_score (0-100)
+#     └── section_score × section_weight
+#           └── item_score × (1 / max(generated, ground_truth))
+#                 └── attribute_score × attribute_weight
+#
+# KEY DIFFERENCE FROM CMP EVAL:
+#   DMP eval does not score KRI thresholds or QTLs.
+#   It scores: system checkboxes (S5), vendor tables (S6), critical data
+#   modules (S8), and reconciliation flags (S11.4).
+#   Numeric scoring applies to data_review_tier and s8 tier (ordered scale),
+#   not to threshold percentages.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── 1. ATTRIBUTES ─────────────────────────────────────────────────────────────
+# match_type options:
+#   verbatim_with_semantic_fallback  — exact string = 1.0, near-miss/semantic = partial
+#   exact                            — exact value on controlled vocabulary = 1.0 else 0.0
+#   boolean                          — field populated and non-null = 1.0 else 0.0
+#   tier                             — ordered scale, within-N-tiers = partial score
+#   jaccard                          — set overlap: |intersection| / |union|
+#
+# weights per attribute group are defined per section below
+# because S5, S6, S8, S11 attributes differ in kind
+
+attributes:
+
+  # ── S5 System Checkbox Attributes ──────────────────────────────────────────
+  s5_system_name:
+    match_type: verbatim_with_semantic_fallback
+    weight: 0.50
+    description: >
+      System vendor/product name as it appears in DMP S5.2 checkboxes.
+      Verbatim match = 1.0. Near-miss (Levenshtein ≤ 5) = 0.80.
+      Semantic similarity ≥ 0.85 = 0.60. No match = 0.0.
+      Example: 'Signant Health' vs 'Signant' → Levenshtein 7 → semantic path.
+    verbatim_fallback:
+      levenshtein_max: 5
+      levenshtein_score: 0.80
+    semantic_fallback:
+      high_threshold: 0.85
+      high_score: 0.60
+      medium_threshold: 0.70
+      medium_score: 0.30
+      low_score: 0.00
+
+  s5_checkbox_state:
+    match_type: exact
+    weight: 0.30
+    description: >
+      Whether system checkbox is ticked (true) or unticked (false).
+      Exact match only — a ticked system that should be unticked is
+      treated the same as a miss. Vocabulary: [true, false].
+    vocabulary: [true, false]
+
+  s5_confidence_tier:
+    match_type: tier
+    weight: 0.20
+    description: >
+      Confidence tier from dmp_systems_benchmarks.yaml (auto_yes / review / omit).
+      Exact match = 1.0. auto_yes vs review (adjacent) = 0.5. Beyond = 0.0.
+    tiers:
+      - auto_yes   # frequency >= 70% in training TA/phase segment
+      - review     # frequency 40-69%
+      - omit       # frequency < 40%
+    tier_scores:
+      exact_match: 1.00
+      adjacent_tier: 0.50
+      beyond_adjacent: 0.00
+
+  # ── S6 Vendor Table Attributes ─────────────────────────────────────────────
+  s6_vendor_name:
+    match_type: verbatim_with_semantic_fallback
+    weight: 0.40
+    description: >
+      Vendor name as it appears in DMP S6.2 eSource/eData table.
+      Verbatim = 1.0. Near-miss (Levenshtein ≤ 5) = 0.80.
+      Semantic ≥ 0.85 = 0.60. Primary source: sds_non_crf_ground_truth_clean.csv.
+    verbatim_fallback:
+      levenshtein_max: 5
+      levenshtein_score: 0.80
+    semantic_fallback:
+      high_threshold: 0.85
+      high_score: 0.60
+      medium_threshold: 0.70
+      medium_score: 0.30
+      low_score: 0.00
+
+  s6_data_type:
+    match_type: verbatim_with_semantic_fallback
+    weight: 0.25
+    description: >
+      Data description column in S6.2 table. Verbatim = 1.0.
+      Semantic near-match acceptable (e.g. 'ePRO: SALT' vs 'SALT ePRO data' → semantic).
+    verbatim_fallback:
+      levenshtein_max: 8
+      levenshtein_score: 0.75
+    semantic_fallback:
+      high_threshold: 0.80
+      high_score: 0.60
+      medium_threshold: 0.65
+      medium_score: 0.30
+      low_score: 0.00
+
+  s6_data_review_tier:
+    match_type: exact
+    weight: 0.25
+    description: >
+      Data Review Tier column in S6.2 table. Controlled vocabulary only.
+      Propagated verbatim from sds_non_crf_ground_truth_clean.csv column
+      data_review_tier. Exact match required — no partial credit.
+    vocabulary: [Critical, Supportive, Minimal]
+
+  s6_source_tag:
+    match_type: boolean
+    weight: 0.10
+    description: >
+      Traceability gate. Score 1.0 if source_tag is non-null and identifies
+      a valid origin: sds_csv, yaml_vendor_pattern, or dmp_json_s6_fallback.
+      Score 0.0 if source_tag is null or 'unknown'.
+
+  # ── S8 Critical Data Attributes ────────────────────────────────────────────
+  s8_module_name:
+    match_type: verbatim_with_semantic_fallback
+    weight: 0.35
+    description: >
+      Data module name in the Critical Data table (S8). Verbatim = 1.0.
+      Near-miss acceptable: 'SALT Assessment' vs 'SALT Response' → semantic.
+      Clinical equivalence is sufficient — exact instrument label not required
+      if semantic similarity >= 0.85.
+    verbatim_fallback:
+      levenshtein_max: 5
+      levenshtein_score: 0.80
+    semantic_fallback:
+      high_threshold: 0.85
+      high_score: 0.60
+      medium_threshold: 0.70
+      medium_score: 0.30
+      low_score: 0.00
+
+  s8_tier:
+    match_type: exact
+    weight: 0.25
+    description: >
+      Critical / Supportive / Minimal tier assigned to each S8 module.
+      Exact match required — a module placed in wrong tier is a classification
+      error even if the module name matches. Vocabulary: [Critical, Supportive, Minimal].
+    vocabulary: [Critical, Supportive, Minimal]
+
+  s8_source_tag:
+    match_type: boolean
+    weight: 0.20
+    description: >
+      No-fabrication gate. Score 1.0 if source_tag is non-null and valid:
+      usdm_endpoint, yaml_l2_standard, yaml_l3_conditional, sds_csv.
+      Score 0.0 if null — triggers hallucination flag regardless of module correctness.
+
+  s8_layer:
+    match_type: exact
+    weight: 0.10
+    description: >
+      Generation layer: L1 (endpoint-derived), L2 (TA-standard), L3 (signal-conditional).
+      Scored for generator transparency — does not affect module recall scoring.
+      Exact match with ground truth layer annotation = 1.0.
+    vocabulary: [L1, L2, L3]
+
+  s8_confidence_tier:
+    match_type: tier
+    weight: 0.10
+    description: >
+      Confidence tier assigned to each S8 module. L1 = high, L2 = high,
+      L3 = medium (signal-dependent). Exact = 1.0. Adjacent = 0.5. Beyond = 0.0.
+    tiers: [high, medium, low]
+    tier_scores:
+      exact_match: 1.00
+      adjacent_tier: 0.50
+      beyond_adjacent: 0.00
+
+  # ── S11.4 Reconciliation Attributes ────────────────────────────────────────
+  s11_flag:
+    match_type: exact
+    weight: 0.70
+    description: >
+      Applicable / N/A flag per reconciliation subsection.
+      Exact match required. Controlled vocabulary: [Applicable, N/A].
+      Any misclassification (wrong flag) scores 0.0 regardless of inference rule.
+    vocabulary: [Applicable, "N/A"]
+
+  s11_inference_rule:
+    match_type: boolean
+    weight: 0.20
+    description: >
+      Inference rule used to determine the flag (e.g. irt_activity_in_usdm_soa,
+      hardcoded_sae_always_applicable). Score 1.0 if rule field is non-null
+      and matches expected rule for the subsection. Traceability check.
+
+  s11_confidence:
+    match_type: exact
+    weight: 0.10
+    description: >
+      Confidence level of the flag: high (hardcoded or unambiguous signal),
+      medium (signal detected but borderline), low (no signal — defaulted).
+      Exact match = 1.0.
+    vocabulary: [high, medium, low]
+
+# ── 2. SECTIONS ───────────────────────────────────────────────────────────────
+# Weights reflect eval metric importance and DMP section complexity.
+# Weights must sum to 1.0.
+
+sections:
+
+  s5_systems:
+    name: "S5 Systems & Tools Checkboxes"
+    metric: M1
+    weight: 0.25
+    description: >
+      Accuracy of system checkbox population in S5.2 (Other Systems & Tools).
+      Driven by dmp_systems_benchmarks.yaml — TA/phase frequency analysis.
+      AUTO YES systems (>=70%) and REVIEW systems (40-69%) both scored.
+    near_deterministic: false     # vendor names can vary within TA
+
+  s8_critical_data:
+    name: "S8 Critical Data Table"
+    metric: M3
+    weight: 0.40
+    description: >
+      Recall and accuracy of Critical Data modules. Highest weight — S8 is
+      the most study-specific, highest-value section in the DMP.
+      Three-layer rule set: L1 endpoint-derived (AUTO), L2 TA-standard (REVIEW),
+      L3 signal-conditional (AUTO/REVIEW). 508 unique modules in training data —
+      frequency approach rejected; rule-based architecture required.
+    near_deterministic: false
+
+  s6_vendors:
+    name: "S6.2 eSource/eData Vendor Table"
+    metric: M2
+    weight: 0.25
+    description: >
+      Recall and accuracy of vendor table in S6.2. Primary source: SDS Non-CRF
+      CSV. Fallback: dmp_ground_truth_clean.json S6 (RCC template studies).
+      Adjudication rows scored in S6.3 separately (not included in S6.2 score).
+    near_deterministic: true      # when SDS CSV available — direct table copy
+
+  s11_reconciliation:
+    name: "S11.4 Reconciliation Flags"
+    metric: M4
+    weight: 0.10
+    description: >
+      Accuracy of Applicable/N-A flags across 7 reconciliation subsections.
+      Rule-based: 2 hardcoded (CTMS always N/A, SAE always Applicable);
+      5 USDM signal-driven. Near-deterministic when USDM signals are clear.
+    near_deterministic: true
+
+# ── 3. SCORING ────────────────────────────────────────────────────────────────
+
+scoring:
+
+  config_version: "1.0"
+
+  # Document-level pass threshold
+  document_pass_threshold: 75       # score out of 100
+  document_target: 80               # aspirational target for demo
+
+  # Per-metric pass thresholds (aligned with DMP design document Section 13)
+  metric_targets:
+    m1_s5_system_accuracy:          0.90  # checkbox accuracy — HIGH priority
+    m2_s6_vendor_recall:            0.90  # vendor table recall — HIGH priority
+    m3_s8_module_recall:            0.85  # critical data module recall — HIGH priority
+    m4_s11_reconciliation_accuracy: 0.95  # reconciliation flag accuracy — HIGH priority
+    m4_hallucination:               0.00  # zero tolerance — null source_tag = fail
+
+  # Semantic similarity settings (for module/vendor name matching)
+  semantic:
+    enable: true
+    model: sentence-transformers/all-MiniLM-L6-v2
+    batch_size: 64
+    cache_embeddings: true
+
+  # Item scoring — how to handle misses and hallucinations
+  item_scoring:
+    denominator: max_of_generated_and_ground_truth
+    # penalises both misses AND hallucinated content
+    miss_score: 0.00
+    hallucination_score: 0.00      # source_tag = null → hallucination flag
+
+  # S8 module count sanity check
+  s8_sanity:
+    min_modules: 8                 # minimum expected modules (L1 primary + L2 standard)
+    max_modules: 35                # above this = possible field-level anomaly (flag only, not fail)
+    outlier_studies: [C4221015, C3671013]   # excluded from frequency analysis — field-level
+
+  # S11 reconciliation subsections (all 7 scored)
+  s11_subsections:
+    - s11_4_1_irt
+    - s11_4_2_ctms
+    - s11_4_3_sae
+    - s11_4_4_central_lab
+    - s11_4_5_ecoa
+    - s11_4_6_pk_pd
+    - s11_4_7_adjudication
+
+  # Near-miss logging threshold
+  near_miss_log_threshold: 10
+
+# ── 4. FALLBACK HANDLING ──────────────────────────────────────────────────────
+# RCC template studies (11 of 39) do not have a SDS Non-CRF tab.
+# These studies use fallback_mode = RCC_template for S6.2 scoring.
+
+fallback:
+
+  rcc_template_studies:
+    # These study IDs are expected to use fallback_mode
+    # S6.2 is scored against dmp_ground_truth_clean.json S6 section
+    # rather than sds_non_crf_ground_truth_clean.csv
+    # Eval script must detect fallback_used=true in generation_metadata
+    # and switch ground truth source accordingly
+    fallback_flag: fallback_used
+    fallback_source: dmp_ground_truth_clean.json
+    fallback_section: s6_data_flow
+    score_penalty: 0.00            # no score penalty for using fallback
+    flag_in_output: true           # flag fallback_used in eval JSON output
+
+  # Out of scope — never penalised
+  out_of_scope_exclusions:
+    - S1 Revision History          # static metadata — not scored
+    - S3 DM Process Documentation  # boilerplate SOP text — not scored
+    - S4 Roles & Responsibilities  # boilerplate — not scored
+    - S7 Dictionary Coding         # boilerplate — not scored
+    - S9 Risk-Based Monitoring     # hardcoded CluePoints — not scored
+    - S10 Data Surveillance        # boilerplate — not scored
+    - S11_1_through_11_3_and_11_5_through_11_8  # boilerplate subsections
+    - S12 Metrics & Oversight      # boilerplate — not scored
+    - S13 Quality Control          # boilerplate — not scored
+    - S15 Data Archiving           # boilerplate — not scored
+    - S16 Reviewers & Approvers    # named individuals — not scored
+
+---
+
+dmp_eval_report:
+  eval_metadata:
+    study_id: B7981027
+    protocol_title: Alopecia Areata
+    therapeutic_area: I&I
+    phase: Ph III
+    yaml_bucket: ''
+    eval_date: '2026-04-15'
+    config_version: '1.0'
+    config_file: dmp_eval_config.yaml
+    generator_version: Protocol Intelligence Platform — DMP v1.0
+    ground_truth_sources:
+    - dmp_ground_truth_clean.json
+    - sds_non_crf_ground_truth_clean.csv (when fallback_used=false)
+    fallback_used: false
+    fallback_mode: null
+    sds_available: true
+    asb_available: false
+    supplemental_enriched: false
+    out_of_scope_sections_excluded:
+    - S1
+    - S3
+    - S4
+    - S7
+    - S9
+    - S10
+    - S11.1
+    - S11.2
+    - S11.3
+    - S11.5
+    - S11.6
+    - S11.7
+    - S11.8
+    - S12
+    - S13
+    - S15
+    - S16
+    out_of_scope_reason: Boilerplate / non-scored sections per DMP eval framework
+  document_score: 87.29
+  document_pass: false
+  document_target: 80.0
+  document_pass_threshold: 75.0
+  summary_metrics:
+    m1_s5_system_accuracy: 0.8214
+    m1_target: 0.9
+    m1_pass: false
+    m2_s6_vendor_recall: 0.8861
+    m2_target: 0.9
+    m2_pass: false
+    m3_s8_module_recall: 0.865
+    m3_target: 0.85
+    m3_pass: true
+    m4_reconciliation_accuracy: 1.0
+    m4_target: 0.95
+    m4_pass: true
+    m4_hallucinations: 2
+    m4_hallucination_target: 0
+    m4_hallucination_pass: false
+    overall_pass: false
+    go_no_go: NO-GO
+  section_scores:
+    s5_systems:
+      metric: M1
+      weight: 0.25
+      score: 82.14
+      weighted_contribution: 20.54
+      generated_count: 14
+      ground_truth_count: 13
+      matched: 11
+      misses:
+      - system_type: cdms
+        ground_truth_name: DMW
+        generated_name: Data Management Workbench (DMW)
+        item_score: 50.0
+        match_status: mismatch
+        attributes:
+          s5_system_name:
+            score: 0.0
+            match_type: semantic_low
+            levenshtein: 28
+            cosine_similarity: 0.5915
+          s5_checkbox_state:
+            score: 1.0
+            match_type: exact
+            generated: true
+            ground_truth: true
+          s5_confidence_tier:
+            score: 1.0
+            match_type: tier
+            generated: auto_yes
+            expected: auto_yes
+      - system_type: pd_mgmt_system
+        ground_truth_name: CORD
+        generated_name: Clinical Oversight Review Dashboard (CORD)
+        item_score: 50.0
+        match_status: mismatch
+        attributes:
+          s5_system_name:
+            score: 0.0
+            match_type: semantic_low
+            levenshtein: 38
+            cosine_similarity: 0.3397
+          s5_checkbox_state:
+            score: 1.0
+            match_type: exact
+            generated: true
+            ground_truth: true
+          s5_confidence_tier:
+            score: 1.0
+            match_type: tier
+            generated: auto_yes
+            expected: auto_yes
+      - system_type: randomization_system
+        ground_truth_name: (empty)
+        generated_name: Sapphire
+        item_score: 20.0
+        match_status: mismatch
+        attributes:
+          s5_system_name:
+            score: 0.0
+            match_type: mismatch
+          s5_checkbox_state:
+            score: 0.0
+            match_type: exact
+            generated: true
+            ground_truth: false
+          s5_confidence_tier:
+            score: 1.0
+            match_type: tier
+            generated: auto_yes
+            expected: auto_yes
+      hallucinations: []
+      notes: null
+    s8_critical_data:
+      metric: M3
+      weight: 0.4
+      score: 86.5
+      weighted_contribution: 34.6
+      generated_count: 19
+      ground_truth_count: 18
+      matched: 18
+      misses: []
+      hallucinations:
+      - ground_truth_module: null
+        generated_module: Dosing
+        item_score: 0.0
+        match_status: extra
+        layer: L2
+        note: Extra generated module — not in ground truth list
+    s6_vendors:
+      metric: M2
+      weight: 0.25
+      score: 88.61
+      weighted_contribution: 22.15
+      generated_count: 18
+      ground_truth_count: 18
+      matched: 18
+      misses: []
+      hallucinations: []
+      notes: null
+    s11_reconciliation:
+      metric: M4
+      weight: 0.1
+      score: 100.0
+      weighted_contribution: 10.0
+      total_subsections: 7
+      correct_flags: 7
+      misclassifications: []
+      notes: null
+  s5_systems:
+  - system_type: crf_system
+    ground_truth_name: InForm
+    generated_name: InForm
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s5_system_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s5_checkbox_state:
+        score: 1.0
+        match_type: exact
+        generated: true
+        ground_truth: true
+      s5_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: auto_yes
+        expected: auto_yes
+  - system_type: cdms
+    ground_truth_name: DMW
+    generated_name: Data Management Workbench (DMW)
+    item_score: 50.0
+    match_status: mismatch
+    attributes:
+      s5_system_name:
+        score: 0.0
+        match_type: semantic_low
+        levenshtein: 28
+      s5_checkbox_state:
+        score: 1.0
+        match_type: exact
+        generated: true
+        ground_truth: true
+      s5_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: auto_yes
+        expected: auto_yes
+  - system_type: ecrf_config_tool
+    ground_truth_name: Central Designer
+    generated_name: Central Designer
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s5_system_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s5_checkbox_state:
+        score: 1.0
+        match_type: exact
+        generated: true
+        ground_truth: true
+      s5_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: auto_yes
+        expected: auto_yes
+  - system_type: ctms
+    ground_truth_name: Siebel CTMS
+    generated_name: Siebel CTMS
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s5_system_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s5_checkbox_state:
+        score: 1.0
+        match_type: exact
+        generated: true
+        ground_truth: true
+      s5_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: auto_yes
+        expected: auto_yes
+  - system_type: irt_system
+    ground_truth_name: IMPALA
+    generated_name: IMPALA
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s5_system_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s5_checkbox_state:
+        score: 1.0
+        match_type: exact
+        generated: true
+        ground_truth: true
+      s5_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: auto_yes
+        expected: auto_yes
+  - system_type: safety_db
+    ground_truth_name: Argus
+    generated_name: Argus
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s5_system_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s5_checkbox_state:
+        score: 1.0
+        match_type: exact
+        generated: true
+        ground_truth: true
+      s5_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: auto_yes
+        expected: auto_yes
+  - system_type: coding_dictionary
+    ground_truth_name: Pfizer MedDRA, Pfizer WHO-Drug
+    generated_name: Pfizer MedDRA, Pfizer WHO-Drug
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s5_system_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s5_checkbox_state:
+        score: 1.0
+        match_type: exact
+        generated: true
+        ground_truth: true
+      s5_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: auto_yes
+        expected: auto_yes
+  - system_type: rbm_system
+    ground_truth_name: CluePoints
+    generated_name: CluePoints
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s5_system_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s5_checkbox_state:
+        score: 1.0
+        match_type: exact
+        generated: true
+        ground_truth: true
+      s5_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: auto_yes
+        expected: auto_yes
+  - system_type: epro_vendor
+    ground_truth_name: Signant Health TrialMax
+    generated_name: Signant Health TrialMax
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s5_system_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s5_checkbox_state:
+        score: 1.0
+        match_type: exact
+        generated: true
+        ground_truth: true
+      s5_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: review
+        expected: review
+  - system_type: sdq_system
+    ground_truth_name: Smart Data Query
+    generated_name: Smart Data Query (SDQ)
+    item_score: 65.0
+    match_status: near_miss
+    attributes:
+      s5_system_name:
+        score: 0.3
+        match_type: semantic_med
+        levenshtein: 6
+      s5_checkbox_state:
+        score: 1.0
+        match_type: exact
+        generated: true
+        ground_truth: true
+      s5_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: auto_yes
+        expected: auto_yes
+  - system_type: adjudication_vendor
+    ground_truth_name: Clario - Trial Application Platform TAP
+    generated_name: Trial Application Platform (TAP)
+    item_score: 65.0
+    match_status: near_miss
+    attributes:
+      s5_system_name:
+        score: 0.3
+        match_type: semantic_med
+        levenshtein: 11
+      s5_checkbox_state:
+        score: 1.0
+        match_type: exact
+        generated: true
+        ground_truth: true
+      s5_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: auto_yes
+        expected: auto_yes
+  - system_type: pd_mgmt_system
+    ground_truth_name: CORD
+    generated_name: Clinical Oversight Review Dashboard (CORD)
+    item_score: 50.0
+    match_status: mismatch
+    attributes:
+      s5_system_name:
+        score: 0.0
+        match_type: semantic_low
+        levenshtein: 38
+      s5_checkbox_state:
+        score: 1.0
+        match_type: exact
+        generated: true
+        ground_truth: true
+      s5_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: auto_yes
+        expected: auto_yes
+  - system_type: photography_vendor
+    ground_truth_name: Canfield Portal
+    generated_name: Canfield Portal
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s5_system_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s5_checkbox_state:
+        score: 1.0
+        match_type: exact
+        generated: true
+        ground_truth: true
+      s5_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: auto_yes
+        expected: auto_yes
+  - system_type: randomization_system
+    ground_truth_name: (empty)
+    generated_name: Sapphire
+    item_score: 20.0
+    match_status: mismatch
+    attributes:
+      s5_system_name:
+        score: 0.0
+        match_type: mismatch
+        levenshtein: null
+      s5_checkbox_state:
+        score: 0.0
+        match_type: exact
+        generated: true
+        ground_truth: false
+      s5_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: auto_yes
+        expected: auto_yes
+  s8_critical_data:
+  - ground_truth_module: SALT
+    generated_module: SALT
+    item_score: 100.0
+    match_status: verbatim
+    layer: L1
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Critical
+        ground_truth: Critical
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: usdm_endpoint:primary
+        valid: true
+      s8_layer:
+        score: 1.0
+        match_type: exact
+        generated: L1
+        expected: L1
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: PGI-C
+    generated_module: PGI-C
+    item_score: 90.0
+    match_status: verbatim
+    layer: L1
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: usdm_endpoint:primary
+        valid: true
+      s8_layer:
+        score: 0.0
+        match_type: exact
+        generated: L1
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: Adverse event
+    generated_module: Adverse event
+    item_score: 100.0
+    match_status: verbatim
+    layer: L2
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: yaml_l2_standard:Standard_safety_rule
+        valid: true
+      s8_layer:
+        score: 1.0
+        match_type: exact
+        generated: L2
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: Vital Signs
+    generated_module: Vital Signs
+    item_score: 100.0
+    match_status: verbatim
+    layer: L2
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: yaml_l2_standard:Standard_safety_rule
+        valid: true
+      s8_layer:
+        score: 1.0
+        match_type: exact
+        generated: L2
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: Clinical Lab
+    generated_module: Clinical Lab
+    item_score: 100.0
+    match_status: verbatim
+    layer: L2
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: yaml_l2_standard:Standard_safety_rule
+        valid: true
+      s8_layer:
+        score: 1.0
+        match_type: exact
+        generated: L2
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: Audiologic assessment
+    generated_module: Audiologic assessment
+    item_score: 85.0
+    match_status: verbatim
+    layer: L3
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: yaml_l3_conditional:dmp_critical_data_benchmarks.yaml_—_I&I_
+        valid: true
+      s8_layer:
+        score: 0.0
+        match_type: exact
+        generated: L3
+        expected: L2
+      s8_confidence_tier:
+        score: 0.5
+        match_type: tier
+        generated: high
+        expected: medium
+  - ground_truth_module: Concomitant Medications
+    generated_module: Concomitant Medications
+    item_score: 100.0
+    match_status: verbatim
+    layer: L2
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: yaml_l2_standard:Standard_safety_rule
+        valid: true
+      s8_layer:
+        score: 1.0
+        match_type: exact
+        generated: L2
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: PK
+    generated_module: PK
+    item_score: 90.0
+    match_status: verbatim
+    layer: L1
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: usdm_endpoint:primary
+        valid: true
+      s8_layer:
+        score: 0.0
+        match_type: exact
+        generated: L1
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: AAPPO
+    generated_module: AAPPO
+    item_score: 90.0
+    match_status: verbatim
+    layer: L1
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: usdm_endpoint:primary
+        valid: true
+      s8_layer:
+        score: 0.0
+        match_type: exact
+        generated: L1
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: PROMIS Parent Proxy Depressive Symptoms
+    generated_module: PROMIS Parent Proxy Depressive Symptoms
+    item_score: 90.0
+    match_status: verbatim
+    layer: L1
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: usdm_endpoint:primary
+        valid: true
+      s8_layer:
+        score: 0.0
+        match_type: exact
+        generated: L1
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: PROMIS Parent Proxy Anxiety Symptoms
+    generated_module: PROMIS Parent Proxy Anxiety Symptoms
+    item_score: 90.0
+    match_status: verbatim
+    layer: L1
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: usdm_endpoint:primary
+        valid: true
+      s8_layer:
+        score: 0.0
+        match_type: exact
+        generated: L1
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: BRIEF®
+    generated_module: BRIEF®
+    item_score: 90.0
+    match_status: verbatim
+    layer: L1
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: usdm_endpoint:primary
+        valid: true
+      s8_layer:
+        score: 0.0
+        match_type: exact
+        generated: L1
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: Modified-DLQI
+    generated_module: Modified-DLQI
+    item_score: 90.0
+    match_status: verbatim
+    layer: L1
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: usdm_endpoint:primary
+        valid: true
+      s8_layer:
+        score: 0.0
+        match_type: exact
+        generated: L1
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: ELA
+    generated_module: ELA
+    item_score: 90.0
+    match_status: verbatim
+    layer: L1
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: usdm_endpoint:primary
+        valid: true
+      s8_layer:
+        score: 0.0
+        match_type: exact
+        generated: L1
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: EBA
+    generated_module: EBA
+    item_score: 90.0
+    match_status: verbatim
+    layer: L1
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: usdm_endpoint:primary
+        valid: true
+      s8_layer:
+        score: 0.0
+        match_type: exact
+        generated: L1
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: Acceptability and palatability assessment.
+    generated_module: Acceptability and palatability assessment
+    item_score: 83.0
+    match_status: near_miss
+    layer: L1
+    attributes:
+      s8_module_name:
+        score: 0.8
+        match_type: near_miss
+        levenshtein: 1
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: usdm_endpoint:primary
+        valid: true
+      s8_layer:
+        score: 0.0
+        match_type: exact
+        generated: L1
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: Dosing, FACS TBNK, IP-10, Menarchal status, C-SSRS, WISC-V
+    generated_module: Dosing, FACS TBNK, IP-10, Menarchal status, C-SSRS, WISC-V
+    item_score: 90.0
+    match_status: verbatim
+    layer: L3
+    attributes:
+      s8_module_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Critical
+        ground_truth: Critical
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: yaml_l3_conditional:dmp_critical_data_benchmarks.yaml_—_I&I_
+        valid: true
+      s8_layer:
+        score: 0.0
+        match_type: exact
+        generated: L3
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: medium
+        expected: medium
+  - ground_truth_module: ICD, Demography, and disposition data (Randomization, Dispostion-Screening,
+      Disposition-Treatment, Disposition-Follow Up, Death Details, Withdrawal of consent,
+      Treatment unblinded)
+    generated_module: ICD, Demography, and disposition data
+    item_score: 75.5
+    match_status: near_miss
+    layer: L2
+    attributes:
+      s8_module_name:
+        score: 0.3
+        match_type: semantic_med
+        levenshtein: 143
+      s8_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s8_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: yaml_l2_standard:Standard_enrollment_rule
+        valid: true
+      s8_layer:
+        score: 1.0
+        match_type: exact
+        generated: L2
+        expected: L2
+      s8_confidence_tier:
+        score: 1.0
+        match_type: tier
+        generated: high
+        expected: high
+  - ground_truth_module: null
+    generated_module: Dosing
+    item_score: 0.0
+    match_status: extra
+    layer: L2
+    attributes:
+      s8_module_name:
+        score: null
+        match_type: null
+        levenshtein: null
+      s8_tier:
+        score: null
+        match_type: null
+        generated: null
+        ground_truth: null
+      s8_source_tag:
+        score: null
+        match_type: null
+        generated: null
+        valid: null
+      s8_layer:
+        score: null
+        match_type: null
+        generated: null
+        expected: null
+      s8_confidence_tier:
+        score: null
+        match_type: null
+        generated: null
+        expected: null
+  s6_vendors:
+  - ground_truth_vendor: PPD
+    generated_vendor: PPD
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 1.0
+        match_type: verbatim
+        generated: LAB
+        ground_truth: LAB
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Critical
+        ground_truth: Critical
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: Signant Health
+    generated_vendor: Signant Health
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 1.0
+        match_type: verbatim
+        generated: Severity of Alopecia Tool (SALT)
+        ground_truth: Severity of Alopecia Tool (SALT)
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: Signant Health
+    generated_vendor: Signant Health
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 1.0
+        match_type: verbatim
+        generated: Eyelash Assessment (ELA)
+        ground_truth: Eyelash Assessment (ELA)
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: Signant Health
+    generated_vendor: Signant Health
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 1.0
+        match_type: verbatim
+        generated: Eyebrow Assessment (EBA)
+        ground_truth: Eyebrow Assessment (EBA)
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: Signant Health
+    generated_vendor: Signant Health
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 1.0
+        match_type: verbatim
+        generated: Patient’s Global Impression of Change (PGI-C)
+        ground_truth: Patient’s Global Impression of Change (PGI-C)
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Critical
+        ground_truth: Critical
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: Signant Health
+    generated_vendor: Signant Health
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 1.0
+        match_type: verbatim
+        generated: Alopecia Areata Patient Priority Outcomes (AAPPO)
+        ground_truth: Alopecia Areata Patient Priority Outcomes (AAPPO)
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: Signant Health
+    generated_vendor: Signant Health
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 1.0
+        match_type: verbatim
+        generated: Patient-Reported Outcomes Measurement Information System(PROMIS)®
+          Parent Proxy Anxiety symptoms
+        ground_truth: Patient-Reported Outcomes Measurement Information System(PROMIS)®
+          Parent Proxy Anxiety symptoms
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: Signant Health
+    generated_vendor: Signant Health
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 1.0
+        match_type: verbatim
+        generated: Patient-Reported Outcomes Measurement Information System(PROMIS)®
+          Parent Proxy Depressive symptoms
+        ground_truth: Patient-Reported Outcomes Measurement Information System(PROMIS)®
+          Parent Proxy Depressive symptoms
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: Signant Health
+    generated_vendor: Signant Health
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 1.0
+        match_type: verbatim
+        generated: Columbia Suicide Severity Rating Scale (C-SSRS) Pediatric Version
+          Baseline
+        ground_truth: Columbia Suicide Severity Rating Scale (C-SSRS) Pediatric Version
+          Baseline
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: null
+        ground_truth: null
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: Signant Health
+    generated_vendor: Signant Health
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 1.0
+        match_type: verbatim
+        generated: Columbia Suicide Severity Rating Scale (C-SSRS) Pediatric Version
+          Baseline Post
+        ground_truth: Columbia Suicide Severity Rating Scale (C-SSRS) Pediatric Version
+          Baseline Post
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: null
+        ground_truth: null
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: ''
+    generated_vendor: Signant Health
+    item_score: 35.0
+    match_status: mismatch
+    attributes:
+      s6_vendor_name:
+        score: 0.0
+        match_type: mismatch
+        levenshtein: null
+      s6_data_type:
+        score: 0.0
+        match_type: semantic_low
+        generated: Behavior Rating Inventory of Executive Function®, Second Edition
+          (BRIEF®2)
+        ground_truth: Baseline
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: Signant Health
+    generated_vendor: Signant Health
+    item_score: 75.0
+    match_status: near_miss
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 0.0
+        match_type: semantic_low
+        generated: Modified Children’s Dermatology Life Quality Index (CDLQI)
+        ground_truth: Behavior Rating Inventory of Executive Function®, Second Edition
+          (BRIEF®2)
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: Signant Health
+    generated_vendor: Signant Health
+    item_score: 75.0
+    match_status: near_miss
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 0.0
+        match_type: semantic_low
+        generated: Tanner staging
+        ground_truth: Modified Children’s Dermatology Life Quality Index (CDLQI)
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: Signant Health
+    generated_vendor: Signant Health
+    item_score: 75.0
+    match_status: near_miss
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 0.0
+        match_type: semantic_low
+        generated: Acceptability and Palatability Questionnaire
+        ground_truth: Tanner staging
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: Signant Health
+    generated_vendor: Clario
+    item_score: 35.0
+    match_status: mismatch
+    attributes:
+      s6_vendor_name:
+        score: 0.0
+        match_type: semantic_low
+        levenshtein: 13
+      s6_data_type:
+        score: 0.0
+        match_type: semantic_low
+        generated: Adjudication Data
+        ground_truth: Acceptability and Palatability Questionnaire
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: QPS
+    generated_vendor: QPS
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 1.0
+        match_type: verbatim
+        generated: 'Biomarker: IP-10 (CXCL-10)'
+        ground_truth: 'Biomarker: IP-10 (CXCL-10)'
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Critical
+        ground_truth: Critical
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: PPD
+    generated_vendor: PPD
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 1.0
+        match_type: verbatim
+        generated: 'Biomarker: Fluorescence-activated cell sorting lymphocyte subsets
+          T, B, and NK (FACS TBNK)'
+        ground_truth: 'Biomarker: Fluorescence-activated cell sorting lymphocyte subsets
+          T, B, and NK (FACS TBNK)'
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Critical
+        ground_truth: Critical
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  - ground_truth_vendor: Canfield
+    generated_vendor: Canfield
+    item_score: 100.0
+    match_status: verbatim
+    attributes:
+      s6_vendor_name:
+        score: 1.0
+        match_type: verbatim
+        levenshtein: null
+      s6_data_type:
+        score: 1.0
+        match_type: verbatim
+        generated: Rash Assessment(imagine data)
+        ground_truth: Rash Assessment(imagine data)
+      s6_data_review_tier:
+        score: 1.0
+        match_type: exact
+        generated: Supportive
+        ground_truth: Supportive
+      s6_source_tag:
+        score: 1.0
+        match_type: boolean
+        generated: sds_csv:B7981027
+        valid: true
+  s11_reconciliation:
+  - subsection: s11_4_1_irt
+    subsection_label: IRT Reconciliation
+    ground_truth_flag: Applicable
+    generated_flag: Applicable
+    item_score: 100.0
+    match_status: correct
+    attributes:
+      s11_flag:
+        score: 1.0
+        match_type: exact
+        generated: Applicable
+        ground_truth: Applicable
+      s11_inference_rule:
+        score: 1.0
+        match_type: boolean
+        rule: IMPALA IRT system present in S5
+        valid: true
+      s11_confidence:
+        score: 1.0
+        match_type: exact
+        generated: high
+        expected: high
+  - subsection: s11_4_2_ctms
+    subsection_label: CTMS Reconciliation
+    ground_truth_flag: N/A
+    generated_flag: N/A
+    item_score: 100.0
+    match_status: correct
+    attributes:
+      s11_flag:
+        score: 1.0
+        match_type: exact
+        generated: N/A
+        ground_truth: N/A
+      s11_inference_rule:
+        score: 1.0
+        match_type: boolean
+        rule: CTMS always N/A — Siebel not reconciled via DMP
+        valid: true
+      s11_confidence:
+        score: 1.0
+        match_type: exact
+        generated: high
+        expected: high
+  - subsection: s11_4_3_sae
+    subsection_label: SAE Reconciliation
+    ground_truth_flag: Applicable
+    generated_flag: Applicable
+    item_score: 100.0
+    match_status: correct
+    attributes:
+      s11_flag:
+        score: 1.0
+        match_type: exact
+        generated: Applicable
+        ground_truth: Applicable
+      s11_inference_rule:
+        score: 1.0
+        match_type: boolean
+        rule: SAE always applicable — every Pfizer study
+        valid: true
+      s11_confidence:
+        score: 1.0
+        match_type: exact
+        generated: high
+        expected: high
+  - subsection: s11_4_4_central_lab
+    subsection_label: Central Laboratory Data Reconciliation
+    ground_truth_flag: Applicable
+    generated_flag: Applicable
+    item_score: 100.0
+    match_status: correct
+    attributes:
+      s11_flag:
+        score: 1.0
+        match_type: exact
+        generated: Applicable
+        ground_truth: Applicable
+      s11_inference_rule:
+        score: 1.0
+        match_type: boolean
+        rule: PPD central lab vendor in S6_esource
+        valid: true
+      s11_confidence:
+        score: 1.0
+        match_type: exact
+        generated: high
+        expected: high
+  - subsection: s11_4_5_ecoa
+    subsection_label: eCOA Reconciliation
+    ground_truth_flag: Applicable
+    generated_flag: Applicable
+    item_score: 100.0
+    match_status: correct
+    attributes:
+      s11_flag:
+        score: 1.0
+        match_type: exact
+        generated: Applicable
+        ground_truth: Applicable
+      s11_inference_rule:
+        score: 1.0
+        match_type: boolean
+        rule: Signant Health eCOA vendor in S6_esource
+        valid: true
+      s11_confidence:
+        score: 1.0
+        match_type: exact
+        generated: high
+        expected: high
+  - subsection: s11_4_6_pk_pd
+    subsection_label: PK/PD Reconciliation
+    ground_truth_flag: Applicable
+    generated_flag: Applicable
+    item_score: 100.0
+    match_status: correct
+    attributes:
+      s11_flag:
+        score: 1.0
+        match_type: exact
+        generated: Applicable
+        ground_truth: Applicable
+      s11_inference_rule:
+        score: 1.0
+        match_type: boolean
+        rule: Biomarker/PK vendors (QPS, PPD) in S6_esource
+        valid: true
+      s11_confidence:
+        score: 1.0
+        match_type: exact
+        generated: high
+        expected: high
+  - subsection: s11_4_7_adjudication
+    subsection_label: Adjudication Reconciliation
+    ground_truth_flag: Applicable
+    generated_flag: Applicable
+    item_score: 100.0
+    match_status: correct
+    attributes:
+      s11_flag:
+        score: 1.0
+        match_type: exact
+        generated: Applicable
+        ground_truth: Applicable
+      s11_inference_rule:
+        score: 1.0
+        match_type: boolean
+        rule: Clario adjudication in S6_adjudication
+        valid: true
+      s11_confidence:
+        score: 1.0
+        match_type: exact
+        generated: high
+        expected: high
+  improvement_actions:
+  - priority: LOW
+    section: s8_critical_data
+    type: near_miss
+    action: 'Module wording mismatch: GT Acceptability and palatability assessment.
+      vs Gen Acceptability and palatability assessment'
+    fix_location: semantic_matcher.py::normalize_text + S8 module synonym map
+  - priority: LOW
+    section: s8_critical_data
+    type: near_miss
+    action: 'Module wording mismatch: GT ICD, Demography, and disposition data (Randomization,
+      Dispostion-Screening, Disposition-Treatment, Disposition-Follow Up, Death Details,
+      Withdrawal of consent, Treatment unblinded) vs Gen ICD, Demography, and disposition
+      data'
+    fix_location: semantic_matcher.py::normalize_text + S8 module synonym map
+  - priority: MEDIUM
+    section: s8_critical_data
+    type: hallucination
+    action: 'Extra S8 module not in GT: ''Dosing''.'
+    fix_location: dmp_generator.py::build_s8_modules (module whitelist / ontology)
+  - priority: MEDIUM
+    section: s5_systems
+    type: mismatch
+    action: 'System cdms: GT DMW vs Gen Data Management Workbench (DMW)'
+    fix_location: dmp_generator.py::populate_s5_systems (field-level benchmark binding)
+  - priority: MEDIUM
+    section: s5_systems
+    type: mismatch
+    action: 'System pd_mgmt_system: GT CORD vs Gen Clinical Oversight Review Dashboard
+      (CORD)'
+    fix_location: dmp_generator.py::populate_s5_systems (field-level benchmark binding)
+  - priority: HIGH
+    section: s5_systems
+    type: hallucination
+    action: GT is null for randomization_system, but generator produced 'Sapphire'.
+      Should remain null/empty when no benchmark signal exists.
+    fix_location: dmp_generator.py::populate_s5_systems (disable cross-study fallback
+      for null GT slots)
+  - priority: MEDIUM
+    section: s6_vendors
+    type: mismatch
+    action: 'Vendor mismatch: GT  vs Gen Signant Health'
+    fix_location: dmp_generator.py::populate_s6_vendors (vendor resolution)
+  - priority: MEDIUM
+    section: s6_vendors
+    type: mismatch
+    action: 'Vendor mismatch: GT Signant Health vs Gen Clario'
+    fix_location: dmp_generator.py::populate_s6_vendors (vendor resolution)
+scoring_note: Section and attribute weights are in document 1 (attributes / sections
+  / scoring).

@@ -1,0 +1,215 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# PIPD Eval Configuration — pipd_eval_config.yaml
+# Version: 1.0
+# Date: 5 April 2026
+# Project: Pfizer DDF Challenge — Protocol Intelligence Platform
+#
+# PURPOSE:
+#   This file controls how the PIPD eval script scores generator output.
+#   Three sections:
+#     1. attributes   — match type and weight per field (applies to ALL subcategories)
+#     2. categories   — weight per PIPD category within the document score
+#     3. scoring      — thresholds, pass/fail targets, semantic config
+#
+# HIERARCHY:
+#   document_score (0-100)
+#     └── category_score × category_weight
+#           └── subcategory_score × (1 / max(generated, ground_truth))
+#                 └── attribute_score × attribute_weight
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── 1. ATTRIBUTES ─────────────────────────────────────────────────────────────
+# match_type options:
+#   verbatim_with_semantic_fallback  — exact string = 1.0, near-miss/semantic = partial
+#   exact                            — exact value match on controlled vocabulary = 1.0 else 0.0
+#   boolean                          — field populated and valid = 1.0 else 0.0
+#   tier                             — ordered scale, within-N-tiers = partial score
+#   jaccard                          — set overlap: |intersection| / |union|
+#
+# weights must sum to 1.0
+
+attributes:
+
+  subcategory_text:
+    match_type: verbatim_with_semantic_fallback
+    weight: 0.50
+    description: >
+      The core subcategory description. Verbatim match scores 1.0.
+      Near-miss (Levenshtein 1-5) scores 0.80. Semantic similarity
+      above threshold scores partial. No match scores 0.0.
+    verbatim_fallback:
+      levenshtein_max: 5
+      levenshtein_score: 0.80
+    semantic_fallback:
+      high_threshold: 0.85
+      high_score: 0.60
+      medium_threshold: 0.70
+      medium_score: 0.30
+      low_score: 0.00
+
+  include_in_csr:
+    match_type: exact
+    weight: 0.20
+    description: >
+      YES/NO flag indicating whether the deviation is included in the CSR.
+      Controlled vocabulary — exact match only.
+    vocabulary: [true, false]
+
+  usdm_entity_id:
+    match_type: boolean
+    weight: 0.15
+    description: >
+      Traceability gate. Score 1.0 if usdm_entity_id is non-null AND
+      the entity ID exists in the target protocol USDM JSON.
+      Score 0.0 if null, empty, or entity not found in USDM.
+
+  confidence:
+    match_type: tier
+    weight: 0.10
+    description: >
+      Confidence tier assigned by generator. Scored by comparison to
+      expected tier derived from QE severity data. Within 1 tier = 0.5.
+      Exact match = 1.0. More than 1 tier away = 0.0.
+    tiers:
+      - auto_confirmed   # tier 1 — lowest concern
+      - review           # tier 2
+      - low_confidence   # tier 3 — highest concern
+      - category_10      # special — always maps to review tier for scoring
+    tier_scores:
+      exact_match: 1.00
+      adjacent_tier: 0.50
+      beyond_adjacent: 0.00
+
+  gsop_codes:
+    match_type: jaccard
+    weight: 0.05
+    description: >
+      GSOP business process codes (e.g. CT05, IP13). Both generated and
+      ground truth are arrays. Score = |intersection| / |union|.
+      Empty array on both sides scores 1.0 (both agree none apply).
+      Empty on one side only scores 0.0.
+
+# ── 2. CATEGORIES ─────────────────────────────────────────────────────────────
+# Weights reflect clinical importance and prediction difficulty.
+# Weights must sum to 1.0.
+# none_identified_weight: weight applied when both generator and ground truth
+#   agree the category is empty (none_identified=true). Full credit.
+
+categories:
+
+  cat_1:
+    name: Inclusion/Exclusion Criteria
+    weight: 0.12
+    none_identified_weight: 1.00
+    rationale: Most frequent deviation source across all TAs
+
+  cat_2:
+    name: Investigational Product
+    weight: 0.14
+    none_identified_weight: 1.00
+    rationale: High clinical risk — dispensing, compliance, storage errors
+
+  cat_3:
+    name: Concomitant Medications
+    weight: 0.08
+    none_identified_weight: 1.00
+    rationale: Protocol-specific prohibited meds
+
+  cat_4:
+    name: Labs
+    weight: 0.08
+    none_identified_weight: 1.00
+    rationale: Safety labs and specimen management
+
+  cat_5:
+    name: Visit Schedule
+    weight: 0.04
+    none_identified_weight: 1.00
+    rationale: Often empty in I&I Phase III — low weight
+
+  cat_6:
+    name: Procedures and Tests
+    weight: 0.07
+    none_identified_weight: 1.00
+    rationale: Assessment compliance and personnel requirements
+
+  cat_7:
+    name: Randomization
+    weight: 0.05
+    none_identified_weight: 1.00
+    rationale: Often empty in I&I Phase III — low weight
+
+  cat_8:
+    name: Safety Reporting
+    weight: 0.14
+    none_identified_weight: 1.00
+    rationale: High clinical risk — SAE reporting failures are critical
+
+  cat_9:
+    name: Discontinuation Criteria
+    weight: 0.06
+    none_identified_weight: 1.00
+    rationale: Protocol-specific withdrawal criteria
+
+  cat_10:
+    name: Other
+    weight: 0.12
+    none_identified_weight: 1.00
+    rationale: Protocol-specific — hardest to predict, highest value if correct
+    special_rules:
+      confidence_always_review: true
+      semantic_weight_boost: 0.10  # boost semantic score for Cat 10 — paraphrasing expected
+
+  cat_11:
+    name: Informed Consent
+    weight: 0.10
+    none_identified_weight: 1.00
+    rationale: Regulatory critical — consent failures are always high severity
+
+# ── 3. SCORING ────────────────────────────────────────────────────────────────
+
+scoring:
+
+  # Document-level pass threshold
+  document_pass_threshold: 75       # score out of 100
+  document_target: 80               # aspirational target
+
+  # Per-metric pass thresholds (legacy metrics — kept for compatibility)
+  metric_targets:
+    m1_subcategory_recall:    0.85  # B7981027 primary target
+    m1_aggregate_recall:      0.75  # across 8 verify studies
+    m2_flag_accuracy:         0.90  # YES/NO on auto_confirmed subcats
+    m3_empty_category:        0.80  # none_identified flag accuracy
+    m4_hallucination:         0.00  # zero tolerance — any hallucination = fail
+    m5_severity_match:        0.75  # new metric
+    m6_gsop_coverage:         0.70  # new metric
+
+  # Semantic similarity settings
+  semantic:
+    enable: true                    # set false to run verbatim-only (faster)
+    model: sentence-transformers/all-MiniLM-L6-v2
+    batch_size: 64
+    cache_embeddings: true          # cache to avoid recomputing on re-runs
+
+  # Subcategory scoring — how to handle misses and hallucinations
+  subcategory_scoring:
+    denominator: max_of_generated_and_ground_truth
+    # options: max_of_generated_and_ground_truth | ground_truth_only | harmonic_mean
+    # max_of_generated_and_ground_truth penalises both misses AND hallucinations
+    miss_score: 0.00                # ground truth subcat not in generator output
+    hallucination_score: 0.00       # generator subcat not in ground truth
+
+  # None-identified handling
+  none_identified:
+    both_true_score: 1.00           # both agree category is empty — full credit
+    both_false_score: null          # score normally on subcategories
+    mismatch_penalty: 0.00          # one says empty, other has content — 0 for category
+
+  # Out of scope — never penalised
+  out_of_scope_exclusions:
+    - IT Systems
+    - Potential allegation of Falsification or misconduct
+
+  # Levenshtein near-miss logging threshold (logged but not counted as match)
+  near_miss_log_threshold: 10       # log all pairs with distance <= 10
+

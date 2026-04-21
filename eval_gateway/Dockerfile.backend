@@ -1,0 +1,28 @@
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+WORKDIR /app
+
+# System deps commonly needed by python packages in this workspace.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy required repositories for orchestrated eval execution.
+COPY eval_gateway /app/eval_gateway
+COPY protocol_eval_hub /app/protocol_eval_hub
+COPY ppid_py /app/ppid_py
+COPY risk_profile_eval /app/risk_profile_eval
+COPY cmd_py /app/cmd_py
+COPY DMP_py /app/DMP_py
+
+WORKDIR /app/eval_gateway
+
+RUN pip install --no-cache-dir -r requirements-railway.txt
+
+EXPOSE 9001
+
+CMD ["uvicorn", "unified_api:app", "--host", "0.0.0.0", "--port", "9001"]

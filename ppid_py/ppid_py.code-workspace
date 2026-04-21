@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../risk_profile_eval"
+		},
+		{
+			"path": "../cmd_py"
+		},
+		{
+			"path": "../DMP_py"
+		}
+	]
+}

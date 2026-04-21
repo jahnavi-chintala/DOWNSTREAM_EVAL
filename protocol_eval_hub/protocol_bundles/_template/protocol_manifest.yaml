@@ -1,0 +1,8 @@
+# Duplicate this folder, rename to your study id (e.g. C4891023), update study_id + filenames.
+
+study_id: STUDY_ID
+
+files:
+  pipd: STUDY_ID_PIPD.json
+  risk_profile: STUDY_ID_RiskProfile.json
+  cmp: STUDY_ID_CMP.json

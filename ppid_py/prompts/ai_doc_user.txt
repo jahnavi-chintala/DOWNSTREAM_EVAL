@@ -1,0 +1,13 @@
+Using ONLY the evaluation JSON below, produce a single Markdown document titled "PIPD composite evaluation — documentation".
+
+Include these sections in order:
+1. Executive summary (overall score %, weighted breakdown, interpretation).
+2. Methodology summary (how completeness, accuracy, semantic, and hallucination scores are defined — mirror the "methodology" object).
+3. Results by component (expand each key under "components" with plain-language explanation).
+4. Per-category narrative: for each entry in "per_category", summarize ground truth vs generated coverage and notable mismatches (use row-level data; do not list every cell if there are hundreds—summarize patterns).
+5. Micro-scoring summary (what the per-subcategory points mean and total earned vs 100).
+6. Recommended next steps.
+
+After the JSON block, write the document. Do not repeat the raw JSON in full in your prose; reference it.
+
+---BEGIN EVALUATION JSON---

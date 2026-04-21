@@ -1,0 +1,1202 @@
+{
+  "study_id": "C4891002",
+  "ta": "Oncology",
+  "phase": "Ph III",
+  "eval_date": "2026-04-17T13:21:22.188476",
+  "scenario": 1,
+  "metrics": {
+    "m1_subcategory_recall": {
+      "score": 0.15512820512820516,
+      "precision": 0.09918032786885247,
+      "f1": 0.12100000000000002,
+      "total_matched": 1,
+      "total_credit": 6.050000000000001,
+      "total_gt": 39,
+      "total_generated": 61,
+      "target": 0.75,
+      "f1_target": 0.7,
+      "pass": false
+    },
+    "m2_flag_accuracy": {
+      "auto_confirmed_accuracy": 1.0,
+      "auto_confirmed_total": 1,
+      "auto_confirmed_correct": 1,
+      "target": 0.9,
+      "pass": true
+    },
+    "m3_empty_category_accuracy": {
+      "score": 0.5454545454545454,
+      "correct_flags": 6,
+      "total_categories": 11,
+      "mismatches": [
+        {
+          "category_num": 4,
+          "gt_none_identified": true,
+          "generated_none_identified": false
+        },
+        {
+          "category_num": 5,
+          "gt_none_identified": true,
+          "generated_none_identified": false
+        },
+        {
+          "category_num": 6,
+          "gt_none_identified": true,
+          "generated_none_identified": false
+        },
+        {
+          "category_num": 8,
+          "gt_none_identified": true,
+          "generated_none_identified": false
+        },
+        {
+          "category_num": 10,
+          "gt_none_identified": true,
+          "generated_none_identified": false
+        }
+      ],
+      "target": 0.8,
+      "pass": false
+    },
+    "m4_hallucination_detection": {
+      "hallucinations_found": 9,
+      "flagged_subcategories": [
+        {
+          "category_num": 1,
+          "subcategory_text": "Pending Site Monitor Action Inc/Excl",
+          "usdm_entity_id": null,
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "auto_confirmed",
+          "issues": [
+            "usdm_entity_id is null/missing \u2013 no protocol traceability"
+          ]
+        },
+        {
+          "category_num": 3,
+          "subcategory_text": "Participant took prohibited concomitant medication (e.g., strong CYP3A inhibitors or inducers) during the study treatment period",
+          "usdm_entity_id": null,
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "auto_confirmed",
+          "issues": [
+            "usdm_entity_id is null/missing \u2013 no protocol traceability"
+          ]
+        },
+        {
+          "category_num": 3,
+          "subcategory_text": "Participant took permitted concomitant medication, but not as specified per protocol",
+          "usdm_entity_id": null,
+          "usdm_entity": "Activity",
+          "confidence": "auto_confirmed",
+          "issues": [
+            "usdm_entity_id is null/missing \u2013 no protocol traceability"
+          ]
+        },
+        {
+          "category_num": 9,
+          "subcategory_text": "Participant met protocol-specified criteria for study treatment discontinuation (e.g., objective disease progression per RECIST v1.1, unacceptable toxicity) but study treatment was not discontinued",
+          "usdm_entity_id": null,
+          "usdm_entity": "StudyIntervention",
+          "confidence": "auto_confirmed",
+          "issues": [
+            "usdm_entity_id is null/missing \u2013 no protocol traceability"
+          ]
+        },
+        {
+          "category_num": 9,
+          "subcategory_text": "Participant was discontinued from study treatment or the study but did not meet any protocol-specified discontinuation criteria",
+          "usdm_entity_id": null,
+          "usdm_entity": "StudyIntervention",
+          "confidence": "auto_confirmed",
+          "issues": [
+            "usdm_entity_id is null/missing \u2013 no protocol traceability"
+          ]
+        },
+        {
+          "category_num": 11,
+          "subcategory_text": "Participant did not sign the Informed Consent Document (ICD) and did not give verbal consent prior to randomization or any study procedures.",
+          "usdm_entity_id": null,
+          "usdm_entity": "Activity",
+          "confidence": "auto_confirmed",
+          "issues": [
+            "usdm_entity_id is null/missing \u2013 no protocol traceability"
+          ]
+        },
+        {
+          "category_num": 11,
+          "subcategory_text": "The Informed Consent Document (ICD) signed by the participant had not received IRB/IEC approval.",
+          "usdm_entity_id": null,
+          "usdm_entity": "Activity",
+          "confidence": "auto_confirmed",
+          "issues": [
+            "usdm_entity_id is null/missing \u2013 no protocol traceability"
+          ]
+        },
+        {
+          "category_num": 11,
+          "subcategory_text": "The Informed Consent Document (ICD) was not translated into the participant's native language.",
+          "usdm_entity_id": null,
+          "usdm_entity": "Activity",
+          "confidence": "auto_confirmed",
+          "issues": [
+            "usdm_entity_id is null/missing \u2013 no protocol traceability"
+          ]
+        },
+        {
+          "category_num": 11,
+          "subcategory_text": "The signed Informed Consent Document (ICD) was lost, and no copy is available at the site.",
+          "usdm_entity_id": null,
+          "usdm_entity": "Activity",
+          "confidence": "auto_confirmed",
+          "issues": [
+            "usdm_entity_id is null/missing \u2013 no protocol traceability"
+          ]
+        }
+      ],
+      "target": 0,
+      "pass": false,
+      "usdm_protocol_validation_active": true,
+      "usdm_protocol_path": "C:\\Users\\jahna\\OneDrive\\Desktop\\Pfizer\\protocol_eval_hub\\protocol_bundles\\C4891002\\USDM_C4891002_v3.0.json"
+    },
+    "m5_severity_match": {
+      "score": 0.5,
+      "total_matched": 1,
+      "target": 0.75,
+      "pass": false,
+      "note": "Matched rows with non-empty GT rationale_if_no vs confidence tiers."
+    },
+    "m6_gsop_coverage": {
+      "score": 1.0,
+      "total_matched": 1,
+      "target": 0.7,
+      "pass": true,
+      "note": "Mean Jaccard on matched rows; GT side empty if CSV has no gsop_codes."
+    }
+  },
+  "per_category": {
+    "1": {
+      "category_num": 1,
+      "m1_recall": 0.08636363636363636,
+      "m1_matched": 1,
+      "m1_gt_total": 22,
+      "m1_generated_total": 5,
+      "m1_near_misses": 2,
+      "matched_subcats": [
+        "Pending Site Monitor Action Inc/Excl"
+      ],
+      "missed_subcats": [
+        "Phase 3 only-Subject not meet inclusion criteria 2 [Pts to comply with SoA visits, assessments/procedures. a. Mandatory blood and tumor at diagnosis of local adv met aBC. If not, de novo biopsy needed. Tumor at initial diagnosis accepted if bone mets only",
+        "Subject did not meet inclusion criteria 1 [Participants aged 18 years or older (or the minimum age of consent in accordance with local regulations) at screening.]",
+        "Subject did not meet inclusion criteria 4 [No prior systemic anti-cancer therapy for their locoregionally advanced or metastatic disease.]",
+        "Subject did not meet inclusion criteria 5 [At least 1 measurable lesion as defined by RECIST v1.1. Bone only disease: participants with only non-measurable lesions are eligible.]",
+        "Subject didnot meet inclusion criteria 3 [Local advanced/metastatic BC not amenable to surgery or radiotherapy with curative intent. BC to be ER(+)\u22651%,HER2(-)]",
+        "Subject met exclusion criteria 1 [Other medical, psychiatric cond. include recent suicidal idea, behavior, abnormal lab that may increase risk of study participation or investigator\u2019s judgment, make participant inappropriate for study.]",
+        "Subject met exclusion criteria 10 [Hematologic abnormalities as defined in protocol.]",
+        "Subject met exclusion criteria 11 [Renal impairment as defined in protocol.]",
+        "Subject met exclusion criteria 12 [Hepatic dysfunction as defined in protocol.]",
+        "Subject met exclusion criteria 13 [Known active infection including SARS-CoV-2, HBV, HCV, and HIV or AIDS- related illness, as defined in protocol.]",
+        "Subject met exclusion criteria 14 [Refractory nausea & vomiting, chronic GI disease, GI ulcer, GI bleeding, inability to swallow study drugs, prior significant gastric, bowel resection preventing adequate absorption of study drugs.]",
+        "Subject met exclusion criteria 15 [Site staff directly involved in conduct of study and family members, site otherwise supervised by investigator, sponsor and delegate employees directly involved in conduct of study and family members.]",
+        "Subject met exclusion criteria 2 [History of any other tumor malignancies within the past 3 years as per protocol. Participants with inflammatory BC and HSCT are excluded.]",
+        "Subject met exclusion criteria 3 [Participants with newly diagnosed/symptomatic CNS mets, carcinomatous meningitis,or leptomeningeal disease. Exception are detailed in the study protocol.]",
+        "Subject met exclusion criteria 4 [Pts in visceral crisis at risk of immediate life-threatening complications including pts with massive uncontrolled pleural/pericardial/peritoneal effusion, pulmonary lymphangitis, liver involvement above 50%.]",
+        "Subject met exclusion criteria 5 [Impaired cardiovascular function or clinically significant cardiovascular diseases as defined in protocol.]",
+        "Subject met exclusion criteria 6 [Relapse while on or within 12 months ofcompleting standard adjuvant ET. CDK4/6i, ARV-471, fulvestrant, and other investigational agents (including novel ET, any SERDs, SERCAs, CERANs) in any setting.]",
+        "Subject met exclusion criteria 7 [Major Surgery, RT or systemic therapy for BC \u2264 14 days pre- randomization. Pts with prior RT \u226525% of BM are not eligible.]",
+        "Subject met exclusion criteria 9 [Concurrent administration of drugs, food and herbal supplement that are strong CYP3A inhibitors or inducers.]"
+      ],
+      "hallucinated_subcats": [
+        "Participant met all eligibility criteria but source documentation is incomplete or missing",
+        "Participant met all eligibility criteria but was randomized prior to assessment of all eligibility criteria"
+      ],
+      "m2_flag_accuracy": 1.0,
+      "m2_auto_confirmed_accuracy": 1.0,
+      "m2_discrepancies": [],
+      "m3_none_identified_correct": true,
+      "m5_severity_match": 0.5,
+      "m6_gsop_coverage": 1.0
+    },
+    "2": {
+      "category_num": 2,
+      "m1_recall": 0.0,
+      "m1_matched": 0,
+      "m1_gt_total": 3,
+      "m1_generated_total": 6,
+      "m1_near_misses": 0,
+      "matched_subcats": [],
+      "missed_subcats": [
+        "Blind compromised",
+        "DOSING error: underdose",
+        "Dosing error: overdose."
+      ],
+      "hallucinated_subcats": [
+        "Dosing/Administration error for vepdegestrant, palbociclib, letrozole, or LHRH agonist",
+        "Required LHRH agonist not administered to pre-/peri-menopausal female or male participant",
+        "Storage error/temperature excursion. IP administered to participant without Sponsor approval",
+        "Study drug not held despite AE that required dose to be held per protocol",
+        "Study drug not reduced as per protocol for toxicity (e.g., palbociclib or vepdegestrant)",
+        "Subject received wrong treatment (e.g., randomized to Arm A but received letrozole, or Arm B but received vepdegestrant)"
+      ],
+      "m2_flag_accuracy": 1.0,
+      "m2_auto_confirmed_accuracy": 1.0,
+      "m2_discrepancies": [],
+      "m3_none_identified_correct": true,
+      "m5_severity_match": 1.0,
+      "m6_gsop_coverage": 1.0
+    },
+    "3": {
+      "category_num": 3,
+      "m1_recall": 0.45,
+      "m1_matched": 0,
+      "m1_gt_total": 1,
+      "m1_generated_total": 4,
+      "m1_near_misses": 1,
+      "matched_subcats": [],
+      "missed_subcats": [],
+      "hallucinated_subcats": [
+        "Mandatory concomitant medication (LHRH agonist for pre-/peri-menopausal female and male participants) not taken/administered or not used as specified per protocol",
+        "Participant received prohibited concurrent systemic anti-cancer therapy or radiotherapy during the study drug treatment period",
+        "Participant took prohibited concomitant medication (e.g., strong CYP3A inhibitors or inducers) during the study treatment period"
+      ],
+      "m2_flag_accuracy": 1.0,
+      "m2_auto_confirmed_accuracy": 1.0,
+      "m2_discrepancies": [],
+      "m3_none_identified_correct": true,
+      "m5_severity_match": 1.0,
+      "m6_gsop_coverage": 1.0
+    },
+    "4": {
+      "category_num": 4,
+      "m1_recall": 1.0,
+      "m1_matched": 0,
+      "m1_gt_total": 0,
+      "m1_generated_total": 7,
+      "m1_near_misses": 0,
+      "matched_subcats": [],
+      "missed_subcats": [],
+      "hallucinated_subcats": [
+        "Abnormal lab result (e.g., Grade 4 neutropenia, hepatic dysfunction) not followed up appropriately",
+        "Blood samples for vepdegestrant PK, palbociclib PK, or pharmacodynamics not done",
+        "Blood samples for vepdegestrant PK, palbociclib PK, or pharmacodynamics not properly collected, stored or handled",
+        "Clinical laboratory results were not reviewed by an Investigator in a timely manner",
+        "Critical safety labs required for dosing decisions (e.g., ANC, PLT, ALT, AST, Bilirubin) not done",
+        "Study participant dosed without required pregnancy test done for WOCBP",
+        "Tumor tissue for biomarkers or ctDNA blood samples not collected per protocol"
+      ],
+      "m2_flag_accuracy": 1.0,
+      "m2_auto_confirmed_accuracy": 1.0,
+      "m2_discrepancies": [],
+      "m3_none_identified_correct": false,
+      "m5_severity_match": 1.0,
+      "m6_gsop_coverage": 1.0
+    },
+    "5": {
+      "category_num": 5,
+      "m1_recall": 1.0,
+      "m1_matched": 0,
+      "m1_gt_total": 0,
+      "m1_generated_total": 5,
+      "m1_near_misses": 0,
+      "matched_subcats": [],
+      "missed_subcats": [],
+      "hallucinated_subcats": [
+        "Active Treatment Phase visit (e.g., Cycle 1 Day 15, Cycle 2 Day 1) conducted outside the protocol-specified window",
+        "Safety Follow-up, Long Term Follow-up, or Survival Follow-up visit conducted outside the protocol-specified window",
+        "Screening visit completed outside the protocol-specified window of \u2264 28 days prior to randomization",
+        "Visit not done",
+        "Visit not performed per protocol"
+      ],
+      "m2_flag_accuracy": 1.0,
+      "m2_auto_confirmed_accuracy": 1.0,
+      "m2_discrepancies": [],
+      "m3_none_identified_correct": false,
+      "m5_severity_match": 1.0,
+      "m6_gsop_coverage": 1.0
+    },
+    "6": {
+      "category_num": 6,
+      "m1_recall": 1.0,
+      "m1_matched": 0,
+      "m1_gt_total": 0,
+      "m1_generated_total": 6,
+      "m1_near_misses": 0,
+      "matched_subcats": [],
+      "missed_subcats": [],
+      "hallucinated_subcats": [
+        "12-Lead ECG not performed per protocol, impacting safety monitoring for QTcF prolongation.",
+        "Disease assessment (tumor imaging or bone scan) not performed, incomplete, or performed out of window, impacting the primary endpoint of PFS by BICR.",
+        "Patient-Reported Outcomes (EQ-5D-5L, EORTC QLQ-C30, EORTC QLQ-BR23) not completed per protocol.",
+        "Pharmacokinetic (PK) blood samples for vepdegestrant or palbociclib not collected or collected incorrectly.",
+        "Procedures for contraception counseling or contraception requirements not followed for IOCBP or male participants.",
+        "Required tumor tissue or blood sample for biomarkers (e.g., ctDNA) not collected at diagnosis or de novo biopsy not performed for Phase 3 participants."
+      ],
+      "m2_flag_accuracy": 1.0,
+      "m2_auto_confirmed_accuracy": 1.0,
+      "m2_discrepancies": [],
+      "m3_none_identified_correct": false,
+      "m5_severity_match": 1.0,
+      "m6_gsop_coverage": 1.0
+    },
+    "7": {
+      "category_num": 7,
+      "m1_recall": 0.5,
+      "m1_matched": 0,
+      "m1_gt_total": 1,
+      "m1_generated_total": 5,
+      "m1_near_misses": 1,
+      "matched_subcats": [],
+      "missed_subcats": [],
+      "hallucinated_subcats": [
+        "Participant didn't receive the drugs they were randomized to (e.g., assigned to Vepdegestrant + Palbociclib but received Letrozole + Palbociclib)",
+        "Participant randomized in IRT in error despite not meeting eligibility criteria or being a screen failure",
+        "Participant randomized out of protocol defined window (e.g., >28 days after start of screening)",
+        "Participant randomized prior to completion of all required screening assessments (e.g., tumor biopsy or baseline scans)"
+      ],
+      "m2_flag_accuracy": 1.0,
+      "m2_auto_confirmed_accuracy": 1.0,
+      "m2_discrepancies": [],
+      "m3_none_identified_correct": true,
+      "m5_severity_match": 1.0,
+      "m6_gsop_coverage": 1.0
+    },
+    "8": {
+      "category_num": 8,
+      "m1_recall": 1.0,
+      "m1_matched": 0,
+      "m1_gt_total": 0,
+      "m1_generated_total": 5,
+      "m1_near_misses": 0,
+      "matched_subcats": [],
+      "missed_subcats": [],
+      "hallucinated_subcats": [
+        "Adverse event (including protocol-specified events of interest such as Grade 4 neutropenia) was not recorded in the clinical database",
+        "Clinically significant laboratory or ECG abnormality was not reported as an adverse event",
+        "SAE Not reported by investigator to Ethics Committee / IRB per local regulations",
+        "SAE/EIU not reported to Sponsor",
+        "SAE/EIU not reported to Sponsor within specified timeframe"
+      ],
+      "m2_flag_accuracy": 1.0,
+      "m2_auto_confirmed_accuracy": 1.0,
+      "m2_discrepancies": [],
+      "m3_none_identified_correct": false,
+      "m5_severity_match": 1.0,
+      "m6_gsop_coverage": 1.0
+    },
+    "9": {
+      "category_num": 9,
+      "m1_recall": 0.5,
+      "m1_matched": 0,
+      "m1_gt_total": 1,
+      "m1_generated_total": 5,
+      "m1_near_misses": 1,
+      "matched_subcats": [],
+      "missed_subcats": [],
+      "hallucinated_subcats": [
+        "Participant became pregnant during the study but study treatment was not discontinued",
+        "Participant met protocol-specified criteria for study treatment discontinuation (e.g., objective disease progression per RECIST v1.1, unacceptable toxicity) but study treatment was not discontinued",
+        "Participant started a new anti-cancer therapy but study treatment was not discontinued",
+        "Participant withdrew consent but continued to receive study treatment or undergo study procedures"
+      ],
+      "m2_flag_accuracy": 1.0,
+      "m2_auto_confirmed_accuracy": 1.0,
+      "m2_discrepancies": [],
+      "m3_none_identified_correct": true,
+      "m5_severity_match": 1.0,
+      "m6_gsop_coverage": 1.0
+    },
+    "10": {
+      "category_num": 10,
+      "m1_recall": 1.0,
+      "m1_matched": 0,
+      "m1_gt_total": 0,
+      "m1_generated_total": 6,
+      "m1_near_misses": 0,
+      "matched_subcats": [],
+      "missed_subcats": [],
+      "hallucinated_subcats": [
+        "ICD signed by subject/LAR had not received IRB/IEC approval",
+        "ICD was lost, no copy available",
+        "Participant confidentiality compromised",
+        "Participant randomized to Phase 3 despite Sponsor decision not to conduct the Phase 3 portion of the study",
+        "Subject/LAR did not sign ICD & did not give verbal consent",
+        "Subject/LAR signed and dated ICD after screen/enroll date"
+      ],
+      "m2_flag_accuracy": 1.0,
+      "m2_auto_confirmed_accuracy": 1.0,
+      "m2_discrepancies": [],
+      "m3_none_identified_correct": false,
+      "m5_severity_match": 1.0,
+      "m6_gsop_coverage": 1.0
+    },
+    "11": {
+      "category_num": 11,
+      "m1_recall": 0.24545454545454548,
+      "m1_matched": 0,
+      "m1_gt_total": 11,
+      "m1_generated_total": 7,
+      "m1_near_misses": 6,
+      "matched_subcats": [],
+      "missed_subcats": [
+        "ICD not signed by impartial witness, when applicable",
+        "ICD signed by unauthorized site personnel",
+        "ICD was lost, copy available",
+        "Subject/LAR did not sign the ICD but gave verbal consent",
+        "Subject/LAR signed and dated ICD after screen/enroll date"
+      ],
+      "hallucinated_subcats": [
+        "Participant signed a superseded or outdated version of the Informed Consent Document (ICD)."
+      ],
+      "m2_flag_accuracy": 1.0,
+      "m2_auto_confirmed_accuracy": 1.0,
+      "m2_discrepancies": [],
+      "m3_none_identified_correct": true,
+      "m5_severity_match": 1.0,
+      "m6_gsop_coverage": 1.0
+    }
+  },
+  "near_misses": [
+    {
+      "generated_text": "Participant did not meet one or more inclusion criteria but was randomized to the study treatment",
+      "gt_text": "Subject did not meet inclusion criteria 6 [ECOG performance status less than or equal to 2.]",
+      "distance": 50,
+      "tier": "P",
+      "credit": 0.45,
+      "root_cause": "PARAPHRASE",
+      "category_num": 1,
+      "study_id": "C4891002"
+    },
+    {
+      "generated_text": "Participant met one or more exclusion criteria but was randomized to the study treatment",
+      "gt_text": "Subject met exclusion criteria 8 [Any unresolved toxicities from prior surgeries or therapies or other toxicities as per protocol.]",
+      "distance": 84,
+      "tier": "P",
+      "credit": 0.45,
+      "root_cause": "PARAPHRASE",
+      "category_num": 1,
+      "study_id": "C4891002"
+    },
+    {
+      "generated_text": "Participant took permitted concomitant medication, but not as specified per protocol",
+      "gt_text": "Took prohibited concomitant medication/vaccine",
+      "distance": 34,
+      "tier": "P",
+      "credit": 0.45,
+      "root_cause": "PARAPHRASE",
+      "category_num": 3,
+      "study_id": "C4891002"
+    },
+    {
+      "generated_text": "Participant randomized under wrong stratification factors",
+      "gt_text": "Randomized under wrong stratification",
+      "distance": 8,
+      "tier": "B",
+      "credit": 0.5,
+      "root_cause": "TRUNCATION",
+      "category_num": 7,
+      "study_id": "C4891002"
+    },
+    {
+      "generated_text": "Participant was discontinued from study treatment or the study but did not meet any protocol-specified discontinuation criteria",
+      "gt_text": "Participant developed withdrawal criteria during the study but was not withdrawn",
+      "distance": 86,
+      "tier": "B",
+      "credit": 0.5,
+      "root_cause": "TRUNCATION",
+      "category_num": 9,
+      "study_id": "C4891002"
+    },
+    {
+      "generated_text": "Participant did not sign the additional consent for optional procedures (e.g., Retained Research Blood Sample for Genetics) but these biologic samples were collected.",
+      "gt_text": "Subject did not sign the additional consent for optional procedure(s) but biologic samples were collected",
+      "distance": 53,
+      "tier": "P",
+      "credit": 0.45,
+      "root_cause": "PARAPHRASE",
+      "category_num": 11,
+      "study_id": "C4891002"
+    },
+    {
+      "generated_text": "The Informed Consent Document (ICD) signed by the participant had not received IRB/IEC approval.",
+      "gt_text": "ICD signed by subject/LAR had not received IRB/IEC approval",
+      "distance": 43,
+      "tier": "P",
+      "credit": 0.45,
+      "root_cause": "PARAPHRASE",
+      "category_num": 11,
+      "study_id": "C4891002"
+    },
+    {
+      "generated_text": "Participant signed the Informed Consent Document (ICD) after study-specified screening procedures (e.g., tumor biopsy, blood samples, ECG) had been performed.",
+      "gt_text": "Subject signed ICD after study-specified procedures had been performed",
+      "distance": 75,
+      "tier": "P",
+      "credit": 0.45,
+      "root_cause": "PARAPHRASE",
+      "category_num": 11,
+      "study_id": "C4891002"
+    },
+    {
+      "generated_text": "The Informed Consent Document (ICD) was not translated into the participant's native language.",
+      "gt_text": "ICD not translated to subject's/LAR native language",
+      "distance": 51,
+      "tier": "P",
+      "credit": 0.45,
+      "root_cause": "PARAPHRASE",
+      "category_num": 11,
+      "study_id": "C4891002"
+    },
+    {
+      "generated_text": "The signed Informed Consent Document (ICD) was lost, and no copy is available at the site.",
+      "gt_text": "ICD was lost, no copy available",
+      "distance": 56,
+      "tier": "P",
+      "credit": 0.45,
+      "root_cause": "PARAPHRASE",
+      "category_num": 11,
+      "study_id": "C4891002"
+    },
+    {
+      "generated_text": "Participant did not sign the Informed Consent Document (ICD) and did not give verbal consent prior to randomization or any study procedures.",
+      "gt_text": "Subject/LAR did not sign ICD & did not give verbal consent",
+      "distance": 83,
+      "tier": "P",
+      "credit": 0.45,
+      "root_cause": "PARAPHRASE",
+      "category_num": 11,
+      "study_id": "C4891002"
+    }
+  ],
+  "overall_pass": false,
+  "go_no_go": "NO-GO",
+  "classified_failures": [
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Phase 3 only-Subject not meet inclusion criteria 2 [Pts to comply with SoA visits, assessments/procedures. a. Mandatory blood and tumor at diagnosis of local adv met aBC. If not, de novo biopsy needed. Tumor at initial diagnosis accepted if bone mets only",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject did not meet inclusion criteria 1 [Participants aged 18 years or older (or the minimum age of consent in accordance with local regulations) at screening.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject did not meet inclusion criteria 4 [No prior systemic anti-cancer therapy for their locoregionally advanced or metastatic disease.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject did not meet inclusion criteria 5 [At least 1 measurable lesion as defined by RECIST v1.1. Bone only disease: participants with only non-measurable lesions are eligible.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject didnot meet inclusion criteria 3 [Local advanced/metastatic BC not amenable to surgery or radiotherapy with curative intent. BC to be ER(+)\u22651%,HER2(-)]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject met exclusion criteria 1 [Other medical, psychiatric cond. include recent suicidal idea, behavior, abnormal lab that may increase risk of study participation or investigator\u2019s judgment, make participant inappropriate for study.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject met exclusion criteria 10 [Hematologic abnormalities as defined in protocol.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject met exclusion criteria 11 [Renal impairment as defined in protocol.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject met exclusion criteria 12 [Hepatic dysfunction as defined in protocol.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject met exclusion criteria 13 [Known active infection including SARS-CoV-2, HBV, HCV, and HIV or AIDS- related illness, as defined in protocol.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject met exclusion criteria 14 [Refractory nausea & vomiting, chronic GI disease, GI ulcer, GI bleeding, inability to swallow study drugs, prior significant gastric, bowel resection preventing adequate absorption of study drugs.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject met exclusion criteria 15 [Site staff directly involved in conduct of study and family members, site otherwise supervised by investigator, sponsor and delegate employees directly involved in conduct of study and family members.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject met exclusion criteria 2 [History of any other tumor malignancies within the past 3 years as per protocol. Participants with inflammatory BC and HSCT are excluded.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject met exclusion criteria 3 [Participants with newly diagnosed/symptomatic CNS mets, carcinomatous meningitis,or leptomeningeal disease. Exception are detailed in the study protocol.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject met exclusion criteria 4 [Pts in visceral crisis at risk of immediate life-threatening complications including pts with massive uncontrolled pleural/pericardial/peritoneal effusion, pulmonary lymphangitis, liver involvement above 50%.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject met exclusion criteria 5 [Impaired cardiovascular function or clinically significant cardiovascular diseases as defined in protocol.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject met exclusion criteria 6 [Relapse while on or within 12 months ofcompleting standard adjuvant ET. CDK4/6i, ARV-471, fulvestrant, and other investigational agents (including novel ET, any SERDs, SERCAs, CERANs) in any setting.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject met exclusion criteria 7 [Major Surgery, RT or systemic therapy for BC \u2264 14 days pre- randomization. Pts with prior RT \u226525% of BM are not eligible.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 1,
+      "example": "Subject met exclusion criteria 9 [Concurrent administration of drugs, food and herbal supplement that are strong CYP3A inhibitors or inducers.]",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 1,
+      "example": "Participant met all eligibility criteria but source documentation is incomplete or missing",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 1,
+      "example": "Participant met all eligibility criteria but was randomized prior to assessment of all eligibility criteria",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 2,
+      "example": "Blind compromised",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 2,
+      "example": "DOSING error: underdose",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 2,
+      "example": "Dosing error: overdose.",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 2,
+      "example": "Dosing/Administration error for vepdegestrant, palbociclib, letrozole, or LHRH agonist",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 2,
+      "example": "Required LHRH agonist not administered to pre-/peri-menopausal female or male participant",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 2,
+      "example": "Storage error/temperature excursion. IP administered to participant without Sponsor approval",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 2,
+      "example": "Study drug not held despite AE that required dose to be held per protocol",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 2,
+      "example": "Study drug not reduced as per protocol for toxicity (e.g., palbociclib or vepdegestrant)",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 2,
+      "example": "Subject received wrong treatment (e.g., randomized to Arm A but received letrozole, or Arm B but received vepdegestrant)",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 3,
+      "example": "Mandatory concomitant medication (LHRH agonist for pre-/peri-menopausal female and male participants) not taken/administered or not used as specified per protocol",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 3,
+      "example": "Participant received prohibited concurrent systemic anti-cancer therapy or radiotherapy during the study drug treatment period",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 3,
+      "example": "Participant took prohibited concomitant medication (e.g., strong CYP3A inhibitors or inducers) during the study treatment period",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 4,
+      "example": "Abnormal lab result (e.g., Grade 4 neutropenia, hepatic dysfunction) not followed up appropriately",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 4,
+      "example": "Blood samples for vepdegestrant PK, palbociclib PK, or pharmacodynamics not done",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 4,
+      "example": "Blood samples for vepdegestrant PK, palbociclib PK, or pharmacodynamics not properly collected, stored or handled",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 4,
+      "example": "Clinical laboratory results were not reviewed by an Investigator in a timely manner",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 4,
+      "example": "Critical safety labs required for dosing decisions (e.g., ANC, PLT, ALT, AST, Bilirubin) not done",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 4,
+      "example": "Study participant dosed without required pregnancy test done for WOCBP",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 4,
+      "example": "Tumor tissue for biomarkers or ctDNA blood samples not collected per protocol",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M3_EMPTY_MISMATCH",
+      "category_num": 4,
+      "example": "Category 4 none_identified mismatch",
+      "root_cause": "USDM extractor missed entities for this category",
+      "generator_fix": "Fix extract_cat4(). Log what entities were found."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 5,
+      "example": "Active Treatment Phase visit (e.g., Cycle 1 Day 15, Cycle 2 Day 1) conducted outside the protocol-specified window",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 5,
+      "example": "Safety Follow-up, Long Term Follow-up, or Survival Follow-up visit conducted outside the protocol-specified window",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 5,
+      "example": "Screening visit completed outside the protocol-specified window of \u2264 28 days prior to randomization",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 5,
+      "example": "Visit not done",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 5,
+      "example": "Visit not performed per protocol",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M3_EMPTY_MISMATCH",
+      "category_num": 5,
+      "example": "Category 5 none_identified mismatch",
+      "root_cause": "USDM extractor missed entities for this category",
+      "generator_fix": "Fix extract_cat5(). Log what entities were found."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 6,
+      "example": "12-Lead ECG not performed per protocol, impacting safety monitoring for QTcF prolongation.",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 6,
+      "example": "Disease assessment (tumor imaging or bone scan) not performed, incomplete, or performed out of window, impacting the primary endpoint of PFS by BICR.",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 6,
+      "example": "Patient-Reported Outcomes (EQ-5D-5L, EORTC QLQ-C30, EORTC QLQ-BR23) not completed per protocol.",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 6,
+      "example": "Pharmacokinetic (PK) blood samples for vepdegestrant or palbociclib not collected or collected incorrectly.",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 6,
+      "example": "Procedures for contraception counseling or contraception requirements not followed for IOCBP or male participants.",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 6,
+      "example": "Required tumor tissue or blood sample for biomarkers (e.g., ctDNA) not collected at diagnosis or de novo biopsy not performed for Phase 3 participants.",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M3_EMPTY_MISMATCH",
+      "category_num": 6,
+      "example": "Category 6 none_identified mismatch",
+      "root_cause": "USDM extractor missed entities for this category",
+      "generator_fix": "Fix extract_cat6(). Log what entities were found."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 7,
+      "example": "Participant didn't receive the drugs they were randomized to (e.g., assigned to Vepdegestrant + Palbociclib but received Letrozole + Palbociclib)",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 7,
+      "example": "Participant randomized in IRT in error despite not meeting eligibility criteria or being a screen failure",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 7,
+      "example": "Participant randomized out of protocol defined window (e.g., >28 days after start of screening)",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 7,
+      "example": "Participant randomized prior to completion of all required screening assessments (e.g., tumor biopsy or baseline scans)",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 8,
+      "example": "Adverse event (including protocol-specified events of interest such as Grade 4 neutropenia) was not recorded in the clinical database",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 8,
+      "example": "Clinically significant laboratory or ECG abnormality was not reported as an adverse event",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 8,
+      "example": "SAE Not reported by investigator to Ethics Committee / IRB per local regulations",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 8,
+      "example": "SAE/EIU not reported to Sponsor",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 8,
+      "example": "SAE/EIU not reported to Sponsor within specified timeframe",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M3_EMPTY_MISMATCH",
+      "category_num": 8,
+      "example": "Category 8 none_identified mismatch",
+      "root_cause": "USDM extractor missed entities for this category",
+      "generator_fix": "Fix extract_cat8(). Log what entities were found."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 9,
+      "example": "Participant became pregnant during the study but study treatment was not discontinued",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 9,
+      "example": "Participant met protocol-specified criteria for study treatment discontinuation (e.g., objective disease progression per RECIST v1.1, unacceptable toxicity) but study treatment was not discontinued",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 9,
+      "example": "Participant started a new anti-cancer therapy but study treatment was not discontinued",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 9,
+      "example": "Participant withdrew consent but continued to receive study treatment or undergo study procedures",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 10,
+      "example": "ICD signed by subject/LAR had not received IRB/IEC approval",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 10,
+      "example": "ICD was lost, no copy available",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 10,
+      "example": "Participant confidentiality compromised",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 10,
+      "example": "Participant randomized to Phase 3 despite Sponsor decision not to conduct the Phase 3 portion of the study",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 10,
+      "example": "Subject/LAR did not sign ICD & did not give verbal consent",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 10,
+      "example": "Subject/LAR signed and dated ICD after screen/enroll date",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M3_EMPTY_MISMATCH",
+      "category_num": 10,
+      "example": "Category 10 none_identified mismatch",
+      "root_cause": "USDM extractor missed entities for this category",
+      "generator_fix": "Fix extract_cat10(). Log what entities were found."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 11,
+      "example": "ICD not signed by impartial witness, when applicable",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 11,
+      "example": "ICD signed by unauthorized site personnel",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 11,
+      "example": "ICD was lost, copy available",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 11,
+      "example": "Subject/LAR did not sign the ICD but gave verbal consent",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_MISSING_SUBCAT",
+      "category_num": 11,
+      "example": "Subject/LAR signed and dated ICD after screen/enroll date",
+      "root_cause": "Few-shot examples missing this subcat OR USDM extractor missed entity",
+      "generator_fix": "Add train example with this subcat. Check extract_cat function."
+    },
+    {
+      "failure_type": "M1_HALLUCINATED",
+      "category_num": 11,
+      "example": "Participant signed a superseded or outdated version of the Informed Consent Document (ICD).",
+      "root_cause": "Too many USDM entities injected OR model generating from noise",
+      "generator_fix": "Tighten USDM extraction scope. Strengthen post-gen validation."
+    },
+    {
+      "failure_type": "M4_HALLUCINATION",
+      "category_num": 1,
+      "example": "'Pending Site Monitor Action Inc/Excl' has null/missing USDM provenance",
+      "root_cause": "Post-gen validation not rejecting null entities",
+      "generator_fix": "Fix post-gen validation. Strengthen usdm_entity_id prompt instruction."
+    },
+    {
+      "failure_type": "M4_HALLUCINATION",
+      "category_num": 3,
+      "example": "'Participant took prohibited concomitant medication (e.g., strong CYP3A inhibitors or inducers) during the study treatment period' has null/missing USDM provenance",
+      "root_cause": "Post-gen validation not rejecting null entities",
+      "generator_fix": "Fix post-gen validation. Strengthen usdm_entity_id prompt instruction."
+    },
+    {
+      "failure_type": "M4_HALLUCINATION",
+      "category_num": 3,
+      "example": "'Participant took permitted concomitant medication, but not as specified per protocol' has null/missing USDM provenance",
+      "root_cause": "Post-gen validation not rejecting null entities",
+      "generator_fix": "Fix post-gen validation. Strengthen usdm_entity_id prompt instruction."
+    },
+    {
+      "failure_type": "M4_HALLUCINATION",
+      "category_num": 9,
+      "example": "'Participant met protocol-specified criteria for study treatment discontinuation (e.g., objective disease progression per RECIST v1.1, unacceptable toxicity) but study treatment was not discontinued' has null/missing USDM provenance",
+      "root_cause": "Post-gen validation not rejecting null entities",
+      "generator_fix": "Fix post-gen validation. Strengthen usdm_entity_id prompt instruction."
+    },
+    {
+      "failure_type": "M4_HALLUCINATION",
+      "category_num": 9,
+      "example": "'Participant was discontinued from study treatment or the study but did not meet any protocol-specified discontinuation criteria' has null/missing USDM provenance",
+      "root_cause": "Post-gen validation not rejecting null entities",
+      "generator_fix": "Fix post-gen validation. Strengthen usdm_entity_id prompt instruction."
+    },
+    {
+      "failure_type": "M4_HALLUCINATION",
+      "category_num": 11,
+      "example": "'Participant did not sign the Informed Consent Document (ICD) and did not give verbal consent prior to randomization or any study procedures.' has null/missing USDM provenance",
+      "root_cause": "Post-gen validation not rejecting null entities",
+      "generator_fix": "Fix post-gen validation. Strengthen usdm_entity_id prompt instruction."
+    },
+    {
+      "failure_type": "M4_HALLUCINATION",
+      "category_num": 11,
+      "example": "'The Informed Consent Document (ICD) signed by the participant had not received IRB/IEC approval.' has null/missing USDM provenance",
+      "root_cause": "Post-gen validation not rejecting null entities",
+      "generator_fix": "Fix post-gen validation. Strengthen usdm_entity_id prompt instruction."
+    },
+    {
+      "failure_type": "M4_HALLUCINATION",
+      "category_num": 11,
+      "example": "'The Informed Consent Document (ICD) was not translated into the participant's native language.' has null/missing USDM provenance",
+      "root_cause": "Post-gen validation not rejecting null entities",
+      "generator_fix": "Fix post-gen validation. Strengthen usdm_entity_id prompt instruction."
+    },
+    {
+      "failure_type": "M4_HALLUCINATION",
+      "category_num": 11,
+      "example": "'The signed Informed Consent Document (ICD) was lost, and no copy is available at the site.' has null/missing USDM provenance",
+      "root_cause": "Post-gen validation not rejecting null entities",
+      "generator_fix": "Fix post-gen validation. Strengthen usdm_entity_id prompt instruction."
+    }
+  ]
+}

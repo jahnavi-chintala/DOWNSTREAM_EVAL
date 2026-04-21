@@ -1,0 +1,117 @@
+{
+  "run_date": "2026-04-20",
+  "run_timestamp": "2026-04-20T00:32:42.076821Z",
+  "verify_set_count": 8,
+  "evaluated_count": 3,
+  "skipped_count": 5,
+  "metric_1_risk_name": {
+    "score": 0.2889,
+    "target": 0.85,
+    "pass": false,
+    "studies_scored": 3
+  },
+  "metric_2_rpn_tier": {
+    "score": 0.5,
+    "target": 0.9,
+    "pass": false,
+    "studies_scored": 2
+  },
+  "metric_3_critical_factors": {
+    "score": 1.0,
+    "target": 0.8,
+    "pass": true,
+    "studies_scored": 3
+  },
+  "metric_4_hallucinations": {
+    "total_flagged": 5,
+    "target": 0,
+    "pass": false,
+    "studies_scored": 3
+  },
+  "overall_pass": false,
+  "go_no_go": "NO-GO",
+  "go_count": 0,
+  "no_go_count": 3,
+  "per_study": [
+    {
+      "study_id": "B7981027",
+      "ta": "IMMUNOLOGY",
+      "phase": "PHASE III",
+      "verdict": "NO-GO",
+      "m1_score": 0.6667,
+      "m2_score": 0.5,
+      "m3_score": 1.0,
+      "m4_hallucinations": 0
+    },
+    {
+      "study_id": "C4891023",
+      "ta": "ONCOLOGY",
+      "phase": "PHASE II",
+      "verdict": "NO-GO",
+      "m1_score": 0.0,
+      "m2_score": null,
+      "m3_score": 1.0,
+      "m4_hallucinations": 5
+    },
+    {
+      "study_id": "C1071003",
+      "ta": "UNKNOWN",
+      "phase": "UNKNOWN",
+      "verdict": "SKIPPED",
+      "m1_score": null,
+      "m2_score": null,
+      "m3_score": null,
+      "m4_hallucinations": null
+    },
+    {
+      "study_id": "C1071005",
+      "ta": "UNKNOWN",
+      "phase": "UNKNOWN",
+      "verdict": "SKIPPED",
+      "m1_score": null,
+      "m2_score": null,
+      "m3_score": null,
+      "m4_hallucinations": null
+    },
+    {
+      "study_id": "C3651021",
+      "ta": "UNKNOWN",
+      "phase": "UNKNOWN",
+      "verdict": "SKIPPED",
+      "m1_score": null,
+      "m2_score": null,
+      "m3_score": null,
+      "m4_hallucinations": null
+    },
+    {
+      "study_id": "C4591081",
+      "ta": "UNKNOWN",
+      "phase": "UNKNOWN",
+      "verdict": "SKIPPED",
+      "m1_score": null,
+      "m2_score": null,
+      "m3_score": null,
+      "m4_hallucinations": null
+    },
+    {
+      "study_id": "C3671059",
+      "ta": "UNKNOWN",
+      "phase": "UNKNOWN",
+      "verdict": "SKIPPED",
+      "m1_score": null,
+      "m2_score": null,
+      "m3_score": null,
+      "m4_hallucinations": null
+    },
+    {
+      "study_id": "C5091017",
+      "ta": "INFECTIOUS",
+      "phase": "PHASE III",
+      "verdict": "NO-GO",
+      "m1_score": 0.2,
+      "m2_score": 0.5,
+      "m3_score": 1.0,
+      "m4_hallucinations": 0
+    }
+  ]
+}

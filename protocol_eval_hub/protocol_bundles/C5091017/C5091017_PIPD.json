@@ -1,0 +1,1349 @@
+{
+  "protocol_id": "C5091017",
+  "protocol_title": "AN INTERVENTIONAL EFFICACY AND SAFETY, PHASE 3, DOUBLE-BLIND, 2-ARM STUDY TO INVESTIGATE ORALLY ADMINISTERED IBUZATRELVIR COMPARED WITH PLACEBO IN NON-HOSPITALIZED SYMPTOMATIC ADULT AND ADOLESCENT PARTICIPANTS WITH COVID-19 WHO ARE AT HIGH RISK OF PROGRESSING TO SEVERE ILLNESS",
+  "study_drug": "PF-07817883",
+  "therapeutic_area": "",
+  "phase": "Ph 3",
+  "version": "1.0",
+  "version_date": "2026-04-06",
+  "generated_by": "Protocol Digitalization Platform - USDM 4.0",
+  "reviewed_by": {
+    "clinician": "--",
+    "statistician": "--"
+  },
+  "benchmark_segment": {
+    "therapeutic_area": "",
+    "phase": "Ph 3",
+    "train_studies_total": 31,
+    "train_studies_in_segment": 6
+  },
+  "categories": [
+    {
+      "category_num": 1,
+      "category_name": "Inclusion/Exclusion Criteria",
+      "guidance": "Per International Conference on Harmonisation (ICH) guidance, include protocol deviation (PD) sub-categories where subject(s) entered the study even though they did not satisfy the entry criteria. Also include any PDs that could impact subject safety, efficacy, or immunogenicity analysis.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Participant did not meet one or more inclusion criteria but was randomized to the study treatment",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Eligibility Criteria",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant met one or more exclusion criteria but was randomized to the study treatment",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Eligibility Criteria",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 6,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Participant met all eligibility criteria but source documentation is incomplete or missing",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Eligibility Criteria",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 2,
+              "total": 31,
+              "rate": 0.065
+            },
+            "segment": {
+              "present": 2,
+              "total": 6,
+              "rate": 0.333
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant met all eligibility criteria but was randomized prior to assessment of all eligibility criteria",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Eligibility Criteria",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Contraception not confirmed/used prior to Day 1 as required per protocol",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Eligibility Criteria",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 2,
+              "total": 31,
+              "rate": 0.065
+            },
+            "segment": {
+              "present": 2,
+              "total": 6,
+              "rate": 0.333
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Pending Site Monitor Action Inc/Excl",
+          "include_in_csr": false,
+          "rationale_if_no": "Administrative tracking category for pending monitor actions, not a confirmed protocol deviation.",
+          "protocol_source": "Eligibility Criteria",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "auto_confirmed",
+          "benchmark": {
+            "all_studies": {
+              "present": 30,
+              "total": 31,
+              "rate": 0.968
+            },
+            "segment": {
+              "present": 6,
+              "total": 6,
+              "rate": 1.0
+            },
+            "yes_rate": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 2,
+      "category_name": "Investigational Product",
+      "guidance": "Per ICH guidance, include PD sub-categories related to a subject receiving the wrong treatment or incorrect dose. Also include any PDs that could impact subject safety, efficacy, or immunogenicity analysis such as under dosing, overdosing, or storage/preparation issues.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Blind compromised",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Metadata (Blinding)",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 18,
+              "total": 31,
+              "rate": 0.581
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Dispensing error",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Study Interventions",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 11,
+              "total": 31,
+              "rate": 0.355
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant compliance is <80% at one or more visits",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Study Interventions (Administrations)",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant compliance is >120% at one or more visits",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Study Interventions (Administrations)",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant took IP which was not viable due to shipping/storage conditions",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Study Interventions",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 4,
+              "total": 31,
+              "rate": 0.129
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "IP accountability not done",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities (Retrieval of unused study intervention and perform accountability)",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 9,
+              "total": 31,
+              "rate": 0.29
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Medication Error: Administration of IP by wrong subject, or at the wrong time, or at wrong dose, or other use outside the protocol",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Study Interventions (Administrations)",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 3,
+      "category_name": "Concomitant Medications (CCMeds)",
+      "guidance": "Include PD sub-categories related to use of prohibited concomitant medications that could impact safety or efficacy analysis.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Participant took a prohibited medication that could potentially impact efficacy assessments (e.g., other COVID-19 antivirals, mAbs, or convalescent plasma)",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Exclusion Criteria 11",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 3,
+              "total": 31,
+              "rate": 0.097
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant took a prohibited medication that could potentially impact the metabolism of the study drug (ibuzatrelvir)",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Exclusion Criteria 10",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 3,
+              "total": 31,
+              "rate": 0.097
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant received a prohibited COVID-19 vaccine during the restricted study period (through Day 34)",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Exclusion Criteria 12",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 3,
+              "total": 31,
+              "rate": 0.097
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant received rescue medication for COVID-19 that was not specified as per protocol",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Estimands",
+          "usdm_entity": "Estimand",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 4,
+      "category_name": "Labs",
+      "guidance": "Include PD sub-categories related to laboratory assessment deviations including missed lab collections, out-of-window collections, and sample handling issues.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Lab for pregnancy testing not done or done out of visit window",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 13,
+              "total": 31,
+              "rate": 0.419
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Abnormal lab result not followed up appropriately",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 14,
+              "total": 31,
+              "rate": 0.452
+            },
+            "segment": {
+              "present": 4,
+              "total": 6,
+              "rate": 0.667
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "The participant or the participant's legal guardian did not provide consent for collection of PrepD1 samples, although the samples were drawn",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "SARS-CoV-2 RNA level assessment (NP swab) not collected or collected out of window, potentially impacting virologic secondary endpoints",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 6,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Pharmacokinetic (PK) sample for ibuzatrelvir not collected or collected outside the specified time window",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 6,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Required safety laboratory assessments (e.g., hematology, blood chemistry) not performed",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 11,
+              "total": 31,
+              "rate": 0.355
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 5,
+      "category_name": "Visit Schedule",
+      "guidance": "Include PD sub-categories for visits conducted outside the protocol-specified visit window.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Visit performed but outside protocol window.",
+          "include_in_csr": false,
+          "rationale_if_no": "Minor visit window deviations are generally considered operational and do not impact the overall interpretation of safety or efficacy data unless they affect critical endpoint assessments.",
+          "protocol_source": "Schedule of Activities",
+          "usdm_entity": "Encounter",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 2,
+              "total": 31,
+              "rate": 0.065
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Week 24 visit was not performed",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Schedule of Activities",
+          "usdm_entity": "Encounter",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Day 34 visit was not performed",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Schedule of Activities",
+          "usdm_entity": "Encounter",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 6,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Baseline (Day 1) visit performed outside the protocol-specified window (e.g., >5 days after COVID-19 symptom onset)",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Eligibility Criteria",
+          "usdm_entity": "Encounter",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 6,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "One or more treatment period visits (Day 5, Day 10, Day 14, or Day 21) were not performed",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Schedule of Activities",
+          "usdm_entity": "Encounter",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 6,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 6,
+      "category_name": "Procedures/Tests",
+      "guidance": "Include PD sub-categories for protocol-specified procedures or tests not performed or performed incorrectly.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Participant did not use highly effective contraceptive method(s) per protocol during the study",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Inclusion Criterion 2",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 3,
+              "total": 31,
+              "rate": 0.097
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Contraception counseling or contraception check during study visits not done",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 3,
+              "total": 31,
+              "rate": 0.097
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Protocol-specified procedure or test (e.g., SARS-CoV-2 RNA NP swab, PK sample, COVID-19 Rapid antigen test) not done",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 12,
+              "total": 31,
+              "rate": 0.387
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Protocol-specified procedure or test (e.g., SARS-CoV-2 RNA NP swab, PK sample) not performed per protocol",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 12,
+              "total": 31,
+              "rate": 0.387
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 0.667
+          }
+        },
+        {
+          "subcategory_text": "Participant-completed study diary (e.g., COVID-19 symptoms, Long COVID symptoms, WPAI, EQ-5D-5L) incomplete, or not completed, as specified per protocol",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 6,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Participant completed study dosing log incomplete, or not completed, as specified per protocol",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Abnormal procedure/test result not followed up per protocol",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 8,
+              "total": 31,
+              "rate": 0.258
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 7,
+      "category_name": "Randomization",
+      "guidance": "Include PD sub-categories related to randomization errors including IRT errors, eligibility bypass, and stratification errors.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Participant randomized after the 5th day of COVID-19 symptom onset",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Inclusion Criteria",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 6,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Incorrect age stratification group assigned.",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Population",
+          "usdm_entity": "StudyPopulation",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Wrong stratification group assigned based on risk factors for progression to severe COVID-19",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Inclusion Criteria",
+          "usdm_entity": "EligibilityCriterion",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant incorrectly randomized at Day 1",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant randomized prior to confirming all eligibility criteria",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 6,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        },
+        {
+          "subcategory_text": "Participant randomized but did not receive study intervention",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 6,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 8,
+      "category_name": "Safety Reporting",
+      "guidance": "Per SOP, include PD sub-categories that could impact subject safety, efficacy, or immunogenicity analysis as relevant to the compound and study design. Consider safety reporting deviations where serious adverse event reported late by study site and impacts safety or efficacy analysis.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "SAE/EIU not reported to Sponsor within specified timeframe",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities: Serious and nonserious AE monitoring",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 19,
+              "total": 31,
+              "rate": 0.613
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "SAE reporting was delayed or not reported to IEC or IRB per local regulations",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities: Serious and nonserious AE monitoring",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 3,
+              "total": 31,
+              "rate": 0.097
+            },
+            "segment": {
+              "present": 2,
+              "total": 6,
+              "rate": 0.333
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "AE/SAE was not recorded in Clinical Database",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Activities: Serious and nonserious AE monitoring",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 2,
+              "total": 31,
+              "rate": 0.065
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Event information submission to adjudication committee was delayed or not reported",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Estimands: Primary Estimand",
+          "usdm_entity": "Estimand",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 9,
+      "category_name": "Protocol Specific Discontinuation Criteria",
+      "guidance": "Include PD sub-categories related to subjects not being discontinued when meeting protocol-specified discontinuation criteria.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Participant met protocol-specified criteria for discontinuation of study intervention or withdrawal from the study but was not withdrawn",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Estimands",
+          "usdm_entity": "Estimand",
+          "confidence": "auto_confirmed",
+          "benchmark": {
+            "all_studies": {
+              "present": 30,
+              "total": 31,
+              "rate": 0.968
+            },
+            "segment": {
+              "present": 6,
+              "total": 6,
+              "rate": 1.0
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant was discontinued from study intervention or the study but did not meet protocol-specified discontinuation criteria",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Estimands",
+          "usdm_entity": "Estimand",
+          "confidence": "auto_confirmed",
+          "benchmark": {
+            "all_studies": {
+              "present": 17,
+              "total": 31,
+              "rate": 0.548
+            },
+            "segment": {
+              "present": 5,
+              "total": 6,
+              "rate": 0.833
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Delayed discontinuation of study intervention (ibuzatrelvir or placebo) after discontinuation criteria had been met by the participant",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Study Interventions",
+          "usdm_entity": "StudyIntervention",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 3,
+              "total": 31,
+              "rate": 0.097
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant discontinued study intervention (ibuzatrelvir or placebo) prematurely but did not remain in the study to be followed for safety and efficacy assessments through Week 24",
+          "include_in_csr": false,
+          "rationale_if_no": "Participant retention and follow-up failures are typically captured in disposition summaries rather than as PIPDs unless it reflects a specific site failure to attempt follow-up.",
+          "protocol_source": "Estimands",
+          "usdm_entity": "Estimand",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 10,
+      "category_name": "Other",
+      "guidance": "Include any other protocol-specific PD sub-categories that do not fit in categories 1-9 and 11.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Accidental unblinding of site staff or study staff or participant caregiver",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Metadata (Blinding)",
+          "usdm_entity": "Study",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Health Information required to be protected was not properly redacted or was shared in error.",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "General GCP",
+          "usdm_entity": "Study",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Site did not permit study-related monitoring to occur and/or did not permit direct access to source data documents",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "General GCP",
+          "usdm_entity": "Study",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Participant enrolled in an age group (12 to 49 years or 50 to 64 years) after the enrollment cap of 20% for that group was reached",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Population Description",
+          "usdm_entity": "StudyPopulation",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 0,
+              "total": 31,
+              "rate": 0.0
+            },
+            "segment": {
+              "present": 0,
+              "total": 6,
+              "rate": 0.0
+            },
+            "yes_rate": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "category_num": 11,
+      "category_name": "Informed Consent Deviations",
+      "guidance": "Include PD sub-categories related to informed consent process deviations including missing consent, expired consent, and consent obtained after study procedures.",
+      "none_identified": false,
+      "subcategories": [
+        {
+          "subcategory_text": "Participant or the participant's legal guardian did not sign the main ICD/assent prior to first study procedure",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Screening (Day -1 to Day 1) Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 3,
+              "total": 31,
+              "rate": 0.097
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Subject did not sign consent at age of majority",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Screening (Day -1 to Day 1) Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 12,
+              "total": 31,
+              "rate": 0.387
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Subject/LAR signed a superseded/outdated version of the ICD",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Screening (Day -1 to Day 1) Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 12,
+              "total": 31,
+              "rate": 0.387
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Study procedures were performed prior to ICD signed",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Screening (Day -1 to Day 1) Activities",
+          "usdm_entity": "Activity",
+          "confidence": "low_confidence",
+          "benchmark": {
+            "all_studies": {
+              "present": 1,
+              "total": 31,
+              "rate": 0.032
+            },
+            "segment": {
+              "present": 1,
+              "total": 6,
+              "rate": 0.167
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Screening (Day -1 to Day 1) Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 11,
+              "total": 31,
+              "rate": 0.355
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        },
+        {
+          "subcategory_text": "Subject/LAR did not sign ICD & did not give verbal consent",
+          "include_in_csr": true,
+          "rationale_if_no": null,
+          "protocol_source": "Screening (Day -1 to Day 1) Activities",
+          "usdm_entity": "Activity",
+          "confidence": "review",
+          "benchmark": {
+            "all_studies": {
+              "present": 27,
+              "total": 31,
+              "rate": 0.871
+            },
+            "segment": {
+              "present": 3,
+              "total": 6,
+              "rate": 0.5
+            },
+            "yes_rate": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}

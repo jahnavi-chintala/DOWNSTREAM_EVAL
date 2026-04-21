@@ -1,0 +1,1895 @@
+study_folder,therapeutic_area,phase,pd_category,pd_subcategory,pi_flag,count
+B7981027,I&I,Ph III,1) Inc/Excl,,,1
+B7981027,I&I,Ph III,1) Inc/Excl,Participant met one or more exclusion criteria but was randomized to the study treatment,YES,6
+B7981027,I&I,Ph III,10) Other,,,1
+B7981027,I&I,Ph III,11) Informed Consent,,,5
+B7981027,I&I,Ph III,11) Informed Consent,Participant or the participant's legal guardian signed ICD/Assent but documentation is incomplete or missing,NO,1
+B7981027,I&I,Ph III,2) InvProd,,,2
+B7981027,I&I,Ph III,2) InvProd,Dispensing error,YES,6
+B7981027,I&I,Ph III,2) InvProd,IP accountability not done,YES,3
+B7981027,I&I,Ph III,2) InvProd,IP not returned,YES,3
+B7981027,I&I,Ph III,2) InvProd,IP was not handled/dispensed according to GCP guidelines but the error did not result in improper participant dosing,NO,2
+B7981027,I&I,Ph III,2) InvProd,Medication error occurred,YES,3
+B7981027,I&I,Ph III,2) InvProd,Participant compliance is < 80% at one or more visits.,YES,2
+B7981027,I&I,Ph III,2) InvProd,Participant received and understood dosing instructions but did not take IP as prescribed and it cannot be determined if the correct dose was administered,YES,4
+B7981027,I&I,Ph III,2) InvProd,"Source documentation, including diary, is unavailable",NO,3
+B7981027,I&I,Ph III,4) Lab,,,1
+B7981027,I&I,Ph III,4) Lab,Lab not done,NO,3
+B7981027,I&I,Ph III,4) Lab,Lab sample was not properly collected and/or lab sample was collected but lab value could not be resulted,NO,3
+B7981027,I&I,Ph III,5) VisitSched,Visit not done,NO,1
+B7981027,I&I,Ph III,5) VisitSched,Visit was performed out of window,NO,10
+B7981027,I&I,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,3
+B7981027,I&I,Ph III,6) Proc/Test,Procedure/Test performed out of window,YES,2
+B7981027,I&I,Ph III,6) Proc/Test,Procedure/test not performed,YES,12
+B7981027,I&I,Ph III,6) Proc/Test,Procedure/test not performed per protocol,YES,8
+B7981027,I&I,Ph III,7) Random,Incorrect information was entered into the IVRS/IWRS for randomization,NO,1
+B7981028,I&I,Ph III,1) Inc/Excl,Participant met one or more exclusion criteria and was randomized to the study treatment,YES,1
+B7981028,I&I,Ph III,10) Other,Accidental unblinding of site staff or study staff or participant caregiver,YES,1
+B7981028,I&I,Ph III,11) Informed Consent,Revised ICD not signed at the first participant visit after the revised/approved ICD was available at site,NO,1
+B7981028,I&I,Ph III,5) VisitSched,Pending Site Monitor Action VisitSched,NO,1
+B7981028,I&I,Ph III,6) Proc/Test,Procedure/test not performed,YES,1
+B7981032,I&I,Ph III,1) Inc/Excl,Contraception not confirmed/used prior to Day 1 as required per protocol,YES,4
+B7981032,I&I,Ph III,1) Inc/Excl,"Participant did not meet Inclusion #1 (ie, protocol-specific criteria for alopecia areata) (De novo and Group A)",YES,2
+B7981032,I&I,Ph III,1) Inc/Excl,"Participant met Exclusion #25g or #25j (ie, received a prohibited CYP3A inducer or substrate within protocol required washout period)",YES,4
+B7981032,I&I,Ph III,1) Inc/Excl,"Participant met Exclusion #3 or #4 (ie, other than AGA, active systemic disease which can cause hair loss or scalp disease which can impact hair loss assessments) (De novo and Group A)",YES,1
+B7981032,I&I,Ph III,1) Inc/Excl,Participant met all eligibility criteria but source documentation is incomplete or missing,YES,8
+B7981032,I&I,Ph III,1) Inc/Excl,Participant met all eligibility criteria but was randomized prior to assessment of all eligibility criteria,YES,22
+B7981032,I&I,Ph III,1) Inc/Excl,Participant received a prohibited medication within protocol required washout period that could potentially impact efficacy assessments (other than permitted medications for androgenetic alopecia),YES,8
+B7981032,I&I,Ph III,1) Inc/Excl,Participant was randomized but did not meet all eligibility criteria,YES,9
+B7981032,I&I,Ph III,10) Other,Health Information required to be protected was not properly redacted or was shared in error.,YES,1319
+B7981032,I&I,Ph III,10) Other,"Participant did not follow lifestyle requirements relating to hair transplants, tattooing of scalp, eyebrows, and eyelashes during the study",NO,4
+B7981032,I&I,Ph III,10) Other,Participant was rescreened without Sponsor permission,NO,8
+B7981032,I&I,Ph III,10) Other,Procedures were not conducted as specified in the 12-Nov-2020 PDAL or 15-Apr-2021 PDAL Addendum,YES,14
+B7981032,I&I,Ph III,10) Other,Site did not permit study-related monitoring to occur and/or did not permit direct access to source data documents,YES,6
+B7981032,I&I,Ph III,11) Informed Consent,Adolescent participant did not sign the Assent (if required by IRB/IEC),NO,6
+B7981032,I&I,Ph III,11) Informed Consent,ICD/Assent had not undergone proper Pfizer/CRO approval,NO,283
+B7981032,I&I,Ph III,11) Informed Consent,ICD/Assent signed by participant or the participant's legal guardian had not received IRB/IEC approval,NO,8
+B7981032,I&I,Ph III,11) Informed Consent,ICD/Assent was administered but was not administered per GCP guidelines,NO,179
+B7981032,I&I,Ph III,11) Informed Consent,Incorrect ICD/assent version administered,NO,55
+B7981032,I&I,Ph III,11) Informed Consent,Participant did not sign ICD at age of majority (if required by IRB/IEC),NO,5
+B7981032,I&I,Ph III,11) Informed Consent,Participant or the participant's legal guardian did not sign the main ICD/assent prior to first study procedure,YES,7
+B7981032,I&I,Ph III,11) Informed Consent,Participant or the participant's legal guardian signed ICD/Assent but documentation is incomplete or missing,NO,108
+B7981032,I&I,Ph III,11) Informed Consent,Participant or the participant's legal guardian signed consent but did not date it,NO,11
+B7981032,I&I,Ph III,11) Informed Consent,Revised ICD not signed at the first participant visit after the revised/approved ICD was available at site,NO,233
+B7981032,I&I,Ph III,2) InvProd,"After an interruption to IP of >14 days, IP was re-started without Sponsor approval",YES,20
+B7981032,I&I,Ph III,2) InvProd,De novo participant dosed in-clinic with 50 mg dose at Month 1 visit,NO,25
+B7981032,I&I,Ph III,2) InvProd,Dispensing error,YES,3
+B7981032,I&I,Ph III,2) InvProd,IP accountability not done,YES,43
+B7981032,I&I,Ph III,2) InvProd,IP not returned,YES,227
+B7981032,I&I,Ph III,2) InvProd,IP was not handled/dispensed according to GCP guidelines but the error did not result in improper participant dosing,NO,34
+B7981032,I&I,Ph III,2) InvProd,Medication error occurred,YES,3
+B7981032,I&I,Ph III,2) InvProd,Medication taken from incorrect blister card,NO,4
+B7981032,I&I,Ph III,2) InvProd,Participant compliance is <80% at one or more visits,YES,130
+B7981032,I&I,Ph III,2) InvProd,Participant compliance is >120% at one or more visits,YES,1
+B7981032,I&I,Ph III,2) InvProd,Participant did not dose at the Baseline (Day 1) visit of B7981032,NO,19
+B7981032,I&I,Ph III,2) InvProd,Participant did not receive MENVEO or Adacel vaccines as assigned in the vaccine sub-study,NO,1
+B7981032,I&I,Ph III,2) InvProd,Participant did not temporarily discontinue study intervention per protocol instructions,YES,63
+B7981032,I&I,Ph III,2) InvProd,Participant dosed at-home instead of at the study site on the day of the visit,NO,52
+B7981032,I&I,Ph III,2) InvProd,Participant dosed in-clinic from a new blister card (excluding Day 1 for all participant and Month 1 for de novo participants),NO,398
+B7981032,I&I,Ph III,2) InvProd,Participant received and understood dosing instructions but did not take IP as prescribed and it cannot be determined if the correct dose was administered,YES,8
+B7981032,I&I,Ph III,2) InvProd,Participant took IP which was not viable due to shipping/storage conditions,YES,4
+B7981032,I&I,Ph III,2) InvProd,Source documentation for drug accountability was completed but is unavailable,NO,4
+B7981032,I&I,Ph III,2) InvProd,"Source documentation, including diary, is unavailable",NO,109
+B7981032,I&I,Ph III,2) InvProd,Study intervention requested through IVRS prior completing study visit,NO,15
+B7981032,I&I,Ph III,3) CCMeds,"Participant took permitted concomitant medication, but not as specified per protocol",NO,16
+B7981032,I&I,Ph III,3) CCMeds,Participant took prohibited medication that could potentially impact efficacy assessments,YES,104
+B7981032,I&I,Ph III,3) CCMeds,Participant took prohibited medication/vaccine (excludes all prohibited medications that could potentially impact efficacy or metabolism of study drug).,YES,56
+B7981032,I&I,Ph III,3) CCMeds,Participant took prohibited medications that could potentially impact metabolism of study drug,YES,29
+B7981032,I&I,Ph III,4) Lab,Abnormal lab result not followed up appropriately,YES,218
+B7981032,I&I,Ph III,4) Lab,Baseline viral screen sample collected in error,YES,252
+B7981032,I&I,Ph III,4) Lab,Lab for pregnancy testing not done or done out of visit window,YES,63
+B7981032,I&I,Ph III,4) Lab,Lab not done,NO,614
+B7981032,I&I,Ph III,4) Lab,Lab not done,YES,2
+B7981032,I&I,Ph III,4) Lab,Lab performed out of window,NO,125
+B7981032,I&I,Ph III,4) Lab,Lab sample was not properly collected and/or lab sample was collected but lab value could not be resulted,NO,813
+B7981032,I&I,Ph III,4) Lab,Lab was performed but source documentation is unavailable,NO,4
+B7981032,I&I,Ph III,4) Lab,Lab(s) was not reviewed by an Investigator in a timely manner,NO,10
+B7981032,I&I,Ph III,4) Lab,Laboratory sample collected and/or tested in error,NO,245
+B7981032,I&I,Ph III,4) Lab,PK samples not collected,NO,132
+B7981032,I&I,Ph III,4) Lab,"PK samples not properly collected, stored or handled",NO,43
+B7981032,I&I,Ph III,4) Lab,Participant was not fasting,NO,185
+B7981032,I&I,Ph III,4) Lab,Serum pregnancy test performed in error,NO,79
+B7981032,I&I,Ph III,5) VisitSched,,,4
+B7981032,I&I,Ph III,5) VisitSched,Neither pregnancy testing nor telephone contact to check pregnancy test results and contraception use between visits were performed,YES,172
+B7981032,I&I,Ph III,5) VisitSched,Visit not done,NO,350
+B7981032,I&I,Ph III,5) VisitSched,Visit was performed out of window,NO,1321
+B7981032,I&I,Ph III,6) Proc/Test,"AAPPO, P-Sat, and/or PGI-C were not done",YES,125
+B7981032,I&I,Ph III,6) Proc/Test,Abnormal procedure/test result not followed up per protocol,YES,7
+B7981032,I&I,Ph III,6) Proc/Test,Change in rater for a participant/assessment not approved prior to performing assessments,NO,8
+B7981032,I&I,Ph III,6) Proc/Test,Contraception use not verified,YES,26
+B7981032,I&I,Ph III,6) Proc/Test,"ELA, EBA, or CGI-AA was not performed properly",YES,8
+B7981032,I&I,Ph III,6) Proc/Test,"Incorrect version of CSSRS used (eg, post-day 1 version used at Day 1 visit)",NO,24
+B7981032,I&I,Ph III,6) Proc/Test,Participant did not use highly effective contraceptive method(s) per protocol during the study,YES,23
+B7981032,I&I,Ph III,6) Proc/Test,Participant was not contacted via telephone between visits to verify pregnancy test results,YES,25
+B7981032,I&I,Ph III,6) Proc/Test,Patient reported outcome questionnaires were not administered properly,YES,143
+B7981032,I&I,Ph III,6) Proc/Test,"Procedure not performed properly per protocol (includes all non-lab procedures except SALT, ELA, EBA, CGI-AA, AAPPO, P-Sat, PGI-C, pregnancy tests, and contraception checks)",NO,403
+B7981032,I&I,Ph III,6) Proc/Test,"Procedure was not done (includes all non-lab procedures except SALT, ELA, EBA, CGI-AA, AAPPO, P-Sat, PGI-C, pregnancy tests, and contraception checks)",YES,1212
+B7981032,I&I,Ph III,6) Proc/Test,Procedure was not performed by qualified site staff or qualified rater,YES,64
+B7981032,I&I,Ph III,6) Proc/Test,Procedure was performed but source documentation is unavailable,NO,56
+B7981032,I&I,Ph III,6) Proc/Test,Procedure was performed in error,YES,384
+B7981032,I&I,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,346
+B7981032,I&I,Ph III,6) Proc/Test,SALT scoring was not performed properly,YES,1
+B7981032,I&I,Ph III,6) Proc/Test,"SALT, ELA, EBA, and/or CGI-AA were not done",YES,180
+B7981032,I&I,Ph III,7) Random,Incorrect information was entered into the IVRS/IWRS for randomization,NO,1
+B7981032,I&I,Ph III,7) Random,Randomized out of protocol defined window,NO,2
+B7981032,I&I,Ph III,8) SafetyRep,Adverse Event not reported in Clinical Database in a timely manner,NO,9
+B7981032,I&I,Ph III,8) SafetyRep,SAE reporting was delayed or not reported to IEC or IRB per local regulations,YES,2
+B7981032,I&I,Ph III,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,18
+B7981032,I&I,Ph III,9) DiscCrit,Participant developed withdrawal criteria during the study but was not withdrawn,YES,20
+B7981040,I&I,Ph III,1) Inc/Excl,Participant did not meet inclusion criteria 2: clinical diagnosis of nonsegmental vitiligo for at least 3 months;BSA involvement 4%-60% inclusive; BSA ≥0.5% involvement on the face,YES,16
+B7981040,I&I,Ph III,1) Inc/Excl,Participant met exclusion Criteria 3: Participant met exclusion criteria 3 for General Infection History per protocol,YES,2
+B7981040,I&I,Ph III,1) Inc/Excl,Participant met exclusion criteria 11: Adolescent participants 12 to <18 years and adults in South Africa without eidence of VZV vaccine or prior exposure per protocol,YES,2
+B7981040,I&I,Ph III,1) Inc/Excl,Participant met exclusion criteria 1: Participant has psychiatric condition with recent or active suicidal ideation or behavior per protocol,YES,2
+B7981040,I&I,Ph III,1) Inc/Excl,Participant met exclusion criteria 2: Participant has other medical conditions pertaining to vitiligo and other diseases/conditions affecting the skin per protocol,YES,2
+B7981040,I&I,Ph III,1) Inc/Excl,Participant met exclusion criteria 5: Participant has any medical or psychiatric condition making them inappropriate for the study per protocol,YES,11
+B7981040,I&I,Ph III,1) Inc/Excl,Participant met exclusion criteria 6: Participant currently uses prohibited concomitant medication(s) per protocol,YES,16
+B7981040,I&I,Ph III,1) Inc/Excl,"Participant met exclusion criteria 8: Participant enrolled despite having Renal impairment, Hepatic dysfunction,or Hematologic abnormalities as defined per protocol",YES,2
+B7981040,I&I,Ph III,10) Other,Other PDs,NO,3
+B7981040,I&I,Ph III,11) Informed Consent,,,3
+B7981040,I&I,Ph III,11) Informed Consent,ICD signed by subject/LAR had not received IRB/IEC approval,NO,20
+B7981040,I&I,Ph III,11) Informed Consent,"ICD was lost, no copy available",NO,6
+B7981040,I&I,Ph III,11) Informed Consent,Other,NO,155
+B7981040,I&I,Ph III,11) Informed Consent,Participant/LAR signed Assent but did not date it,YES,1
+B7981040,I&I,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,YES,91
+B7981040,I&I,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,YES,4
+B7981040,I&I,Ph III,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,YES,1
+B7981040,I&I,Ph III,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,3
+B7981040,I&I,Ph III,2) InvProd,Blind compromised,YES,1
+B7981040,I&I,Ph III,2) InvProd,Dispensing error,NO,17
+B7981040,I&I,Ph III,2) InvProd,Dosing/Administration error,NO,180
+B7981040,I&I,Ph III,2) InvProd,IP accountability not done,NO,19
+B7981040,I&I,Ph III,2) InvProd,IP not returned,NO,77
+B7981040,I&I,Ph III,2) InvProd,"Medication error: Administration of IP by wrong subject, or at the wrong time, or at wrong dose, or other use outside the protocol",YES,13
+B7981040,I&I,Ph III,2) InvProd,Participant compliance is <80% between visits,YES,38
+B7981040,I&I,Ph III,2) InvProd,Storage error,NO,3
+B7981040,I&I,Ph III,3) CCMeds,Mandatory concomitant medication/vaccine not taken/administered or not used as specified per protocol,NO,2
+B7981040,I&I,Ph III,3) CCMeds,"Took permitted concomitant medication/vaccine, but not as specified per protocol",NO,2
+B7981040,I&I,Ph III,3) CCMeds,Took prohibited concomitant medication/vaccine,YES,59
+B7981040,I&I,Ph III,3) CCMeds,Treatment for hypovitaminosis D did not start prior to randomization prior to PA3,NO,6
+B7981040,I&I,Ph III,4) Lab,A problem with the lab(s) occurred which was not otherwise specified,NO,11
+B7981040,I&I,Ph III,4) Lab,Abnormal lab result not followed up appropriately,YES,40
+B7981040,I&I,Ph III,4) Lab,Lab for pregnancy testing not done or done out of visit window,YES,39
+B7981040,I&I,Ph III,4) Lab,Lab not done,YES,58
+B7981040,I&I,Ph III,4) Lab,Lab not done.,YES,1
+B7981040,I&I,Ph III,4) Lab,Lab not performed within pre-specified conditions,NO,185
+B7981040,I&I,Ph III,4) Lab,Lab performed out of window,NO,6
+B7981040,I&I,Ph III,4) Lab,Lab(s) was not reviewed by an Investigator in a timely manner,NO,2
+B7981040,I&I,Ph III,4) Lab,PK/PD samples not done,NO,37
+B7981040,I&I,Ph III,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,262
+B7981040,I&I,Ph III,4) Lab,Specimen could not be analyzed,NO,345
+B7981040,I&I,Ph III,5) VisitSched,Visit not done,NO,4
+B7981040,I&I,Ph III,5) VisitSched,Visit not done.,YES,38
+B7981040,I&I,Ph III,5) VisitSched,Visit not performed per protocol,NO,7
+B7981040,I&I,Ph III,5) VisitSched,Visit performed but outside protocol window.,NO,324
+B7981040,I&I,Ph III,6) Proc/Test,,,3
+B7981040,I&I,Ph III,6) Proc/Test,Abnormal procedure/test result not followed up per protocol,YES,3
+B7981040,I&I,Ph III,6) Proc/Test,Contraception use not verified,YES,1
+B7981040,I&I,Ph III,6) Proc/Test,Did not have qualified audiologist perform audiological exam at one or more visits,YES,1
+B7981040,I&I,Ph III,6) Proc/Test,Other Procedure and Test Issue,NO,13
+B7981040,I&I,Ph III,6) Proc/Test,Other Procedure and Test Issue.,NO,1
+B7981040,I&I,Ph III,6) Proc/Test,"PRO not completed or not completed correctly, wrong PRO completed, or completed at the wrong time or ediary did not function appropriately and entries were missed",NO,174
+B7981040,I&I,Ph III,6) Proc/Test,Participant did not follow lifestyle requirements,NO,13
+B7981040,I&I,Ph III,6) Proc/Test,Participant did not use highly effective contraceptive method(s) per protocol during the study,YES,6
+B7981040,I&I,Ph III,6) Proc/Test,Participant was not contacted via telephone between visits to verify pregnancy test results,YES,2
+B7981040,I&I,Ph III,6) Proc/Test,Procedure/Test not done,YES,198
+B7981040,I&I,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,302
+B7981040,I&I,Ph III,6) Proc/Test,Procedure/Test not performed per protocol.,NO,1
+B7981040,I&I,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,34
+B7981040,I&I,Ph III,6) Proc/Test,Procedure/Test: F-VASI and T-VASI not performed or repeated as required by protocol at Day 1 up to Week 52,NO,13
+B7981040,I&I,Ph III,6) Proc/Test,Procedure/Test: F-VASI and T-VASI not performed or repeated as required by protocol at Week 52,YES,4
+B7981040,I&I,Ph III,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,YES,1
+B7981040,I&I,Ph III,6) Proc/Test,Unqualified/uncertified rater assessed the participant,YES,24
+B7981040,I&I,Ph III,7) Random,Incorrect FST type during randomization,YES,1
+B7981040,I&I,Ph III,7) Random,Randomization done out of sequence,NO,1
+B7981040,I&I,Ph III,7) Random,Randomized out of protocol defined window,NO,21
+B7981040,I&I,Ph III,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,3
+B7981040,I&I,Ph III,9) DiscCrit,Participant developed withdrawal criteria during the study but was not withdrawn,YES,1
+B7981041,I&I,Ph III,1) Inc/Excl,Pending Site Monitor Action Inc/Excl,YES,1
+B7981041,I&I,Ph III,1) Inc/Excl,Subject did not meet inclusion criteria 2: Did not meet eligibility criteria for study B7981040 and/or complete 52 weeks in study B7981040,YES,1
+B7981041,I&I,Ph III,1) Inc/Excl,Subject did not meet inclusion criteria 4:BL visit/first dose in Study B7981041 was not within 30 days after the week 52 visit in Study B7981040,YES,6
+B7981041,I&I,Ph III,1) Inc/Excl,Subject met exclusion criteria 1: Participant met parent study discontinuation criteria for safety-related event per protocol,YES,1
+B7981041,I&I,Ph III,1) Inc/Excl,Subject met exclusion criteria 3: Participant met exclusion criteria for TB infection history per protocol,YES,2
+B7981041,I&I,Ph III,1) Inc/Excl,Subject met exclusion criteria 5: Participant currently uses or received prohibited concomitant medication(s) as described in the protocol,YES,10
+B7981041,I&I,Ph III,10) Other,A PD occurred that is not otherwise specified,NO,1
+B7981041,I&I,Ph III,10) Other,GCP non-compliance/issue,NO,5
+B7981041,I&I,Ph III,11) Informed Consent,ICD had not undergone proper Pfizer/CRO approval,NO,7
+B7981041,I&I,Ph III,11) Informed Consent,ICD signed by subject/LAR had not received IRB/IEC approval,NO,2
+B7981041,I&I,Ph III,11) Informed Consent,"ICD was lost, no copy available",NO,1
+B7981041,I&I,Ph III,11) Informed Consent,Other,NO,69
+B7981041,I&I,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,YES,24
+B7981041,I&I,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,YES,5
+B7981041,I&I,Ph III,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,YES,1
+B7981041,I&I,Ph III,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,2
+B7981041,I&I,Ph III,2) InvProd,Compliance <80% between visits,YES,14
+B7981041,I&I,Ph III,2) InvProd,Compliance >120% between visits,YES,2
+B7981041,I&I,Ph III,2) InvProd,Dispensing error,NO,3
+B7981041,I&I,Ph III,2) InvProd,Dosing/Administration error,NO,27
+B7981041,I&I,Ph III,2) InvProd,IP accountability not done,NO,6
+B7981041,I&I,Ph III,2) InvProd,IP not returned,NO,6
+B7981041,I&I,Ph III,2) InvProd,IP not taken as prescribed and/or it cannot be determined if the correct dose was administered.,NO,2
+B7981041,I&I,Ph III,2) InvProd,Participant dosed at home instead of at the study site on the day of the visit,NO,2
+B7981041,I&I,Ph III,2) InvProd,Pending Site Monitor Action InvProd,NO,1
+B7981041,I&I,Ph III,3) CCMeds,Pending Site Monitor Action CCMeds,NO,1
+B7981041,I&I,Ph III,3) CCMeds,Took prohibited concomitant medication/vaccine,YES,35
+B7981041,I&I,Ph III,4) Lab,Abnormal lab result not followed up appropriately,YES,16
+B7981041,I&I,Ph III,4) Lab,Lab for pregnancy testing not done or done out of visit window,YES,2
+B7981041,I&I,Ph III,4) Lab,Lab not done,YES,18
+B7981041,I&I,Ph III,4) Lab,Lab not performed within pre-specified conditions,NO,34
+B7981041,I&I,Ph III,4) Lab,Lab performed out of window,NO,6
+B7981041,I&I,Ph III,4) Lab,Lab(s) was not reviewed by an Investigator in a timely manner,NO,1
+B7981041,I&I,Ph III,4) Lab,Laboratory sample collected and/or tested in error,NO,43
+B7981041,I&I,Ph III,4) Lab,PK/PD samples not done,NO,7
+B7981041,I&I,Ph III,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,46
+B7981041,I&I,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,2
+B7981041,I&I,Ph III,4) Lab,Pregnancy testing lab not done or done out of visit window,YES,1
+B7981041,I&I,Ph III,4) Lab,Safety lab other than pregnancy not done,NO,13
+B7981041,I&I,Ph III,4) Lab,Specimen could not be analyzed,NO,104
+B7981041,I&I,Ph III,5) VisitSched,,,2
+B7981041,I&I,Ph III,5) VisitSched,Other Visit Schedule Issue,NO,2
+B7981041,I&I,Ph III,5) VisitSched,Visit not done,NO,8
+B7981041,I&I,Ph III,5) VisitSched,Visit not performed per protocol,NO,3
+B7981041,I&I,Ph III,5) VisitSched,Visit performed but outside protocol window.,NO,278
+B7981041,I&I,Ph III,5) VisitSched,Week 52 visit not done,YES,2
+B7981041,I&I,Ph III,6) Proc/Test,Abnormal procedure/test result not followed up per protocol,YES,3
+B7981041,I&I,Ph III,6) Proc/Test,Contraception use not verified,YES,34
+B7981041,I&I,Ph III,6) Proc/Test,Other Procedure/Test Issue,NO,7
+B7981041,I&I,Ph III,6) Proc/Test,Participant did not follow lifestyle requirements,YES,6
+B7981041,I&I,Ph III,6) Proc/Test,Participant did not use highly effective contraceptive method(s) per protocol during the study,YES,2
+B7981041,I&I,Ph III,6) Proc/Test,Participant was not contacted via telephone between visits to verify pregnancy test results,YES,1
+B7981041,I&I,Ph III,6) Proc/Test,Patient reported outcome questionnaires were missed/not completed correctly,NO,29
+B7981041,I&I,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,3
+B7981041,I&I,Ph III,6) Proc/Test,Procedure/Test (other than VASI and Contraception) not done,NO,55
+B7981041,I&I,Ph III,6) Proc/Test,Procedure/Test (other than VASI and Contraception) not performed per protocol,NO,131
+B7981041,I&I,Ph III,6) Proc/Test,Procedure/Test not done,YES,1
+B7981041,I&I,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,8
+B7981041,I&I,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,15
+B7981041,I&I,Ph III,6) Proc/Test,Procedure/Test: F-VASI and T-VASI not performed as required by protocol,NO,6
+B7981041,I&I,Ph III,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,YES,2
+B7981041,I&I,Ph III,6) Proc/Test,Unqualified/uncertified rater assessed the participant,NO,6
+B7981041,I&I,Ph III,7) Random,Incorrect information was entered into the IVRS/IWRS for randomization resulting in incorrect strata assignment,NO,16
+B7981080,I&I,Ph III,1) Inc/Excl,"Participant did not meet inclusion criteria 2: clinical diagnosis of nonsegmental vitiligo for at least 3 months;BSA involvement 4%-60% inclusive; BSA ≥0.5% involvement on the face; F-VASI ≥0.5 and T-VASI ≥3, active or stable disease.",YES,1
+B7981080,I&I,Ph III,1) Inc/Excl,Participant did not meet inclusion criteria 3: Participant not on stable regimen of concomitant medications pror to Day 1 per protocol; unwilling to stop all other treatments for vitiligo per protocol,YES,2
+B7981080,I&I,Ph III,1) Inc/Excl,Participant met exclusion Criteria 3: Participant met exclusion criteria 3 for General Infection History per protocol,YES,13
+B7981080,I&I,Ph III,1) Inc/Excl,Participant met exclusion criteria 10: Participant has other laboratory abnormalities as defined by protocol.,YES,2
+B7981080,I&I,Ph III,1) Inc/Excl,Participant met exclusion criteria 11: Standard 12-lead ECG that demonstrates clinically relevant abnormalities that may affect participant safety or interpretation of study results,YES,7
+B7981080,I&I,Ph III,1) Inc/Excl,Participant met exclusion criteria 2: Participant has other medical conditions pertaining to vitiligo and other diseases/conditions affecting the skin per protocol,YES,4
+B7981080,I&I,Ph III,1) Inc/Excl,Participant met exclusion criteria 4: Participant met exclusion criteria 4 for Specific Viral Infection History per protocol,YES,3
+B7981080,I&I,Ph III,1) Inc/Excl,Participant met exclusion criteria 5 for Other Medical Conditions,YES,43
+B7981080,I&I,Ph III,1) Inc/Excl,"Participant met exclusion criteria 6: Enrolled in the same study prior to this under a different subject ID, resulting in duplication.",YES,5
+B7981080,I&I,Ph III,1) Inc/Excl,"Participant met exclusion criteria 6: Enrollment in another vitiligo study with the same compound, resulting in duplication.",YES,2
+B7981080,I&I,Ph III,1) Inc/Excl,Participant met exclusion criteria 6: Participant using prohibited concomitant medication(s) per protocol,YES,15
+B7981080,I&I,Ph III,10) Other,,,1
+B7981080,I&I,Ph III,10) Other,Other protocol requirements not listed in any other subcategory were not followed,NO,9
+B7981080,I&I,Ph III,10) Other,Other: GCP Issue,NO,49
+B7981080,I&I,Ph III,11) Informed Consent,,,3
+B7981080,I&I,Ph III,11) Informed Consent,ICD had not undergone proper Pfizer/CRO approval,NO,7
+B7981080,I&I,Ph III,11) Informed Consent,ICD signed and dated by subject/LAR but ICD incomplete.,YES,37
+B7981080,I&I,Ph III,11) Informed Consent,ICD signed by unauthorized site personnel,NO,4
+B7981080,I&I,Ph III,11) Informed Consent,Other,NO,169
+B7981080,I&I,Ph III,11) Informed Consent,Pending Site Monitor Action Informed Consent,NO,3
+B7981080,I&I,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,YES,58
+B7981080,I&I,Ph III,11) Informed Consent,Study procedures were performed prior to ICD signed,YES,2
+B7981080,I&I,Ph III,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,YES,1
+B7981080,I&I,Ph III,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,YES,3
+B7981080,I&I,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,YES,54
+B7981080,I&I,Ph III,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,2
+B7981080,I&I,Ph III,2) InvProd,,,28
+B7981080,I&I,Ph III,2) InvProd,Compliance <80% or >120% between visits,NO,1
+B7981080,I&I,Ph III,2) InvProd,Dispensing error,NO,7
+B7981080,I&I,Ph III,2) InvProd,Dosing/Administration error,NO,5
+B7981080,I&I,Ph III,2) InvProd,Failure to review the participant-completed electronic dosing diary on a weekly basis during the study intervention period.,NO,31
+B7981080,I&I,Ph III,2) InvProd,IP accountability not done,NO,38
+B7981080,I&I,Ph III,2) InvProd,IP not returned,NO,114
+B7981080,I&I,Ph III,2) InvProd,"Medication Error: Administration of IP by wrong subject, or at the wrong time, or at wrong dose, or other use outside the protocol",YES,24
+B7981080,I&I,Ph III,2) InvProd,Participant compliance is <80% between visits,YES,58
+B7981080,I&I,Ph III,2) InvProd,Participant compliance is >120% between visits,YES,4
+B7981080,I&I,Ph III,2) InvProd,Pending Site Monitor Action InvProd,NO,13
+B7981080,I&I,Ph III,3) CCMeds,,,5
+B7981080,I&I,Ph III,3) CCMeds,Took prohibited concomitant medication/vaccine,YES,61
+B7981080,I&I,Ph III,4) Lab,,,28
+B7981080,I&I,Ph III,4) Lab,Abnormal lab result not followed up appropriately,YES,31
+B7981080,I&I,Ph III,4) Lab,Lab for pregnancy testing not done or done out of visit window,YES,22
+B7981080,I&I,Ph III,4) Lab,Lab not done,YES,123
+B7981080,I&I,Ph III,4) Lab,Lab not done per protocol.,NO,27
+B7981080,I&I,Ph III,4) Lab,Lab not performed within pre-specified conditions,NO,372
+B7981080,I&I,Ph III,4) Lab,Lab performed out of window,NO,18
+B7981080,I&I,Ph III,4) Lab,PK/PD samples not done,NO,8
+B7981080,I&I,Ph III,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,29
+B7981080,I&I,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,10
+B7981080,I&I,Ph III,4) Lab,Specimen could not be analyzed,NO,87
+B7981080,I&I,Ph III,5) VisitSched,,,41
+B7981080,I&I,Ph III,5) VisitSched,PART I Week 52 visit performed but outside protocol window,YES,26
+B7981080,I&I,Ph III,5) VisitSched,Pending Site Monitor Action VisitSched,NO,5
+B7981080,I&I,Ph III,5) VisitSched,Visit not done,NO,18
+B7981080,I&I,Ph III,5) VisitSched,Visit not performed per protocol,NO,4
+B7981080,I&I,Ph III,5) VisitSched,Visit performed but outside protocol window.,NO,613
+B7981080,I&I,Ph III,6) Proc/Test,,,61
+B7981080,I&I,Ph III,6) Proc/Test,Abnormal procedure/test result not followed up per protocol,YES,2
+B7981080,I&I,Ph III,6) Proc/Test,Contraception counseling during study visits not done,YES,9
+B7981080,I&I,Ph III,6) Proc/Test,Contraception use not verified,YES,6
+B7981080,I&I,Ph III,6) Proc/Test,"Daily dosing eDiary incomplete, or not completed, as specified per protocol",YES,67
+B7981080,I&I,Ph III,6) Proc/Test,Did not have qualified audiologist perform audiological exam at one or more visits,YES,1
+B7981080,I&I,Ph III,6) Proc/Test,"PRO not completed or not completed correctly, wrong PRO completed, or completed at the wrong time or slate did not function appropriately and entries were missed",NO,130
+B7981080,I&I,Ph III,6) Proc/Test,Participant did not follow lifestyle requirements (other than contraception),NO,56
+B7981080,I&I,Ph III,6) Proc/Test,Participant did not use highly effective contraceptive method(s) per protocol during the study,YES,16
+B7981080,I&I,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,14
+B7981080,I&I,Ph III,6) Proc/Test,Procedure/Test not done,YES,140
+B7981080,I&I,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,308
+B7981080,I&I,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,134
+B7981080,I&I,Ph III,6) Proc/Test,Procedure/Test performed when not required per protocol.,NO,102
+B7981080,I&I,Ph III,6) Proc/Test,Procedure/Test: F-VASI and T-VASI not performed or repeated as required by protocol at Day 1 and/or Week 52,YES,11
+B7981080,I&I,Ph III,6) Proc/Test,Procedure/Test: F-VASI and T-VASI not performed or repeated as required by protocol for any visit EXCEPT Day 1 and Week 52,NO,44
+B7981080,I&I,Ph III,6) Proc/Test,Unqualified/uncertified rater assessed the participant,YES,232
+B7981080,I&I,Ph III,7) Random,,,1
+B7981080,I&I,Ph III,7) Random,Other Randomization Issue,YES,2
+B7981080,I&I,Ph III,7) Random,Pending Site Monitor Action Random,NO,1
+B7981080,I&I,Ph III,7) Random,Randomized out of protocol defined window,NO,8
+B7981080,I&I,Ph III,7) Random,Responder status incorrectly entered resulting in incorrect re-randomization at week 52.,YES,11
+B7981080,I&I,Ph III,7) Random,Wrong stratification group assigned,YES,7
+B7981080,I&I,Ph III,8) SafetyRep,,,2
+B7981080,I&I,Ph III,8) SafetyRep,Other Safety Reporting Issue,NO,2
+B7981080,I&I,Ph III,8) SafetyRep,Pending Site Monitor Action SafetyRep,NO,1
+B7981080,I&I,Ph III,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,7
+B7981080,I&I,Ph III,9) DiscCrit,Participant developed withdrawal criteria during the study but was not withdrawn,YES,1
+B7981094,I&I,Ph III,1) Inc/Excl,,,2
+B7981094,I&I,Ph III,1) Inc/Excl,Contraception not confirmed/used prior to Day 1 as required per protocol,YES,6
+B7981094,I&I,Ph III,1) Inc/Excl,Participant did not meet Inclusion #2b sub-bullet: >=50% hair loss of the scalp confirmed by central photo review prior to randomization.,YES,1
+B7981094,I&I,Ph III,1) Inc/Excl,Participant met all eligibility criteria but was randomized prior to assessment of all eligibility criteria.,YES,12
+B7981094,I&I,Ph III,1) Inc/Excl,Participant met exclusion #3: Any psychiatric condition including recent or active suicidal ideation or behavior.,YES,1
+B7981094,I&I,Ph III,1) Inc/Excl,Participant met exclusion #4: General Infection History.,YES,1
+B7981094,I&I,Ph III,1) Inc/Excl,Participant met exclusion #5: Specific Viral Infection History.,YES,4
+B7981094,I&I,Ph III,1) Inc/Excl,Participant met exclusion #6: Other Medical Conditions.,YES,4
+B7981094,I&I,Ph III,1) Inc/Excl,Participant met exclusion #7: Adolescent pt without 1 of the following: Evidence of having received 2 doses of the varicella vaccination or Evidence of prior exposure to VZV based on serological test,YES,1
+B7981094,I&I,Ph III,1) Inc/Excl,Participant met exclusion #9: Current or prior use of any prohibited medication or treatment that could affect AA within the protocol-specified timeframes.,YES,6
+B7981094,I&I,Ph III,1) Inc/Excl,"Participant met exclusion #9: Current or prior use of any prohibited medication, vaccine, or treatment other than those that could affect AA within the protocol-specified timeframes.",YES,6
+B7981094,I&I,Ph III,1) Inc/Excl,Pending Site Monitor Action Inc/Excl,YES,2
+B7981094,I&I,Ph III,10) Other,Pending Site Monitor Action Other,NO,8
+B7981094,I&I,Ph III,10) Other,Protected personal identifiable information was inappropriately provided to the study team,YES,3
+B7981094,I&I,Ph III,11) Informed Consent,ICD/Assent was administered but was not administered per GCP guidelines,NO,9
+B7981094,I&I,Ph III,11) Informed Consent,Participant did not sign ICD at age of majority (if required by IRB/IEC).,NO,2
+B7981094,I&I,Ph III,11) Informed Consent,Participant or the participant's legal guardian signed ICD/Assent but documentation is incomplete or missing,NO,1
+B7981094,I&I,Ph III,11) Informed Consent,Participant or the participant's legal guardian signed consent but did not date it,NO,1
+B7981094,I&I,Ph III,11) Informed Consent,Pending Site Monitor Action Informed Consent,NO,1
+B7981094,I&I,Ph III,2) InvProd,,,12
+B7981094,I&I,Ph III,2) InvProd,"After an interruption to IP of >10 consecutive days, IP was re-started without Sponsor approval.",YES,2
+B7981094,I&I,Ph III,2) InvProd,Dispensing error,YES,2
+B7981094,I&I,Ph III,2) InvProd,IP not returned,YES,31
+B7981094,I&I,Ph III,2) InvProd,IP was not handled/dispensed according to GCP guidelines but the error did not result in improper participant dosing,NO,1
+B7981094,I&I,Ph III,2) InvProd,Medication error occurred,YES,3
+B7981094,I&I,Ph III,2) InvProd,Participant compliance is <80% at one or more visits.,YES,9
+B7981094,I&I,Ph III,2) InvProd,Participant dosed at-home instead of at the study site on the day of the visit.,NO,8
+B7981094,I&I,Ph III,2) InvProd,Participant was randomized but was never dosed with IP or receipt of IP is unknown.,YES,1
+B7981094,I&I,Ph III,2) InvProd,Pending Site Monitor Action InvProd,NO,8
+B7981094,I&I,Ph III,2) InvProd,"Source documentation, including diary, is unavailable",NO,1
+B7981094,I&I,Ph III,2) InvProd,The in-clinic dose was incorrect or dosing was from newly dispensed IP bottles at applicable study visits.,NO,71
+B7981094,I&I,Ph III,3) CCMeds,,,1
+B7981094,I&I,Ph III,3) CCMeds,Participant took prohibited medication that could potentially impact efficacy assessments,YES,2
+B7981094,I&I,Ph III,3) CCMeds,Participant took prohibited medications that could potentially impact metabolism of study drug,YES,1
+B7981094,I&I,Ph III,4) Lab,,,26
+B7981094,I&I,Ph III,4) Lab,Abnormal lab result not followed up appropriately,YES,6
+B7981094,I&I,Ph III,4) Lab,Lab for pregnancy testing not done or done out of visit window,YES,4
+B7981094,I&I,Ph III,4) Lab,Lab not done,NO,4
+B7981094,I&I,Ph III,4) Lab,Lab performed out of window,NO,1
+B7981094,I&I,Ph III,4) Lab,Lab sample was not properly collected and/or lab sample was collected but lab value could not be resulted,NO,127
+B7981094,I&I,Ph III,4) Lab,Lab was performed but source documentation is unavailable,NO,1
+B7981094,I&I,Ph III,4) Lab,Lab(s) was not reviewed by an Investigator in a timely manner,NO,1
+B7981094,I&I,Ph III,4) Lab,Laboratory sample collected and/or tested in error.,NO,86
+B7981094,I&I,Ph III,4) Lab,One or more of PK samples not collected at Week 4 or Week 12.,NO,4
+B7981094,I&I,Ph III,4) Lab,"PK samples not properly collected, stored or handled.",NO,2
+B7981094,I&I,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,3
+B7981094,I&I,Ph III,4) Lab,"The participant or the participant's legal guardian did not provide consent for collection of PrepD1 samples, although the samples were drawn",YES,12
+B7981094,I&I,Ph III,5) VisitSched,,,3
+B7981094,I&I,Ph III,5) VisitSched,Pending Site Monitor Action VisitSched,NO,1
+B7981094,I&I,Ph III,5) VisitSched,Visit was performed out of window,NO,73
+B7981094,I&I,Ph III,6) Proc/Test,,,17
+B7981094,I&I,Ph III,6) Proc/Test,AAPPO and/or P-Sat were not performed properly.,YES,2
+B7981094,I&I,Ph III,6) Proc/Test,Abnormal procedure/test result not followed up per protocol,YES,2
+B7981094,I&I,Ph III,6) Proc/Test,Images were obtained which did not comply with ICD specified masking procedures,NO,3
+B7981094,I&I,Ph III,6) Proc/Test,"Incorrect version of CSSRS used (eg, CSSR-S Since Last Visit version used at Scr visit)",NO,42
+B7981094,I&I,Ph III,6) Proc/Test,Participant did not use highly effective contraceptive method(s) per protocol during the study.,YES,2
+B7981094,I&I,Ph III,6) Proc/Test,Participant was not contacted via telephone between visits for contraception check and/or to verify pregnancy test,YES,1
+B7981094,I&I,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,16
+B7981094,I&I,Ph III,6) Proc/Test,"Procedure not performed properly per protocol (includes all non-lab procedures except SALT, ELA, EBA, AAPPO, P-Sat, PGI-C, pregnancy tests, and contraception checks)",YES,9
+B7981094,I&I,Ph III,6) Proc/Test,"Procedure was not done (includes all non-lab procedures except SALT, ELA, EBA, AAPPO, P-Sat, PGI-C, pregnancy tests, and contraception checks)",YES,19
+B7981094,I&I,Ph III,6) Proc/Test,Procedure was not performed by qualified site staff or qualified rater,YES,13
+B7981094,I&I,Ph III,6) Proc/Test,Procedure was performed but source documentation is unavailable,NO,1
+B7981094,I&I,Ph III,6) Proc/Test,Procedure was performed in error,YES,10
+B7981094,I&I,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,3
+B7981094,I&I,Ph III,7) Random,,,2
+B7981094,I&I,Ph III,7) Random,Incorrect SALT score stratification group assigned at Baseline.,YES,1
+B7981094,I&I,Ph III,7) Random,Participant incorrectly randomized at Day 1,YES,1
+B7981094,I&I,Ph III,7) Random,Randomized out of protocol defined window,NO,2
+B7981094,I&I,Ph III,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,1
+B7981118,I&I,Ph II,10) Other,,,1
+B7981118,I&I,Ph II,6) Proc/Test,,,1
+B7981118,I&I,Ph II,6) Proc/Test,Procedure was not performed by qualified site staff or qualified rater,YES,1
+B7981118,I&I,Ph II,6) Proc/Test,Procedure/Test not performed per protocol,NO,1
+B7981119,I&I,Ph II,10) Other,,,1
+B7981119,I&I,Ph II,2) InvProd,Dosing/Administration error,NO,1
+B7981119,I&I,Ph II,4) Lab,,,1
+B7981119,I&I,Ph II,4) Lab,Lab(s) was not reviewed by an Investigator in a timely manner,NO,1
+B7981119,I&I,Ph II,5) VisitSched,,,1
+B7981119,I&I,Ph II,6) Proc/Test,,,1
+B7981119,I&I,Ph II,6) Proc/Test,Partecipant's compliance with ePRO Assessments is < 80%,NO,1
+B7981119,I&I,Ph II,6) Proc/Test,Procedure/Test not performed per protocol,NO,1
+C1071003,Oncology,Ph II,1) Inc/Excl,Subject did not meet inclusion criteria 4 (measurable disease),YES,2
+C1071003,Oncology,Ph II,1) Inc/Excl,Subject did not meet inclusion criteria 6 (Refractory to proteasome inhibitor),YES,4
+C1071003,Oncology,Ph II,1) Inc/Excl,Subject did not meet inclusion criteria 7 (Refractory to anti-CD38 Ab),YES,1
+C1071003,Oncology,Ph II,1) Inc/Excl,"Subject met exclusion criteria 10 (active hepatitis(B,C), SARS-CoV2, HIV, other active, uncontrolled infection)",YES,1
+C1071003,Oncology,Ph II,1) Inc/Excl,Subject met exclusion criteria 11 (other active malignancy within 3 years prior to enrollment),YES,1
+C1071003,Oncology,Ph II,1) Inc/Excl,Subject met exclusion criteria 13 (previous anti-BCMA bispecific antibody),YES,1
+C1071003,Oncology,Ph II,10) Other,,,2
+C1071003,Oncology,Ph II,11) Informed Consent,ICD had not undergone proper Pfizer/CRO approval,NO,2
+C1071003,Oncology,Ph II,11) Informed Consent,ICD not translated to subject's/LAR native language,NO,2
+C1071003,Oncology,Ph II,11) Informed Consent,ICD not translated to subject's/LAR native language,YES,3
+C1071003,Oncology,Ph II,11) Informed Consent,ICD signed by unauthorized site personnel,NO,1
+C1071003,Oncology,Ph II,11) Informed Consent,ICD signed by unauthorized site personnel,YES,1
+C1071003,Oncology,Ph II,11) Informed Consent,Other,NO,35
+C1071003,Oncology,Ph II,11) Informed Consent,Other,YES,33
+C1071003,Oncology,Ph II,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,60
+C1071003,Oncology,Ph II,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,YES,67
+C1071003,Oncology,Ph II,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,YES,3
+C1071003,Oncology,Ph II,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,YES,6
+C1071003,Oncology,Ph II,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,YES,3
+C1071003,Oncology,Ph II,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,1
+C1071003,Oncology,Ph II,11) Informed Consent,Subject/LAR signed consent but did not date it,YES,1
+C1071003,Oncology,Ph II,2) InvProd,,,1
+C1071003,Oncology,Ph II,2) InvProd,Dispensing error,NO,5
+C1071003,Oncology,Ph II,2) InvProd,Dosed at wrong frequency,YES,13
+C1071003,Oncology,Ph II,2) InvProd,Dosed outside of protocol allowed window,NO,1
+C1071003,Oncology,Ph II,2) InvProd,Dosed outside of protocol allowed window,YES,14
+C1071003,Oncology,Ph II,2) InvProd,Dosing/Administration error,NO,1
+C1071003,Oncology,Ph II,2) InvProd,Elranatamab: Wrong Dose administered/Overdose,NO,1
+C1071003,Oncology,Ph II,2) InvProd,"IP administered by medically qualified individual, but without documentation of study specific training",NO,116
+C1071003,Oncology,Ph II,2) InvProd,InvProd was administered without following dosage modification for hematologic and non hematologic toxicity as defined in the protocol,YES,80
+C1071003,Oncology,Ph II,2) InvProd,Other (other InvProd subcategories do not apply),NO,9
+C1071003,Oncology,Ph II,2) InvProd,Other (other InvProd subcategories do not apply),YES,9
+C1071003,Oncology,Ph II,2) InvProd,Storage error,YES,2
+C1071003,Oncology,Ph II,3) CCMeds,Premedication for Study Drugs (Elaranatanab or Comparator) not administered as specified in the protocol,NO,61
+C1071003,Oncology,Ph II,3) CCMeds,Premedication for Study Drugs (Elaranatanab or Comparator) not administered as specified in the protocol,YES,2
+C1071003,Oncology,Ph II,3) CCMeds,"Took permitted concomitant medication/vaccine, but not as specified per protocol",NO,2
+C1071003,Oncology,Ph II,3) CCMeds,Took prohibited concomitant medication/vaccine,YES,6
+C1071003,Oncology,Ph II,4) Lab,,,5
+C1071003,Oncology,Ph II,4) Lab,Biomarkers samples not performed as per protocol,NO,26
+C1071003,Oncology,Ph II,4) Lab,"Central lab samples (for exploratory analyses) not properly collected, stored, or handled",NO,1
+C1071003,Oncology,Ph II,4) Lab,Central lab samples(for exploratory analyses) not done,NO,7
+C1071003,Oncology,Ph II,4) Lab,Lab for disease assessment not done/not done per protocol,NO,5
+C1071003,Oncology,Ph II,4) Lab,Lab for pregnancy testing not done or done out of visit window,NO,2
+C1071003,Oncology,Ph II,4) Lab,Lab for pregnancy testing not done or done out of visit window,YES,3
+C1071003,Oncology,Ph II,4) Lab,Lab not done,NO,1649
+C1071003,Oncology,Ph II,4) Lab,Lab not performed within pre-specified conditions,NO,9
+C1071003,Oncology,Ph II,4) Lab,Lab performed out of window,NO,20
+C1071003,Oncology,Ph II,4) Lab,MRD sample not collected,NO,2
+C1071003,Oncology,Ph II,4) Lab,MRD sample not collected,YES,1
+C1071003,Oncology,Ph II,4) Lab,PK/PD samples not done,NO,281
+C1071003,Oncology,Ph II,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,40
+C1071003,Oncology,Ph II,4) Lab,Pending Site Monitor Action Lab,NO,4
+C1071003,Oncology,Ph II,4) Lab,"Safety labs (hematology, coagulation or biochemistry or urinanalysis...) not performed",NO,103
+C1071003,Oncology,Ph II,4) Lab,Specimen could not be analyzed,NO,5
+C1071003,Oncology,Ph II,4) Lab,other (other Lab subcategories do not apply),NO,4
+C1071003,Oncology,Ph II,5) VisitSched,,,2
+C1071003,Oncology,Ph II,5) VisitSched,Pending Site Monitor Action VisitSched,NO,1
+C1071003,Oncology,Ph II,5) VisitSched,Visit not done,NO,463
+C1071003,Oncology,Ph II,5) VisitSched,Visit not done,YES,99
+C1071003,Oncology,Ph II,5) VisitSched,Visit not performed per protocol,NO,214
+C1071003,Oncology,Ph II,6) Proc/Test,,,3
+C1071003,Oncology,Ph II,6) Proc/Test,Disease assessment not done /not completely done (i.e. Imaging),NO,3
+C1071003,Oncology,Ph II,6) Proc/Test,Disease assessment not done /not completely done (i.e. Imaging),YES,2
+C1071003,Oncology,Ph II,6) Proc/Test,"Disease assessment not done /not completely done (including any components of assessment as required per protocol (SPEP,SIFE,FLC; BMA/BMB or Imaging)",NO,41
+C1071003,Oncology,Ph II,6) Proc/Test,"Disease assessment not done /not completely done (including any components of assessment as required per protocol (SPEP,SIFE,FLC; BMA/BMB or Imaging)",YES,164
+C1071003,Oncology,Ph II,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,1
+C1071003,Oncology,Ph II,6) Proc/Test,Procedure not performed by a medically qualified individual or correct personnel,YES,2
+C1071003,Oncology,Ph II,6) Proc/Test,Procedure/Test not done,NO,851
+C1071003,Oncology,Ph II,6) Proc/Test,Procedure/Test not performed per protocol,NO,510
+C1071003,Oncology,Ph II,6) Proc/Test,Procedure/Test performed out of window,NO,120
+C1071003,Oncology,Ph II,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,YES,62
+C1071003,Oncology,Ph II,6) Proc/Test,other (other Proc/Test subcategories do not apply),NO,2
+C1071003,Oncology,Ph II,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,98
+C1071003,Oncology,Ph II,8) SafetyRep,other (other SafetyRep subcategories do not apply),NO,1
+C1071004,Oncology,Ph II,1) Inc/Excl,Subject did meet exclusion criteria,YES,5
+C1071004,Oncology,Ph II,10) Other,Other (no other PD categories apply),NO,20
+C1071004,Oncology,Ph II,11) Informed Consent,ICD signed by unauthorized site personnel,NO,1
+C1071004,Oncology,Ph II,11) Informed Consent,"ICD was lost, copy available",NO,1
+C1071004,Oncology,Ph II,11) Informed Consent,"ICD was lost, no copy available",YES,1
+C1071004,Oncology,Ph II,11) Informed Consent,Other,NO,27
+C1071004,Oncology,Ph II,11) Informed Consent,Pending Site Monitor Action Informed Consent,NO,3
+C1071004,Oncology,Ph II,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,78
+C1071004,Oncology,Ph II,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,7
+C1071004,Oncology,Ph II,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,YES,1
+C1071004,Oncology,Ph II,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,3
+C1071004,Oncology,Ph II,2) InvProd,,,8
+C1071004,Oncology,Ph II,2) InvProd,Comparator/Combination drug : Wrong Dose administered/Overdose,NO,1
+C1071004,Oncology,Ph II,2) InvProd,Dispensing error,NO,20
+C1071004,Oncology,Ph II,2) InvProd,Dosing/Administration error,NO,108
+C1071004,Oncology,Ph II,2) InvProd,Dosing/Administration error,YES,1
+C1071004,Oncology,Ph II,2) InvProd,IP accountability not done,NO,20
+C1071004,Oncology,Ph II,2) InvProd,InvProd was administered without following dosage modification for Hematologic and non hematologic toxicity as defined in the protcol,YES,31
+C1071004,Oncology,Ph II,2) InvProd,Pending Site Monitor Action InvProd,NO,3
+C1071004,Oncology,Ph II,2) InvProd,Step up priming doses not done according to protocol,YES,1
+C1071004,Oncology,Ph II,2) InvProd,Storage error/temperature excursion. IP administered to participant without Sponsor approval,NO,3
+C1071004,Oncology,Ph II,2) InvProd,Storage error/temperature excursion. IP administered to participant without Sponsor approval,YES,2
+C1071004,Oncology,Ph II,3) CCMeds,,,1
+C1071004,Oncology,Ph II,3) CCMeds,Pending Site Monitor Action CCMeds,NO,9
+C1071004,Oncology,Ph II,3) CCMeds,Premedication for Study Drugs (Elaranatanab or Comparator) not administered as specified in the protocol,NO,166
+C1071004,Oncology,Ph II,3) CCMeds,Required infection prophylaxis treatment not administered as specified in the protocol,NO,63
+C1071004,Oncology,Ph II,3) CCMeds,Required infection prophylaxis treatment not administered at all,YES,3
+C1071004,Oncology,Ph II,4) Lab,,,19
+C1071004,Oncology,Ph II,4) Lab,Biomarkers samples not performed as per protocol,NO,17
+C1071004,Oncology,Ph II,4) Lab,Biomarkers samples not performed as per protocol,YES,2
+C1071004,Oncology,Ph II,4) Lab,Lab for disease assessment not done/not done per protocol,NO,30
+C1071004,Oncology,Ph II,4) Lab,Lab for disease assessment not done/not done per protocol,YES,165
+C1071004,Oncology,Ph II,4) Lab,Lab not done,NO,465
+C1071004,Oncology,Ph II,4) Lab,Lab not performed within pre-specified conditions,NO,26
+C1071004,Oncology,Ph II,4) Lab,Lab performed out of window,NO,8
+C1071004,Oncology,Ph II,4) Lab,Lab(s) was not reviewed by an Investigator in a timely manner,NO,1
+C1071004,Oncology,Ph II,4) Lab,PK/PD samples not done,NO,90
+C1071004,Oncology,Ph II,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,25
+C1071004,Oncology,Ph II,4) Lab,Pending Site Monitor Action Lab,NO,3
+C1071004,Oncology,Ph II,4) Lab,"Safety labs (hematology, coagulation or biochemistry or urinanalysis...) not performed",NO,142
+C1071004,Oncology,Ph II,4) Lab,Specimen could not be analyzed,NO,3
+C1071004,Oncology,Ph II,5) VisitSched,,,5
+C1071004,Oncology,Ph II,5) VisitSched,Pending Site Monitor Action VisitSched,NO,3
+C1071004,Oncology,Ph II,5) VisitSched,Visit not done,NO,137
+C1071004,Oncology,Ph II,5) VisitSched,Visit not performed per protocol,NO,172
+C1071004,Oncology,Ph II,6) Proc/Test,,,11
+C1071004,Oncology,Ph II,6) Proc/Test,Disease assessment not done /not completely done (i.e. Imaging),NO,16
+C1071004,Oncology,Ph II,6) Proc/Test,Disease assessment not done /not completely done (i.e. Imaging),YES,23
+C1071004,Oncology,Ph II,6) Proc/Test,PROs not done or not performed as required per protocol,NO,260
+C1071004,Oncology,Ph II,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,5
+C1071004,Oncology,Ph II,6) Proc/Test,Procedure/Test not done,NO,376
+C1071004,Oncology,Ph II,6) Proc/Test,Procedure/Test not performed per protocol,NO,271
+C1071004,Oncology,Ph II,6) Proc/Test,Procedure/Test performed out of window,NO,45
+C1071004,Oncology,Ph II,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,YES,2
+C1071004,Oncology,Ph II,8) SafetyRep,Pending Site Monitor Action SafetyRep,NO,1
+C1071004,Oncology,Ph II,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,29
+C1071005,Oncology,Ph III,1) Inc/Excl,Subject did not meet inclusion criteria 2 (willing and able to comply with protocol requirements),YES,1
+C1071005,Oncology,Ph III,1) Inc/Excl,Subject did not meet inclusion criteria 3 (Diagnosis of MM per protocol),YES,5
+C1071005,Oncology,Ph III,1) Inc/Excl,Subject did not meet inclusion criteria 5 (PA2: Identification of dominant malignant (index) clone as assessed by central laboratory NGS test (Adaptive Biotechnologies clonoSEQ® assay).,YES,1
+C1071005,Oncology,Ph III,1) Inc/Excl,Subject did not meet inclusion criteria 7 (LVEF ≥40% as determined by a MUGA scan or ECHO).,YES,1
+C1071005,Oncology,Ph III,1) Inc/Excl,"Subject met exclusion criteria 15 (Participants with active, uncontrolled bacterial, fungal, or viral infection, including HBV, HCV, SARS-CoV-2, and known HIV or AIDS-related illness.",YES,26
+C1071005,Oncology,Ph III,1) Inc/Excl,"Subject met exclusion criteria 4 (Impaired cardiovascular function or clinically significant cardiovascular diseases, defined as any of the following within 6 months prior to enrollment)",YES,5
+C1071005,Oncology,Ph III,10) Other,Pending Site Monitor Action Other,NO,3
+C1071005,Oncology,Ph III,10) Other,Pending Site Monitor Action Other,YES,1
+C1071005,Oncology,Ph III,11) Informed Consent,ICD had not undergone proper Pfizer/CRO approval,NO,16
+C1071005,Oncology,Ph III,11) Informed Consent,"ICD not signed by impartial witness, when applicable",NO,7
+C1071005,Oncology,Ph III,11) Informed Consent,ICD not translated to subject's/LAR native language,NO,2
+C1071005,Oncology,Ph III,11) Informed Consent,ICD signed by subject/LAR had not received IRB/IEC approval,NO,4
+C1071005,Oncology,Ph III,11) Informed Consent,ICD signed by subject/LAR had not received IRB/IEC approval,YES,5
+C1071005,Oncology,Ph III,11) Informed Consent,ICD signed by unauthorized site personnel,NO,12
+C1071005,Oncology,Ph III,11) Informed Consent,"ICD was lost, copy available",NO,12
+C1071005,Oncology,Ph III,11) Informed Consent,"ICD was lost, no copy available",YES,7
+C1071005,Oncology,Ph III,11) Informed Consent,Optional Consent deviations,NO,1
+C1071005,Oncology,Ph III,11) Informed Consent,Optional Consent deviations,YES,17
+C1071005,Oncology,Ph III,11) Informed Consent,Other,NO,82
+C1071005,Oncology,Ph III,11) Informed Consent,Pending Site Monitor Action Informed Consent,NO,3
+C1071005,Oncology,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,165
+C1071005,Oncology,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,YES,7
+C1071005,Oncology,Ph III,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,YES,21
+C1071005,Oncology,Ph III,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,YES,4
+C1071005,Oncology,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,62
+C1071005,Oncology,Ph III,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,YES,19
+C1071005,Oncology,Ph III,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,25
+C1071005,Oncology,Ph III,2) InvProd,Comparator/Combination drug : Wrong Dose administered/Overdose,YES,6
+C1071005,Oncology,Ph III,2) InvProd,Dispensing error,NO,18
+C1071005,Oncology,Ph III,2) InvProd,Dosed but protocol dosing criteria not met,YES,12
+C1071005,Oncology,Ph III,2) InvProd,Dosed outside of protocol allowed window,NO,199
+C1071005,Oncology,Ph III,2) InvProd,Dosing/Administration error,NO,204
+C1071005,Oncology,Ph III,2) InvProd,Elranatamab: Wrong Dose administered/Overdose,YES,16
+C1071005,Oncology,Ph III,2) InvProd,IP accountability not done,NO,84
+C1071005,Oncology,Ph III,2) InvProd,IP accountability not done,YES,2
+C1071005,Oncology,Ph III,2) InvProd,InvProd was administered without following dosage modification for Hematologic and non hematologic toxicity as defined in the protcol,YES,27
+C1071005,Oncology,Ph III,2) InvProd,Non compliance with Lenalidomide intake,NO,349
+C1071005,Oncology,Ph III,2) InvProd,Non compliance with Lenalidomide intake,YES,68
+C1071005,Oncology,Ph III,2) InvProd,Pending Site Monitor Action InvProd,NO,1
+C1071005,Oncology,Ph III,2) InvProd,Priming doses not done according to protocol,YES,3
+C1071005,Oncology,Ph III,2) InvProd,Storage error/temperature excursion. IP administered to participant without Sponsor approval,YES,1
+C1071005,Oncology,Ph III,3) CCMeds,(DO NOT USE) Infection prophylaxis treatment (including IG replacement therapy) was not administered as specified per protocol,YES,1
+C1071005,Oncology,Ph III,3) CCMeds,Premedication for Study Drugs (Elranatamab or Comparator) not administered as specified in the protocol,NO,103
+C1071005,Oncology,Ph III,3) CCMeds,Premedication for Study Drugs (Elranatamab or Comparator) not administered as specified in the protocol,YES,1
+C1071005,Oncology,Ph III,3) CCMeds,Required infection prophylaxis treatment not administered as specified in the protocol,NO,47
+C1071005,Oncology,Ph III,3) CCMeds,Required infection prophylaxis treatment not administered at all,YES,40
+C1071005,Oncology,Ph III,3) CCMeds,"Took permitted concomitant medication/vaccine, but not as specified per protocol",NO,4
+C1071005,Oncology,Ph III,4) Lab,BMA sample for MRD not collected,NO,1
+C1071005,Oncology,Ph III,4) Lab,BMA sample for MRD not collected,YES,169
+C1071005,Oncology,Ph III,4) Lab,"BMA sample for MRD not properly collected, stored or handled",NO,37
+C1071005,Oncology,Ph III,4) Lab,Biomarkers samples not performed as per protocol,NO,116
+C1071005,Oncology,Ph III,4) Lab,Central lab samples (excluding MRD& Lab disease assessment) not done,NO,306
+C1071005,Oncology,Ph III,4) Lab,Central lab samples (excluding MRD& Lab disease assessment) not done,YES,3
+C1071005,Oncology,Ph III,4) Lab,"Central lab samples (excluding MRD& Lab disease assessment) not properly collected, stored, or handled",NO,135
+C1071005,Oncology,Ph III,4) Lab,Lab for disease assessment not done/not done per protocol,NO,28
+C1071005,Oncology,Ph III,4) Lab,Lab for disease assessment not done/not done per protocol,YES,184
+C1071005,Oncology,Ph III,4) Lab,Lab for pregnancy testing not done or done out of visit window,NO,19
+C1071005,Oncology,Ph III,4) Lab,Lab not done,NO,1914
+C1071005,Oncology,Ph III,4) Lab,Lab not done,YES,5
+C1071005,Oncology,Ph III,4) Lab,Lab not performed within pre-specified conditions,NO,592
+C1071005,Oncology,Ph III,4) Lab,Lab not performed within pre-specified conditions,YES,1
+C1071005,Oncology,Ph III,4) Lab,Lab performed out of window,NO,144
+C1071005,Oncology,Ph III,4) Lab,Lab performed out of window,YES,2
+C1071005,Oncology,Ph III,4) Lab,"Lab required for dosing criteria not done (ANC, platelet)",YES,2
+C1071005,Oncology,Ph III,4) Lab,Lab(s) was not reviewed by an Investigator in a timely manner,NO,7
+C1071005,Oncology,Ph III,4) Lab,PK/PD samples not done,NO,56
+C1071005,Oncology,Ph III,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,67
+C1071005,Oncology,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,3
+C1071005,Oncology,Ph III,4) Lab,"Safety labs (hematology, coagulation or biochemistry or urinanalysis...) not performed",NO,145
+C1071005,Oncology,Ph III,4) Lab,Specimen could not be analyzed,NO,6
+C1071005,Oncology,Ph III,4) Lab,Study participant dosed without pregnancy test done,YES,5
+C1071005,Oncology,Ph III,5) VisitSched,Pending Site Monitor Action VisitSched,NO,4
+C1071005,Oncology,Ph III,5) VisitSched,Required hospitalization period for visit C1D1 not done,YES,1
+C1071005,Oncology,Ph III,5) VisitSched,Required hospitalization period for visit C1D4 not done,YES,1
+C1071005,Oncology,Ph III,5) VisitSched,Visit not done,NO,621
+C1071005,Oncology,Ph III,5) VisitSched,Visit not done,YES,8
+C1071005,Oncology,Ph III,5) VisitSched,Visit not performed per protocol,NO,1377
+C1071005,Oncology,Ph III,5) VisitSched,Visit not performed per protocol,YES,9
+C1071005,Oncology,Ph III,6) Proc/Test,,,2
+C1071005,Oncology,Ph III,6) Proc/Test,Abnormal procedure/test result not followed up per protocol,NO,5
+C1071005,Oncology,Ph III,6) Proc/Test,Disease assessment not done /not completely done (i.e. Imaging),NO,2
+C1071005,Oncology,Ph III,6) Proc/Test,Disease assessment not done /not completely done (i.e. Imaging),YES,94
+C1071005,Oncology,Ph III,6) Proc/Test,PROs not done or not performed as required per protocol,NO,1306
+C1071005,Oncology,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,28
+C1071005,Oncology,Ph III,6) Proc/Test,Procedure not performed by a medically qualified individual,YES,2
+C1071005,Oncology,Ph III,6) Proc/Test,Procedure/Test not done,NO,780
+C1071005,Oncology,Ph III,6) Proc/Test,Procedure/Test not done,YES,5
+C1071005,Oncology,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,1192
+C1071005,Oncology,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,YES,7
+C1071005,Oncology,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,307
+C1071005,Oncology,Ph III,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,YES,28
+C1071005,Oncology,Ph III,7) Random,Patient randomized in IRT in error,NO,2
+C1071005,Oncology,Ph III,7) Random,Patient randomized in the wrong strata,YES,116
+C1071005,Oncology,Ph III,7) Random,Pending Site Monitor Action Random,NO,3
+C1071005,Oncology,Ph III,8) SafetyRep,SAE Not reported by investigator to Ethics Committee / IRB per local regulations,YES,2
+C1071005,Oncology,Ph III,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,117
+C1071006,Oncology,Ph III,1) Inc/Excl,Subject did meet exclusion criteria,YES,5
+C1071006,Oncology,Ph III,10) Other,Other (no other PD categories apply),NO,20
+C1071006,Oncology,Ph III,11) Informed Consent,ICD signed by unauthorized site personnel,NO,1
+C1071006,Oncology,Ph III,11) Informed Consent,"ICD was lost, copy available",NO,1
+C1071006,Oncology,Ph III,11) Informed Consent,"ICD was lost, no copy available",YES,1
+C1071006,Oncology,Ph III,11) Informed Consent,Other,NO,27
+C1071006,Oncology,Ph III,11) Informed Consent,Pending Site Monitor Action Informed Consent,NO,3
+C1071006,Oncology,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,78
+C1071006,Oncology,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,7
+C1071006,Oncology,Ph III,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,YES,1
+C1071006,Oncology,Ph III,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,3
+C1071006,Oncology,Ph III,2) InvProd,,,8
+C1071006,Oncology,Ph III,2) InvProd,Comparator/Combination drug : Wrong Dose administered/Overdose,NO,1
+C1071006,Oncology,Ph III,2) InvProd,Dispensing error,NO,20
+C1071006,Oncology,Ph III,2) InvProd,Dosing/Administration error,NO,108
+C1071006,Oncology,Ph III,2) InvProd,Dosing/Administration error,YES,1
+C1071006,Oncology,Ph III,2) InvProd,IP accountability not done,NO,20
+C1071006,Oncology,Ph III,2) InvProd,InvProd was administered without following dosage modification for Hematologic and non hematologic toxicity as defined in the protcol,YES,31
+C1071006,Oncology,Ph III,2) InvProd,Pending Site Monitor Action InvProd,NO,3
+C1071006,Oncology,Ph III,2) InvProd,Step up priming doses not done according to protocol,YES,1
+C1071006,Oncology,Ph III,2) InvProd,Storage error/temperature excursion. IP administered to participant without Sponsor approval,NO,3
+C1071006,Oncology,Ph III,2) InvProd,Storage error/temperature excursion. IP administered to participant without Sponsor approval,YES,2
+C1071006,Oncology,Ph III,3) CCMeds,,,1
+C1071006,Oncology,Ph III,3) CCMeds,Pending Site Monitor Action CCMeds,NO,9
+C1071006,Oncology,Ph III,3) CCMeds,Premedication for Study Drugs (Elaranatanab or Comparator) not administered as specified in the protocol,NO,166
+C1071006,Oncology,Ph III,3) CCMeds,Required infection prophylaxis treatment not administered as specified in the protocol,NO,63
+C1071006,Oncology,Ph III,3) CCMeds,Required infection prophylaxis treatment not administered at all,YES,3
+C1071006,Oncology,Ph III,4) Lab,,,19
+C1071006,Oncology,Ph III,4) Lab,Biomarkers samples not performed as per protocol,NO,17
+C1071006,Oncology,Ph III,4) Lab,Biomarkers samples not performed as per protocol,YES,2
+C1071006,Oncology,Ph III,4) Lab,Lab for disease assessment not done/not done per protocol,NO,30
+C1071006,Oncology,Ph III,4) Lab,Lab for disease assessment not done/not done per protocol,YES,165
+C1071006,Oncology,Ph III,4) Lab,Lab not done,NO,465
+C1071006,Oncology,Ph III,4) Lab,Lab not performed within pre-specified conditions,NO,26
+C1071006,Oncology,Ph III,4) Lab,Lab performed out of window,NO,8
+C1071006,Oncology,Ph III,4) Lab,Lab(s) was not reviewed by an Investigator in a timely manner,NO,1
+C1071006,Oncology,Ph III,4) Lab,PK/PD samples not done,NO,90
+C1071006,Oncology,Ph III,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,25
+C1071006,Oncology,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,3
+C1071006,Oncology,Ph III,4) Lab,"Safety labs (hematology, coagulation or biochemistry or urinanalysis...) not performed",NO,142
+C1071006,Oncology,Ph III,4) Lab,Specimen could not be analyzed,NO,3
+C1071006,Oncology,Ph III,5) VisitSched,,,5
+C1071006,Oncology,Ph III,5) VisitSched,Pending Site Monitor Action VisitSched,NO,3
+C1071006,Oncology,Ph III,5) VisitSched,Visit not done,NO,137
+C1071006,Oncology,Ph III,5) VisitSched,Visit not performed per protocol,NO,172
+C1071006,Oncology,Ph III,6) Proc/Test,,,11
+C1071006,Oncology,Ph III,6) Proc/Test,Disease assessment not done /not completely done (i.e. Imaging),NO,16
+C1071006,Oncology,Ph III,6) Proc/Test,Disease assessment not done /not completely done (i.e. Imaging),YES,23
+C1071006,Oncology,Ph III,6) Proc/Test,PROs not done or not performed as required per protocol,NO,260
+C1071006,Oncology,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,5
+C1071006,Oncology,Ph III,6) Proc/Test,Procedure/Test not done,NO,376
+C1071006,Oncology,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,271
+C1071006,Oncology,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,45
+C1071006,Oncology,Ph III,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,YES,2
+C1071006,Oncology,Ph III,8) SafetyRep,Pending Site Monitor Action SafetyRep,NO,1
+C1071006,Oncology,Ph III,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,29
+C1071007,Oncology,Ph III,1) Inc/Excl,Subject did not meet inclusion criteria 2 (willing and able to comply with protocol requirements),YES,1
+C1071007,Oncology,Ph III,1) Inc/Excl,Subject did not meet inclusion criteria 3 (Diagnosis of MM per protocol),YES,5
+C1071007,Oncology,Ph III,1) Inc/Excl,Subject did not meet inclusion criteria 5 (PA2: Identification of dominant malignant (index) clone as assessed by central laboratory NGS test (Adaptive Biotechnologies clonoSEQ® assay).,YES,1
+C1071007,Oncology,Ph III,1) Inc/Excl,Subject did not meet inclusion criteria 7 (LVEF ≥40% as determined by a MUGA scan or ECHO).,YES,1
+C1071007,Oncology,Ph III,1) Inc/Excl,"Subject met exclusion criteria 15 (Participants with active, uncontrolled bacterial, fungal, or viral infection, including HBV, HCV, SARS-CoV-2, and known HIV or AIDS-related illness.",YES,26
+C1071007,Oncology,Ph III,1) Inc/Excl,"Subject met exclusion criteria 4 (Impaired cardiovascular function or clinically significant cardiovascular diseases, defined as any of the following within 6 months prior to enrollment)",YES,5
+C1071007,Oncology,Ph III,10) Other,Pending Site Monitor Action Other,NO,3
+C1071007,Oncology,Ph III,10) Other,Pending Site Monitor Action Other,YES,1
+C1071007,Oncology,Ph III,11) Informed Consent,ICD had not undergone proper Pfizer/CRO approval,NO,16
+C1071007,Oncology,Ph III,11) Informed Consent,"ICD not signed by impartial witness, when applicable",NO,7
+C1071007,Oncology,Ph III,11) Informed Consent,ICD not translated to subject's/LAR native language,NO,2
+C1071007,Oncology,Ph III,11) Informed Consent,ICD signed by subject/LAR had not received IRB/IEC approval,NO,4
+C1071007,Oncology,Ph III,11) Informed Consent,ICD signed by subject/LAR had not received IRB/IEC approval,YES,5
+C1071007,Oncology,Ph III,11) Informed Consent,ICD signed by unauthorized site personnel,NO,12
+C1071007,Oncology,Ph III,11) Informed Consent,"ICD was lost, copy available",NO,12
+C1071007,Oncology,Ph III,11) Informed Consent,"ICD was lost, no copy available",YES,7
+C1071007,Oncology,Ph III,11) Informed Consent,Optional Consent deviations,NO,1
+C1071007,Oncology,Ph III,11) Informed Consent,Optional Consent deviations,YES,17
+C1071007,Oncology,Ph III,11) Informed Consent,Other,NO,82
+C1071007,Oncology,Ph III,11) Informed Consent,Pending Site Monitor Action Informed Consent,NO,3
+C1071007,Oncology,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,165
+C1071007,Oncology,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,YES,7
+C1071007,Oncology,Ph III,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,YES,21
+C1071007,Oncology,Ph III,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,YES,4
+C1071007,Oncology,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,62
+C1071007,Oncology,Ph III,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,YES,19
+C1071007,Oncology,Ph III,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,25
+C1071007,Oncology,Ph III,2) InvProd,Comparator/Combination drug : Wrong Dose administered/Overdose,YES,6
+C1071007,Oncology,Ph III,2) InvProd,Dispensing error,NO,18
+C1071007,Oncology,Ph III,2) InvProd,Dosed but protocol dosing criteria not met,YES,12
+C1071007,Oncology,Ph III,2) InvProd,Dosed outside of protocol allowed window,NO,199
+C1071007,Oncology,Ph III,2) InvProd,Dosing/Administration error,NO,204
+C1071007,Oncology,Ph III,2) InvProd,Elranatamab: Wrong Dose administered/Overdose,YES,16
+C1071007,Oncology,Ph III,2) InvProd,IP accountability not done,NO,84
+C1071007,Oncology,Ph III,2) InvProd,IP accountability not done,YES,2
+C1071007,Oncology,Ph III,2) InvProd,InvProd was administered without following dosage modification for Hematologic and non hematologic toxicity as defined in the protcol,YES,27
+C1071007,Oncology,Ph III,2) InvProd,Non compliance with Lenalidomide intake,NO,349
+C1071007,Oncology,Ph III,2) InvProd,Non compliance with Lenalidomide intake,YES,68
+C1071007,Oncology,Ph III,2) InvProd,Pending Site Monitor Action InvProd,NO,1
+C1071007,Oncology,Ph III,2) InvProd,Priming doses not done according to protocol,YES,3
+C1071007,Oncology,Ph III,2) InvProd,Storage error/temperature excursion. IP administered to participant without Sponsor approval,YES,1
+C1071007,Oncology,Ph III,3) CCMeds,(DO NOT USE) Infection prophylaxis treatment (including IG replacement therapy) was not administered as specified per protocol,YES,1
+C1071007,Oncology,Ph III,3) CCMeds,Premedication for Study Drugs (Elranatamab or Comparator) not administered as specified in the protocol,NO,103
+C1071007,Oncology,Ph III,3) CCMeds,Premedication for Study Drugs (Elranatamab or Comparator) not administered as specified in the protocol,YES,1
+C1071007,Oncology,Ph III,3) CCMeds,Required infection prophylaxis treatment not administered as specified in the protocol,NO,47
+C1071007,Oncology,Ph III,3) CCMeds,Required infection prophylaxis treatment not administered at all,YES,40
+C1071007,Oncology,Ph III,3) CCMeds,"Took permitted concomitant medication/vaccine, but not as specified per protocol",NO,4
+C1071007,Oncology,Ph III,4) Lab,BMA sample for MRD not collected,NO,1
+C1071007,Oncology,Ph III,4) Lab,BMA sample for MRD not collected,YES,169
+C1071007,Oncology,Ph III,4) Lab,"BMA sample for MRD not properly collected, stored or handled",NO,37
+C1071007,Oncology,Ph III,4) Lab,Biomarkers samples not performed as per protocol,NO,116
+C1071007,Oncology,Ph III,4) Lab,Central lab samples (excluding MRD& Lab disease assessment) not done,NO,306
+C1071007,Oncology,Ph III,4) Lab,Central lab samples (excluding MRD& Lab disease assessment) not done,YES,3
+C1071007,Oncology,Ph III,4) Lab,"Central lab samples (excluding MRD& Lab disease assessment) not properly collected, stored, or handled",NO,135
+C1071007,Oncology,Ph III,4) Lab,Lab for disease assessment not done/not done per protocol,NO,28
+C1071007,Oncology,Ph III,4) Lab,Lab for disease assessment not done/not done per protocol,YES,184
+C1071007,Oncology,Ph III,4) Lab,Lab for pregnancy testing not done or done out of visit window,NO,19
+C1071007,Oncology,Ph III,4) Lab,Lab not done,NO,1914
+C1071007,Oncology,Ph III,4) Lab,Lab not done,YES,5
+C1071007,Oncology,Ph III,4) Lab,Lab not performed within pre-specified conditions,NO,592
+C1071007,Oncology,Ph III,4) Lab,Lab not performed within pre-specified conditions,YES,1
+C1071007,Oncology,Ph III,4) Lab,Lab performed out of window,NO,144
+C1071007,Oncology,Ph III,4) Lab,Lab performed out of window,YES,2
+C1071007,Oncology,Ph III,4) Lab,"Lab required for dosing criteria not done (ANC, platelet)",YES,2
+C1071007,Oncology,Ph III,4) Lab,Lab(s) was not reviewed by an Investigator in a timely manner,NO,7
+C1071007,Oncology,Ph III,4) Lab,PK/PD samples not done,NO,56
+C1071007,Oncology,Ph III,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,67
+C1071007,Oncology,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,3
+C1071007,Oncology,Ph III,4) Lab,"Safety labs (hematology, coagulation or biochemistry or urinanalysis...) not performed",NO,145
+C1071007,Oncology,Ph III,4) Lab,Specimen could not be analyzed,NO,6
+C1071007,Oncology,Ph III,4) Lab,Study participant dosed without pregnancy test done,YES,5
+C1071007,Oncology,Ph III,5) VisitSched,Pending Site Monitor Action VisitSched,NO,4
+C1071007,Oncology,Ph III,5) VisitSched,Required hospitalization period for visit C1D1 not done,YES,1
+C1071007,Oncology,Ph III,5) VisitSched,Required hospitalization period for visit C1D4 not done,YES,1
+C1071007,Oncology,Ph III,5) VisitSched,Visit not done,NO,621
+C1071007,Oncology,Ph III,5) VisitSched,Visit not done,YES,8
+C1071007,Oncology,Ph III,5) VisitSched,Visit not performed per protocol,NO,1377
+C1071007,Oncology,Ph III,5) VisitSched,Visit not performed per protocol,YES,9
+C1071007,Oncology,Ph III,6) Proc/Test,,,2
+C1071007,Oncology,Ph III,6) Proc/Test,Abnormal procedure/test result not followed up per protocol,NO,5
+C1071007,Oncology,Ph III,6) Proc/Test,Disease assessment not done /not completely done (i.e. Imaging),NO,2
+C1071007,Oncology,Ph III,6) Proc/Test,Disease assessment not done /not completely done (i.e. Imaging),YES,94
+C1071007,Oncology,Ph III,6) Proc/Test,PROs not done or not performed as required per protocol,NO,1306
+C1071007,Oncology,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,28
+C1071007,Oncology,Ph III,6) Proc/Test,Procedure not performed by a medically qualified individual,YES,2
+C1071007,Oncology,Ph III,6) Proc/Test,Procedure/Test not done,NO,780
+C1071007,Oncology,Ph III,6) Proc/Test,Procedure/Test not done,YES,5
+C1071007,Oncology,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,1192
+C1071007,Oncology,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,YES,7
+C1071007,Oncology,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,307
+C1071007,Oncology,Ph III,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,YES,28
+C1071007,Oncology,Ph III,7) Random,Patient randomized in IRT in error,NO,2
+C1071007,Oncology,Ph III,7) Random,Patient randomized in the wrong strata,YES,116
+C1071007,Oncology,Ph III,7) Random,Pending Site Monitor Action Random,NO,3
+C1071007,Oncology,Ph III,8) SafetyRep,SAE Not reported by investigator to Ethics Committee / IRB per local regulations,YES,2
+C1071007,Oncology,Ph III,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,117
+C1071015,Oncology,Unknown,2) InvProd,Dispensing error,NO,2
+C1071015,Oncology,Unknown,4) Lab,Lab not done,NO,1
+C1071015,Oncology,Unknown,4) Lab,Lab not performed within pre-specified conditions,NO,2
+C1071015,Oncology,Unknown,5) VisitSched,Visit not done,NO,5
+C1071015,Oncology,Unknown,5) VisitSched,Visit not performed per protocol,NO,2
+C1071015,Oncology,Unknown,6) Proc/Test,Procedure/Test not performed per protocol,NO,1
+C2321003,Oncology,Ph III,1) Inc/Excl,,,3
+C2321003,Oncology,Ph III,1) Inc/Excl,"Met Exclusion Criteria: Any history of myelodysplastic syndrome, acute myeloid leukemia, or any other prior malignancy except as noted per protocol",YES,1
+C2321003,Oncology,Ph III,1) Inc/Excl,Met Exclusion Criteria: Any medical or psychiatric condition or active suicidal ideation/behavior or lab abnormality that make the participant inappropriate for the study,YES,1
+C2321003,Oncology,Ph III,1) Inc/Excl,Met Exclusion Criteria: Clinically significant cardiovascular disease within last 6 months; cardiac pacemaker; QTcF >480 on screening ECG,YES,3
+C2321003,Oncology,Ph III,1) Inc/Excl,Met Exclusion Criteria: Current use/anticipated need for known strong CYP3A4/5 inhibitors and inducers(with exception of Enza as part of this study) within 10 days or 5 half-lives whichever is longer,YES,1
+C2321003,Oncology,Ph III,1) Inc/Excl,Met Exclusion Criteria: Inadequate renal function defined by an eGFR < 45 mL/min./1.73 m²,YES,2
+C2321003,Oncology,Ph III,1) Inc/Excl,Met Exclusion Criteria: Prior treatment with opioids for pain related to either primary prostate cancer or metastasis within 28 days prior to randomization are not permitted,YES,1
+C2321003,Oncology,Ph III,1) Inc/Excl,Pending Site Monitor Action Inc/Excl,YES,4
+C2321003,Oncology,Ph III,1) Inc/Excl,Unmet Inclusion Criteria: Documented metastatic disease in bone(bone scan) or in soft tissue(CT/MRI); Measurable soft tissue disease per RECIST v1.1 is required when there is no evaluable bone lesion,YES,2
+C2321003,Oncology,Ph III,1) Inc/Excl,Unmet Inclusion Criteria: Surgical/Medical castration: serum testosterone ≤50ng/dL(≤1.73nmol/L) at SCR; Prior (> 4 wk start) & ongoing ADT with (GnRH) agonist/antagonist unless bilateral orchiectomy,YES,2
+C2321003,Oncology,Ph III,10) Other,,,10
+C2321003,Oncology,Ph III,10) Other,Subject's confidentiality compromised,YES,3
+C2321003,Oncology,Ph III,11) Informed Consent,,,13
+C2321003,Oncology,Ph III,11) Informed Consent,"ICD not signed by impartial witness, when applicable",NO,1
+C2321003,Oncology,Ph III,11) Informed Consent,ICD signed by subject/LAR had not received IRB/IEC approval,YES,1
+C2321003,Oncology,Ph III,11) Informed Consent,ICD signed by unauthorized site personnel,YES,1
+C2321003,Oncology,Ph III,11) Informed Consent,"ICD was lost, no copy available",YES,1
+C2321003,Oncology,Ph III,11) Informed Consent,Other,NO,22
+C2321003,Oncology,Ph III,11) Informed Consent,Pending Site Monitor Action Informed Consent,NO,19
+C2321003,Oncology,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,12
+C2321003,Oncology,Ph III,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,NO,1
+C2321003,Oncology,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,10
+C2321003,Oncology,Ph III,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,1
+C2321003,Oncology,Ph III,2) InvProd,,,54
+C2321003,Oncology,Ph III,2) InvProd,Blinded Therapy compliance >80% but <100%,NO,32
+C2321003,Oncology,Ph III,2) InvProd,Blinded Therapy not taken per specified window,NO,1
+C2321003,Oncology,Ph III,2) InvProd,Dispensing error,YES,1
+C2321003,Oncology,Ph III,2) InvProd,Dosing/Administration error,YES,1
+C2321003,Oncology,Ph III,2) InvProd,Enzalutamide compliance <80%,YES,2
+C2321003,Oncology,Ph III,2) InvProd,Enzalutamide compliance >80% but <100%,NO,12
+C2321003,Oncology,Ph III,2) InvProd,IP not returned,YES,10
+C2321003,Oncology,Ph III,2) InvProd,Incorrectly stored product administered to patient,YES,2
+C2321003,Oncology,Ph III,2) InvProd,Pending Site Monitor Action InvProd,NO,32
+C2321003,Oncology,Ph III,2) InvProd,Study drug not held despite AE that required dose to be held per protocol,YES,6
+C2321003,Oncology,Ph III,2) InvProd,Study treatment not taken per protocol (i.e. Taken at home instead of in clinic),NO,1
+C2321003,Oncology,Ph III,2) InvProd,Subject took incorrect dose of Blinded Therapy,YES,19
+C2321003,Oncology,Ph III,2) InvProd,Subject took incorrect dose of Enzalutamide,YES,25
+C2321003,Oncology,Ph III,3) CCMeds,,,11
+C2321003,Oncology,Ph III,3) CCMeds,Loperamide not taken per protocol,NO,15
+C2321003,Oncology,Ph III,3) CCMeds,Pending Site Monitor Action CCMeds,NO,3
+C2321003,Oncology,Ph III,3) CCMeds,Took prohibited concomitant medication/vaccine,YES,11
+C2321003,Oncology,Ph III,4) Lab,,,18
+C2321003,Oncology,Ph III,4) Lab,Abnormal lab result not followed up appropriately,YES,1
+C2321003,Oncology,Ph III,4) Lab,Biomarker samples not done,NO,6
+C2321003,Oncology,Ph III,4) Lab,"Critical safety labs required for dosing decisions missing: ANC, PLT, lymphocytes, ALT, AST and Bili (central and local)",YES,9
+C2321003,Oncology,Ph III,4) Lab,Lab performed out of window,NO,10
+C2321003,Oncology,Ph III,4) Lab,Labs not collected per protocol,NO,2
+C2321003,Oncology,Ph III,4) Lab,Non-critical safety labs missing (central and local),NO,4
+C2321003,Oncology,Ph III,4) Lab,PK samples collected out of window,NO,39
+C2321003,Oncology,Ph III,4) Lab,PK samples not done,NO,18
+C2321003,Oncology,Ph III,4) Lab,"PK samples not properly collected, stored or handled",NO,12
+C2321003,Oncology,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,32
+C2321003,Oncology,Ph III,4) Lab,Prostate Specific Antigen (PSA) not done,YES,3
+C2321003,Oncology,Ph III,4) Lab,Sample collected in error (not allowed per local regulations or not required per protocol),NO,5
+C2321003,Oncology,Ph III,4) Lab,Specimen could not be analyzed,NO,4
+C2321003,Oncology,Ph III,5) VisitSched,,,22
+C2321003,Oncology,Ph III,5) VisitSched,Pending Site Monitor Action VisitSched,NO,9
+C2321003,Oncology,Ph III,5) VisitSched,Visit not done,YES,6
+C2321003,Oncology,Ph III,5) VisitSched,Visit not performed per protocol,NO,36
+C2321003,Oncology,Ph III,6) Proc/Test,,,213
+C2321003,Oncology,Ph III,6) Proc/Test,Pain Log not completed at least 4 out of 7 days as per protocol,YES,198
+C2321003,Oncology,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,317
+C2321003,Oncology,Ph III,6) Proc/Test,Procedure/Test not done,NO,17
+C2321003,Oncology,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,53
+C2321003,Oncology,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,3
+C2321003,Oncology,Ph III,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,YES,10
+C2321003,Oncology,Ph III,6) Proc/Test,Questionnaire not completed by patient,NO,367
+C2321003,Oncology,Ph III,6) Proc/Test,Questionnaires not done per protocol,NO,109
+C2321003,Oncology,Ph III,6) Proc/Test,Radiographic imaging not done,YES,6
+C2321003,Oncology,Ph III,6) Proc/Test,Radiographic imaging not done as per protocol,NO,4
+C2321003,Oncology,Ph III,6) Proc/Test,Radiographic imaging performed out of window,NO,12
+C2321003,Oncology,Ph III,7) Random,,,1
+C2321003,Oncology,Ph III,7) Random,Randomized under wrong stratification,YES,2
+C2321003,Oncology,Ph III,8) SafetyRep,,,9
+C2321003,Oncology,Ph III,8) SafetyRep,Pending Site Monitor Action SafetyRep,NO,4
+C2321003,Oncology,Ph III,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,6
+C2321008,Oncology,Ph III,1) Inc/Excl,Any medical condition including recent or active suicidal ideation/behavior or lab abnormality that may increase the risk of study participation,YES,1
+C2321008,Oncology,Ph III,1) Inc/Excl,Current use of any prohibited concomitant medication(s) or unwillingness or inability to use a required concomitant medication(s),YES,2
+C2321008,Oncology,Ph III,10) Other,,,1
+C2321008,Oncology,Ph III,10) Other,Confidentiality compromised,YES,1
+C2321008,Oncology,Ph III,11) Informed Consent,"ICD not signed by impartial witness, when applicable",NO,1
+C2321008,Oncology,Ph III,2) InvProd,,,12
+C2321008,Oncology,Ph III,2) InvProd,Dosing/Administration error without impact to patient safety,NO,8
+C2321008,Oncology,Ph III,2) InvProd,IP accountability not done,NO,1
+C2321008,Oncology,Ph III,2) InvProd,IP not returned,NO,1
+C2321008,Oncology,Ph III,2) InvProd,IP not returned,YES,1
+C2321008,Oncology,Ph III,2) InvProd,Pending Site Monitor Action InvProd,NO,4
+C2321008,Oncology,Ph III,2) InvProd,Subject took incorrect dose of blinded therapy,YES,4
+C2321008,Oncology,Ph III,2) InvProd,Subject took incorrect dose of enzalutamide,YES,2
+C2321008,Oncology,Ph III,3) CCMeds,,,2
+C2321008,Oncology,Ph III,4) Lab,,,8
+C2321008,Oncology,Ph III,4) Lab,"Biomarker samples not properly collected, processed, stored or handled",NO,2
+C2321008,Oncology,Ph III,4) Lab,"Critical safety labs not done: (including but not limited to ANC, Hgb, PLT, lymphocytes, ALT, AST and Bili (central and local))",YES,4
+C2321008,Oncology,Ph III,4) Lab,Lab performed out of window,NO,2
+C2321008,Oncology,Ph III,4) Lab,Non-critical safety labs not done (central and local),NO,8
+C2321008,Oncology,Ph III,4) Lab,PK samples not done,NO,2
+C2321008,Oncology,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,2
+C2321008,Oncology,Ph III,5) VisitSched,,,3
+C2321008,Oncology,Ph III,5) VisitSched,Visit not done,YES,1
+C2321008,Oncology,Ph III,5) VisitSched,Visit not performed per protocol,NO,4
+C2321008,Oncology,Ph III,6) Proc/Test,,,9
+C2321008,Oncology,Ph III,6) Proc/Test,PSA not performed per protocol,YES,4
+C2321008,Oncology,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,3
+C2321008,Oncology,Ph III,6) Proc/Test,Procedure/Test not done,NO,5
+C2321008,Oncology,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,12
+C2321008,Oncology,Ph III,6) Proc/Test,Questionnaire not completed by participant,NO,10
+C2321008,Oncology,Ph III,6) Proc/Test,Questionnaires not done per protocol,NO,5
+C2321008,Oncology,Ph III,6) Proc/Test,Radiographic imaging not done,YES,1
+C2321008,Oncology,Ph III,6) Proc/Test,Serum testosterone not performed per protocol,YES,4
+C2321008,Oncology,Ph III,7) Random,,,2
+C2321008,Oncology,Ph III,7) Random,Randomized under wrong stratification,YES,3
+C2321008,Oncology,Ph III,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,1
+C2321014,Oncology,Ph III,1) Inc/Excl,,,6
+C2321014,Oncology,Ph III,1) Inc/Excl,"Subject did not meet Inclusion Criteria: Metastatic disease in bone documented on bone scan, or in soft tissue documented on CT/MRI scan; Measurable soft tissue disease (per RECIST v1.1) is required if there is not an evaluable bone lesion",YES,2
+C2321014,Oncology,Ph III,1) Inc/Excl,"Subject did not meet Inclusion Criteria: Progressive disease as defined by 1 or more of the following; PSA,soft tissue,or bone disease progression.Evidence of disease progression on abiraterone acetate(mCSPC/first line mCRPC setting)",YES,4
+C2321014,Oncology,Ph III,1) Inc/Excl,Subject met Exclusion Criteria: Any medical or psychiatric condition including suicidal ideation/behavior or lab abnormality that may increase the risk of study participation or make the participant inappropriate for the study.,YES,1
+C2321014,Oncology,Ph III,1) Inc/Excl,Subject met Exclusion Criteria: Clinically significant cardiovascular disease; participants with cardiac pacemaker must be discussed in detail sponsor medical monitor to determine eligibility; QTcF >480 on screening ECG,YES,3
+C2321014,Oncology,Ph III,1) Inc/Excl,"Subject met Exclusion Criteria: Prior treatment for prostate cancer with any cytotoxic chemotherapy, radioligand therapy, ARSi, PARP monotherapy or other systemic anti-cancer treatment with some exceptions",YES,2
+C2321014,Oncology,Ph III,1) Inc/Excl,"Subject met Exclusion Criteria: Recent (defined in protocol), current, or anticipated need for drugs that are known strong CYP3A4/5 inhibitors and inducers (with exception of enzalutamide as part of this study).",YES,1
+C2321014,Oncology,Ph III,10) Other,,,33
+C2321014,Oncology,Ph III,11) Informed Consent,,,48
+C2321014,Oncology,Ph III,11) Informed Consent,ICD signed by unauthorized site personnel,YES,1
+C2321014,Oncology,Ph III,11) Informed Consent,Other,NO,9
+C2321014,Oncology,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,34
+C2321014,Oncology,Ph III,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,NO,4
+C2321014,Oncology,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,6
+C2321014,Oncology,Ph III,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,2
+C2321014,Oncology,Ph III,2) InvProd,,,146
+C2321014,Oncology,Ph III,2) InvProd,Enzalutamide compliance for cycle was greater than 80% but less than 100%,NO,16
+C2321014,Oncology,Ph III,2) InvProd,Enzalutamide compliance for cycle was less than 80%,YES,2
+C2321014,Oncology,Ph III,2) InvProd,IP accountability not done,NO,2
+C2321014,Oncology,Ph III,2) InvProd,IP not returned,YES,6
+C2321014,Oncology,Ph III,2) InvProd,Mevrometostat compliance for cycle was greater than 80% but less than 100%,NO,14
+C2321014,Oncology,Ph III,2) InvProd,Pending Site Monitor Action InvProd,NO,2
+C2321014,Oncology,Ph III,2) InvProd,Study drug not held despite AE that required dose to be held per protocol,YES,1
+C2321014,Oncology,Ph III,2) InvProd,Study drug not taken per specified dispensing window,NO,5
+C2321014,Oncology,Ph III,2) InvProd,Subject took Mevrometostat without food,NO,9
+C2321014,Oncology,Ph III,2) InvProd,Subject took incorrect dose of enzalutamide,YES,14
+C2321014,Oncology,Ph III,2) InvProd,Subject took incorrect dose of mevrometostat,YES,15
+C2321014,Oncology,Ph III,3) CCMeds,,,4
+C2321014,Oncology,Ph III,3) CCMeds,Loperamide not taken per protocol,NO,1
+C2321014,Oncology,Ph III,3) CCMeds,Mandatory concomitant medication/vaccine not taken/administered or not used as specified per protocol,YES,1
+C2321014,Oncology,Ph III,3) CCMeds,Pending Site Monitor Action CCMeds,NO,4
+C2321014,Oncology,Ph III,3) CCMeds,Took prohibited concomitant medication/vaccine,YES,4
+C2321014,Oncology,Ph III,4) Lab,,,125
+C2321014,Oncology,Ph III,4) Lab,Biomarker Samples not done,NO,5
+C2321014,Oncology,Ph III,4) Lab,Biomarker samples not collected per protocol,NO,5
+C2321014,Oncology,Ph III,4) Lab,"Critical safety labs required for dosing decisions not done: ANC, PLT, lymphocytes, ALT, AST and Bili (central and local)",YES,2
+C2321014,Oncology,Ph III,4) Lab,Lab performed out of window,NO,2
+C2321014,Oncology,Ph III,4) Lab,Non-critical safety labs not done (central and local),NO,5
+C2321014,Oncology,Ph III,4) Lab,PK samples not done,NO,12
+C2321014,Oncology,Ph III,4) Lab,PK samples performed out of window,NO,13
+C2321014,Oncology,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,15
+C2321014,Oncology,Ph III,4) Lab,Prostate Specific Antigen (PSA)not done,YES,3
+C2321014,Oncology,Ph III,4) Lab,Sample collected in error (not allowed per local regulations or not required per protocol),NO,17
+C2321014,Oncology,Ph III,4) Lab,Specimen could not be analyzed,NO,4
+C2321014,Oncology,Ph III,5) VisitSched,,,59
+C2321014,Oncology,Ph III,5) VisitSched,Visit Not Done,NO,6
+C2321014,Oncology,Ph III,5) VisitSched,Visit not performed per protocol,NO,23
+C2321014,Oncology,Ph III,6) Proc/Test,,,404
+C2321014,Oncology,Ph III,6) Proc/Test,Imaging to assess tumor(s) was not done or incomplete,NO,1
+C2321014,Oncology,Ph III,6) Proc/Test,Incorrect imaging modality used for bone scan,NO,1
+C2321014,Oncology,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,12
+C2321014,Oncology,Ph III,6) Proc/Test,Procedure/Test not done,NO,47
+C2321014,Oncology,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,48
+C2321014,Oncology,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,5
+C2321014,Oncology,Ph III,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,YES,2
+C2321014,Oncology,Ph III,6) Proc/Test,"Protocol required procedure/assessment for study endpoints (not primary) not done (PSA, PRO, biomarkers)",NO,1
+C2321014,Oncology,Ph III,6) Proc/Test,Questionnaire not completed by patient,NO,282
+C2321014,Oncology,Ph III,6) Proc/Test,Questionnaires not done per protocol,NO,28
+C2321014,Oncology,Ph III,6) Proc/Test,Radiographic Imaging not performed per protocol,NO,2
+C2321014,Oncology,Ph III,6) Proc/Test,Radiographic imaging not done,YES,1
+C2321014,Oncology,Ph III,6) Proc/Test,Radiographic imaging not done as per protocol,NO,7
+C2321014,Oncology,Ph III,6) Proc/Test,Radiographic imaging performed out of window,NO,10
+C2321014,Oncology,Ph III,7) Random,,,6
+C2321014,Oncology,Ph III,7) Random,Randomized under wrong stratification,YES,8
+C2321014,Oncology,Ph III,8) SafetyRep,,,21
+C2321014,Oncology,Ph III,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,17
+C2321014,Oncology,Ph III,9) DiscCrit,,,3
+C3651003,Oncology,Ph II,1) Inc/Excl,Any medical condition including recent or active suicidal ideation/behavior or lab abnormality that may increase the risk of study participation,YES,1
+C3651003,Oncology,Ph II,1) Inc/Excl,Current use of any prohibited concomitant medication(s) or unwillingness or inability to use a required concomitant medication(s),YES,2
+C3651003,Oncology,Ph II,10) Other,,,1
+C3651003,Oncology,Ph II,10) Other,Confidentiality compromised,YES,1
+C3651003,Oncology,Ph II,11) Informed Consent,"ICD not signed by impartial witness, when applicable",NO,1
+C3651003,Oncology,Ph II,2) InvProd,,,12
+C3651003,Oncology,Ph II,2) InvProd,Dosing/Administration error without impact to patient safety,NO,8
+C3651003,Oncology,Ph II,2) InvProd,IP accountability not done,NO,1
+C3651003,Oncology,Ph II,2) InvProd,IP not returned,NO,1
+C3651003,Oncology,Ph II,2) InvProd,IP not returned,YES,1
+C3651003,Oncology,Ph II,2) InvProd,Pending Site Monitor Action InvProd,NO,4
+C3651003,Oncology,Ph II,2) InvProd,Subject took incorrect dose of blinded therapy,YES,4
+C3651003,Oncology,Ph II,2) InvProd,Subject took incorrect dose of enzalutamide,YES,2
+C3651003,Oncology,Ph II,3) CCMeds,,,2
+C3651003,Oncology,Ph II,4) Lab,,,8
+C3651003,Oncology,Ph II,4) Lab,"Biomarker samples not properly collected, processed, stored or handled",NO,2
+C3651003,Oncology,Ph II,4) Lab,"Critical safety labs not done: (including but not limited to ANC, Hgb, PLT, lymphocytes, ALT, AST and Bili (central and local))",YES,4
+C3651003,Oncology,Ph II,4) Lab,Lab performed out of window,NO,2
+C3651003,Oncology,Ph II,4) Lab,Non-critical safety labs not done (central and local),NO,8
+C3651003,Oncology,Ph II,4) Lab,PK samples not done,NO,2
+C3651003,Oncology,Ph II,4) Lab,Pending Site Monitor Action Lab,NO,2
+C3651003,Oncology,Ph II,5) VisitSched,,,3
+C3651003,Oncology,Ph II,5) VisitSched,Visit not done,YES,1
+C3651003,Oncology,Ph II,5) VisitSched,Visit not performed per protocol,NO,4
+C3651003,Oncology,Ph II,6) Proc/Test,,,9
+C3651003,Oncology,Ph II,6) Proc/Test,PSA not performed per protocol,YES,4
+C3651003,Oncology,Ph II,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,3
+C3651003,Oncology,Ph II,6) Proc/Test,Procedure/Test not done,NO,5
+C3651003,Oncology,Ph II,6) Proc/Test,Procedure/Test not performed per protocol,NO,12
+C3651003,Oncology,Ph II,6) Proc/Test,Questionnaire not completed by participant,NO,10
+C3651003,Oncology,Ph II,6) Proc/Test,Questionnaires not done per protocol,NO,5
+C3651003,Oncology,Ph II,6) Proc/Test,Radiographic imaging not done,YES,1
+C3651003,Oncology,Ph II,6) Proc/Test,Serum testosterone not performed per protocol,YES,4
+C3651003,Oncology,Ph II,7) Random,,,2
+C3651003,Oncology,Ph II,7) Random,Randomized under wrong stratification,YES,3
+C3651003,Oncology,Ph II,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,1
+C3651021,Oncology,Ph III,10) Other,,,1
+C3651021,Oncology,Ph III,10) Other,Pending Site Monitor Action Other,NO,1
+C3651021,Oncology,Ph III,10) Other,Pending Site Monitor Action Other,YES,2
+C3651021,Oncology,Ph III,11) Informed Consent,,,1
+C3651021,Oncology,Ph III,11) Informed Consent,Other,NO,1
+C3651021,Oncology,Ph III,2) InvProd,,,3
+C3651021,Oncology,Ph III,4) Lab,,,4
+C3651021,Oncology,Ph III,5) VisitSched,,,1
+C3651021,Oncology,Ph III,5) VisitSched,Visit not performed per protocol,NO,1
+C3651021,Oncology,Ph III,6) Proc/Test,,,11
+C3651021,Oncology,Ph III,6) Proc/Test,Procedure/Test not done,YES,1
+C3651021,Oncology,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,1
+C3651021,Oncology,Ph III,8) SafetyRep,,,2
+C3671013,Vaccines,Ph III,1) Inc/Excl,"Did not meet inclusion criteria 1. Willing and able to comply with scheduled visits, treatment plan, laboratory tests, and other study procedures.",YES,11
+C3671013,Vaccines,Ph III,1) Inc/Excl,"Did not meet inclusion criteria 2. Healthy participants who are determined by medical history, physical examination, and clinical judgment of the investigator to be eligible for inclusion in the study",YES,24
+C3671013,Vaccines,Ph III,1) Inc/Excl,"Did not meet inclusion criteria 4. Capable of giving signed informed consent, which includes compliance with the requirements and restrictions listed in the ICD and in this protocol.",YES,7
+C3671013,Vaccines,Ph III,1) Inc/Excl,Did not meet inclusion criteria 5. Male or female participants ≥60 years of age. Males able to father children must use contraception from ICD through at least 28 days after study intervention administration. Females must not be of childbearing potential.,YES,2
+C3671013,Vaccines,Ph III,1) Inc/Excl,"Did not meet inclusion criteria 6 (SSA, SSB & SSC). Participants who received RSVpreF in the efficacy study.",YES,3
+C3671013,Vaccines,Ph III,1) Inc/Excl,"Did not meet inclusion criteria 7 (SSA & SSC). Participants who have an efficacy study Visit 2 serology sample, completed the Visit 5 and did not meet exclusion criteria during the efficacy study.",YES,3
+C3671013,Vaccines,Ph III,1) Inc/Excl,"Met exclusion criteria 1. Bleeding diathesis or condition associated with prolonged bleeding that would, in the opinion of the investigator, contraindicate intramuscular injection.",YES,1
+C3671013,Vaccines,Ph III,1) Inc/Excl,"Met exclusion criteria 10. Investigator site staff or Pfizer employees directly involved in the conduct of the study, site staff otherwise supervised by the investigator, and their respective family members.",YES,1
+C3671013,Vaccines,Ph III,1) Inc/Excl,Met exclusion criteria 15 (SSC). Participants who completed Vaccination 1 from the efficacy study less than 32 months or greater than 40 months prior to revaccination.,YES,34
+C3671013,Vaccines,Ph III,1) Inc/Excl,"Met exclusion criteria 2. History of severe adverse reaction associated with a vaccine and/or severe allergic reaction (eg, anaphylaxis) to any component of the study intervention(s) or any related vaccine.",YES,1
+C3671013,Vaccines,Ph III,1) Inc/Excl,"Met exclusion criteria 3. Serious chronic disorder including metastatic malignancy, end-stage renal disease, clinically unstable cardiac disease, or any other disorder that, in the investigator’s opinion, excludes participation in the study.",YES,7
+C3671013,Vaccines,Ph III,1) Inc/Excl,"Met exclusion criteria 4. Immunocompromised individuals with known or suspected immunodeficiency, as determined by history and/or laboratory/physical examination.",YES,3
+C3671013,Vaccines,Ph III,1) Inc/Excl,Met exclusion criteria 5. Other medical or psychiatric condition including recent or active suicidal ideation or behavior or abnormal labs that may increase risk associated with participation,YES,3
+C3671013,Vaccines,Ph III,1) Inc/Excl,Met exclusion criteria 6. Participation in other studies involving study intervention within 28 days prior to consent and/or during study participation.,YES,23
+C3671013,Vaccines,Ph III,1) Inc/Excl,"Met exclusion criteria 7. Individuals who receive chronic systemic immunosuppressive therapy, including cytotoxic agents, monoclonal antibodies, systemic corticosteroids, or radiotherapy from 60 days before study intervention or throughout the study",YES,32
+C3671013,Vaccines,Ph III,1) Inc/Excl,Met exclusion criteria 9. Previous vaccination with any licensed or investigational RSV vaccine or planned receipt during study participation.,YES,11
+C3671013,Vaccines,Ph III,10) Other,Site staff training missing/incomplete,NO,3218
+C3671013,Vaccines,Ph III,11) Informed Consent,ICD had not undergone proper Pfizer/CRO approval,NO,1
+C3671013,Vaccines,Ph III,11) Informed Consent,"ICD not signed by impartial witness, when applicable",NO,30
+C3671013,Vaccines,Ph III,11) Informed Consent,ICD not translated to subject's/LAR native language,NO,3
+C3671013,Vaccines,Ph III,11) Informed Consent,ICD signed by subject/LAR had not received IRB/IEC approval,NO,135
+C3671013,Vaccines,Ph III,11) Informed Consent,ICD signed by unauthorized site personnel,NO,249
+C3671013,Vaccines,Ph III,11) Informed Consent,"ICD was lost, copy available",NO,20
+C3671013,Vaccines,Ph III,11) Informed Consent,"ICD was lost, no copy available",NO,6
+C3671013,Vaccines,Ph III,11) Informed Consent,Other,NO,1432
+C3671013,Vaccines,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,1441
+C3671013,Vaccines,Ph III,11) Informed Consent,Subject did not sign consent at age of majority,NO,1
+C3671013,Vaccines,Ph III,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,NO,1
+C3671013,Vaccines,Ph III,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,NO,25
+C3671013,Vaccines,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,1116
+C3671013,Vaccines,Ph III,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,NO,6
+C3671013,Vaccines,Ph III,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,125
+C3671013,Vaccines,Ph III,11) Informed Consent,subject/LAR signed the main ICD but didn't sign the additional consent for future storage/research and/or subset participation.,NO,142
+C3671013,Vaccines,Ph III,2) InvProd,Administration of investigational products performed by person not listed on the delegation log,NO,298
+C3671013,Vaccines,Ph III,2) InvProd,Dosing/Administration error,YES,3
+C3671013,Vaccines,Ph III,2) InvProd,IP administered by untrained personnel,NO,1267
+C3671013,Vaccines,Ph III,2) InvProd,IP administered prior to authorization for use,NO,41
+C3671013,Vaccines,Ph III,2) InvProd,IP administered that was deemed not suitable for use,YES,119
+C3671013,Vaccines,Ph III,2) InvProd,IP documentation error,NO,228
+C3671013,Vaccines,Ph III,2) InvProd,IP verification incomplete,NO,103
+C3671013,Vaccines,Ph III,2) InvProd,IP was not kept at ambient temperature for approximately 15 minutes prior to preparation start,NO,17
+C3671013,Vaccines,Ph III,2) InvProd,Incorrect vaccine allocation/assigned to participant,YES,23
+C3671013,Vaccines,Ph III,2) InvProd,Medical Device Complaint not reported per protocol,NO,2
+C3671013,Vaccines,Ph III,2) InvProd,Other IP deviation,NO,5
+C3671013,Vaccines,Ph III,2) InvProd,Participant received their SSC Year 4 vaccination at the wrong visit,YES,5
+C3671013,Vaccines,Ph III,2) InvProd,Participant was assigned to both the Year 3 and Year 4 vaccination at the same visit,NO,8
+C3671013,Vaccines,Ph III,2) InvProd,"Subject was enrolled more than once in the study, at different sites",YES,1029
+C3671013,Vaccines,Ph III,2) InvProd,Temporary delay criteria #1 met but participant still vaccinated (current febrile illness or other acute illness within 48 hours),NO,3
+C3671013,Vaccines,Ph III,2) InvProd,Temporary delay criteria #2 met but participant still vaccinated (Any ARI within 14 days before study intervention administration),YES,2
+C3671013,Vaccines,Ph III,2) InvProd,Temporary delay criteria #3 met but participant still vaccinated (receipt of concomitant vaccine outside specified window),NO,148
+C3671013,Vaccines,Ph III,2) InvProd,Temporary delay criteria #4 met but participant still vaccinated (receipt of short term systemic corticosteroids [<14 days]),YES,2
+C3671013,Vaccines,Ph III,3) CCMeds,Participant received blood/plasma products or immunoglobulins outside the specified study windows,YES,9
+C3671013,Vaccines,Ph III,3) CCMeds,Participant received nonstudy RSV vaccine,YES,11
+C3671013,Vaccines,Ph III,3) CCMeds,Participant received prohibited immunosuppressive therapy,YES,282
+C3671013,Vaccines,Ph III,3) CCMeds,Participant received systemic corticosteroids >=20 mg/day of prednisone or equivalent) for >=14 days within the prohibited study window,YES,3
+C3671013,Vaccines,Ph III,3) CCMeds,"Receipt of permitted vaccine, but not as specified per protocol",NO,278
+C3671013,Vaccines,Ph III,3) CCMeds,"Took permitted concomitant medication/vaccine, but not as specified per protocol",YES,1
+C3671013,Vaccines,Ph III,3) CCMeds,Took prohibited concomitant medication/vaccine,YES,6
+C3671013,Vaccines,Ph III,4) Lab,All nasal swab samples collected out of window,YES,2667
+C3671013,Vaccines,Ph III,4) Lab,All nasal swabs collected using expired kits,YES,42
+C3671013,Vaccines,Ph III,4) Lab,Expired/incorrect lab supplies used,NO,471
+C3671013,Vaccines,Ph III,4) Lab,Incorrect serology sample volume collected,NO,36
+C3671013,Vaccines,Ph III,4) Lab,Nasal swab sample collected when not required,NO,458
+C3671013,Vaccines,Ph III,4) Lab,Nasal swab sample incorrectly collected (e.g. wrong media),NO,110
+C3671013,Vaccines,Ph III,4) Lab,Nasal swab sample not collected during an in person visit,NO,377
+C3671013,Vaccines,Ph III,4) Lab,Nasal swab sample not labelled properly and had to be discarded,NO,2
+C3671013,Vaccines,Ph III,4) Lab,Nasal swab sample not labelled properly and had to be discarded,YES,13
+C3671013,Vaccines,Ph III,4) Lab,Nasal swab sample not received by the lab,NO,6
+C3671013,Vaccines,Ph III,4) Lab,Nasal swab sample not received by the lab,YES,27
+C3671013,Vaccines,Ph III,4) Lab,Nasal swab sample processed incorrectly,NO,14
+C3671013,Vaccines,Ph III,4) Lab,No nasal swab collected at all (self and site),YES,2640
+C3671013,Vaccines,Ph III,4) Lab,Other lab deviation,NO,82
+C3671013,Vaccines,Ph III,4) Lab,Sample management documentation not completed appropriately,NO,422
+C3671013,Vaccines,Ph III,4) Lab,Self swabs collected using expired kit and site swab collected out of window,YES,86
+C3671013,Vaccines,Ph III,4) Lab,Self-swab not stored frozen within required window,NO,363
+C3671013,Vaccines,Ph III,4) Lab,Serology sample collected at a visit where it was not required,NO,13
+C3671013,Vaccines,Ph III,4) Lab,Serology sample collected but participant is not in the immunogenicity subset,NO,548
+C3671013,Vaccines,Ph III,4) Lab,Serology sample not collected for immunogenicity subset,YES,12
+C3671013,Vaccines,Ph III,4) Lab,Serology sample not collected for substudy visit,YES,97
+C3671013,Vaccines,Ph III,4) Lab,Serology sample processed incorrectly,NO,118
+C3671013,Vaccines,Ph III,4) Lab,Serum sample not received by the lab,NO,41
+C3671013,Vaccines,Ph III,4) Lab,Visit 2 serology sample not collected for non-immunogenicity subset,NO,157
+C3671013,Vaccines,Ph III,5) VisitSched,PI deferred the decision for an onsite illness visit to the participant rather than determining based on clinical judgement per protocol,NO,2103
+C3671013,Vaccines,Ph III,5) VisitSched,"Participant experienced ARI symptoms but unplanned respiratory illness visit not performed, where applicable",YES,552
+C3671013,Vaccines,Ph III,5) VisitSched,Unplanned respiratory illness visit performed when not required per protocol,NO,374
+C3671013,Vaccines,Ph III,5) VisitSched,"Unscheduled reactogenicity visit not done, where applicable",NO,2
+C3671013,Vaccines,Ph III,5) VisitSched,Visit not done,NO,114
+C3671013,Vaccines,Ph III,5) VisitSched,Visit performed outside of protocol specified window,NO,10307
+C3671013,Vaccines,Ph III,5) VisitSched,Visit was not performed by telephone when required per protocol,NO,79
+C3671013,Vaccines,Ph III,5) VisitSched,Visit was not performed in clinic when required per protocol,NO,150
+C3671013,Vaccines,Ph III,5) VisitSched,Visit was performed after the participant had been discontinued from the study,NO,7
+C3671013,Vaccines,Ph III,6) Proc/Test,No follow up made to a participant not completing the e-diary,NO,646
+C3671013,Vaccines,Ph III,6) Proc/Test,Other Proc/Test deviation,NO,8
+C3671013,Vaccines,Ph III,6) Proc/Test,"Participant was not dispensed a provisioned device, or did not download the app to their own device",NO,5
+C3671013,Vaccines,Ph III,6) Proc/Test,Participant‘s temperature not measured prior to vaccination,NO,83
+C3671013,Vaccines,Ph III,6) Proc/Test,Procedure not recorded in source documentation as having been performed,NO,456
+C3671013,Vaccines,Ph III,6) Proc/Test,Procedure/Test not done,NO,325
+C3671013,Vaccines,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,1774
+C3671013,Vaccines,Ph III,6) Proc/Test,Procedure/Test performed by site personnel not listed on delegation log,NO,353
+C3671013,Vaccines,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,82
+C3671013,Vaccines,Ph III,6) Proc/Test,Vaccination diary not completed at all during required 7 day post vaccination period,YES,371
+C3671013,Vaccines,Ph III,6) Proc/Test,Vaccination e-diary entered but participant is not in the reactogenicity subset,NO,71
+C3671013,Vaccines,Ph III,6) Proc/Test,Visit 1 procedures not performed per protocol specified sequence with respect to randomization,NO,145
+C3671013,Vaccines,Ph III,7) Random,Participant randomized into incorrect age stratum in Impala,NO,135
+C3671013,Vaccines,Ph III,7) Random,Randomization done out of sequence,NO,4
+C3671013,Vaccines,Ph III,7) Random,Randomized using a different SSID #,YES,4
+C3671013,Vaccines,Ph III,8) SafetyRep,AE/SAE/NDCMC not recorded in clinical database,NO,4
+C3671013,Vaccines,Ph III,8) SafetyRep,Other AE/SAE deviation,NO,1
+C3671013,Vaccines,Ph III,8) SafetyRep,Participant not observed for 30 minutes following vaccination,NO,69
+C3671013,Vaccines,Ph III,8) SafetyRep,SAE not reported to Ethics Committee / IRB per local regulations,NO,26
+C3671013,Vaccines,Ph III,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,317
+C3671013,Vaccines,Ph III,9) DiscCrit,Subject was discontinued but did not meet discontinuation criteria,NO,4
+C3671058,Vaccines,Ph III,1) Inc/Excl,Did not meet inclusion criterion 1 (Male and female participants ≥50 years of age at the time of consent),YES,1
+C3671058,Vaccines,Ph III,1) Inc/Excl,"Did not meet inclusion criterion 4 (Determined by medical history, physical examination, and clinical judgement of PI to be eligible for study.",YES,1
+C3671058,Vaccines,Ph III,1) Inc/Excl,Met exclusion criterion 10 (Previous vaccination with any licensed recombinant adjuvant zoster vaccine (Shingrix) any time before enrollment or planned receipt of a nonstudy VZV vaccine during study participation),YES,1
+C3671058,Vaccines,Ph III,1) Inc/Excl,"Met exclusion criterion 13 (Receipt of any blood/plasma products or immunoglobulin, from 60 days before study intervention administration, or planned receipt throughout the study)",YES,1
+C3671058,Vaccines,Ph III,1) Inc/Excl,"Met exclusion criterion 14 (Receipt of chronic systemic treatment with immunosuppressive therapy,incl cytotoxic agents, monoclonal antibodies, systemic corticosteroids, or radiotherapy, from 60 days before study intervention through study)",YES,3
+C3671058,Vaccines,Ph III,1) Inc/Excl,Met exclusion criterion 9 (Previous vaccination with any licensed or investigational RSV vaccine any time before enrollment or planned receipt of a nonstudy RSV vaccine during study participation),YES,1
+C3671058,Vaccines,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,1
+C3671058,Vaccines,Ph III,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,NO,2
+C3671058,Vaccines,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,1
+C3671058,Vaccines,Ph III,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,NO,11
+C3671058,Vaccines,Ph III,2) InvProd,IP verification incomplete,NO,1
+C3671058,Vaccines,Ph III,2) InvProd,Incorrect vaccine allocation/assigned to participant,NO,1
+C3671058,Vaccines,Ph III,3) CCMeds,"Receipt of nonstudy, nonlive vaccines within 14 days after study intervention administration",YES,1
+C3671058,Vaccines,Ph III,4) Lab,Expired/incorrect lab supplies used,NO,7
+C3671058,Vaccines,Ph III,4) Lab,Incorrect sample volume collected,NO,7
+C3671058,Vaccines,Ph III,4) Lab,Sample collected after vaccination at vaccination visit,NO,1
+C3671058,Vaccines,Ph III,4) Lab,Sample collected at a visit where it was not required,NO,27
+C3671058,Vaccines,Ph III,4) Lab,Sample not collected,NO,3
+C3671058,Vaccines,Ph III,4) Lab,Sample not processed in accordance with lab manual instructions,YES,63
+C3671058,Vaccines,Ph III,5) VisitSched,Visit not done,NO,1
+C3671058,Vaccines,Ph III,5) VisitSched,Visit performed outside of protocol specified window,NO,104
+C3671058,Vaccines,Ph III,6) Proc/Test,Assessment of acute reaction for protocol specified timeframe after study intervention administration not performed at the vaccination visits,NO,2
+C3671058,Vaccines,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,1
+C3671058,Vaccines,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,3
+C3671058,Vaccines,Ph III,6) Proc/Test,Procedure/test performed by a site staff member not listed on the delegation log,NO,71
+C3671058,Vaccines,Ph III,6) Proc/Test,Vaccination diary not completed at all during required 7-day post vaccination period,NO,34
+C3671058,Vaccines,Ph III,7) Random,Participant randomized into incorrect age group/stratum,NO,1
+C3671059,Vaccines,Ph III,1) Inc/Excl,Did not meet inclusion criterion 1 (Male and female participants ≥50 years of age at the time of consent),YES,1
+C3671059,Vaccines,Ph III,1) Inc/Excl,"Did not meet inclusion criterion 4 (Determined by medical history, physical examination, and clinical judgement of PI to be eligible for study.",YES,1
+C3671059,Vaccines,Ph III,1) Inc/Excl,Met exclusion criterion 10 (Previous vaccination with any licensed recombinant adjuvant zoster vaccine (Shingrix) any time before enrollment or planned receipt of a nonstudy VZV vaccine during study participation),YES,1
+C3671059,Vaccines,Ph III,1) Inc/Excl,"Met exclusion criterion 13 (Receipt of any blood/plasma products or immunoglobulin, from 60 days before study intervention administration, or planned receipt throughout the study)",YES,1
+C3671059,Vaccines,Ph III,1) Inc/Excl,"Met exclusion criterion 14 (Receipt of chronic systemic treatment with immunosuppressive therapy,incl cytotoxic agents, monoclonal antibodies, systemic corticosteroids, or radiotherapy, from 60 days before study intervention through study)",YES,3
+C3671059,Vaccines,Ph III,1) Inc/Excl,Met exclusion criterion 9 (Previous vaccination with any licensed or investigational RSV vaccine any time before enrollment or planned receipt of a nonstudy RSV vaccine during study participation),YES,1
+C3671059,Vaccines,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,1
+C3671059,Vaccines,Ph III,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,NO,2
+C3671059,Vaccines,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,1
+C3671059,Vaccines,Ph III,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,NO,11
+C3671059,Vaccines,Ph III,2) InvProd,IP verification incomplete,NO,1
+C3671059,Vaccines,Ph III,2) InvProd,Incorrect vaccine allocation/assigned to participant,NO,1
+C3671059,Vaccines,Ph III,3) CCMeds,"Receipt of nonstudy, nonlive vaccines within 14 days after study intervention administration",YES,1
+C3671059,Vaccines,Ph III,4) Lab,Expired/incorrect lab supplies used,NO,7
+C3671059,Vaccines,Ph III,4) Lab,Incorrect sample volume collected,NO,7
+C3671059,Vaccines,Ph III,4) Lab,Sample collected after vaccination at vaccination visit,NO,1
+C3671059,Vaccines,Ph III,4) Lab,Sample collected at a visit where it was not required,NO,27
+C3671059,Vaccines,Ph III,4) Lab,Sample not collected,NO,3
+C3671059,Vaccines,Ph III,4) Lab,Sample not processed in accordance with lab manual instructions,YES,63
+C3671059,Vaccines,Ph III,5) VisitSched,Visit not done,NO,1
+C3671059,Vaccines,Ph III,5) VisitSched,Visit performed outside of protocol specified window,NO,104
+C3671059,Vaccines,Ph III,6) Proc/Test,Assessment of acute reaction for protocol specified timeframe after study intervention administration not performed at the vaccination visits,NO,2
+C3671059,Vaccines,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,1
+C3671059,Vaccines,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,3
+C3671059,Vaccines,Ph III,6) Proc/Test,Procedure/test performed by a site staff member not listed on the delegation log,NO,71
+C3671059,Vaccines,Ph III,6) Proc/Test,Vaccination diary not completed at all during required 7-day post vaccination period,NO,34
+C3671059,Vaccines,Ph III,7) Random,Participant randomized into incorrect age group/stratum,NO,1
+C4221015,Oncology,Ph III,1) Inc/Excl,"Participant did not meet inclusion criteria 10: Adequate tumor tissue for submission to a central laboratory for confirmation of BRAF V600E, as defined by the protocol.",YES,1
+C4221015,Oncology,Ph III,1) Inc/Excl,Participant did not meet inclusion criteria 11: Participants who have received <= 1 (SLI) or no (Phase 3 and Cohort 3) prior systemic regimen(s) for metastatic disease,YES,5
+C4221015,Oncology,Ph III,1) Inc/Excl,Participant did not meet inclusion criteria 14: Adequate bone marrow function characterized by the following at screening: a. ANC >= 1.5 × 10^9/L; b. Platelets >= 100 × 10^9/L; c. Hemoglobin >= 9.0 g/dL (with or without blood transfusions).,YES,1
+C4221015,Oncology,Ph III,1) Inc/Excl,Participant did not meet inclusion criteria 15: Adequate hepatic and renal function,YES,9
+C4221015,Oncology,Ph III,1) Inc/Excl,"Participant did not meet inclusion criteria 9: Presence of a BRAF V600E mutation in tumor tissue or blood (eg, ctDNA genetic testing)",YES,3
+C4221015,Oncology,Ph III,1) Inc/Excl,Participant did not meet molecular prescreen inclusion criteria 1: SLI: Male or female participants age >=18 years at the time of informed consent. Ph 3 and Cohort 3: Male or female participants age >= 16 years at the time of informed consent/assent,YES,1
+C4221015,Oncology,Ph III,1) Inc/Excl,Participant did not meet molecular prescreening inclusion criteria 2: Body weight >= 40 kg,YES,1
+C4221015,Oncology,Ph III,1) Inc/Excl,Participant did not meet molecular prescreening inclusion criteria 5: Able to provide a sufficient amount of representative tumor specimen for central testing of BRAF V600E mutation status and tumor tissue assessment,YES,6
+C4221015,Oncology,Ph III,1) Inc/Excl,Participant met exclusion criteria 11: Clinically significant cardiovascular diseases,YES,4
+C4221015,Oncology,Ph III,1) Inc/Excl,Participant met exclusion criteria 21: Major surgery or completion of radiation therapy <= 4 weeks prior to enrollment /randomization or radiation therapy that included >30% of the bone marrow,YES,1
+C4221015,Oncology,Ph III,1) Inc/Excl,Participant met molecular prescreening exclusion criteria 2: Presence of acute or chronic pancreatitis,YES,1
+C4221015,Oncology,Ph III,1) Inc/Excl,"Participant met molecular prescreening exclusion criteria 5: Known DPD deficiency; refer to local fluorouracil or capecitabine label or local clinical guidance, for DPD status recommendation prior to starting treatment",YES,1
+C4221015,Oncology,Ph III,1) Inc/Excl,Participant met molecular prescreening exclusion criteria 8: Colorectal adenocarcinoma that is RAS mutant or for which RAS mutation status is unknown.,YES,2
+C4221015,Oncology,Ph III,1) Inc/Excl,Participant met molecular prescreening exclusion criteria 9: Locally confirmed dMMR or MSI-H colorectal carcinoma or unknown MSI/MMR status.,YES,9
+C4221015,Oncology,Ph III,10) Other,Other deviation,NO,37
+C4221015,Oncology,Ph III,11) Informed Consent,ICD had not undergone proper Pfizer/CRO approval,NO,1
+C4221015,Oncology,Ph III,11) Informed Consent,"ICD not signed by impartial witness, when applicable",YES,1
+C4221015,Oncology,Ph III,11) Informed Consent,ICD signed by subject/LAR had not received IRB/IEC approval,YES,2
+C4221015,Oncology,Ph III,11) Informed Consent,ICD signed by unauthorized site personnel,YES,27
+C4221015,Oncology,Ph III,11) Informed Consent,"ICD was lost, copy available",NO,3
+C4221015,Oncology,Ph III,11) Informed Consent,"ICD was lost, no copy available",YES,4
+C4221015,Oncology,Ph III,11) Informed Consent,Other,NO,357
+C4221015,Oncology,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,124
+C4221015,Oncology,Ph III,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,YES,18
+C4221015,Oncology,Ph III,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,YES,17
+C4221015,Oncology,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,44
+C4221015,Oncology,Ph III,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,NO,1
+C4221015,Oncology,Ph III,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,3
+C4221015,Oncology,Ph III,2) InvProd,,,2
+C4221015,Oncology,Ph III,2) InvProd,Commercial IP utilised for dosing,NO,139
+C4221015,Oncology,Ph III,2) InvProd,Dispensing error,NO,42
+C4221015,Oncology,Ph III,2) InvProd,Dosing/Administration error,NO,857
+C4221015,Oncology,Ph III,2) InvProd,IP accountability not done,NO,19
+C4221015,Oncology,Ph III,2) InvProd,IP dispensed outside of IRT system,YES,161
+C4221015,Oncology,Ph III,2) InvProd,IP not returned,NO,45
+C4221015,Oncology,Ph III,2) InvProd,Pending Site Monitor Action InvProd,NO,5
+C4221015,Oncology,Ph III,2) InvProd,Storage error,NO,4
+C4221015,Oncology,Ph III,3) CCMeds,"Took permitted concomitant medication/vaccine, but not as specified per protocol",YES,4
+C4221015,Oncology,Ph III,3) CCMeds,Took prohibited concomitant medication/vaccine,YES,46
+C4221015,Oncology,Ph III,4) Lab,,,1918
+C4221015,Oncology,Ph III,4) Lab,Lab for pregnancy testing not done or done out of visit window,NO,36
+C4221015,Oncology,Ph III,4) Lab,Lab not done,NO,675
+C4221015,Oncology,Ph III,4) Lab,Lab not performed within pre-specified conditions,NO,692
+C4221015,Oncology,Ph III,4) Lab,Lab performed out of window,NO,101
+C4221015,Oncology,Ph III,4) Lab,Lab samples taken when not required per protocol,NO,341
+C4221015,Oncology,Ph III,4) Lab,Lab(s) was not reviewed by an Investigator in a timely manner,NO,35
+C4221015,Oncology,Ph III,4) Lab,PK/PD samples not done,NO,76
+C4221015,Oncology,Ph III,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,335
+C4221015,Oncology,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,1
+C4221015,Oncology,Ph III,4) Lab,Specimen could not be analyzed,NO,912
+C4221015,Oncology,Ph III,5) VisitSched,,,4
+C4221015,Oncology,Ph III,5) VisitSched,Pending Site Monitor Action VisitSched,NO,3
+C4221015,Oncology,Ph III,5) VisitSched,Visit not done,NO,307
+C4221015,Oncology,Ph III,5) VisitSched,Visit not performed per protocol,NO,1391
+C4221015,Oncology,Ph III,6) Proc/Test,,,4
+C4221015,Oncology,Ph III,6) Proc/Test,Abnormal procedure/test result not followed up per protocol,NO,1
+C4221015,Oncology,Ph III,6) Proc/Test,Central expedited review for confirmation of disease progression not requested,YES,21
+C4221015,Oncology,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,3
+C4221015,Oncology,Ph III,6) Proc/Test,Procedure/Test not done,NO,1392
+C4221015,Oncology,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,1092
+C4221015,Oncology,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,326
+C4221015,Oncology,Ph III,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,NO,69
+C4221015,Oncology,Ph III,6) Proc/Test,Tumor assessment scan conducted out of window,NO,384
+C4221015,Oncology,Ph III,6) Proc/Test,Tumor assessment scan not conducted by site,YES,223
+C4221015,Oncology,Ph III,7) Random,Incorrect stratification,YES,6
+C4221015,Oncology,Ph III,7) Random,Randomization done out of sequence,NO,12
+C4221015,Oncology,Ph III,7) Random,Randomized out of protocol defined window,NO,15
+C4221015,Oncology,Ph III,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,91
+C4221015,Oncology,Ph III,9) DiscCrit,Participant developed withdrawal criteria during the study but was not withdrawn,YES,4
+C4221016,Oncology,Ph III,1) Inc/Excl,Subject did not have adequate hepatic and/or renal function,YES,2
+C4221016,Oncology,Ph III,1) Inc/Excl,Subject did not have documented evidence of a BRAF mutation per protocol,YES,17
+C4221016,Oncology,Ph III,1) Inc/Excl,Subject did not submit tumor tissue to the central laboratory(ies) during the screening period,YES,35
+C4221016,Oncology,Ph III,1) Inc/Excl,"Subject had or has prior or current symptomatic brain metastasis, leptomeningeal disease or other active CNS metastases",YES,2
+C4221016,Oncology,Ph III,1) Inc/Excl,Subject has clinically significant cardiovascular diseases as outlined in the protocol,YES,3
+C4221016,Oncology,Ph III,1) Inc/Excl,Subject has concurrent or previous other malignancy within 2 years of study entry,YES,1
+C4221016,Oncology,Ph III,1) Inc/Excl,Subject received prior first-line systemic therapy for metastatic or unresectable locally advanced melanoma,YES,1
+C4221016,Oncology,Ph III,11) Informed Consent,ICD signed by subject/LAR had not received IRB/IEC approval,YES,6
+C4221016,Oncology,Ph III,11) Informed Consent,ICD signed by unauthorized site personnel,YES,3
+C4221016,Oncology,Ph III,11) Informed Consent,"ICD was lost, copy available",NO,6
+C4221016,Oncology,Ph III,11) Informed Consent,"ICD was lost, no copy available",YES,1
+C4221016,Oncology,Ph III,11) Informed Consent,Other,NO,82
+C4221016,Oncology,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,109
+C4221016,Oncology,Ph III,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,YES,17
+C4221016,Oncology,Ph III,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,YES,6
+C4221016,Oncology,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,15
+C4221016,Oncology,Ph III,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,NO,4
+C4221016,Oncology,Ph III,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,4
+C4221016,Oncology,Ph III,2) InvProd,Blind compromised,YES,4
+C4221016,Oncology,Ph III,2) InvProd,Dispensing error,NO,15
+C4221016,Oncology,Ph III,2) InvProd,Dosing/Administration error,NO,432
+C4221016,Oncology,Ph III,2) InvProd,IP accountability not done,NO,31
+C4221016,Oncology,Ph III,2) InvProd,IP not returned,NO,20
+C4221016,Oncology,Ph III,2) InvProd,Medication error (eg. Wrong study IP administered),YES,10
+C4221016,Oncology,Ph III,2) InvProd,Overdose of Binimetinib/Placebo,YES,4
+C4221016,Oncology,Ph III,2) InvProd,Overdose of Encorafenib/Placebo,YES,17
+C4221016,Oncology,Ph III,2) InvProd,Storage error,NO,2
+C4221016,Oncology,Ph III,3) CCMeds,"Took permitted concomitant medication/vaccine, but not as specified per protocol",YES,2
+C4221016,Oncology,Ph III,4) Lab,Lab for pregnancy testing not done or done out of visit window,NO,7
+C4221016,Oncology,Ph III,4) Lab,Lab not done,NO,527
+C4221016,Oncology,Ph III,4) Lab,Lab not performed within pre-specified conditions,NO,51
+C4221016,Oncology,Ph III,4) Lab,Lab performed out of window,NO,19
+C4221016,Oncology,Ph III,4) Lab,Lab(s) was not reviewed by an Investigator in a timely manner,NO,4
+C4221016,Oncology,Ph III,4) Lab,PK/PD samples not done,NO,29
+C4221016,Oncology,Ph III,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,291
+C4221016,Oncology,Ph III,4) Lab,Specimen could not be analyzed,NO,70
+C4221016,Oncology,Ph III,5) VisitSched,Visit not done,NO,63
+C4221016,Oncology,Ph III,5) VisitSched,Visit not performed per protocol,NO,219
+C4221016,Oncology,Ph III,6) Proc/Test,Missing or Incomplete Scans and Photographs (if applicable) at a scheduled tumor assessment timepoint impacting primary analysis of the primary and/or secondary endpoints,YES,16
+C4221016,Oncology,Ph III,6) Proc/Test,Missing or Incomplete Scans and Photographs (if applicable) at a scheduled tumor assessment timepoint not impacting primary analysis of the primary and/or secondary endpoints,NO,116
+C4221016,Oncology,Ph III,6) Proc/Test,Procedure/Test not done,NO,417
+C4221016,Oncology,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,501
+C4221016,Oncology,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,324
+C4221016,Oncology,Ph III,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,NO,14
+C4221016,Oncology,Ph III,7) Random,Randomized under incorrect stratification,YES,30
+C4221016,Oncology,Ph III,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,40
+C4221016,Oncology,Ph III,9) DiscCrit,Participant developed withdrawal criteria during the study but was not withdrawn,YES,1
+C4221022,Oncology,Ph II,1) Inc/Excl,Subject did not meet inclusion criterion 10: adequate bone marrow function,YES,1
+C4221022,Oncology,Ph II,1) Inc/Excl,Subject did not meet inclusion criterion 5: histologically or cytologically confirmed metastatic Stage IV colorectal adenocarcinoma.,YES,30
+C4221022,Oncology,Ph II,1) Inc/Excl,Subject did not meet inclusion criterion 8: have not received prior systemic regimens for metastatic disease.,YES,1
+C4221022,Oncology,Ph II,1) Inc/Excl,Subject met exclusion criteria 1,YES,2
+C4221022,Oncology,Ph II,1) Inc/Excl,Subject met exclusion criterion 10: clinically significant cardiovascular diseases,YES,1
+C4221022,Oncology,Ph II,10) Other,Other--,NO,16
+C4221022,Oncology,Ph II,11) Informed Consent,ICD had not undergone proper Pfizer/CRO approval,NO,2
+C4221022,Oncology,Ph II,11) Informed Consent,"ICD not signed by impartial witness, when applicable",YES,1
+C4221022,Oncology,Ph II,11) Informed Consent,ICD signed by unauthorized site personnel,YES,2
+C4221022,Oncology,Ph II,11) Informed Consent,Other,NO,20
+C4221022,Oncology,Ph II,11) Informed Consent,Pending Site Monitor Action Informed Consent,NO,1
+C4221022,Oncology,Ph II,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,34
+C4221022,Oncology,Ph II,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,YES,1
+C4221022,Oncology,Ph II,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,4
+C4221022,Oncology,Ph II,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,1
+C4221022,Oncology,Ph II,2) InvProd,Administration sequence is not per protocol,NO,27
+C4221022,Oncology,Ph II,2) InvProd,Cetuximab infusion administered less than 30 mins after the end of the Pembrolizumab infusion,NO,59
+C4221022,Oncology,Ph II,2) InvProd,Cetuximab infusion administered more than 60 mins after the end of the Pembrolizumab infusion,NO,12
+C4221022,Oncology,Ph II,2) InvProd,Dispensing error,NO,2
+C4221022,Oncology,Ph II,2) InvProd,Dosing/Administration error,NO,80
+C4221022,Oncology,Ph II,2) InvProd,IP not returned,NO,2
+C4221022,Oncology,Ph II,2) InvProd,Pending Site Monitor Action InvProd,NO,1
+C4221022,Oncology,Ph II,2) InvProd,Subject non-compliance,NO,8
+C4221022,Oncology,Ph II,4) Lab,,,1
+C4221022,Oncology,Ph II,4) Lab,Lab not done,NO,70
+C4221022,Oncology,Ph II,4) Lab,Lab not performed within pre-specified conditions,NO,32
+C4221022,Oncology,Ph II,4) Lab,Lab sample taken in error,NO,202
+C4221022,Oncology,Ph II,4) Lab,Lab(s) was not reviewed by an Investigator in a timely manner,NO,2
+C4221022,Oncology,Ph II,4) Lab,Pending Site Monitor Action Lab,NO,1
+C4221022,Oncology,Ph II,4) Lab,Specimen could not be analyzed,NO,192
+C4221022,Oncology,Ph II,5) VisitSched,Pending Site Monitor Action VisitSched,NO,1
+C4221022,Oncology,Ph II,5) VisitSched,Visit not done,NO,8
+C4221022,Oncology,Ph II,5) VisitSched,Visit not performed per protocol,NO,49
+C4221022,Oncology,Ph II,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,5
+C4221022,Oncology,Ph II,6) Proc/Test,Procedure/Test not done,NO,100
+C4221022,Oncology,Ph II,6) Proc/Test,Procedure/Test not performed per protocol,NO,78
+C4221022,Oncology,Ph II,6) Proc/Test,Procedure/Test performed out of window,NO,58
+C4221022,Oncology,Ph II,6) Proc/Test,Radiographic scan not done,YES,61
+C4221022,Oncology,Ph II,7) Random,Incorrect stratification,YES,2
+C4221022,Oncology,Ph II,7) Random,Randomized out of protocol defined window,NO,1
+C4221022,Oncology,Ph II,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,27
+C4221026,Oncology,Unknown,10) Other,Pending Site Monitor Action Other,NO,1
+C4221026,Oncology,Unknown,11) Informed Consent,ICD not translated to subject's/LAR native language,YES,2
+C4221026,Oncology,Unknown,11) Informed Consent,Other,NO,3
+C4221026,Oncology,Unknown,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,1
+C4221026,Oncology,Unknown,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,2
+C4221026,Oncology,Unknown,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,1
+C4221026,Oncology,Unknown,2) InvProd,Dispensing error,NO,6
+C4221026,Oncology,Unknown,2) InvProd,Dosing/Administration error,NO,79
+C4221026,Oncology,Unknown,2) InvProd,IP accountability not done,NO,2
+C4221026,Oncology,Unknown,2) InvProd,IP not returned,NO,5
+C4221026,Oncology,Unknown,2) InvProd,"Overdose (ie, >prescribed dose within a 24-hour time period)",YES,9
+C4221026,Oncology,Unknown,2) InvProd,Pending Site Monitor Action InvProd,NO,1
+C4221026,Oncology,Unknown,4) Lab,Lab(s) was not reviewed by an Investigator in a timely manner,NO,1
+C4221026,Oncology,Unknown,5) VisitSched,Visit not performed per protocol,NO,13
+C4221026,Oncology,Unknown,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,4
+C4591048,Vaccines,Ph III,1) Inc/Excl,SSA Phase 2/3- Participant did not meet inclusion criteria 1: Male or female participants ≥6 months to <5 years of age at the time of randomization/enrollment.,YES,1
+C4591048,Vaccines,Ph III,1) Inc/Excl,"SSA, SSB, SSC, SSD, SSE-Participant did not meet inc criteria 2- Participants parent(s)/LAR(s) and participants, as age appropriate, who are willing and able to comply with all scheduled visits and other study procedures.",YES,13
+C4591048,Vaccines,Ph III,1) Inc/Excl,"SSA, SSB, SSC, SSD, SSE-Participant did not meet inclusion criteria 3-Healthy participants who are determined by medical history, physical examination, and clinical judgment of the investigator to be eligible for inclusion in the study.",YES,1
+C4591048,Vaccines,Ph III,1) Inc/Excl,"SSB Participant did not meet inclusion criteria 1-Group 1 Male or female participants ≥6 months to <4 years 6 months of age, at the time of enrollment.",YES,1
+C4591048,Vaccines,Ph III,1) Inc/Excl,"SSB Participant did not meet inclusion criteria 1-Group 3 Male or female participants from Study C4591007 who are ≥6 months to <5 years of age, at the time of enrollment.",YES,2
+C4591048,Vaccines,Ph III,1) Inc/Excl,"SSB-Subject did not meet inclusion criteria 6- Group 1: Participants who have received 2 prior doses of BNT162b2 3 μg, with the last dose 60 to 150 days before enrollment.",YES,2
+C4591048,Vaccines,Ph III,1) Inc/Excl,"SSB-Subject did not meet inclusion criteria 6-Group 2: Participants who have received 3 prior doses of BNT162b2 3 μg, with the last dose 60 to 240 days before enrollment.",YES,2
+C4591048,Vaccines,Ph III,1) Inc/Excl,"SSC-Subject did not meet inclusion criteria 6-Participants who have received 3 prior doses of BNT162b2 3 μg, with the last dose 60 to 240 days before enrollment.",YES,1
+C4591048,Vaccines,Ph III,1) Inc/Excl,"SSD Participant did not meet inclusion criteria 8-Group 2 Participants who have received 3 doses of BNT162b2 10 µg, with the last dose being 90 to 240 days before enrollment.",YES,1
+C4591048,Vaccines,Ph III,10) Other,Participant confidentiality was compromised.,NO,223
+C4591048,Vaccines,Ph III,10) Other,Site staff training missing/incomplete,NO,7
+C4591048,Vaccines,Ph III,11) Informed Consent,ICD had not undergone proper Pfizer/CRO approval,NO,1
+C4591048,Vaccines,Ph III,11) Informed Consent,ICD signed by subject/LAR had not received IRB/IEC approval,NO,12
+C4591048,Vaccines,Ph III,11) Informed Consent,ICD signed by unauthorized site personnel,NO,15
+C4591048,Vaccines,Ph III,11) Informed Consent,"ICD was lost, copy available",NO,1
+C4591048,Vaccines,Ph III,11) Informed Consent,Other,NO,570
+C4591048,Vaccines,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,380
+C4591048,Vaccines,Ph III,11) Informed Consent,"SSA, SSB, SSC, SSD, and SSE-Subject/LAR signed ICD for a substudy other than the substudy they were enrolled into, but gave verbal consent to participate in the correct substudy.",NO,2
+C4591048,Vaccines,Ph III,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,YES,2
+C4591048,Vaccines,Ph III,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,NO,3
+C4591048,Vaccines,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,20
+C4591048,Vaccines,Ph III,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,NO,3
+C4591048,Vaccines,Ph III,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,4
+C4591048,Vaccines,Ph III,2) InvProd,"Administration error, incorrect container, but correct IP administered",NO,2
+C4591048,Vaccines,Ph III,2) InvProd,"Dosing/administration error, subject did not receive correct dose of vaccine",YES,10
+C4591048,Vaccines,Ph III,2) InvProd,IP administered in incorrect limb,NO,85
+C4591048,Vaccines,Ph III,2) InvProd,IP administered prior to Almac authorizing it for use,NO,151
+C4591048,Vaccines,Ph III,2) InvProd,IP administered that was deemed not suitable for use by Almac,YES,1
+C4591048,Vaccines,Ph III,2) InvProd,IP documentation error,NO,37
+C4591048,Vaccines,Ph III,2) InvProd,IP verification incomplete,NO,21
+C4591048,Vaccines,Ph III,2) InvProd,Incorrect vaccine allocation/assigned to subject,YES,1
+C4591048,Vaccines,Ph III,2) InvProd,Other IP deviation,NO,47
+C4591048,Vaccines,Ph III,2) InvProd,Subject was vaccinated despite meeting temporary delay criterion - current febrile illness or other acute illness within 48 hrs before study intervention administration. Includes current symptoms that could represent a potential COVID-19 illness.,NO,16
+C4591048,Vaccines,Ph III,2) InvProd,Subject was vaccinated despite meeting temporary delay criterion - receipt of seasonal or pandemic influenza vaccine or any other non-study vaccine within 14 days before study intervention administration.,YES,26
+C4591048,Vaccines,Ph III,2) InvProd,Subject was vaccinated despite meeting temporary delay criterion - receiving seasonal or pandemic influenza vaccine within the previous 14 days or any other non-study vaccine within 28 days before IP administration,YES,1
+C4591048,Vaccines,Ph III,2) InvProd,"Subject was vaccinated despite meeting temporary delay criterion - receiving short-term (<14 days) systemic corticosteroids, IP administration should be delayed until systemic corticosteroid use has been discontinued for at least 28 days.",YES,2
+C4591048,Vaccines,Ph III,2) InvProd,Subject was vaccinated despite meeting temporary delay criterion: positive SARS-CoV-2 test result (NAAT or rapid antigen test) within 28 days before study intervention administration,YES,7
+C4591048,Vaccines,Ph III,3) CCMeds,Receipt of any other nonstudy COVID-19 vaccine at any time during study participation.,YES,10
+C4591048,Vaccines,Ph III,3) CCMeds,"Receipt of blood/plasma products, immunoglobulins, or monoclonal antibodies (except palivizumab), from 60 days before enrollment through conclusion of the study.",YES,2
+C4591048,Vaccines,Ph III,3) CCMeds,Receipt of prophylactic antipyretics and other pain medication to prevent symptoms associated with study intervention administration.,NO,3
+C4591048,Vaccines,Ph III,3) CCMeds,Subject received the season influenza vaccine or the pandemic influenza vaccine within 14 days prior to or 14 days after the administration of IP.,YES,9
+C4591048,Vaccines,Ph III,3) CCMeds,Subject received vaccine other than study intervention (not medically necessary) within 14 days before and 14 days after study intervention.,YES,73
+C4591048,Vaccines,Ph III,4) Lab,Expired/incorrect lab supplies used,NO,4
+C4591048,Vaccines,Ph III,4) Lab,Lab performed out of window,NO,31
+C4591048,Vaccines,Ph III,4) Lab,Nasal swab can't be analyzed due to incorrect shipping procedure,NO,8
+C4591048,Vaccines,Ph III,4) Lab,Nasal swab collected where it is not required,NO,40
+C4591048,Vaccines,Ph III,4) Lab,Nasal swab not collected/obtained for the visit where it is required.,NO,425
+C4591048,Vaccines,Ph III,4) Lab,Nasal swab sample processed incorrectly,NO,3
+C4591048,Vaccines,Ph III,4) Lab,Other lab deviation,NO,11
+C4591048,Vaccines,Ph III,4) Lab,Serology sample collected after vaccination at vaccination visits.,NO,1
+C4591048,Vaccines,Ph III,4) Lab,Serology sample collected at a visit where it is not required,NO,4
+C4591048,Vaccines,Ph III,4) Lab,Serology sample not collected,NO,171
+C4591048,Vaccines,Ph III,4) Lab,Serology sample not labeled properly and had to discarded,NO,1
+C4591048,Vaccines,Ph III,4) Lab,Serology samples processed incorrectly,NO,33
+C4591048,Vaccines,Ph III,4) Lab,Serology samples processed incorrectly,YES,5
+C4591048,Vaccines,Ph III,4) Lab,Specimen could not be analyzed,NO,2
+C4591048,Vaccines,Ph III,5) VisitSched,Other visit deviation,NO,5
+C4591048,Vaccines,Ph III,5) VisitSched,Pending Site Monitor Action VisitSched,NO,3
+C4591048,Vaccines,Ph III,5) VisitSched,Visit not done,NO,91
+C4591048,Vaccines,Ph III,5) VisitSched,Visit performed outside of protocol specified window.,NO,493
+C4591048,Vaccines,Ph III,6) Proc/Test,,,1
+C4591048,Vaccines,Ph III,6) Proc/Test,Assessment of acute reaction for protocol specified timeframe after study intervention administration not performed at the vaccination visits.,NO,8
+C4591048,Vaccines,Ph III,6) Proc/Test,COVID-19 illness e-diary was not completed for 4 consecutive weeks.,NO,638
+C4591048,Vaccines,Ph III,6) Proc/Test,COVID-19 illness e-diary was not completed over multiple 4-week periods.,NO,193
+C4591048,Vaccines,Ph III,6) Proc/Test,Procedure not performed by a medically qualified individual at specified visits,NO,6
+C4591048,Vaccines,Ph III,6) Proc/Test,Procedure not recorded in source documentation as having been performed.,NO,10
+C4591048,Vaccines,Ph III,6) Proc/Test,Procedure/Test not done,NO,61
+C4591048,Vaccines,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,347
+C4591048,Vaccines,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,2
+C4591048,Vaccines,Ph III,6) Proc/Test,Vaccination diary not completed at all during required 7-day post vaccination period.,NO,99
+C4591048,Vaccines,Ph III,6) Proc/Test,Visit 1 procedures not performed per protocol specified sequence with respect to randomization.,NO,22
+C4591048,Vaccines,Ph III,7) Random,Participant randomized into the correct substudy but incorrect Group or Age Stratum and dosed,NO,5
+C4591048,Vaccines,Ph III,7) Random,Participant randomized into the incorrect Substudy/Group/Age Stratum and not dosed,NO,4
+C4591048,Vaccines,Ph III,7) Random,Randomized out of protocol defined window,NO,10
+C4591048,Vaccines,Ph III,8) SafetyRep,Other AE/SAE deviation,NO,2
+C4591048,Vaccines,Ph III,8) SafetyRep,SAE report delayed or not reported to Sponsor,NO,8
+C4591076,Vaccines,Ph III,1) Inc/Excl,"Subject did not meet inclusion criterion 4 [Cohort 1] (Participants who received a COVID-19 vaccine containing KP.2 >175 days, with no other COVID-19 vaccine or confirmed COVID-19 since through enrollment)",YES,20
+C4591076,Vaccines,Ph III,1) Inc/Excl,Subject did not meet inclusion criterion 5 [Cohort 1](Participants 18-64 years of age only: Have at least 1 underlying medical condition that increases their risk of severe COVID-19 as listed in the protocol),YES,1
+C4591076,Vaccines,Ph III,11) Informed Consent,Other,NO,5
+C4591076,Vaccines,Ph III,2) InvProd,Subject was vaccinated despite meeting temporary delay criterion - Receipt of any inactivated/nonlive vaccine within 14 days or any live vaccine within 28 days before study intervention administration,YES,2
+C4591076,Vaccines,Ph III,3) CCMeds,Anticipated receipt of any inactivated or otherwise nonlive vaccine within 14 days or any live vaccine within 28 days after study intervention administration,YES,4
+C4591076,Vaccines,Ph III,3) CCMeds,Other CCMED deviation,NO,1
+C4591076,Vaccines,Ph III,3) CCMeds,Receipt of any other nonstudy COVID-19 vaccine throughout the study,YES,2
+C4591076,Vaccines,Ph III,3) CCMeds,"Receipt of systemic corticosteroids, >=20 mg/day of prednisone or equivalent, administered for >=14 days, within 28 days before enrollment or throughout study participation.",YES,1
+C4591076,Vaccines,Ph III,4) Lab,,,1
+C4591076,Vaccines,Ph III,4) Lab,Incorrect serology sample volume collected,NO,1
+C4591076,Vaccines,Ph III,4) Lab,Nasal swab not collected for the visit where it is required (illness visit),NO,1
+C4591076,Vaccines,Ph III,4) Lab,Nasal swab sample processed incorrectly,NO,2
+C4591076,Vaccines,Ph III,4) Lab,Other lab deviation,NO,15
+C4591076,Vaccines,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,1
+C4591076,Vaccines,Ph III,4) Lab,Sample not processed in accordance with lab manual instructions.,YES,3
+C4591076,Vaccines,Ph III,4) Lab,Serology sample not collected,NO,3
+C4591076,Vaccines,Ph III,5) VisitSched,,,1
+C4591076,Vaccines,Ph III,5) VisitSched,Other visit deviation,NO,1
+C4591076,Vaccines,Ph III,5) VisitSched,Visit not done,NO,6
+C4591076,Vaccines,Ph III,5) VisitSched,Visit performed outside of protocol specified window.,NO,16
+C4591076,Vaccines,Ph III,6) Proc/Test,,,9
+C4591076,Vaccines,Ph III,6) Proc/Test,COVID-19 illness e-diary was not completed for 4 consecutive weeks,NO,11
+C4591076,Vaccines,Ph III,6) Proc/Test,COVID-19 illness e-diary was not completed over multiple 4-week periods,NO,3
+C4591076,Vaccines,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,6
+C4591076,Vaccines,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,3
+C4591076,Vaccines,Ph III,6) Proc/Test,Vaccination diary not completed at all during required 7-day post vaccination period.,NO,2
+C4591076,Vaccines,Ph III,8) SafetyRep,Other AE/SAE deviation,NO,1
+C4591081,Vaccines,Ph III,1) Inc/Excl,"Participant met exclusion criterion #1 (Any medical/psychiatric condition including active suicidal ideation in past year, suicidal behaviour in past 5 years or lab abnormality that increases risk of study participation)",YES,1
+C4591081,Vaccines,Ph III,1) Inc/Excl,Participant met exclusion criterion #8 (Participants who have at least 1 underlying medical condition that increases their risk of severe COVID-19),YES,16
+C4591081,Vaccines,Ph III,1) Inc/Excl,Participant met exclusion criterion #9 (Vaccination with or unsure whether they received any investigational or licensed COVID-19 vaccine within 3 months (90 days) before enrollment or planned receipt during study participation),YES,1
+C4591081,Vaccines,Ph III,1) Inc/Excl,Pending Site Monitor Action Inc/Excl,YES,8
+C4591081,Vaccines,Ph III,10) Other,,,1
+C4591081,Vaccines,Ph III,10) Other,Pending Site Monitor Action Other,NO,2
+C4591081,Vaccines,Ph III,10) Other,Site staff training missing/incomplete,NO,1
+C4591081,Vaccines,Ph III,11) Informed Consent,,,2
+C4591081,Vaccines,Ph III,11) Informed Consent,Other,NO,18
+C4591081,Vaccines,Ph III,11) Informed Consent,Pending Site Monitor Action Informed Consent,NO,5
+C4591081,Vaccines,Ph III,4) Lab,,,6
+C4591081,Vaccines,Ph III,4) Lab,Expired/incorrect lab supplies used,NO,1
+C4591081,Vaccines,Ph III,4) Lab,Nasal swab not collected by site staff prior to vaccination.,NO,1
+C4591081,Vaccines,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,26
+C4591081,Vaccines,Ph III,4) Lab,Sample not processed in accordance with lab manual instructions,YES,4
+C4591081,Vaccines,Ph III,4) Lab,Serology/PBMC incorrectly collected - Out of window,NO,2
+C4591081,Vaccines,Ph III,4) Lab,Serology/PBMC samples processed incorrectly,NO,1
+C4591081,Vaccines,Ph III,4) Lab,Specimen could not be analyzed,NO,1
+C4591081,Vaccines,Ph III,4) Lab,Urine pregnancy test not performed.,NO,1
+C4591081,Vaccines,Ph III,5) VisitSched,,,1
+C4591081,Vaccines,Ph III,5) VisitSched,Pending Site Monitor Action VisitSched,NO,74
+C4591081,Vaccines,Ph III,5) VisitSched,Potential COVID illness visit not done when required per protocol,NO,1
+C4591081,Vaccines,Ph III,5) VisitSched,Visit conducted in error,NO,16
+C4591081,Vaccines,Ph III,5) VisitSched,Visit not done,NO,3
+C4591081,Vaccines,Ph III,5) VisitSched,Visit performed outside of protocol specified window.,NO,38
+C4591081,Vaccines,Ph III,6) Proc/Test,,,132
+C4591081,Vaccines,Ph III,6) Proc/Test,Assessment of acute reaction for protocol specified timeframe after study intervention administration not performed at the vaccination visits.,NO,1
+C4591081,Vaccines,Ph III,6) Proc/Test,COVID-19 illness e-diary was not completed for 2 consecutive weeks.,NO,145
+C4591081,Vaccines,Ph III,6) Proc/Test,Cardiologist evaluation for probable/possible myocarditis or pericarditis not conducted per protocol.,NO,5
+C4591081,Vaccines,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,340
+C4591081,Vaccines,Ph III,6) Proc/Test,Procedure not recorded in source documentation as having been performed.,NO,94
+C4591081,Vaccines,Ph III,6) Proc/Test,Procedure/Test not done,NO,92
+C4591081,Vaccines,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,13
+C4591081,Vaccines,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,4
+C4591081,Vaccines,Ph III,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,NO,5
+C4591081,Vaccines,Ph III,6) Proc/Test,"Subject had a vaccination diary activated, but was not part of the reactogenicity subset",NO,56
+C4591081,Vaccines,Ph III,6) Proc/Test,"Subjects was not dispensed a provisioned device, or did not download the app to their own device",NO,2
+C4591081,Vaccines,Ph III,6) Proc/Test,Visit 1 procedures not performed per protocol specified sequence with respect to randomization.,NO,1
+C4591081,Vaccines,Ph III,7) Random,Pending Site Monitor Action Random,NO,1
+C4591081,Vaccines,Ph III,7) Random,Randomized in error but not dosed,NO,1
+C4591081,Vaccines,Ph III,8) SafetyRep,Pending Site Monitor Action SafetyRep,NO,7
+C4591081,Vaccines,Ph III,8) SafetyRep,SAE report delayed or not reported to Sponsor,NO,1
+C4591081,Vaccines,Ph III,9) DiscCrit,Pending Site Monitor Action DiscCrit,NO,1
+C4591082,Vaccines,Ph III,1) Inc/Excl,Subject did not meet inclusion criterion 3 (Participants who have at least 1 underlying medical condition that increases their risk of severe COVID-19),YES,2
+C4591082,Vaccines,Ph III,11) Informed Consent,Other,NO,4
+C4591082,Vaccines,Ph III,2) InvProd,IP documentation error,NO,1
+C4591082,Vaccines,Ph III,2) InvProd,IP verification incomplete,NO,1
+C4591082,Vaccines,Ph III,2) InvProd,"Subject was enrolled more than once in the study, at different sites",YES,4
+C4591082,Vaccines,Ph III,3) CCMeds,"Receipt of any inactivated or otherwise nonlive vaccine within 14 days, or any live vaccine within 28 days, before study intervention administration",YES,1
+C4591082,Vaccines,Ph III,3) CCMeds,"Receipt of systemic corticosteroids ≥2 mg/kg/day of prednisone or eqv in subjs <10 kg, or ≥20 mg/day of prednisone or eqv in subjs ≥10 kg, for <14 days is prohibited from 28 days prior to study intervention administration at Visit 1 through Visit 2",YES,2
+C4591082,Vaccines,Ph III,4) Lab,Baseline (Visit 1) serology sample collected on a day earlier than study intervention,YES,1
+C4591082,Vaccines,Ph III,4) Lab,Nasal swab can't be analyzed due to incorrect shipping procedure,NO,1
+C4591082,Vaccines,Ph III,4) Lab,Nasal swab collected where it is not required,NO,4
+C4591082,Vaccines,Ph III,4) Lab,Nasal swab not collected by site staff prior to vaccination.,NO,1
+C4591082,Vaccines,Ph III,4) Lab,Nasal swab not collected for the visit where it is required (illness visit),NO,11
+C4591082,Vaccines,Ph III,4) Lab,Other lab deviation,NO,2
+C4591082,Vaccines,Ph III,4) Lab,Sample not processed in accordance with lab manual instructions,YES,5
+C4591082,Vaccines,Ph III,4) Lab,Serology sample not collected,NO,18
+C4591082,Vaccines,Ph III,5) VisitSched,Visit not done,NO,2
+C4591082,Vaccines,Ph III,5) VisitSched,Visit performed outside of protocol specified window.,NO,10
+C4591082,Vaccines,Ph III,6) Proc/Test,Assessment of acute reaction for protocol specified timeframe after study intervention administration not performed at the vaccination visits.,NO,2
+C4591082,Vaccines,Ph III,6) Proc/Test,COVID-19 illness e-diary was not completed for 4 consecutive weeks,NO,17
+C4591082,Vaccines,Ph III,6) Proc/Test,COVID-19 illness e-diary was not completed over multiple 4-week periods,NO,3
+C4591082,Vaccines,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,1
+C4591082,Vaccines,Ph III,6) Proc/Test,Vaccination diary not completed at all during required 7-day post vaccination period.,NO,2
+C4591082,Vaccines,Ph III,7) Random,Randomization done out of sequence,NO,2
+C4601003,Vaccines,Ph III,1) Inc/Excl,Subject did not meet inclusion criteria 3 (Participants or participants' parent(s)/legal guardian(s) who are willing and able to comply with all scheduled visits and study procedures),YES,1
+C4601003,Vaccines,Ph III,1) Inc/Excl,Subject did not meet inclusion criteria 5 (Capable of giving signed informed consent and assent (as appropriate) and can comply with the requirements and restrictions listed in the ICD and in this protocol),YES,14
+C4601003,Vaccines,Ph III,1) Inc/Excl,"Subject met exclusion criteria 1 (Female participants that are pregnant, breastfeeding, or have a positive urine pregnancy test at Visit 1. Sexually active females and fertile males unwilling to use contraception as per protocol)",YES,2
+C4601003,Vaccines,Ph III,1) Inc/Excl,"Subject met exclusion criteria 10 (Underlying bone marrow disorder treated within the past year, or any history of bone marrow transplant)",YES,2
+C4601003,Vaccines,Ph III,1) Inc/Excl,"Subject met exclusion criteria 11 (Malignancy that required treatment with chemotherapy, immunotherapy, radiation therapy, or antineoplastic target therapies within the past 24 months)",YES,4
+C4601003,Vaccines,Ph III,1) Inc/Excl,"Subject met exclusion criteria 12 (Other medical, psychiatric condition, active suicidal ideation/behavior or lab abnormality which increases risk of study participation or, in investigator's judgment is inappropriate for the study)",YES,1
+C4601003,Vaccines,Ph III,1) Inc/Excl,Subject met exclusion criteria 14 (Treatment for Lyme disease in the 3 months prior to study intervention administration),YES,1
+C4601003,Vaccines,Ph III,1) Inc/Excl,Subject met exclusion criteria 15 (Chronic systemic doxycycline or minocycline or other tetracycline class drug use for acne or any other chronic suppressive antibiotics),YES,1
+C4601003,Vaccines,Ph III,1) Inc/Excl,Subject met exclusion criteria 19 (Receipt of anticoagulant therapy within 1 month before study intervention),YES,6
+C4601003,Vaccines,Ph III,1) Inc/Excl,"Subject met exclusion criteria 20 (Participation in other studies involving investigational drug(s), investigational vaccines, or investigational devices within 28 days prior to study entry and/or during study participation)",YES,6
+C4601003,Vaccines,Ph III,1) Inc/Excl,"Subject met exclusion criteria 21(Investigator site staff or Pfizer employees directly involved in the conduct of the study, site staff otherwise supervised by the investigator, and their respective family members)",YES,14
+C4601003,Vaccines,Ph III,1) Inc/Excl,Subject met exclusion criteria 3 (Any diagnosis of Lyme disease within the past 3 months),YES,1
+C4601003,Vaccines,Ph III,1) Inc/Excl,"Subject met exclusion criteria 4 (History of Lyme carditis, neuroborreliosis, or arthritis, regardless of when diagnosed)",YES,4
+C4601003,Vaccines,Ph III,1) Inc/Excl,Subject met exclusion criteria 5 (Known tick bite within the past 4 weeks),YES,2
+C4601003,Vaccines,Ph III,1) Inc/Excl,Subject met exclusion criteria 6 (Newly developed or unstable underlying medical conditions that may interfere with assessment of Lyme disease),YES,1
+C4601003,Vaccines,Ph III,1) Inc/Excl,Subject met exclusion criteria 8 (Congenital or acquired immunodeficiency or treatments that would inhibit the ability to mount an immune response to a vaccine),YES,1
+C4601003,Vaccines,Ph III,1) Inc/Excl,Subject met exclusion criteria 9 (Any autoimmune condition with a manifestation that may interfere with the assessment of Lyme disease),YES,1
+C4601003,Vaccines,Ph III,10) Other,Site staff training missing/incomplete,NO,167
+C4601003,Vaccines,Ph III,11) Informed Consent,ICD had not undergone proper Pfizer/CRO approval,NO,4
+C4601003,Vaccines,Ph III,11) Informed Consent,ICD not translated to subject's/LAR native language,NO,34
+C4601003,Vaccines,Ph III,11) Informed Consent,ICD signed by subject/LAR had not received IRB/IEC approval,NO,31
+C4601003,Vaccines,Ph III,11) Informed Consent,ICD signed by unauthorized site personnel,NO,27
+C4601003,Vaccines,Ph III,11) Informed Consent,"ICD was lost, copy available",NO,7
+C4601003,Vaccines,Ph III,11) Informed Consent,"ICD was lost, no copy available",NO,6
+C4601003,Vaccines,Ph III,11) Informed Consent,Incorrect/Missing signatories on ICD subsequently corrected,NO,143
+C4601003,Vaccines,Ph III,11) Informed Consent,Other,NO,1346
+C4601003,Vaccines,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,369
+C4601003,Vaccines,Ph III,11) Informed Consent,Subject did not sign consent at age of majority,NO,18
+C4601003,Vaccines,Ph III,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,YES,2
+C4601003,Vaccines,Ph III,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,YES,1
+C4601003,Vaccines,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,312
+C4601003,Vaccines,Ph III,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,NO,51
+C4601003,Vaccines,Ph III,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,19
+C4601003,Vaccines,Ph III,2) InvProd,"Administration error, incorrect container, but correct IP administered",NO,15
+C4601003,Vaccines,Ph III,2) InvProd,"Administration error, incorrect container, but correct IP administered. CORRECTED",NO,1
+C4601003,Vaccines,Ph III,2) InvProd,Blind compromised,YES,1
+C4601003,Vaccines,Ph III,2) InvProd,"Dosing/administration error, participant did not receive correct dose of IP as randomized",YES,5
+C4601003,Vaccines,Ph III,2) InvProd,IP accountability not done,NO,19
+C4601003,Vaccines,Ph III,2) InvProd,IP administered by untrained personnel,NO,20
+C4601003,Vaccines,Ph III,2) InvProd,IP administered prior to authorization for use,NO,9
+C4601003,Vaccines,Ph III,2) InvProd,IP documentation error,NO,11
+C4601003,Vaccines,Ph III,2) InvProd,Incorrect IP assigned to participant due to IRT not being utilized,YES,3
+C4601003,Vaccines,Ph III,2) InvProd,Other InvProd deviation,NO,25
+C4601003,Vaccines,Ph III,2) InvProd,Participant was vaccinated despite meeting temporary delay criteria,YES,26
+C4601003,Vaccines,Ph III,2) InvProd,"Subject was enrolled more than once in the study, at different sites",YES,4
+C4601003,Vaccines,Ph III,3) CCMeds,Other CCMeds deviation,NO,3
+C4601003,Vaccines,Ph III,3) CCMeds,Receipt of anticoagulant therapy other than aspirin within 28 days before any vaccination.,NO,45
+C4601003,Vaccines,Ph III,3) CCMeds,Receipt of anticoagulant therapy other than aspirin within 28 days before any vaccination.,YES,3
+C4601003,Vaccines,Ph III,3) CCMeds,Receipt of any nonlive vaccine ≤14 days before or after study intervention administration. Receipt of any live vaccine ≤28 days before or after study intervention administration,YES,575
+C4601003,Vaccines,Ph III,3) CCMeds,Receipt of blood/plasma products or immunoglobulins within protocol specified timeframe,YES,19
+C4601003,Vaccines,Ph III,3) CCMeds,"Receipt of chronic systemic doxycycline, minocycline, or other tetracycline class drugs for acne or any other chronic suppressive antibiotics used to treat other conditions through conclusion of study participation",YES,25
+C4601003,Vaccines,Ph III,3) CCMeds,"Receipt of chronic systemic treatment with known immunosuppressant medication, or radiotherapy, within 6 months before enrollment through conclusion of the study",YES,45
+C4601003,Vaccines,Ph III,3) CCMeds,"Receipt of nonstudy investigational vaccines, drugs, or medical devices through conclusion of study participation",YES,3
+C4601003,Vaccines,Ph III,3) CCMeds,Receipt of prophylactic antipyretics and other pain medication to prevent symptoms associated with study intervention administration,NO,2
+C4601003,Vaccines,Ph III,3) CCMeds,Receipt of systemic corticosteroids (≥20mg/day of prednisone or equivalent) for ≥14 days is prohibited from 28 days before study intervention administration through 28 days after end of the primary series or booster dose,YES,14
+C4601003,Vaccines,Ph III,4) Lab,Biopsy sample collected/processed/stored/shipped incorrectly,NO,4
+C4601003,Vaccines,Ph III,4) Lab,Biopsy sample consented for but not collected,NO,2
+C4601003,Vaccines,Ph III,4) Lab,Other Lab deviation,NO,48
+C4601003,Vaccines,Ph III,4) Lab,Plasma sample collected at a visit where it is not required,NO,73
+C4601003,Vaccines,Ph III,4) Lab,Plasma sample collected/processed/stored/shipped incorrectly,NO,24
+C4601003,Vaccines,Ph III,4) Lab,Plasma sample not collected,NO,27
+C4601003,Vaccines,Ph III,4) Lab,Serology sample collected at a visit where it is not required,NO,20
+C4601003,Vaccines,Ph III,4) Lab,Serology sample collected out of window,NO,29
+C4601003,Vaccines,Ph III,4) Lab,Serology sample collected/processed/stored/shipped incorrectly,NO,124
+C4601003,Vaccines,Ph III,4) Lab,Serology sample not collected,NO,147
+C4601003,Vaccines,Ph III,4) Lab,Serology sample not collected per protocol requirements,NO,31
+C4601003,Vaccines,Ph III,4) Lab,Standard of care CSF/SF/paired serum sample available but stored/shipped incorrectly,NO,2
+C4601003,Vaccines,Ph III,4) Lab,Urine pregnancy test not performed or performed outside of visit window,NO,277
+C4601003,Vaccines,Ph III,5) VisitSched,No safety follow-up occurred 6 months after participant's last study dose receipt,NO,15
+C4601003,Vaccines,Ph III,5) VisitSched,Other VisitSched deviation,NO,13
+C4601003,Vaccines,Ph III,5) VisitSched,Visit not done,NO,3090
+C4601003,Vaccines,Ph III,5) VisitSched,Visit performed outside of protocol specified window,NO,3140
+C4601003,Vaccines,Ph III,6) Proc/Test,DO NOT USE - Thermometer or caliper not provided to participant,NO,1
+C4601003,Vaccines,Ph III,6) Proc/Test,Other Proc/Test Deviation,NO,167
+C4601003,Vaccines,Ph III,6) Proc/Test,Participant declared lost to follow up without protocol specified documentation,NO,6
+C4601003,Vaccines,Ph III,6) Proc/Test,Participant not observed for at least 30 minutes post vaccination,NO,163
+C4601003,Vaccines,Ph III,6) Proc/Test,Procedure/Test not done,NO,638
+C4601003,Vaccines,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,816
+C4601003,Vaccines,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,8
+C4601003,Vaccines,Ph III,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,NO,168
+C4601003,Vaccines,Ph III,6) Proc/Test,Vaccination diary not completed at all during required 7 day post vaccination period,YES,428
+C4601003,Vaccines,Ph III,6) Proc/Test,e-Diary not set-up/completed,NO,442
+C4601003,Vaccines,Ph III,7) Random,Randomization done out of sequence,NO,97
+C4601003,Vaccines,Ph III,7) Random,Randomized in error but not dosed,NO,7
+C4601003,Vaccines,Ph III,7) Random,Randomized into incorrect stratum,NO,1
+C4601003,Vaccines,Ph III,8) SafetyRep,Other SafetyRep deviation,NO,77
+C4601003,Vaccines,Ph III,8) SafetyRep,SAE not reported to Ethics Committee/IRB per local regulations,NO,1
+C4601003,Vaccines,Ph III,8) SafetyRep,SAE/EDP not reported to Sponsor within specified timeframe,NO,102
+C4601003,Vaccines,Ph III,8) SafetyRep,Telephone contact was not performed per unscheduled visit criteria,NO,8
+C4601003,Vaccines,Ph III,9) DiscCrit,Participant developed withdrawal criteria during the study but was not withdrawn,YES,1
+C4601003,Vaccines,Ph III,9) DiscCrit,Subject was discontinued but did not meet discontinuation criteria,NO,2
+C4891001,Oncology,Ph III,1) Inc/Excl,"Subject did not meet inclusion criteria 3 [Locoregional recurrent/met BC, with no S or RT with curative intent.]",YES,12
+C4891001,Oncology,Ph III,1) Inc/Excl,Subject did not meet inclusion criteria 4 [Prior Therapy for locoregional recurrent/metastatic BC.],YES,9
+C4891001,Oncology,Ph III,1) Inc/Excl,Subject did not meet inclusion criteria 5 [At least 1 measurable lesion as defined by RECIST v1.1. Bone only disease: participants with only non-measurable lesions are eligible.],YES,4
+C4891001,Oncology,Ph III,1) Inc/Excl,"Subject met exclusion criteria 1 [Any other solid tumors in past 3 years, except curatively treated, as per protocol]",YES,1
+C4891001,Oncology,Ph III,1) Inc/Excl,Subject met exclusion criteria 12 [Hematologic abnormalities as defined in protocol],YES,2
+C4891001,Oncology,Ph III,1) Inc/Excl,Subject met exclusion criteria 13 [Renal impairment as defined in protocol],YES,2
+C4891001,Oncology,Ph III,1) Inc/Excl,"Subject met exclusion criteria 3 [Major S, RT or systemic therapy for BC ≤ 14 days pre-randomization. Participants with prior RT ≥25% of BM are not eligible.]",YES,3
+C4891001,Oncology,Ph III,1) Inc/Excl,Subject met exclusion criteria 5 [Impaired cardiovascular function or clinically significant cardiovascular diseases as defined in protocol.],YES,1
+C4891001,Oncology,Ph III,1) Inc/Excl,"Subject met exclusion criteria 8 [Coadmin of drugs, food and herbs that are strong CYP3A inhibitors or inducers and drugs known to predispose to Torsade de Pointes or QT interval prolongation.]",YES,9
+C4891001,Oncology,Ph III,1) Inc/Excl,"Subject met exclusion criteria 9 [Prior treatment with ARV-471, fulvestrant, mTOR, PI3K, AKT or PARP inhibitor, other investigational ET (ie, SERD, SERCA, CERAN) for any setting, CDK4/6 inhibitor as neo/adjuvant or chemo for advanced/metastatic BC.]",YES,7
+C4891001,Oncology,Ph III,10) Other,Pending Site Monitor Action Other,NO,1
+C4891001,Oncology,Ph III,11) Informed Consent,ICD not completed or not completed correctly (e.g. date),NO,41
+C4891001,Oncology,Ph III,11) Informed Consent,"ICD not signed by impartial witness, when applicable",YES,2
+C4891001,Oncology,Ph III,11) Informed Consent,ICD not translated to subject's/LAR native language,YES,3
+C4891001,Oncology,Ph III,11) Informed Consent,ICD signed by subject/LAR had not received IRB/IEC approval,YES,1
+C4891001,Oncology,Ph III,11) Informed Consent,ICD signed by unauthorized site personnel,YES,17
+C4891001,Oncology,Ph III,11) Informed Consent,"ICD was lost, copy available",YES,1
+C4891001,Oncology,Ph III,11) Informed Consent,Other,NO,29
+C4891001,Oncology,Ph III,11) Informed Consent,Pending Site Monitor Action Informed Consent,NO,1
+C4891001,Oncology,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,41
+C4891001,Oncology,Ph III,11) Informed Consent,Subject did not sign the additional consent for optional procedure(s) but biologic samples were collected,YES,8
+C4891001,Oncology,Ph III,11) Informed Consent,Subject signed ICD after study-specified procedures had been performed,YES,8
+C4891001,Oncology,Ph III,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,YES,12
+C4891001,Oncology,Ph III,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,YES,4
+C4891001,Oncology,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,41
+C4891001,Oncology,Ph III,11) Informed Consent,Subject/LAR signed and dated ICD after screen/enroll date,YES,1
+C4891001,Oncology,Ph III,2) InvProd,Administration error,NO,40
+C4891001,Oncology,Ph III,2) InvProd,Dispensing error,NO,15
+C4891001,Oncology,Ph III,2) InvProd,Dosing error: overdose.,YES,4
+C4891001,Oncology,Ph III,2) InvProd,Dosing error: underdose,NO,79
+C4891001,Oncology,Ph III,2) InvProd,Dosing/Administration error,NO,6
+C4891001,Oncology,Ph III,2) InvProd,IP accountability not done,NO,13
+C4891001,Oncology,Ph III,2) InvProd,IP not returned,NO,20
+C4891001,Oncology,Ph III,2) InvProd,Pending Site Monitor Action InvProd,NO,1
+C4891001,Oncology,Ph III,2) InvProd,Storage error,NO,15
+C4891001,Oncology,Ph III,3) CCMeds,Mandatory concomitant medication/vaccine not taken/administered or not used as specified per protocol,NO,6
+C4891001,Oncology,Ph III,3) CCMeds,"Took permitted concomitant medication/vaccine, but not as specified per protocol",NO,6
+C4891001,Oncology,Ph III,3) CCMeds,Took prohibited concomitant medication/vaccine,YES,31
+C4891001,Oncology,Ph III,4) Lab,Lab for pregnancy testing not done as required,NO,24
+C4891001,Oncology,Ph III,4) Lab,Lab not done,NO,328
+C4891001,Oncology,Ph III,4) Lab,Lab not performed within pre-specified conditions,NO,315
+C4891001,Oncology,Ph III,4) Lab,Lab performed out of window,NO,21
+C4891001,Oncology,Ph III,4) Lab,Lab(s) was not reviewed by an Investigator in a timely manner,NO,3
+C4891001,Oncology,Ph III,4) Lab,PK/PD samples not done,NO,28
+C4891001,Oncology,Ph III,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,118
+C4891001,Oncology,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,1
+C4891001,Oncology,Ph III,5) VisitSched,Visit not done,NO,48
+C4891001,Oncology,Ph III,5) VisitSched,Visit not performed per protocol,NO,228
+C4891001,Oncology,Ph III,6) Proc/Test,,,3
+C4891001,Oncology,Ph III,6) Proc/Test,Abnormal procedure/test result not followed up per protocol,NO,1
+C4891001,Oncology,Ph III,6) Proc/Test,Dosing diary not available / not completed by participant.,NO,103
+C4891001,Oncology,Ph III,6) Proc/Test,ECG not performed / not done as per protocol / performed out of window,NO,461
+C4891001,Oncology,Ph III,6) Proc/Test,PRO not performed / not done as per protocol / performed out of window,NO,2309
+C4891001,Oncology,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,2
+C4891001,Oncology,Ph III,6) Proc/Test,Procedure/Test not done,NO,267
+C4891001,Oncology,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,630
+C4891001,Oncology,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,137
+C4891001,Oncology,Ph III,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,NO,1
+C4891001,Oncology,Ph III,6) Proc/Test,Subject underwent protocol prohibited intervention,NO,1
+C4891001,Oncology,Ph III,7) Random,Randomized out of protocol defined window,NO,12
+C4891001,Oncology,Ph III,7) Random,Randomized under wrong stratification,YES,47
+C4891001,Oncology,Ph III,8) SafetyRep,Safety Reporting delayed/ other,NO,26
+C4891002,Oncology,Ph III,1) Inc/Excl,"Subject did not meet inclusion criteria 3 [Local advanced/metastatic BC not amenable to surgery or radiotherapy with curative intent. BC to be ER(+)≥1%,HER2(-)]",YES,2
+C4891002,Oncology,Ph III,1) Inc/Excl,"Subject met exclusion criteria 6 [Relapse while on or within 12 months of completing standard adjuvant ET. CDK4/6i, ARV-471, fulvestrant, and other investigational agents (including novel ET, any SERDs, SERCAs, CERANs) in any setting.]",YES,1
+C4891002,Oncology,Ph III,11) Informed Consent,ICD not completed or not completed correctly (e.g. date),NO,2
+C4891002,Oncology,Ph III,11) Informed Consent,ICD not translated to subject's/LAR native language,YES,1
+C4891002,Oncology,Ph III,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,14
+C4891002,Oncology,Ph III,11) Informed Consent,Subject signed ICD after study-specified procedures had been performed,YES,1
+C4891002,Oncology,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,1
+C4891002,Oncology,Ph III,2) InvProd,,,1
+C4891002,Oncology,Ph III,2) InvProd,Administration error,NO,8
+C4891002,Oncology,Ph III,2) InvProd,DOSING error: underdose,NO,2
+C4891002,Oncology,Ph III,2) InvProd,DOSING error: underdose,YES,1
+C4891002,Oncology,Ph III,2) InvProd,Dosing Error : other,NO,10
+C4891002,Oncology,Ph III,2) InvProd,Dosing error: overdose.,YES,3
+C4891002,Oncology,Ph III,2) InvProd,Dosing/Administration error,NO,60
+C4891002,Oncology,Ph III,2) InvProd,IP accountability not done,NO,3
+C4891002,Oncology,Ph III,2) InvProd,IP not returned,NO,1
+C4891002,Oncology,Ph III,2) InvProd,Pending Site Monitor Action InvProd,NO,5
+C4891002,Oncology,Ph III,2) InvProd,Storage error,NO,2
+C4891002,Oncology,Ph III,3) CCMeds,Pending Site Monitor Action CCMeds,NO,10
+C4891002,Oncology,Ph III,3) CCMeds,"Took permitted concomitant medication/vaccine, but not as specified per protocol",NO,11
+C4891002,Oncology,Ph III,3) CCMeds,Took prohibited concomitant medication/vaccine,YES,4
+C4891002,Oncology,Ph III,4) Lab,,,1
+C4891002,Oncology,Ph III,4) Lab,Lab for pregnancy testing not done as required,NO,11
+C4891002,Oncology,Ph III,4) Lab,Lab not done,NO,51
+C4891002,Oncology,Ph III,4) Lab,Lab not performed within pre-specified conditions,NO,7
+C4891002,Oncology,Ph III,4) Lab,Lab performed out of window,NO,7
+C4891002,Oncology,Ph III,4) Lab,PK/PD samples not done,NO,34
+C4891002,Oncology,Ph III,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,74
+C4891002,Oncology,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,2
+C4891002,Oncology,Ph III,4) Lab,Specimen could not be analyzed,NO,3
+C4891002,Oncology,Ph III,5) VisitSched,,,1
+C4891002,Oncology,Ph III,5) VisitSched,Pending Site Monitor Action VisitSched,NO,5
+C4891002,Oncology,Ph III,5) VisitSched,Visit not done,NO,7
+C4891002,Oncology,Ph III,5) VisitSched,Visit not performed per protocol,NO,39
+C4891002,Oncology,Ph III,6) Proc/Test,,,3
+C4891002,Oncology,Ph III,6) Proc/Test,Dosing diary not available / not completed by participant.,NO,7
+C4891002,Oncology,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,1
+C4891002,Oncology,Ph III,6) Proc/Test,Procedure/Test not done,NO,33
+C4891002,Oncology,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,124
+C4891002,Oncology,Ph III,6) Proc/Test,Procedure/Test performed out of window,NO,25
+C4891002,Oncology,Ph III,8) SafetyRep,Safety Reporting: delayed/Other.,NO,5
+C4891006,Oncology,Ph II,1) Inc/Excl,Subject did not meet inclusion criteria 4 [Participants must have >=1 measurable lesion per RECIST v1.1. Participants with ONLY bone lesions are elegible if >=1 bone lesion has a measurable component per RECIST v1.1.],YES,2
+C4891006,Oncology,Ph II,11) Informed Consent,ICD not completed or not completed correctly (e.g. date),NO,8
+C4891006,Oncology,Ph II,11) Informed Consent,ICD not translated to subject's/LAR native language,NO,1
+C4891006,Oncology,Ph II,11) Informed Consent,"ICD was lost, copy available",NO,1
+C4891006,Oncology,Ph II,11) Informed Consent,"ICD was lost, no copy available",NO,1
+C4891006,Oncology,Ph II,11) Informed Consent,Other,NO,2
+C4891006,Oncology,Ph II,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,1
+C4891006,Oncology,Ph II,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,YES,1
+C4891006,Oncology,Ph II,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,NO,3
+C4891006,Oncology,Ph II,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,1
+C4891006,Oncology,Ph II,2) InvProd,Dosing/Administration Error : other,NO,10
+C4891006,Oncology,Ph II,2) InvProd,Dosing/Administration error: overdose.,NO,1
+C4891006,Oncology,Ph II,2) InvProd,Dosing/Administration error: underdose,NO,196
+C4891006,Oncology,Ph II,2) InvProd,Dosing/Administration error: underdose,YES,1
+C4891006,Oncology,Ph II,2) InvProd,IP accountability not done,NO,1
+C4891006,Oncology,Ph II,2) InvProd,IP not returned,NO,5
+C4891006,Oncology,Ph II,2) InvProd,Storage error,NO,1
+C4891006,Oncology,Ph II,3) CCMeds,Took prohibited concomitant medication/vaccine,YES,3
+C4891006,Oncology,Ph II,4) Lab,Lab for pregnancy testing not done as required,NO,1
+C4891006,Oncology,Ph II,4) Lab,Lab not done,NO,17
+C4891006,Oncology,Ph II,4) Lab,Lab not performed within pre-specified conditions,NO,10
+C4891006,Oncology,Ph II,4) Lab,PK/PD samples not done,NO,11
+C4891006,Oncology,Ph II,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,41
+C4891006,Oncology,Ph II,5) VisitSched,Visit not done,NO,8
+C4891006,Oncology,Ph II,5) VisitSched,Visit not performed per protocol,NO,20
+C4891006,Oncology,Ph II,6) Proc/Test,Abnormal procedure/test result not followed up per protocol,NO,1
+C4891006,Oncology,Ph II,6) Proc/Test,Baseline Tumor Assessment inadequate/not performed/out of protocol specified window.,NO,2
+C4891006,Oncology,Ph II,6) Proc/Test,Baseline Tumor Assessment inadequate/not performed/out of protocol specified window.,YES,1
+C4891006,Oncology,Ph II,6) Proc/Test,Dosing diary not available / not completed by participant.,NO,7
+C4891006,Oncology,Ph II,6) Proc/Test,ECG not performed / not done as per protocol.,NO,15
+C4891006,Oncology,Ph II,6) Proc/Test,Procedure/Test not done,NO,18
+C4891006,Oncology,Ph II,6) Proc/Test,Procedure/Test not performed per protocol,NO,46
+C4891006,Oncology,Ph II,6) Proc/Test,Procedure/Test performed out of window,NO,13
+C4891023,Oncology,Ph II,11) Informed Consent,ICD not completed or not completed correctly (e.g. date),NO,2
+C4891023,Oncology,Ph II,11) Informed Consent,ICD signed by subject/LAR had not received IRB/IEC approval,YES,1
+C4891023,Oncology,Ph II,11) Informed Consent,Other,NO,4
+C4891023,Oncology,Ph II,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,1
+C4891023,Oncology,Ph II,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,YES,1
+C4891023,Oncology,Ph II,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,2
+C4891023,Oncology,Ph II,2) InvProd,Dispensing error,NO,1
+C4891023,Oncology,Ph II,2) InvProd,Dosing/Administration Error : other,NO,1
+C4891023,Oncology,Ph II,2) InvProd,Dosing/Administration Error : other,YES,1
+C4891023,Oncology,Ph II,2) InvProd,Dosing/Administration error: medication error (excluding underdose and overdose),NO,1
+C4891023,Oncology,Ph II,2) InvProd,Dosing/Administration error: underdose,NO,41
+C4891023,Oncology,Ph II,2) InvProd,Dosing/Administration error: underdose,YES,4
+C4891023,Oncology,Ph II,4) Lab,Lab not done,NO,6
+C4891023,Oncology,Ph II,4) Lab,Lab performed out of window,NO,1
+C4891023,Oncology,Ph II,4) Lab,PK/PD samples not done,NO,15
+C4891023,Oncology,Ph II,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,19
+C4891023,Oncology,Ph II,5) VisitSched,Visit not performed per protocol,NO,10
+C4891023,Oncology,Ph II,6) Proc/Test,Dosing diary not available / not completed by participant.,NO,1
+C4891023,Oncology,Ph II,6) Proc/Test,ECG not performed / not done as per protocol.,NO,6
+C4891023,Oncology,Ph II,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,1
+C4891023,Oncology,Ph II,6) Proc/Test,Procedure/Test not done,NO,17
+C4891023,Oncology,Ph II,6) Proc/Test,Procedure/Test not performed per protocol,NO,10
+C4891023,Oncology,Ph II,6) Proc/Test,Procedure/Test performed out of window,NO,10
+C4891023,Oncology,Ph II,8) SafetyRep,Safety Reporting: delayed/Other.,NO,1
+C4891024,Oncology,Ph II,11) Informed Consent,ICD not completed or not completed correctly (e.g. date),NO,1
+C4891024,Oncology,Ph II,2) InvProd,Dosing/Administration error : medication error (excluding overdose and underdose),NO,11
+C4891024,Oncology,Ph II,2) InvProd,Dosing/Administration error : other,NO,2
+C4891024,Oncology,Ph II,2) InvProd,Dosing/Administration error : overdose,NO,1
+C4891024,Oncology,Ph II,2) InvProd,Dosing/Administration error : underdose,NO,20
+C4891024,Oncology,Ph II,2) InvProd,Dosing/Administration error : underdose,YES,1
+C4891024,Oncology,Ph II,3) CCMeds,Took prohibited concomitant medication/vaccine,YES,1
+C4891024,Oncology,Ph II,4) Lab,Lab not done,NO,6
+C4891024,Oncology,Ph II,4) Lab,Lab not performed within pre-specified conditions,NO,1
+C4891024,Oncology,Ph II,4) Lab,PK/PD samples not done,NO,5
+C4891024,Oncology,Ph II,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,4
+C4891024,Oncology,Ph II,5) VisitSched,Visit not done,NO,1
+C4891024,Oncology,Ph II,5) VisitSched,Visit not performed per protocol,NO,4
+C4891024,Oncology,Ph II,6) Proc/Test,Dosing diary not available / not completed by participant.,NO,6
+C4891024,Oncology,Ph II,6) Proc/Test,ECG not performed / not done as per protocol.,NO,8
+C4891024,Oncology,Ph II,6) Proc/Test,Procedure/Test not done,NO,3
+C4891024,Oncology,Ph II,6) Proc/Test,Procedure/Test not performed per protocol,NO,3
+C4891024,Oncology,Ph II,6) Proc/Test,Procedure/Test performed out of window,NO,2
+C4891024,Oncology,Ph II,8) SafetyRep,Safety Reporting: Delayed/Other.,NO,2
+C4891026,Oncology,Ph II,1) Inc/Excl,"Subject met exclusion criteria 6 [Prior procedures and treatment including major surgery, radiotherapy, other anticancer treatments and participation in other clinical studies as defined in protocol.]",YES,2
+C4891026,Oncology,Ph II,11) Informed Consent,ICD not completed or not completed correctly (e.g. date),NO,3
+C4891026,Oncology,Ph II,11) Informed Consent,Other,NO,1
+C4891026,Oncology,Ph II,11) Informed Consent,Revised ICD not signed at the first subject visits after the revised/approved ICD was available at site,NO,6
+C4891026,Oncology,Ph II,11) Informed Consent,Subject signed ICD after study-specified procedures had been performed,YES,1
+C4891026,Oncology,Ph II,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,NO,1
+C4891026,Oncology,Ph II,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,YES,1
+C4891026,Oncology,Ph II,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,1
+C4891026,Oncology,Ph II,2) InvProd,Dosing/Administration error : medication error (excluding overdose and underdose),NO,1
+C4891026,Oncology,Ph II,2) InvProd,Dosing/Administration error : other,NO,1
+C4891026,Oncology,Ph II,2) InvProd,Dosing/Administration error : overdose,NO,8
+C4891026,Oncology,Ph II,2) InvProd,Dosing/Administration error : underdose,NO,123
+C4891026,Oncology,Ph II,2) InvProd,Dosing/Administration error : underdose,YES,4
+C4891026,Oncology,Ph II,3) CCMeds,Took prohibited concomitant medication/vaccine,NO,1
+C4891026,Oncology,Ph II,3) CCMeds,Took prohibited concomitant medication/vaccine,YES,4
+C4891026,Oncology,Ph II,4) Lab,Lab for pregnancy testing not done as required,NO,2
+C4891026,Oncology,Ph II,4) Lab,Lab not done,NO,16
+C4891026,Oncology,Ph II,4) Lab,Lab not performed within pre-specified conditions,NO,41
+C4891026,Oncology,Ph II,4) Lab,Lab performed out of window,NO,3
+C4891026,Oncology,Ph II,4) Lab,PK/PD samples not done,NO,3
+C4891026,Oncology,Ph II,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,8
+C4891026,Oncology,Ph II,4) Lab,Specimen could not be analyzed,NO,1
+C4891026,Oncology,Ph II,5) VisitSched,Visit not done,NO,4
+C4891026,Oncology,Ph II,5) VisitSched,Visit not performed per protocol,NO,39
+C4891026,Oncology,Ph II,6) Proc/Test,ECG not performed / not done as per protocol.,NO,45
+C4891026,Oncology,Ph II,6) Proc/Test,Procedure/Test not done,NO,34
+C4891026,Oncology,Ph II,6) Proc/Test,Procedure/Test not performed per protocol,NO,64
+C4891026,Oncology,Ph II,6) Proc/Test,Procedure/Test performed out of window,NO,11
+C4891026,Oncology,Ph II,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,NO,1
+C4891026,Oncology,Ph II,8) SafetyRep,Safety Reporting: Delayed/Other.,NO,1
+C4891026,Oncology,Ph II,9) DiscCrit,Participant developed withdrawal criteria during the study but was not withdrawn,YES,1
+C5091017,Unknown,Ph III,1) Inc/Excl,,,5
+C5091017,Unknown,Ph III,1) Inc/Excl,Excl 10 met: Current use of any prohibited concomitant medication(s).,YES,4
+C5091017,Unknown,Ph III,1) Inc/Excl,Excl 11 met: Has received any other antiviral or COVID-19 mAbs for the treatment of COVID-19 within 30 days or 5 half-lives prior to screening or covalescent COVID-19 plasma within 12 months.,YES,1
+C5091017,Unknown,Ph III,1) Inc/Excl,Excl 12 met: Received any dose of a COVID-19 vaccine within 4 months of randomization or expected to receive one through Day 34.,YES,2
+C5091017,Unknown,Ph III,1) Inc/Excl,Excl 4 met: Suspected or confirmed concurrent active systemic infection other than COVID-19 that may interfere with the evaluation of response to the study intervention.,YES,1
+C5091017,Unknown,Ph III,1) Inc/Excl,Excl 6 met: Severely immunocompromised (see Appendix 13).,YES,1
+C5091017,Unknown,Ph III,1) Inc/Excl,Incl 2 not met: Presence of risk factors for progression to severe COVID-19 based on age.,YES,7
+C5091017,Unknown,Ph III,10) Other,,,2
+C5091017,Unknown,Ph III,10) Other,Pending Site Monitor Action Other,NO,1
+C5091017,Unknown,Ph III,11) Informed Consent,,,13
+C5091017,Unknown,Ph III,11) Informed Consent,ICD had not undergone proper Pfizer/CRO approval,NO,3
+C5091017,Unknown,Ph III,11) Informed Consent,ICD signed by unauthorized site personnel,NO,1
+C5091017,Unknown,Ph III,11) Informed Consent,Other,NO,5
+C5091017,Unknown,Ph III,11) Informed Consent,Pending Site Monitor Action Informed Consent,NO,4
+C5091017,Unknown,Ph III,11) Informed Consent,Subject/LAR did not sign ICD & did not give verbal consent,YES,2
+C5091017,Unknown,Ph III,11) Informed Consent,Subject/LAR did not sign the ICD but gave verbal consent,YES,1
+C5091017,Unknown,Ph III,11) Informed Consent,Subject/LAR signed a superseded/outdated version of the ICD,NO,2
+C5091017,Unknown,Ph III,11) Informed Consent,Subject/LAR signed consent but did not date it,NO,1
+C5091017,Unknown,Ph III,2) InvProd,,,4
+C5091017,Unknown,Ph III,2) InvProd,Dosing/Administration error,YES,4
+C5091017,Unknown,Ph III,2) InvProd,Dosing/Administration error: Additional doses administered,NO,22
+C5091017,Unknown,Ph III,2) InvProd,Dosing/Administration error: Other,NO,66
+C5091017,Unknown,Ph III,2) InvProd,Dosing/Administration error: Two or more consecutive doses missed,YES,1
+C5091017,Unknown,Ph III,2) InvProd,Dosing/Administration error: one or two non-consecutive doses missed,NO,6
+C5091017,Unknown,Ph III,2) InvProd,Dosing/Administration error: three or more doses missed,YES,1
+C5091017,Unknown,Ph III,2) InvProd,Pending Site Monitor Action InvProd,NO,2
+C5091017,Unknown,Ph III,3) CCMeds,Took prohibited concomitant medication/vaccine,YES,2
+C5091017,Unknown,Ph III,4) Lab,,,32
+C5091017,Unknown,Ph III,4) Lab,Expired/Incorrect lab kit used,NO,2
+C5091017,Unknown,Ph III,4) Lab,Lab for pregnancy testing not done or done out of visit window,YES,6
+C5091017,Unknown,Ph III,4) Lab,Lab not done when required: blood biomarkers and retained research samples,NO,54
+C5091017,Unknown,Ph III,4) Lab,Lab not performed within pre-specified conditions,NO,10
+C5091017,Unknown,Ph III,4) Lab,Lab performed out of window,NO,2
+C5091017,Unknown,Ph III,4) Lab,NP swab for viral load not done,YES,19
+C5091017,Unknown,Ph III,4) Lab,PK/PD samples not done,NO,8
+C5091017,Unknown,Ph III,4) Lab,"PK/PD samples not properly collected, stored or handled",NO,7
+C5091017,Unknown,Ph III,4) Lab,Pending Site Monitor Action Lab,NO,4
+C5091017,Unknown,Ph III,4) Lab,Safety lab not done (not drawn),YES,9
+C5091017,Unknown,Ph III,4) Lab,Specimen could not be analyzed,NO,108
+C5091017,Unknown,Ph III,5) VisitSched,,,4
+C5091017,Unknown,Ph III,5) VisitSched,Pending Site Monitor Action VisitSched,NO,10
+C5091017,Unknown,Ph III,5) VisitSched,Visit not done,YES,6
+C5091017,Unknown,Ph III,5) VisitSched,Visit not performed per protocol,NO,54
+C5091017,Unknown,Ph III,6) Proc/Test,,,294
+C5091017,Unknown,Ph III,6) Proc/Test,Pending Site Monitor Action Proc/Test,NO,16
+C5091017,Unknown,Ph III,6) Proc/Test,Procedure/Test not done,NO,5
+C5091017,Unknown,Ph III,6) Proc/Test,Procedure/Test not performed per protocol,NO,58
+C5091017,Unknown,Ph III,6) Proc/Test,Procedures for contraception counseling/contraception requirements not followed,YES,3
+C5091017,Unknown,Ph III,6) Proc/Test,eDiary compliance: COVID-19/PGI symptoms daily diary overall completion below 75%,YES,25
+C5091017,Unknown,Ph III,6) Proc/Test,eDiary compliance: Long COVID-19 symptoms weekly diary overall completion below 75%,YES,1
+C5091017,Unknown,Ph III,6) Proc/Test,eDiary compliance: missing COVID-19 symptoms/PGI diary entries (single or multiple) but overall completion =/> 75%,NO,164
+C5091017,Unknown,Ph III,6) Proc/Test,eDiary compliance: missing EQ-5D-5L diary entries (single or multiple),NO,67
+C5091017,Unknown,Ph III,6) Proc/Test,eDiary compliance: missing PROMIS – Cognitive Function 8a diary entries (single or multiple),NO,55
+C5091017,Unknown,Ph III,6) Proc/Test,eDiary compliance: missing PROMIS – Dyspnea Severity 10a diary entries (single or multiple),NO,53
+C5091017,Unknown,Ph III,6) Proc/Test,eDiary compliance: missing PROMIS – Fatigue 7a diary entries (single or multiple),NO,53
+C5091017,Unknown,Ph III,6) Proc/Test,eDiary compliance: missing WPAI diary entries,NO,23
+C5091017,Unknown,Ph III,6) Proc/Test,eDiary compliance: missing dosing diary entries (single or multiple),NO,1
+C5091017,Unknown,Ph III,6) Proc/Test,eDiary compliance: missing long COVID-19 PGI diary entries (single or multiple),NO,50
+C5091017,Unknown,Ph III,6) Proc/Test,eDiary compliance: missing long COVID-19 diary entries (single or multiple) but overall completion =/> 75%,NO,41
+C5091017,Unknown,Ph III,7) Random,Randomization under wrong strata,NO,6
+C5091017,Unknown,Ph III,8) SafetyRep,SAE/EIU not reported to Sponsor within specified timeframe,YES,1

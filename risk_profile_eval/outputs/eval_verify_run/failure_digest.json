@@ -1,0 +1,92 @@
+{
+  "run_date": "2026-04-20",
+  "evaluated_studies": 3,
+  "failure_counts_by_metric": {
+    "M1": 3,
+    "M2": 3,
+    "M3": 0,
+    "M4": 1
+  },
+  "failed_studies_by_metric": {
+    "M1": [
+      "B7981027",
+      "C4891023",
+      "C5091017"
+    ],
+    "M2": [
+      "B7981027",
+      "C4891023",
+      "C5091017"
+    ],
+    "M3": [],
+    "M4": [
+      "C4891023"
+    ]
+  },
+  "top_3_missed_risks": [
+    {
+      "risk_name": "Investigator / Staff Conduct",
+      "miss_count": 3
+    },
+    {
+      "risk_name": "Protocol Compliance",
+      "miss_count": 2
+    },
+    {
+      "risk_name": "Enrollment Criteria",
+      "miss_count": 1
+    }
+  ],
+  "all_missed_risk_names": [
+    "Enrollment Criteria",
+    "Investigator / Staff Conduct",
+    "AE / SAE Management",
+    "Participant Safety",
+    "Protocol Compliance",
+    "Timelines / Resources",
+    "Informed Consent",
+    "Sample Management",
+    "Data / Data Reliability",
+    "ICH Compliance",
+    "Data Privacy",
+    "Payments",
+    "Information Security / IP",
+    "Participant / Caregiver Trial Conduct",
+    "Investigator / Staff Conduct",
+    "Investigator / Staff Conduct",
+    "Protocol Compliance"
+  ],
+  "total_hallucinations": 5,
+  "hallucination_details": [
+    {
+      "study_id": "C4891023",
+      "field_path": "risks[0]",
+      "value": "Concomitant Medication Management",
+      "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+    },
+    {
+      "study_id": "C4891023",
+      "field_path": "risks[1]",
+      "value": "Enrollment Criteria",
+      "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+    },
+    {
+      "study_id": "C4891023",
+      "field_path": "risks[2]",
+      "value": "Sample Management",
+      "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+    },
+    {
+      "study_id": "C4891023",
+      "field_path": "risks[3]",
+      "value": "AE / SAE Management",
+      "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+    },
+    {
+      "study_id": "C4891023",
+      "field_path": "risks[4]",
+      "value": "Medicinal Product Administration",
+      "rule": "Risk existence mismatch: study 'C4891023' has no risk profile in GT; expected 0 generated risks."
+    }
+  ]
+}
