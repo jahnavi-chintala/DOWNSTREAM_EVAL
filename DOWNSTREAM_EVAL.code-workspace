@@ -1,0 +1,46 @@
+{
+  "folders": [
+    {
+      "name": "DOWNSTREAM_EVAL (repository root)",
+      "path": "."
+    },
+    {
+      "name": "Hub — Unified UI & API mount",
+      "path": "protocol_eval_hub"
+    },
+    {
+      "name": "PIPD Evaluator",
+      "path": "pipd_eval"
+    },
+    {
+      "name": "CMP Evaluator",
+      "path": "cmp_eval"
+    },
+    {
+      "name": "DMP Evaluator",
+      "path": "dmp_eval"
+    },
+    {
+      "name": "Risk Profile Evaluator",
+      "path": "risk_profile_eval"
+    },
+    {
+      "name": "Eval Gateway",
+      "path": "eval_gateway"
+    },
+    {
+      "name": "Tools — batch & maintenance scripts",
+      "path": "tools"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/.venv": true
+    },
+    "search.exclude": {
+      "**/__pycache__": true,
+      "**/node_modules": true
+    }
+  }
+}
