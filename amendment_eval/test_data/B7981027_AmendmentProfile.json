@@ -1,0 +1,574 @@
+{
+  "instanceType": "AmendmentProfile",
+  "id": "ap-b7981027-001",
+  "studyId": "B7981027",
+  "studyTitle": "Ritlecitinib Phase III Alopecia Areata",
+  "therapeuticArea": "I&I",
+  "phase": "Ph III",
+  "indication": "Alopecia Areata",
+  "investigationalProduct": "Ritlecitinib",
+  "baseProtocolVersion": "Final Protocol",
+  "generatedDate": "2026-04-25",
+  "generatorVersion": "1.0",
+  "benchmarkSource": "amendment_benchmarks.yaml v1.0",
+  "profileSummary": {
+    "predictedAmendmentCount": {"min": 2, "max": 2},
+    "dominantCategory": "Multiple",
+    "overallConfidence": "High"
+  },
+  "predictedAmendments": [
+    {
+      "amendmentNumber": 1,
+      "predictedTiming": "~6-12 months",
+      "predictedCategory": "Multiple",
+      "predictedRegulatoryDriven": true,
+      "predictedSafetyDriven": false,
+      "confidence": "High",
+      "predictedChanges": [
+        {
+          "changeNumber": 1,
+          "usdmEntity": "EligibilityCriteria",
+          "protocolSection": "5.1",
+          "sectionTitle": "Inclusion Criteria",
+          "languagePattern": "Clarification",
+          "originalText": "Inclusion criteria text",
+          "proposedText": "Clarified inclusion criteria",
+          "changeRationale": "Regulatory clarification",
+          "confidence": "Medium",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "EligibilityCriteria",
+              "field": "inclusionCriteria",
+              "value": "Participants aged 12 years and older",
+              "protocol_section": "5.1",
+              "section_title": "Inclusion Criteria",
+              "extraction_path": "versions[0].studyDesigns[0].eligibilityCriteria[?criterionType='Inclusion']"
+            },
+            "yaml_match": {
+              "benchmark_key": "I_and_I.Ph_III.usdm_entity_rates.EligibilityCriteria",
+              "benchmark_value": 0.08,
+              "yaml_file": "amendment_benchmarks.yaml"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C1071006",
+                "amendment_number": 2,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct"
+              }
+            ],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "entity_rate": 0.08,
+              "confidence_interval_note": "n>=8 training studies."
+            }
+          }
+        },
+        {
+          "changeNumber": 2,
+          "usdmEntity": "EligibilityCriteria",
+          "protocolSection": "5.2",
+          "sectionTitle": "Exclusion Criteria",
+          "languagePattern": "Clarification",
+          "originalText": "Exclusion criteria text",
+          "proposedText": "Clarified exclusion criteria",
+          "changeRationale": "Regulatory clarification",
+          "confidence": "Low — Needs Clinical Review",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "EligibilityCriteria",
+              "field": "exclusionCriteria",
+              "value": "Exclusion criteria for autoimmune conditions",
+              "protocol_section": "5.2",
+              "section_title": "Exclusion Criteria",
+              "extraction_path": "versions[0].studyDesigns[0].eligibilityCriteria[?criterionType='Exclusion']"
+            },
+            "yaml_match": {
+              "benchmark_key": "I_and_I.Ph_III.usdm_entity_rates.EligibilityCriteria",
+              "benchmark_value": 0.08,
+              "yaml_file": "amendment_benchmarks.yaml"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C1071007",
+                "amendment_number": 4,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct"
+              }
+            ],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "entity_rate": 0.08,
+              "confidence_interval_note": "n>=8 training studies."
+            }
+          }
+        },
+        {
+          "changeNumber": 3,
+          "usdmEntity": "StudyProcedure",
+          "protocolSection": "8.1",
+          "sectionTitle": "Schedule of Activities",
+          "languagePattern": "Clarification",
+          "originalText": "Visit schedule text",
+          "proposedText": "Blood volume specification clarified",
+          "changeRationale": "Blood volume correction",
+          "confidence": "High",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "StudyProcedure",
+              "field": "bloodVolume",
+              "value": "Total blood volume ~50ml",
+              "protocol_section": "8.1",
+              "section_title": "Schedule of Activities",
+              "extraction_path": "versions[0].studyDesigns[0].scheduleTimelines[*]"
+            },
+            "yaml_match": {
+              "benchmark_key": "I_and_I.Ph_III.usdm_entity_rates.StudyProcedure",
+              "benchmark_value": 0.55,
+              "yaml_file": "amendment_benchmarks.yaml"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C4221016",
+                "amendment_number": 4,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct"
+              }
+            ],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "entity_rate": 0.55,
+              "confidence_interval_note": "n>=8 training studies."
+            }
+          }
+        },
+        {
+          "changeNumber": 4,
+          "usdmEntity": "StudyProcedure",
+          "protocolSection": "8.2",
+          "sectionTitle": "Clinical Assessments",
+          "languagePattern": "Addition",
+          "originalText": "Assessment procedures",
+          "proposedText": "Schwartz equation clarification added",
+          "changeRationale": "Procedural clarification",
+          "confidence": "Medium",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "StudyProcedure",
+              "field": "labAssessments",
+              "value": "Schwartz equation for eGFR calculation",
+              "protocol_section": "8.2",
+              "section_title": "Clinical Assessments",
+              "extraction_path": "versions[0].studyDesigns[0].activities[*]"
+            },
+            "yaml_match": {
+              "benchmark_key": "I_and_I.Ph_III.usdm_entity_rates.StudyProcedure",
+              "benchmark_value": 0.55,
+              "yaml_file": "amendment_benchmarks.yaml"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C2321014",
+                "amendment_number": 3,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct"
+              }
+            ],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "entity_rate": 0.55,
+              "confidence_interval_note": "n>=8 training studies."
+            }
+          }
+        },
+        {
+          "changeNumber": 5,
+          "usdmEntity": "StudyIntervention",
+          "protocolSection": "6.1",
+          "sectionTitle": "Study Intervention",
+          "languagePattern": "Clarification",
+          "originalText": "Study intervention administration",
+          "proposedText": "Palatability guidance addition",
+          "changeRationale": "Intervention clarification",
+          "confidence": "Medium",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "StudyIntervention",
+              "field": "administrationInstructions",
+              "value": "Ritlecitinib oral tablet administration",
+              "protocol_section": "6.1",
+              "section_title": "Study Intervention",
+              "extraction_path": "versions[0].studyInterventions[*]"
+            },
+            "yaml_match": {
+              "benchmark_key": "I_and_I.Ph_III.usdm_entity_rates.StudyIntervention",
+              "benchmark_value": 0.12,
+              "yaml_file": "amendment_benchmarks.yaml"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C1071006",
+                "amendment_number": 4,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct"
+              }
+            ],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "entity_rate": 0.12,
+              "confidence_interval_note": "n>=8 training studies."
+            }
+          }
+        },
+        {
+          "changeNumber": 6,
+          "usdmEntity": "EligibilityCriteria",
+          "protocolSection": "5.2",
+          "sectionTitle": "Exclusion Criteria",
+          "languagePattern": "Addition",
+          "originalText": "Exclusion criteria",
+          "proposedText": "Added Exclusion Criterion #15 hypersensitivity to IP",
+          "changeRationale": "EU regulatory requirement",
+          "confidence": "High",
+          "scope": "EU",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "EligibilityCriteria",
+              "field": "exclusionCriteria",
+              "value": "EU exclusion criteria addition",
+              "protocol_section": "5.2",
+              "section_title": "Exclusion Criteria",
+              "extraction_path": "versions[0].studyDesigns[0].eligibilityCriteria[?criterionType='Exclusion']"
+            },
+            "yaml_match": {
+              "benchmark_key": "I_and_I.Ph_III.usdm_entity_rates.EligibilityCriteria",
+              "benchmark_value": 0.08,
+              "yaml_file": "amendment_benchmarks.yaml"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C1071007",
+                "amendment_number": 2,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Addition",
+                "match_strength": "Direct"
+              }
+            ],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "entity_rate": 0.08,
+              "confidence_interval_note": "n>=8 training studies."
+            }
+          }
+        },
+        {
+          "changeNumber": 7,
+          "usdmEntity": "EligibilityCriteria",
+          "protocolSection": "5.1",
+          "sectionTitle": "Inclusion Criteria",
+          "languagePattern": "Addition",
+          "originalText": "Inclusion criteria",
+          "proposedText": "Added Inclusion Criterion #5 body weight >=17kg EU sites",
+          "changeRationale": "EU regulatory requirement",
+          "confidence": "High",
+          "scope": "EU",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "EligibilityCriteria",
+              "field": "inclusionCriteria",
+              "value": "EU inclusion criteria addition",
+              "protocol_section": "5.1",
+              "section_title": "Inclusion Criteria",
+              "extraction_path": "versions[0].studyDesigns[0].eligibilityCriteria[?criterionType='Inclusion']"
+            },
+            "yaml_match": {
+              "benchmark_key": "I_and_I.Ph_III.usdm_entity_rates.EligibilityCriteria",
+              "benchmark_value": 0.08,
+              "yaml_file": "amendment_benchmarks.yaml"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C4891001",
+                "amendment_number": 3,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Addition",
+                "match_strength": "Direct"
+              }
+            ],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "entity_rate": 0.08,
+              "confidence_interval_note": "n>=8 training studies."
+            }
+          }
+        },
+        {
+          "changeNumber": 8,
+          "usdmEntity": "StudyProcedure",
+          "protocolSection": "8.3",
+          "sectionTitle": "Lab Assessments",
+          "languagePattern": "Substitution",
+          "originalText": "China blood volume specification",
+          "proposedText": "Blood volume updated for China HBV/HIV requirements",
+          "changeRationale": "China regulatory requirement",
+          "confidence": "Medium",
+          "scope": "China",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "StudyProcedure",
+              "field": "bloodVolume",
+              "value": "China-specific blood volume ~50ml",
+              "protocol_section": "8.3",
+              "section_title": "Lab Assessments",
+              "extraction_path": "versions[0].studyDesigns[0].activities[*]"
+            },
+            "yaml_match": {
+              "benchmark_key": "I_and_I.Ph_III.usdm_entity_rates.StudyProcedure",
+              "benchmark_value": 0.55,
+              "yaml_file": "amendment_benchmarks.yaml"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C4221016",
+                "amendment_number": 3,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Substitution",
+                "match_strength": "Direct"
+              }
+            ],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "entity_rate": 0.55,
+              "confidence_interval_note": "n>=8 training studies."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "amendmentNumber": 2,
+      "predictedTiming": "~12-18 months",
+      "predictedCategory": "Multiple",
+      "predictedRegulatoryDriven": true,
+      "predictedSafetyDriven": false,
+      "confidence": "Medium",
+      "predictedChanges": [
+        {
+          "changeNumber": 1,
+          "usdmEntity": "StudyProcedure",
+          "protocolSection": "8.1",
+          "sectionTitle": "Schedule of Activities",
+          "languagePattern": "Clarification",
+          "originalText": "Visit window specifications",
+          "proposedText": "Visit window clarification for assessments",
+          "changeRationale": "Visit window clarification",
+          "confidence": "High",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "StudyProcedure",
+              "field": "visitWindow",
+              "value": "Screening through Week 48 visit windows",
+              "protocol_section": "8.1",
+              "section_title": "Schedule of Activities",
+              "extraction_path": "versions[0].studyDesigns[0].scheduleTimelines[*].timings[*]"
+            },
+            "yaml_match": {
+              "benchmark_key": "I_and_I.Ph_III.usdm_entity_rates.StudyProcedure",
+              "benchmark_value": 0.55,
+              "yaml_file": "amendment_benchmarks.yaml"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C2321003",
+                "amendment_number": 4,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct"
+              }
+            ],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "entity_rate": 0.55,
+              "confidence_interval_note": "n>=8 training studies."
+            }
+          }
+        },
+        {
+          "changeNumber": 2,
+          "usdmEntity": "StudyProcedure",
+          "protocolSection": "8.3",
+          "sectionTitle": "Safety Assessments",
+          "languagePattern": "Clarification",
+          "originalText": "C-SSRS lifetime assessment",
+          "proposedText": "C-SSRS clarification for lifetime vs since-last-visit",
+          "changeRationale": "Safety assessment clarification",
+          "confidence": "High",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "StudyProcedure",
+              "field": "safetyAssessment",
+              "value": "C-SSRS assessment schedule",
+              "protocol_section": "8.3",
+              "section_title": "Safety Assessments",
+              "extraction_path": "versions[0].studyDesigns[0].activities[*]"
+            },
+            "yaml_match": {
+              "benchmark_key": "I_and_I.Ph_III.usdm_entity_rates.StudyProcedure",
+              "benchmark_value": 0.55,
+              "yaml_file": "amendment_benchmarks.yaml"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C2321003",
+                "amendment_number": 3,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct"
+              }
+            ],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "entity_rate": 0.55,
+              "confidence_interval_note": "n>=8 training studies."
+            }
+          }
+        },
+        {
+          "changeNumber": 3,
+          "usdmEntity": "StudyProcedure",
+          "protocolSection": "8.2",
+          "sectionTitle": "Assessments",
+          "languagePattern": "Clarification",
+          "originalText": "Screen failure CRF reporting",
+          "proposedText": "Clarification of screen failure CRF requirements",
+          "changeRationale": "Operational clarification",
+          "confidence": "Needs Clinical Review",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "StudyProcedure",
+              "field": "screeningProcedures",
+              "value": "Screen failure data collection",
+              "protocol_section": "8.2",
+              "section_title": "Assessments",
+              "extraction_path": "versions[0].studyDesigns[0].activities[*]"
+            },
+            "yaml_match": {
+              "benchmark_key": "I_and_I.Ph_III.usdm_entity_rates.StudyProcedure",
+              "benchmark_value": 0.55,
+              "yaml_file": "amendment_benchmarks.yaml"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C4891002",
+                "amendment_number": 1,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct"
+              }
+            ],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "entity_rate": 0.55,
+              "confidence_interval_note": "n>=8 training studies."
+            }
+          }
+        },
+        {
+          "changeNumber": 4,
+          "usdmEntity": "Administrative",
+          "protocolSection": "Multiple",
+          "sectionTitle": "Protocol Template Updates",
+          "languagePattern": "Addition",
+          "originalText": "Protocol template version",
+          "proposedText": "Protocol template updates — SAE reporting, safety sections",
+          "changeRationale": "Template alignment",
+          "confidence": "High",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "Administrative",
+              "field": "templateReference",
+              "value": "Protocol template version alignment",
+              "protocol_section": "Multiple",
+              "section_title": "Protocol Template Updates",
+              "extraction_path": "versions[0].versionIdentifier"
+            },
+            "yaml_match": {
+              "benchmark_key": "I_and_I.Ph_III.usdm_entity_rates.Administrative",
+              "benchmark_value": 0.02,
+              "yaml_file": "amendment_benchmarks.yaml"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C4891001",
+                "amendment_number": 2,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct"
+              }
+            ],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "entity_rate": 0.02,
+              "confidence_interval_note": "n>=8 training studies."
+            }
+          }
+        },
+        {
+          "changeNumber": 5,
+          "usdmEntity": "StudyProcedure",
+          "protocolSection": "8.1",
+          "sectionTitle": "Schedule of Activities",
+          "languagePattern": "Removal",
+          "originalText": "Screen failure CRF reporting requirement",
+          "proposedText": "Removed non-reporting of screen failure data on CRF",
+          "changeRationale": "Operational streamlining",
+          "confidence": "Medium",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "StudyProcedure",
+              "field": "dataCollection",
+              "value": "Screen failure reporting on CRF",
+              "protocol_section": "8.1",
+              "section_title": "Schedule of Activities",
+              "extraction_path": "versions[0].studyDesigns[0].activities[*]"
+            },
+            "yaml_match": {
+              "benchmark_key": "I_and_I.Ph_III.usdm_entity_rates.StudyProcedure",
+              "benchmark_value": 0.55,
+              "yaml_file": "amendment_benchmarks.yaml"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C2321014",
+                "amendment_number": 2,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Removal",
+                "match_strength": "Direct"
+              }
+            ],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "entity_rate": 0.55,
+              "confidence_interval_note": "n>=8 training studies."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

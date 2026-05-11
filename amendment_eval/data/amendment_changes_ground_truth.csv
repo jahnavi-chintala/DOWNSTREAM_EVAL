@@ -1,0 +1,13 @@
+study_id,amendment_number,change_number,usdm_entity,scope,description,category,split
+B7981027,4,1,StudyProcedure,Global,Blood volume corrected ~50ml to ~61ml,Multiple,verify
+B7981027,4,2,StudyProcedure,Global,Removed non-reporting of screen failure data on CRF,Multiple,verify
+B7981027,4,3,StudyProcedure,Global,Corrected Schwartz equation k constant for male children <12yr,Multiple,verify
+B7981027,4,4,StudyProcedure,Global,Added palatability assessment guidance at Week 18,Multiple,verify
+B7981027,4,5,SafetyAssessment,Global,Protocol template updates — SAE reporting safety sections,Multiple,verify
+B7981027,4,6,EligibilityCriteria,EU,Added Exclusion Criterion #15 — hypersensitivity to IP,Multiple,verify
+B7981027,4,7,EligibilityCriteria,EU,Added Inclusion Criterion #5 — min body weight >=17kg EU sites,Multiple,verify
+B7981027,4,8,StudyProcedure,China,Blood volume updated ~50ml to ~65ml for China HBV/HIV,Multiple,verify
+B7981027,4,9,StudyProcedure,China,Human genetic resource sample requirements added,Multiple,verify
+B7981027,4,10,StudyProcedure,China,QTcF worksheet clarification,Multiple,verify
+B7981027,4,11,StudyProcedure,Czech Republic,HBV-DNA testing requirements added,Multiple,verify
+B7981027,4,12,StudyProcedure,Czech Republic,HCV-RNA testing requirements added,Multiple,verify

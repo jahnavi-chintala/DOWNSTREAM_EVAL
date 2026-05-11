@@ -1,0 +1,234 @@
+=== B7981027_AmendmentProfile_Intelligence.docx ===
+
+P1: PROTOCOL AMENDMENT INTELLIGENCE REPORT
+P2: AI Explainability & Prediction Lineage
+P3: B7981027  |  I&I  |  Ph III  |  Alopecia Areata
+P6: 1. Amendment Prediction Profile Summary
+P8: 2. Amendment Risk Matrix by USDM Entity
+P9: Historical rate of amendment by USDM entity across 3 I&I Phase III training studies (7 amendments, 449 individual changes). Rates carry ±30% uncertainty at n=3.
+P12: 3. Prediction Provenance — Full Lineage per Change
+P13: This section provides the complete four-layer lineage chain for every predicted change. Each row is traceable from the predicted text back to the USDM signal, YAML benchmark, training study, and CSV source.
+P16: Amendment 1 — Multiple (~6-12 months post first patient enrolled)
+P34: Amendment 2 — Operational (~12-18 months post first patient enrolled)
+P46: 4. USDM Protocol Fingerprint
+P47: The following USDM entities in Protocol B7981027 contain signals that triggered amendment predictions. This shows the prediction is protocol-specific — derived from actual field values in the USDM JSON, not from generic templates.
+P51: 5. Cross-Deliverable Signal Map
+P52: Where D1 (Risk Profile) and D2 (PIPD) signals corroborate amendment predictions. Three-layer corroboration — risk flagged it, deviation confirmed it, amendment predicted it — is the strongest signal in the platform.
+P55: 6. Sensitivity Analysis
+P56: For each High confidence prediction — what signal in the USDM JSON drives it, and what would change the prediction if absent. This makes the model interpretable and shows predictions are protocol-specific.
+P59: 7. Coverage Gaps and Model Limitations
+P62: 8. Visualization Data Guide
+P63: This section maps Intelligence Report sections to the three planned interactive visualizations. All visualizations read from the canonical B7981027_AmendmentProfile.json lineage blocks.
+
+=== TABLE 0 ===
+R0: Study || B7981027 || Phase || Ph III
+R1: Product || Ritlecitinib (PF-06651600) || Indication || Alopecia Areata
+R2: Base Protocol || v0 (18Jun2024) || Generated || 2026-04-25
+R3: Benchmark || amendment_benchmarks.yaml v1.0 — I_and_I / Ph_III block (3 training studies, 7 amendments) || amendment_benchmarks.yaml v1.0 — I_and_I / Ph_III block (3 training studies, 7 amendments) || amendment_benchmarks.yaml v1.0 — I_and_I / Ph_III block (3 training studies, 7 amendments)
+
+=== TABLE 1 ===
+R0: This Intelligence Report is the companion to the Protocol Amendment Profile Form document. | It provides full AI explainability: the quantified basis for each prediction, the USDM signals that triggered it, | the training study evidence that grounds it, and the cross-deliverable signals that corroborate it. | All lineage data is structured to power interactive visualization.
+
+=== TABLE 2 ===
+R0: Parameter || Value || Quantified Basis
+R1: Predicted Amendment Count || 2–3 || I&I Ph III historical average: 2.33 amendments per study across 3 training studies
+R2: Dominant Category || Multiple || 43% of 7 I&I Ph III amendments in training set
+R3: Regulatory Driven Probability || 57% || 4 of 7 I&I Ph III amendments regulatory-driven. EU/UK most frequent authority.
+R4: Safety Driven Probability || 0% || 0 of 7 I&I Ph III training amendments were safety-driven. No IB updates predicted.
+R5: Avg Changes per Amendment || ~64 || Training range: 23–111. B7981027 pediatric complexity suggests upper half of range.
+R6: Overall Confidence || Medium || 3 I&I Ph III training studies — thin but directionally valid. Regulatory drivers dominate.
+R7: Scope || Global | EU (direct evidence) | China (direct evidence) || v1 predictions cover Global and major market country-specific changes (EU, China). Minor market country-specific changes (Czech Republic, Poland, individual countries) are out of scope for v1.
+
+=== TABLE 3 ===
+R0: USDM Entity || Rate || Risk Level || Typical Pattern || Changes (n) || Rationale || CI Note
+R1: StudyProcedure || 55% || High || Clarification || 247 of 449 || 55% of all I&I Ph III changes affect StudyProcedure — primarily visit windows, assessment procedures, and SOA clarifications. || ±30%
+R2: StudyIntervention || 17% || Medium || Clarification || 76 of 449 || 17% of changes — primarily concomitant medication guidance and administration clarifications. || ±30%
+R3: EligibilityCriteria || 11% || Medium || Clarification / Removal || 49 of 449 || 11% of changes — regulatory-driven clarifications to inclusion/exclusion criteria text. || ±30%
+R4: StudyEndpoint || 9% || Low-Medium || Clarification / Addition || 40 of 449 || 9% of changes — endpoint definition clarifications and addition of sub-study endpoints. || ±30%
+R5: SafetyAssessment || 6% || Low-Medium || Addition || 27 of 449 || 6% of changes — safety assessment additions driven by regulatory or IB updates. Elevated for pediatric studies with C-SSRS requirements. || ±30%
+R6: StudyDesign || 1% || Low || Clarification || 4 of 449 || 1% of changes — rare, only when overall design description requires regulatory alignment. || ±30%
+
+=== TABLE 4 ===
+R0: Visualization input: This table is the data source for the Provenance Tree interactive visualization. Each row maps to one collapsible tree node. match_strength=Direct nodes render in green; Indirect in amber.
+
+=== TABLE 5 ===
+R0: Ch1  |  [Global]  EligibilityCriteria  |  Clarification  |  Confidence: Medium
+
+=== TABLE 6 ===
+R0: Layer || Field || Value
+R1: Layer 1 | USDM Signal || Entity: EligibilityCriteria | Field: inclusionCriteria | Section: 5.1 — Inclusion Criteria | Path: studyDesigns[0].population.criterions[?(@.criterionType=='INCLUSION')] || Age 12 years or older at the time of informed consent/assent
+R2: Layer 2 | YAML Benchmark || Key: I_and_I.Ph_III.usdm_entity_rates.EligibilityCriteria | File: amendment_benchmarks.yaml v1.0 || Value: 0.11
+R3: Layer 3 | Training Evidence | (2 studies) || B7981032 Amendment 1  [Direct] | Source: amendment_changes_ground_truth.csv | Pattern: Clarification | B7981028 Amendment 4  [Indirect] | Source: amendment_changes_ground_truth.csv | Pattern: Clarification || Confidence Basis: | Entity rate: 11% | Training: n=3 studies / 7 amendments | n=3 training studies — rates carry ±30% uncertainty
+R4: Layer 4 | Corroborating | Signals | (0) || No corroborating signals from other deliverables || Total corroboration: 0 sources
+
+=== TABLE 7 ===
+R0: Ch2  |  [Global]  EligibilityCriteria  |  Clarification  |  Confidence: Low — Needs Clinical Review
+
+=== TABLE 8 ===
+R0: Layer || Field || Value
+R1: Layer 1 | USDM Signal || Entity: EligibilityCriteria | Field: exclusionCriteria | Section: 5.2 — Exclusion Criteria | Path: studyDesigns[0].population.criterions[?(@.criterionType=='EXCLUSION')] || History of or current diagnosis of active tuberculosis (TB)
+R2: Layer 2 | YAML Benchmark || Key: I_and_I.Ph_III.amendment_category_rates.Regulatory | File: amendment_benchmarks.yaml v1.0 || Value: 0.14
+R3: Layer 3 | Training Evidence | (1 study) || B7981028 Amendment 4  [Indirect] | Source: amendment_changes_ground_truth.csv | Pattern: Clarification || Confidence Basis: | Entity rate: 11% | Training: n=3 studies / 7 amendments | n=3 — Low confidence. TB-specific text requires IB review.
+R4: Layer 4 | Corroborating | Signals | (1) || D1 — risk_profile_ground_truth.csv | Infectious disease risk elevated in JAK inhibitor I&I studies | Studies: n=3 || Total corroboration: 1 source | • D1 risk signal — infectious disease
+
+=== TABLE 9 ===
+R0: Ch3  |  [Global]  StudyProcedure  |  Clarification  |  Confidence: High
+
+=== TABLE 10 ===
+R0: Layer || Field || Value
+R1: Layer 1 | USDM Signal || Entity: StudyProcedure | Field: bloodVolumeCollection | Section: 8.1 — Administrative Procedures | Path: studyDesigns[0].activities[?(@.name=='Blood Volume Collection')].definedProcedures[0] || approximately 50 ml
+R2: Layer 2 | YAML Benchmark || Key: I_and_I.Ph_III.usdm_entity_rates.StudyProcedure | File: amendment_benchmarks.yaml v1.0 || Value: 0.55
+R3: Layer 3 | Training Evidence | (2 studies) || B7981028 Amendment 4  [Direct] | Source: amendment_header_ground_truth.csv | Pattern: Substitution | Rationale: revise the estimated total blood volume | B7981032 Amendment 1  [Direct] | Source: amendment_header_ground_truth.csv | Pattern: Substitution | Rationale: revise the estimated total blood volume and provide clarifications to eligibility criteria || Confidence Basis: | Entity rate: 55% | Training: n=3 studies / 7 amendments | 2 of 3 I&I Ph III training studies had blood volume amendment. Direct rationale text match. High confidence justified.
+R4: Layer 4 | Corroborating | Signals | (1) || D1 — risk_profile_ground_truth.csv | Central lab vendor dependency flagged as operational risk | Studies: n=2 || Total corroboration: 1 source | • D1 risk — central lab vendor
+
+=== TABLE 11 ===
+R0: Ch4  |  [Global]  StudyProcedure  |  Addition  |  Confidence: Medium
+
+=== TABLE 12 ===
+R0: Layer || Field || Value
+R1: Layer 1 | USDM Signal || Entity: StudyProcedure | Field: saltAssessment | Section: 8.3 — Study Assessments and Procedures | Path: studyDesigns[0].activities[?(@.name=='SALT Assessment')].definedProcedures[0] || SALT score assessed at Screening and as specified in Schedule of Activities
+R2: Layer 2 | YAML Benchmark || Key: I_and_I.Ph_III.language_pattern_rates.Addition | File: amendment_benchmarks.yaml v1.0 || Value: 0.08
+R3: Layer 3 | Training Evidence | (1 study) || B7981032 Amendment 2  [Indirect] | Source: amendment_changes_ground_truth.csv | Pattern: Addition || Confidence Basis: | Entity rate: 55% | Training: n=3 studies / 7 amendments | Addition pattern at 8% in I&I Ph III. Rater certification is common for eCOA primary endpoints.
+R4: Layer 4 | Corroborating | Signals | (1) || D2 — pipd_ground_truth.csv | Procedure/test not performed per protocol — SALT rater variability | Studies: n=1 || Total corroboration: 1 source | • D2 PIPD — procedure not performed per protocol
+
+=== TABLE 13 ===
+R0: Ch5  |  [Global]  StudyIntervention  |  Clarification  |  Confidence: Medium
+
+=== TABLE 14 ===
+R0: Layer || Field || Value
+R1: Layer 1 | USDM Signal || Entity: StudyIntervention | Field: administrationInstructions | Section: 6.1 — Study Intervention Administration | Path: studyDesigns[0].studyInterventions[0].administrationInstructions || Ritlecitinib 50 mg once daily or matching placebo administered orally
+R2: Layer 2 | YAML Benchmark || Key: I_and_I.Ph_III.usdm_entity_rates.StudyIntervention | File: amendment_benchmarks.yaml v1.0 || Value: 0.17
+R3: Layer 3 | Training Evidence | (1 study) || B7981032 Amendment 2  [Indirect] | Source: amendment_changes_ground_truth.csv | Pattern: Clarification || Confidence Basis: | Entity rate: 17% | Training: n=3 studies / 7 amendments | StudyIntervention at 17% of I&I Ph III changes. Food effect guidance is standard JAK inhibitor clarification.
+R4: Layer 4 | Corroborating | Signals | (0) || No corroborating signals from other deliverables || Total corroboration: 0 sources
+
+=== TABLE 15 ===
+R0: Ch6  |  [EU]  EligibilityCriteria  |  Addition  |  Confidence: High
+
+=== TABLE 16 ===
+R0: Layer || Field || Value
+R1: Layer 1 | USDM Signal || Entity: EligibilityCriteria | Field: exclusionCriteria | Section: 5.2 — Exclusion Criteria | Path: studyDesigns[0].population.criterions[?(@.criterionType=='EXCLUSION')] || Exclusion criteria list — current version
+R2: Layer 2 | YAML Benchmark || Key: I_and_I.Ph_III.regulatory_driven_rate | File: amendment_benchmarks.yaml v1.0 || Value: 0.57
+R3: Layer 3 | Training Evidence | (1 study) || B7981028 Amendment 4  [Direct] | Source: amendment_changes_ground_truth.csv | Pattern: Addition | Proposed: Added Exclusion Criterion #15 Hypersensitivity to the active substance(s) or to any of the excipients of the investigational product. || Confidence Basis: | Entity rate: 11% | Training: n=3 studies / 7 amendments | Direct match — B7981028 Amendment 4 is a sibling study (same TA, same phase, same drug class). High confidence.
+R4: Layer 4 | Corroborating | Signals | (0) || No corroborating signals from other deliverables || Total corroboration: 0 sources
+
+=== TABLE 17 ===
+R0: Ch7  |  [EU]  EligibilityCriteria  |  Addition  |  Confidence: High
+
+=== TABLE 18 ===
+R0: Layer || Field || Value
+R1: Layer 1 | USDM Signal || Entity: EligibilityCriteria | Field: inclusionCriteria | Section: 5.1 — Inclusion Criteria | Path: studyDesigns[0].population.criterions[?(@.criterionType=='INCLUSION')] || Age 6 to less than 12 years
+R2: Layer 2 | YAML Benchmark || Key: I_and_I.Ph_III.regulatory_driven_rate | File: amendment_benchmarks.yaml v1.0 || Value: 0.57
+R3: Layer 3 | Training Evidence | (1 study) || B7981028 Amendment 4  [Direct] | Source: amendment_changes_ground_truth.csv | Pattern: Addition | Proposed: For sites in EU member countries (Czech Republic, France, Italy, Poland, Spain): Minimum body weight of >= 17 kg at the time of the screening visit. || Confidence Basis: | Entity rate: 11% | Training: n=3 studies / 7 amendments | Direct match — identical criterion in B7981028 Amendment 4 sibling study. EU pediatric weight threshold is a known regulatory pattern.
+R4: Layer 4 | Corroborating | Signals | (1) || D1 — risk_profile_ground_truth.csv | Pediatric enrollment complexity — vulnerable population risk elevated | Studies: n=3 || Total corroboration: 1 source | • D1 risk — pediatric enrollment complexity
+
+=== TABLE 19 ===
+R0: Ch8  |  [China]  StudyProcedure  |  Substitution  |  Confidence: Medium
+
+=== TABLE 20 ===
+R0: Layer || Field || Value
+R1: Layer 1 | USDM Signal || Entity: StudyProcedure | Field: bloodVolumeCollection | Section: 8.1 — Administrative Procedures | Path: studyDesigns[0].activities[?(@.name=='Blood Volume Collection')].definedProcedures[0] || approximately 50 ml
+R2: Layer 2 | YAML Benchmark || Key: I_and_I.Ph_III.usdm_entity_rates.StudyProcedure | File: amendment_benchmarks.yaml v1.0 || Value: 0.55
+R3: Layer 3 | Training Evidence | (1 study) || B7981028 Amendment 4  [Direct] | Source: amendment_changes_ground_truth.csv | Pattern: Substitution | Proposed: Updated the estimated total blood volume sampling collection from approximately 50 ml to approximately 65 ml — China HBV/HIV testing requirements. || Confidence Basis: | Entity rate: 55% | Training: n=3 studies / 7 amendments | Direct match in sibling study B7981028. China-specific HBV/HIV requirement is a known NMPA pattern for JAK inhibitor studies.
+R4: Layer 4 | Corroborating | Signals | (0) || No corroborating signals from other deliverables || Total corroboration: 0 sources
+
+=== TABLE 21 ===
+R0: Ch1  |  [Global]  StudyProcedure  |  Clarification  |  Confidence: High
+
+=== TABLE 22 ===
+R0: Layer || Field || Value
+R1: Layer 1 | USDM Signal || Entity: StudyProcedure | Field: visitWindow | Section: 8.1 — Schedule of Activities | Path: studyDesigns[0].schedule.timepoints[*].windowBefore + windowAfter || Visit window: +/-7 days
+R2: Layer 2 | YAML Benchmark || Key: I_and_I.Ph_III.usdm_entity_rates.StudyProcedure | File: amendment_benchmarks.yaml v1.0 || Value: 0.55
+R3: Layer 3 | Training Evidence | (2 studies) || B7981028 Amendment 4  [Direct] | Source: amendment_changes_ground_truth.csv | Pattern: Clarification | B7981032 Amendment 2  [Direct] | Source: amendment_changes_ground_truth.csv | Pattern: Clarification || Confidence Basis: | Entity rate: 55% | Training: n=3 studies / 7 amendments | Visit window clarification present in all 3 I&I Ph III training studies. D2 deviation data confirms visit window is a live operational issue in B7981027.
+R4: Layer 4 | Corroborating | Signals | (1) || D2 — deviation_subcategories.csv | Visit performed out of window — 10 deviations in B7981027 | Studies: n=1 || Total corroboration: 1 source | • D2 deviations — 10 out-of-window visits in B7981027
+
+=== TABLE 23 ===
+R0: Ch2  |  [Global]  StudyProcedure  |  Clarification  |  Confidence: High
+
+=== TABLE 24 ===
+R0: Layer || Field || Value
+R1: Layer 1 | USDM Signal || Entity: SafetyAssessment | Field: cssrsAssessment | Section: 8.3 — Study Assessments and Procedures | Path: studyDesigns[0].activities[?(@.name=='C-SSRS Assessment')].definedProcedures[0] || C-SSRS to be administered at Screening and as specified in Schedule of Activities
+R2: Layer 2 | YAML Benchmark || Key: I_and_I.Ph_III.usdm_entity_rates.SafetyAssessment | File: amendment_benchmarks.yaml v1.0 || Value: 0.06
+R3: Layer 3 | Training Evidence | (1 study) || B7981032 Amendment 5  [Indirect] | Source: amendment_changes_ground_truth.csv | Pattern: Addition || Confidence Basis: | Entity rate: 6% | Training: n=3 studies / 7 amendments | Three-layer corroboration: SafetyAssessment YAML signal + D1 pediatric risk flag + D2 C-SSRS deviation count. High confidence despite low entity rate.
+R4: Layer 4 | Corroborating | Signals | (2) || D1 — risk_profile_ground_truth.csv | Pediatric population safety risk — suicidality monitoring elevated | Studies: n=3 | D2 — deviation_subcategories.csv | Procedure/test not performed — C-SSRS misuse — 12 deviations in B7981027 | Studies: n=1 || Total corroboration: 2 sources | • D1 risk — pediatric safety | • D2 deviations — 12 C-SSRS misuse events
+
+=== TABLE 25 ===
+R0: Ch3  |  [Global]  StudyProcedure  |  Clarification  |  Confidence: Needs Clinical Review
+
+=== TABLE 26 ===
+R0: Layer || Field || Value
+R1: Layer 1 | USDM Signal || Entity: StudyProcedure | Field: administrativeProcedures | Section: 8.2 — Administrative Procedures | Path: studyDesigns[0].activities[?(@.activityType=='ADMINISTRATIVE')] || Administrative procedures as specified
+R2: Layer 2 | YAML Benchmark || Key: I_and_I.Ph_III.amendment_category_rates.Operational | File: amendment_benchmarks.yaml v1.0 || Value: 0.29
+R3: Layer 3 | Training Evidence | (1 study) || B7981028 Amendment 4  [Indirect] | Source: amendment_changes_ground_truth.csv | Pattern: Clarification || Confidence Basis: | Entity rate: 55% | Training: n=3 studies / 7 amendments | Operational category at 29% of I&I Ph III amendments. Specific content cannot be predicted without 12-month enrollment data.
+R4: Layer 4 | Corroborating | Signals | (0) || No corroborating signals from other deliverables || Total corroboration: 0 sources
+
+=== TABLE 27 ===
+R0: Ch4  |  [Global]  Administrative  |  Addition  |  Confidence: High
+
+=== TABLE 28 ===
+R0: Layer || Field || Value
+R1: Layer 1 | USDM Signal || Entity: Administrative | Field: protocolTemplate | Section: Multiple — Protocol Template | Path: study.documentVersion.templateReference || CT02-GSOP Clinical Protocol Template Phase 1 2 3 4 (14 April 2023)
+R2: Layer 2 | YAML Benchmark || Key: I_and_I.Ph_III.usdm_entity_rates.Administrative | File: amendment_benchmarks.yaml v1.0 || Value: 0.01
+R3: Layer 3 | Training Evidence | (1 study) || B7981028 Amendment 4  [Direct] | Source: amendment_changes_ground_truth.csv | Pattern: Addition | Proposed: Incorporated protocol template updates to align with current Pfizer protocol template and requirements || Confidence Basis: | Entity rate: 1% | Training: n=3 studies / 7 amendments | Direct match in B7981028 Amendment 4. Template update is a universal Pfizer pattern — occurs in every multi-year study.
+R4: Layer 4 | Corroborating | Signals | (0) || No corroborating signals from other deliverables || Total corroboration: 0 sources
+
+=== TABLE 29 ===
+R0: Ch5  |  [Global]  StudyProcedure  |  Removal  |  Confidence: Medium
+
+=== TABLE 30 ===
+R0: Layer || Field || Value
+R1: Layer 1 | USDM Signal || Entity: StudyProcedure | Field: screenFailureReporting | Section: 5.4 — Screen Failures | Path: studyDesigns[0].activities[?(@.name=='Screening')].definedProcedures[*] || Screen failure data collection as per standard procedures
+R2: Layer 2 | YAML Benchmark || Key: I_and_I.Ph_III.language_pattern_rates.Removal | File: amendment_benchmarks.yaml v1.0 || Value: 0.01
+R3: Layer 3 | Training Evidence | (1 study) || B7981028 Amendment 4  [Direct] | Source: amendment_changes_ground_truth.csv | Pattern: Removal | Proposed: Removed the text on non-reporting of screen failure data on the CRF. || Confidence Basis: | Entity rate: 55% | Training: n=3 studies / 7 amendments | Direct match in B7981028 Amendment 4. Removal pattern rare (1%) but directly observed in sibling study.
+R4: Layer 4 | Corroborating | Signals | (0) || No corroborating signals from other deliverables || Total corroboration: 0 sources
+
+=== TABLE 31 ===
+R0: Visualization input: This table powers the Amendment Heat Map. Each row is one axis of the matrix. The 'Prediction Triggered' column determines amber cell fill for B7981027 in the heat map.
+
+=== TABLE 32 ===
+R0: USDM Entity || Field || Protocol Value || Section || Predictions Triggered
+R1: EligibilityCriteria || inclusionCriteria || Age 12 years or older at the time of informed consent/assent || 5.1 || • Amend 1 Ch1 [Global] | • Amend 1 Ch7 [EU]
+R2: EligibilityCriteria || exclusionCriteria || History of or current diagnosis of active tuberculosis (TB) || 5.2 || • Amend 1 Ch2 [Global] | • Amend 1 Ch6 [EU]
+R3: StudyProcedure || bloodVolumeCollection || approximately 50 ml || 8.1 || • Amend 1 Ch3 [Global] | • Amend 1 Ch8 [China]
+R4: StudyProcedure || saltAssessment || SALT score assessed at Screening and as specified in Schedul... || 8.3 || • Amend 1 Ch4 [Global]
+R5: StudyIntervention || administrationInstructions || Ritlecitinib 50 mg once daily or matching placebo administer... || 6.1 || • Amend 1 Ch5 [Global]
+R6: StudyProcedure || visitWindow || Visit window: +/-7 days || 8.1 || • Amend 2 Ch1 [Global]
+R7: SafetyAssessment || cssrsAssessment || C-SSRS to be administered at Screening and as specified in S... || 8.3 || • Amend 2 Ch2 [Global]
+R8: StudyProcedure || administrativeProcedures || Administrative procedures as specified || 8.2 || • Amend 2 Ch3 [Global]
+R9: Administrative || protocolTemplate || CT02-GSOP Clinical Protocol Template Phase 1 2 3 4 (14 April... || Multiple || • Amend 2 Ch4 [Global]
+R10: StudyProcedure || screenFailureReporting || Screen failure data collection as per standard procedures || 5.4 || • Amend 2 Ch5 [Global]
+
+=== TABLE 33 ===
+R0: Change || USDM Entity || Source || Deliverable || Corroborating Signal
+R1: Amend 1 Ch2 | [Global] || EligibilityCriteria || D1 || risk_profile_ground_truth.csv || Infectious disease risk elevated in JAK inhibitor I&I studies (n=3)
+R2: Amend 1 Ch3 | [Global] || StudyProcedure || D1 || risk_profile_ground_truth.csv || Central lab vendor dependency flagged as operational risk (n=2)
+R3: Amend 1 Ch4 | [Global] || StudyProcedure || D2 || pipd_ground_truth.csv || Procedure/test not performed per protocol — SALT rater variability (n=1)
+R4: Amend 1 Ch7 | [EU] || EligibilityCriteria || D1 || risk_profile_ground_truth.csv || Pediatric enrollment complexity — vulnerable population risk elevated (n=3)
+R5: Amend 2 Ch1 | [Global] || StudyProcedure || D2 || deviation_subcategories.csv || Visit performed out of window — 10 deviations in B7981027 (n=1)
+R6: Amend 2 Ch2 | [Global] || StudyProcedure || D1 || risk_profile_ground_truth.csv || Pediatric population safety risk — suicidality monitoring elevated (n=3)
+R7: Amend 2 Ch2 | [Global] || StudyProcedure || D2 || deviation_subcategories.csv || Procedure/test not performed — C-SSRS misuse — 12 deviations in B7981027 (n=1)
+
+=== TABLE 34 ===
+R0: Change || Entity || Driving USDM Signal || If Signal Absent — Prediction Changes To || Confidence Impact
+R1: Amend 1 Ch3 [Global] || StudyProcedure | bloodVolumeCollection || approximately 50 ml || Medium — blood volume amendment common but not certain without specific value || Drops to Medium
+R2: Amend 1 Ch6 [EU] || EligibilityCriteria | exclusionCriteria || Exclusion criteria list — current version || Low — hypersensitivity exclusion predicted but not EU-specific || Drops to Low
+R3: Amend 1 Ch7 [EU] || EligibilityCriteria | inclusionCriteria || Age 6 to less than 12 years || Low — pediatric weight threshold EU-specific; absent without pediatric + EU combination || Not predicted
+R4: Amend 2 Ch1 [Global] || StudyProcedure | visitWindow || Visit window: +/-7 days || Medium — visit window clarification common but D2 signal removes uncertainty || Drops to Medium
+R5: Amend 2 Ch2 [Global] || SafetyAssessment | cssrsAssessment || C-SSRS to be administered at Screening and as specified in Schedule of Activities || Low — C-SSRS lifetime specification requires both safety assessment AND pediatric population || Not predicted
+R6: Amend 2 Ch4 [Global] || Administrative | protocolTemplate || CT02-GSOP Clinical Protocol Template Phase 1 2 3 4 (14 April 2023) || Medium — template update common but timing uncertain without version signal || Drops to Medium
+
+=== TABLE 35 ===
+R0: Honest statement of what this model cannot predict. Transparency about limitations builds trust — reviewers can rely on what is predicted precisely because the model declares what it cannot predict.
+
+=== TABLE 36 ===
+R0: Gap Category || Description || Why Out of Scope || Roadmap
+R1: Country-specific — minor markets || Czech Republic, Poland, Japan, Korea, other single-country requirements || Insufficient training examples — fewer than 2 studies per country in train set || Post-hackathon with expanded training set
+R2: Specific correction values || Schwartz equation k constant, exact blood volume ml values, specific lab reference ranges || Corrections are factual errors discovered during execution — not predictable from base protocol || Not addressable — requires human clinical review
+R3: Regulatory correspondence content || Changes driven by specific FDA/EMA agency letters or oral discussions || Regulatory correspondence is not in the training dataset || Partially addressable with IB update pattern matching
+R4: Safety signal driven amendments || IB updates requiring protocol changes mid-study || 0% safety-driven in I&I Ph III training set — insufficient signal || Monitor with n=3 limitation; revisit after May 18 test studies
+R5: Amendment 3 content (B7981027) || Amendment 3 (10 April 2025) has no Summary of Change PDF in the training set || No summary PDF provided for this amendment — cannot extract ground truth || Request from Pfizer post-hackathon
+
+=== TABLE 37 ===
+R0: Visualization || Data Source (JSON path) || Intelligence Doc Section || Implementation
+R1: Heat Map — Amendment Risk by Entity || predictedAmendments[*].predictedChanges[*].lineage.training_evidence + usdm_entity_rates from YAML || Section 2 (Risk Matrix) + Section 4 (Fingerprint) || React + D3 heatmap. Rows=entities, cols=training studies+B7981027. Hover=training_evidence[].overall_rationale
+R2: Provenance Tree — Per Change Drill-Down || predictedAmendments[*].predictedChanges[*].lineage.* || Section 3 (Provenance) — one tree per change row || React collapsible tree. 4 branches per change. Direct=green, Indirect=amber. Click from Form doc row.
+R3: Confidence Waterfall — Per Amendment || predictedAmendments[*].predictedChanges[*].lineage.confidence_basis.* || Section 3 confidence_basis + Section 6 (Sensitivity) || recharts BarChart. Bars=entity_rate, pattern_rate, corroboration_count. Error band=±30% for n=3.

@@ -1,0 +1,48 @@
+# DMP — Field Provenance Policy (Scenario 1 miss explanation)
+#
+# Class meanings: see ppid_py/miss_policy.yaml for the full definitions.
+# Most DMP content is INFERRED from USDM — vendor tables, reconciliation plans
+# and data-handling narrative are *reasoned* from Assessment / DataAcquisition
+# classes, not copied verbatim. Few DMP fields are DIRECT.
+
+product: DMP
+default_class: INFERRED
+default_anchors: [Study, StudyDesign, Assessment, DataAcquisition]
+
+sections:
+  s5_systems:
+    # S5 system rows list vendor/tool names that may appear in USDM as
+    # DataAcquisition nodes — we require the class to be present but the
+    # vendor names themselves are generator-selected.
+    class: STRUCTURAL
+    required_type: DataAcquisition
+  s6_vendors:
+    class: INFERRED
+    anchors: [DataAcquisition, Procedure]
+  s8_critical_data:
+    class: INFERRED
+    anchors: [Assessment, DataAcquisition]
+  s11_reconciliation:
+    class: INFERRED
+    anchors: [Assessment, Procedure]
+
+fields:
+  ground_truth_name:
+    class: STRUCTURAL
+    required_type: DataAcquisition
+  system_type:
+    class: STRUCTURAL
+    required_type: DataAcquisition
+  vendor_name:
+    class: INFERRED
+    anchors: [DataAcquisition]
+  contact:
+    class: COMPUTED
+  sla:
+    class: COMPUTED
+  reconciliation_flag:
+    class: COMPUTED
+  data_review_tier:
+    class: COMPUTED
+  s5_confidence_tier:
+    class: COMPUTED

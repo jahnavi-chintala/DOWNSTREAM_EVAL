@@ -17,7 +17,7 @@ to the legacy inline HTML, so the gateway keeps working during setup.
 ## Prerequisites
 
 - Node 18+ (tested with 18 / 20).
-- The FastAPI gateway running on `http://127.0.0.1:8080` (only needed for dev proxy).
+- The FastAPI gateway (only needed for the dev proxy). Vite defaults to `http://127.0.0.1:8010`; set `EVAL_HUB_URL` if you use another port.
 
 ## One-time install
 
@@ -32,8 +32,11 @@ In one terminal, run FastAPI as usual:
 
 ```powershell
 cd protocol_eval_hub
-python -m uvicorn unified_eval_app:app --host 0.0.0.0 --port 8080
+python -m uvicorn unified_eval_app:app --host 0.0.0.0 --port 8010
 ```
+
+If you use port **8080** (or anything else) for uvicorn, start Vite with the same target, e.g.  
+`$env:EVAL_HUB_URL='http://127.0.0.1:8080'; npm run dev`
 
 In another terminal:
 
@@ -43,7 +46,7 @@ npm run dev
 ```
 
 Open http://localhost:5173 — Vite proxies `/risk`, `/pipd`, `/cmp`, `/dmp`, `/health`,
-`/docs`, and `/openapi.json` to the FastAPI server on port 8080.
+`/docs`, and `/openapi.json` to the FastAPI process (by default on port 8010).
 
 ## Production build
 
@@ -54,7 +57,7 @@ npm run build
 
 That emits `ui/dist/` (HTML + hashed JS/CSS). FastAPI automatically detects
 `ui/dist/index.html` and mounts it at `/`, plus `ui/dist/assets/*` at `/assets/*`.
-Restart uvicorn and open http://localhost:8080/.
+Restart uvicorn and open the app at the same host/port you use for the API (e.g. `http://localhost:8010/`), or use `npm run dev` and open http://localhost:5173/ for the proxied dev UI.
 
 Legacy per-product pages (`/risk/ui`, `/pipd/ui`, `/cmp/ui`, `/dmp/ui`) now
 redirect into the SPA with the correct product pre-selected. The old inline HTML

@@ -1,0 +1,2389 @@
+{
+  "study_id": "C5091017",
+  "scenario": 1,
+  "timestamp": "2026-05-06T21:05:59.669847Z",
+  "verdict": "NO-GO",
+  "generator_version": "1.0",
+  "ta": "INFECTIOUS",
+  "phase": "PHASE III",
+  "metrics": {
+    "m1_risk_name_recall": {
+      "study_id": "C5091017",
+      "score": 1.0,
+      "matched": 20,
+      "ground_truth_total": 20,
+      "ground_truth_risk_rows_full": 20,
+      "m1_scored_gt_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "no_risk_gt_rows": false,
+      "benchmark_expects_zero_risks": false,
+      "matched_names": [
+        "Data / Data Reliability",
+        "Investigator / Staff Conduct",
+        "AE / SAE Management",
+        "Participant / Caregiver Trial Conduct",
+        "Participant Safety",
+        "Protocol Compliance",
+        "Sample Management",
+        "Timelines / Resources",
+        "Enrollment Criteria",
+        "Informed Consent",
+        "Sample Management",
+        "Data / Data Reliability",
+        "ICH Compliance",
+        "Data Privacy",
+        "Payments",
+        "Information Security / IP",
+        "Participant / Caregiver Trial Conduct",
+        "Investigator / Staff Conduct",
+        "Investigator / Staff Conduct",
+        "Protocol Compliance"
+      ],
+      "matched_pairs": [
+        {
+          "gt_risk_name": "Data / Data Reliability",
+          "gt_risk_id": "SR-03125",
+          "gt_rpn": 280,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Data / Data Reliability",
+          "generated_rpn": 280,
+          "generated_json_key": "risks",
+          "generated_list_key": "risks",
+          "generated_list_index": 0,
+          "generated_domain": "study risks"
+        },
+        {
+          "gt_risk_name": "Investigator / Staff Conduct",
+          "gt_risk_id": "SR-03128",
+          "gt_rpn": 160,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Investigator / Staff Conduct",
+          "generated_rpn": 160,
+          "generated_json_key": "risks_monitored",
+          "generated_list_key": "risks_monitored",
+          "generated_list_index": 0,
+          "generated_domain": "study risks"
+        },
+        {
+          "gt_risk_name": "AE / SAE Management",
+          "gt_risk_id": "SR-03123",
+          "gt_rpn": 160,
+          "gt_domain": "study risks",
+          "generated_risk_name": "AE / SAE Management",
+          "generated_rpn": 160,
+          "generated_json_key": "risks_monitored",
+          "generated_list_key": "risks_monitored",
+          "generated_list_index": 1,
+          "generated_domain": "study risks"
+        },
+        {
+          "gt_risk_name": "Participant / Caregiver Trial Conduct",
+          "gt_risk_id": "SR-03131",
+          "gt_rpn": 112,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Participant / Caregiver Trial Conduct",
+          "generated_rpn": 112,
+          "generated_json_key": "risks_monitored",
+          "generated_list_key": "risks_monitored",
+          "generated_list_index": 2,
+          "generated_domain": "study risks"
+        },
+        {
+          "gt_risk_name": "Participant Safety",
+          "gt_risk_id": "SR-03132",
+          "gt_rpn": 112,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Participant Safety",
+          "generated_rpn": 112,
+          "generated_json_key": "risks_monitored",
+          "generated_list_key": "risks_monitored",
+          "generated_list_index": 3,
+          "generated_domain": "study risks"
+        },
+        {
+          "gt_risk_name": "Protocol Compliance",
+          "gt_risk_id": "SR-03133",
+          "gt_rpn": 112,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Protocol Compliance",
+          "generated_rpn": 112,
+          "generated_json_key": "risks_monitored",
+          "generated_list_key": "risks_monitored",
+          "generated_list_index": 4,
+          "generated_domain": "study risks"
+        },
+        {
+          "gt_risk_name": "Sample Management",
+          "gt_risk_id": "SR-03134",
+          "gt_rpn": 112,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Sample Management",
+          "generated_rpn": 112,
+          "generated_json_key": "risks_monitored",
+          "generated_list_key": "risks_monitored",
+          "generated_list_index": 5,
+          "generated_domain": "study risks"
+        },
+        {
+          "gt_risk_name": "Timelines / Resources",
+          "gt_risk_id": "SR-03135",
+          "gt_rpn": 112,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Timelines / Resources",
+          "generated_rpn": 112,
+          "generated_json_key": "risks_monitored",
+          "generated_list_key": "risks_monitored",
+          "generated_list_index": 6,
+          "generated_domain": "study risks"
+        },
+        {
+          "gt_risk_name": "Enrollment Criteria",
+          "gt_risk_id": "SR-03126",
+          "gt_rpn": 112,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Enrollment Criteria",
+          "generated_rpn": 112,
+          "generated_json_key": "risks_monitored",
+          "generated_list_key": "risks_monitored",
+          "generated_list_index": 7,
+          "generated_domain": "study risks"
+        },
+        {
+          "gt_risk_name": "Informed Consent",
+          "gt_risk_id": "SR-03127",
+          "gt_rpn": 112,
+          "gt_domain": "study risks",
+          "generated_risk_name": "Informed Consent",
+          "generated_rpn": 112,
+          "generated_json_key": "risks_monitored",
+          "generated_list_key": "risks_monitored",
+          "generated_list_index": 8,
+          "generated_domain": "study risks"
+        },
+        {
+          "gt_risk_name": "Sample Management",
+          "gt_risk_id": "VR-00113",
+          "gt_rpn": 280,
+          "gt_domain": "vendor risks",
+          "generated_risk_name": "Sample Management",
+          "generated_rpn": 280,
+          "generated_json_key": "vendor_risks",
+          "generated_list_key": "vendor_risks",
+          "generated_list_index": 0,
+          "generated_domain": "vendor risks"
+        },
+        {
+          "gt_risk_name": "Data / Data Reliability",
+          "gt_risk_id": "VR-00009",
+          "gt_rpn": 196,
+          "gt_domain": "vendor risks",
+          "generated_risk_name": "Data / Data Reliability",
+          "generated_rpn": 196,
+          "generated_json_key": "vendor_risks",
+          "generated_list_key": "vendor_risks",
+          "generated_list_index": 1,
+          "generated_domain": "vendor risks"
+        },
+        {
+          "gt_risk_name": "ICH Compliance",
+          "gt_risk_id": "VR-00400",
+          "gt_rpn": 196,
+          "gt_domain": "vendor risks",
+          "generated_risk_name": "ICH Compliance",
+          "generated_rpn": 196,
+          "generated_json_key": "vendor_risks",
+          "generated_list_key": "vendor_risks",
+          "generated_list_index": 2,
+          "generated_domain": "vendor risks"
+        },
+        {
+          "gt_risk_name": "Data Privacy",
+          "gt_risk_id": "VR-05777",
+          "gt_rpn": 196,
+          "gt_domain": "vendor risks",
+          "generated_risk_name": "Data Privacy",
+          "generated_rpn": 196,
+          "generated_json_key": "vendor_risks",
+          "generated_list_key": "vendor_risks",
+          "generated_list_index": 3,
+          "generated_domain": "vendor risks"
+        },
+        {
+          "gt_risk_name": "Payments",
+          "gt_risk_id": "VR-07019",
+          "gt_rpn": 196,
+          "gt_domain": "vendor risks",
+          "generated_risk_name": "Payments",
+          "generated_rpn": 196,
+          "generated_json_key": "vendor_risks",
+          "generated_list_key": "vendor_risks",
+          "generated_list_index": 4,
+          "generated_domain": "vendor risks"
+        },
+        {
+          "gt_risk_name": "Information Security / IP",
+          "gt_risk_id": "VR-00008",
+          "gt_rpn": 160,
+          "gt_domain": "vendor risks",
+          "generated_risk_name": "Information Security / IP",
+          "generated_rpn": 160,
+          "generated_json_key": "vendor_risks",
+          "generated_list_key": "vendor_risks",
+          "generated_list_index": 5,
+          "generated_domain": "vendor risks"
+        },
+        {
+          "gt_risk_name": "Participant / Caregiver Trial Conduct",
+          "gt_risk_id": "VR-00007",
+          "gt_rpn": 160,
+          "gt_domain": "vendor risks",
+          "generated_risk_name": "Participant / Caregiver Trial Conduct",
+          "generated_rpn": 160,
+          "generated_json_key": "vendor_risks",
+          "generated_list_key": "vendor_risks",
+          "generated_list_index": 6,
+          "generated_domain": "vendor risks"
+        },
+        {
+          "gt_risk_name": "Investigator / Staff Conduct",
+          "gt_risk_id": "SSR-06985",
+          "gt_rpn": 280,
+          "gt_domain": "study site risks",
+          "generated_risk_name": "Investigator / Staff Conduct",
+          "generated_rpn": 280,
+          "generated_json_key": "study_site_risks",
+          "generated_list_key": "study_site_risks",
+          "generated_list_index": 0,
+          "generated_domain": "study site risks"
+        },
+        {
+          "gt_risk_name": "Investigator / Staff Conduct",
+          "gt_risk_id": "SSR-07037",
+          "gt_rpn": 280,
+          "gt_domain": "study site risks",
+          "generated_risk_name": "Investigator / Staff Conduct",
+          "generated_rpn": 280,
+          "generated_json_key": "study_site_risks",
+          "generated_list_key": "study_site_risks",
+          "generated_list_index": 1,
+          "generated_domain": "study site risks"
+        },
+        {
+          "gt_risk_name": "Protocol Compliance",
+          "gt_risk_id": "SSR-07504",
+          "gt_rpn": 196,
+          "gt_domain": "study site risks",
+          "generated_risk_name": "Protocol Compliance",
+          "generated_rpn": 196,
+          "generated_json_key": "study_site_risks",
+          "generated_list_key": "study_site_risks",
+          "generated_list_index": 2,
+          "generated_domain": "study site risks"
+        }
+      ],
+      "missed_names": [],
+      "hallucination_candidates": [],
+      "extra_generated_risks": [],
+      "near_misses": [],
+      "passed": true
+    },
+    "m2_rpn_tier_accuracy": {
+      "score": 1.0,
+      "matched_rpn": 20,
+      "total_matched_risks": 20,
+      "ground_truth_risk_rows": 20,
+      "per_risk": [
+        {
+          "risk_name": "Data / Data Reliability",
+          "gt_risk_id": "SR-03125",
+          "generated_rpn": 280,
+          "generated_tier": 4,
+          "truth_rpn": 280,
+          "truth_tier": 4,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Investigator / Staff Conduct",
+          "gt_risk_id": "SR-03128",
+          "generated_rpn": 160,
+          "generated_tier": 2,
+          "truth_rpn": 160,
+          "truth_tier": 2,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "AE / SAE Management",
+          "gt_risk_id": "SR-03123",
+          "generated_rpn": 160,
+          "generated_tier": 2,
+          "truth_rpn": 160,
+          "truth_tier": 2,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Participant / Caregiver Trial Conduct",
+          "gt_risk_id": "SR-03131",
+          "generated_rpn": 112,
+          "generated_tier": 1,
+          "truth_rpn": 112,
+          "truth_tier": 1,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Participant Safety",
+          "gt_risk_id": "SR-03132",
+          "generated_rpn": 112,
+          "generated_tier": 1,
+          "truth_rpn": 112,
+          "truth_tier": 1,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Protocol Compliance",
+          "gt_risk_id": "SR-03133",
+          "generated_rpn": 112,
+          "generated_tier": 1,
+          "truth_rpn": 112,
+          "truth_tier": 1,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Sample Management",
+          "gt_risk_id": "SR-03134",
+          "generated_rpn": 112,
+          "generated_tier": 1,
+          "truth_rpn": 112,
+          "truth_tier": 1,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Timelines / Resources",
+          "gt_risk_id": "SR-03135",
+          "generated_rpn": 112,
+          "generated_tier": 1,
+          "truth_rpn": 112,
+          "truth_tier": 1,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Enrollment Criteria",
+          "gt_risk_id": "SR-03126",
+          "generated_rpn": 112,
+          "generated_tier": 1,
+          "truth_rpn": 112,
+          "truth_tier": 1,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Informed Consent",
+          "gt_risk_id": "SR-03127",
+          "generated_rpn": 112,
+          "generated_tier": 1,
+          "truth_rpn": 112,
+          "truth_tier": 1,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Sample Management",
+          "gt_risk_id": "VR-00113",
+          "generated_rpn": 280,
+          "generated_tier": 4,
+          "truth_rpn": 280,
+          "truth_tier": 4,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Data / Data Reliability",
+          "gt_risk_id": "VR-00009",
+          "generated_rpn": 196,
+          "generated_tier": 3,
+          "truth_rpn": 196,
+          "truth_tier": 3,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "ICH Compliance",
+          "gt_risk_id": "VR-00400",
+          "generated_rpn": 196,
+          "generated_tier": 3,
+          "truth_rpn": 196,
+          "truth_tier": 3,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Data Privacy",
+          "gt_risk_id": "VR-05777",
+          "generated_rpn": 196,
+          "generated_tier": 3,
+          "truth_rpn": 196,
+          "truth_tier": 3,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Payments",
+          "gt_risk_id": "VR-07019",
+          "generated_rpn": 196,
+          "generated_tier": 3,
+          "truth_rpn": 196,
+          "truth_tier": 3,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Information Security / IP",
+          "gt_risk_id": "VR-00008",
+          "generated_rpn": 160,
+          "generated_tier": 2,
+          "truth_rpn": 160,
+          "truth_tier": 2,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Participant / Caregiver Trial Conduct",
+          "gt_risk_id": "VR-00007",
+          "generated_rpn": 160,
+          "generated_tier": 2,
+          "truth_rpn": 160,
+          "truth_tier": 2,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Investigator / Staff Conduct",
+          "gt_risk_id": "SSR-06985",
+          "generated_rpn": 280,
+          "generated_tier": 4,
+          "truth_rpn": 280,
+          "truth_tier": 4,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Investigator / Staff Conduct",
+          "gt_risk_id": "SSR-07037",
+          "generated_rpn": 280,
+          "generated_tier": 4,
+          "truth_rpn": 280,
+          "truth_tier": 4,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        },
+        {
+          "risk_name": "Protocol Compliance",
+          "gt_risk_id": "SSR-07504",
+          "generated_rpn": 196,
+          "generated_tier": 3,
+          "truth_rpn": 196,
+          "truth_tier": 3,
+          "tier_distance": 0,
+          "passed": true,
+          "match_mode": "tier_at_most_1"
+        }
+      ],
+      "passed": true,
+      "skipped": false
+    },
+    "m3_critical_factor_match": {
+      "score": 0.75,
+      "f1": 0.75,
+      "precision": 0.6,
+      "recall": 1.0,
+      "score_basis": "factor_name_f1",
+      "matched_factors": 3,
+      "ground_truth_total": 3,
+      "generated_factor_count": 5,
+      "matched_names": [
+        "Endpoints",
+        "Data Integrity and Reliability of Trial Results",
+        "Adverse Event (AE) / Serious Adverse Event (SAE)"
+      ],
+      "missing_names": [],
+      "extra_names": [
+        "Eligibility criteria",
+        "Investigational Product Management"
+      ],
+      "content_violations": [
+        {
+          "factor_name": "Adverse Event (AE) / Serious Adverse Event (SAE)",
+          "field": "critical_process",
+          "detail": "Ground truth marks critical_process as empty; generator supplied content."
+        },
+        {
+          "factor_name": "Data Integrity and Reliability of Trial Results",
+          "field": "critical_data",
+          "detail": "Ground truth marks critical_data as empty; generator supplied content."
+        }
+      ],
+      "factor_name_only_mode": false,
+      "passed": false,
+      "skipped": false,
+      "benchmark_expects_zero_factors": false,
+      "factor_hallucination_candidates": []
+    },
+    "m4_hallucination_detection": {
+      "provenance_defect_count": 41,
+      "traceability_flag_count": 41,
+      "semantic_hallucination_count": 0,
+      "hallucinations_found": 41,
+      "flagged_fields": [
+        {
+          "field_path": "risks_monitored[0] ('Investigator / Staff Conduct').usdm_drivers[0]",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "2: Risk factors for progression to severe disease based on age brackets",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[0] ('Investigator / Staff Conduct').associated_causes[0].usdm_trigger",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "2: Risk factors for progression to severe disease based on age brackets",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[2] ('Participant / Caregiver Trial Conduct').usdm_drivers[0]",
+          "value": {
+            "entity": "ComplexitySignal",
+            "signal": "epro_instrument_count=8",
+            "usdm_id": "N/A"
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'ComplexitySignal' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[2] ('Participant / Caregiver Trial Conduct').usdm_drivers[1]",
+          "value": {
+            "entity": "Study Intervention",
+            "signal": "Ibuzatrelvir 600 mg orally twice daily for 5 days",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Study Intervention' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[2] ('Participant / Caregiver Trial Conduct').associated_causes[2].usdm_trigger",
+          "value": {
+            "entity": "Study Intervention",
+            "signal": "Ibuzatrelvir 600 mg orally twice daily for 5 days",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Study Intervention' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[3] ('Participant Safety').usdm_drivers[0]",
+          "value": {
+            "entity": "Population",
+            "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[3] ('Participant Safety').associated_causes[0].usdm_trigger",
+          "value": {
+            "entity": "Population",
+            "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[4] ('Protocol Compliance').usdm_drivers[0]",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[4] ('Protocol Compliance').associated_causes[0].usdm_trigger",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[5] ('Sample Management').usdm_drivers[0]",
+          "value": {
+            "entity": "ComplexitySignal",
+            "signal": "has_pk=true",
+            "usdm_id": "N/A"
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'ComplexitySignal' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[6] ('Timelines / Resources').usdm_drivers[0]",
+          "value": {
+            "entity": "Population",
+            "signal": "Planned enrollment target: 2330",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[6] ('Timelines / Resources').associated_causes[0].usdm_trigger",
+          "value": {
+            "entity": "Population",
+            "signal": "Planned enrollment target: 2330",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[7] ('Enrollment Criteria').usdm_drivers[1]",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "2: Risk factors for progression to severe disease based on age brackets",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[7] ('Enrollment Criteria').usdm_drivers[2]",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[7] ('Enrollment Criteria').associated_causes[2].usdm_trigger",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "2: Risk factors for progression to severe disease based on age brackets",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[7] ('Enrollment Criteria').associated_causes[3].usdm_trigger",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[8] ('Informed Consent').usdm_drivers[0]",
+          "value": {
+            "entity": "Population",
+            "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[8] ('Informed Consent').associated_causes[0].usdm_trigger",
+          "value": {
+            "entity": "Population",
+            "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "vendor_risks[0] ('Sample Management').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[0] ('Sample Management').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "vendor_risks[1] ('Data / Data Reliability').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[1] ('Data / Data Reliability').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "vendor_risks[2] ('ICH Compliance').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[2] ('ICH Compliance').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "vendor_risks[3] ('Data Privacy').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[3] ('Data Privacy').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "vendor_risks[4] ('Payments').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[4] ('Payments').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "vendor_risks[5] ('Information Security / IP').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[5] ('Information Security / IP').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "vendor_risks[6] ('Participant / Caregiver Trial Conduct').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[6] ('Participant / Caregiver Trial Conduct').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "study_site_risks[0] ('Investigator / Staff Conduct').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "study_site_risks[0] ('Investigator / Staff Conduct').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "study_site_risks[1] ('Investigator / Staff Conduct').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "study_site_risks[1] ('Investigator / Staff Conduct').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "study_site_risks[2] ('Protocol Compliance').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "study_site_risks[2] ('Protocol Compliance').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "critical_factors[1] ('Adverse Event (AE) / Serious Adverse Event (SAE)').usdm_sources.critical_process[0]",
+          "value": {
+            "entity": "NarrativeSection",
+            "signal": "Potential Cases of Acute Kidney Injury",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'NarrativeSection' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "critical_factors[2] ('Data Integrity and Reliability of Trial Results').usdm_sources.critical_data[1]",
+          "value": {
+            "entity": "ComplexitySignal",
+            "signal": "8 ePRO instruments",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'ComplexitySignal' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "critical_factors[2] ('Data Integrity and Reliability of Trial Results').usdm_sources.critical_process[0]",
+          "value": {
+            "entity": "StudyDesign",
+            "signal": "DOUBLE BLIND",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'StudyDesign' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        }
+      ],
+      "traceability_flags": [
+        {
+          "field_path": "risks_monitored[0] ('Investigator / Staff Conduct').usdm_drivers[0]",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "2: Risk factors for progression to severe disease based on age brackets",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[0] ('Investigator / Staff Conduct').associated_causes[0].usdm_trigger",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "2: Risk factors for progression to severe disease based on age brackets",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[2] ('Participant / Caregiver Trial Conduct').usdm_drivers[0]",
+          "value": {
+            "entity": "ComplexitySignal",
+            "signal": "epro_instrument_count=8",
+            "usdm_id": "N/A"
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'ComplexitySignal' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[2] ('Participant / Caregiver Trial Conduct').usdm_drivers[1]",
+          "value": {
+            "entity": "Study Intervention",
+            "signal": "Ibuzatrelvir 600 mg orally twice daily for 5 days",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Study Intervention' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[2] ('Participant / Caregiver Trial Conduct').associated_causes[2].usdm_trigger",
+          "value": {
+            "entity": "Study Intervention",
+            "signal": "Ibuzatrelvir 600 mg orally twice daily for 5 days",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Study Intervention' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[3] ('Participant Safety').usdm_drivers[0]",
+          "value": {
+            "entity": "Population",
+            "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[3] ('Participant Safety').associated_causes[0].usdm_trigger",
+          "value": {
+            "entity": "Population",
+            "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[4] ('Protocol Compliance').usdm_drivers[0]",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[4] ('Protocol Compliance').associated_causes[0].usdm_trigger",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[5] ('Sample Management').usdm_drivers[0]",
+          "value": {
+            "entity": "ComplexitySignal",
+            "signal": "has_pk=true",
+            "usdm_id": "N/A"
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'ComplexitySignal' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[6] ('Timelines / Resources').usdm_drivers[0]",
+          "value": {
+            "entity": "Population",
+            "signal": "Planned enrollment target: 2330",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[6] ('Timelines / Resources').associated_causes[0].usdm_trigger",
+          "value": {
+            "entity": "Population",
+            "signal": "Planned enrollment target: 2330",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[7] ('Enrollment Criteria').usdm_drivers[1]",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "2: Risk factors for progression to severe disease based on age brackets",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[7] ('Enrollment Criteria').usdm_drivers[2]",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[7] ('Enrollment Criteria').associated_causes[2].usdm_trigger",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "2: Risk factors for progression to severe disease based on age brackets",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[7] ('Enrollment Criteria').associated_causes[3].usdm_trigger",
+          "value": {
+            "entity": "Eligibility Criterion",
+            "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[8] ('Informed Consent').usdm_drivers[0]",
+          "value": {
+            "entity": "Population",
+            "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "risks_monitored[8] ('Informed Consent').associated_causes[0].usdm_trigger",
+          "value": {
+            "entity": "Population",
+            "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "vendor_risks[0] ('Sample Management').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[0] ('Sample Management').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "vendor_risks[1] ('Data / Data Reliability').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[1] ('Data / Data Reliability').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "vendor_risks[2] ('ICH Compliance').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[2] ('ICH Compliance').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "vendor_risks[3] ('Data Privacy').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[3] ('Data Privacy').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "vendor_risks[4] ('Payments').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[4] ('Payments').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "vendor_risks[5] ('Information Security / IP').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[5] ('Information Security / IP').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "vendor_risks[6] ('Participant / Caregiver Trial Conduct').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "vendor_risks[6] ('Participant / Caregiver Trial Conduct').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "study_site_risks[0] ('Investigator / Staff Conduct').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "study_site_risks[0] ('Investigator / Staff Conduct').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "study_site_risks[1] ('Investigator / Staff Conduct').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "study_site_risks[1] ('Investigator / Staff Conduct').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "study_site_risks[2] ('Protocol Compliance').intelligence.benchmark_source",
+          "value": null,
+          "rule": "intelligence.benchmark_source must be non-null and non-empty"
+        },
+        {
+          "field_path": "study_site_risks[2] ('Protocol Compliance').usdm_drivers",
+          "value": null,
+          "rule": "usdm_drivers must be a non-empty list"
+        },
+        {
+          "field_path": "critical_factors[1] ('Adverse Event (AE) / Serious Adverse Event (SAE)').usdm_sources.critical_process[0]",
+          "value": {
+            "entity": "NarrativeSection",
+            "signal": "Potential Cases of Acute Kidney Injury",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'NarrativeSection' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "critical_factors[2] ('Data Integrity and Reliability of Trial Results').usdm_sources.critical_data[1]",
+          "value": {
+            "entity": "ComplexitySignal",
+            "signal": "8 ePRO instruments",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'ComplexitySignal' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        },
+        {
+          "field_path": "critical_factors[2] ('Data Integrity and Reliability of Trial Results').usdm_sources.critical_process[0]",
+          "value": {
+            "entity": "StudyDesign",
+            "signal": "DOUBLE BLIND",
+            "usdm_id": ""
+          },
+          "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+          "trace_status": "unresolved",
+          "matched_node_id": null,
+          "candidates": [],
+          "reason": "Claimed instanceType 'StudyDesign' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+        }
+      ],
+      "out_of_scope_not_penalized": [],
+      "llm_oos_meta": {
+        "enabled": true,
+        "llm_checked": 21,
+        "excluded_count": 0
+      },
+      "passed": false,
+      "risk_existence_check": {
+        "gt_risk_exists": true,
+        "generated_risk_count": 20,
+        "passed": true
+      },
+      "cf_existence_check": {
+        "gt_cf_exists": true,
+        "generated_cf_count": 5,
+        "passed": true
+      },
+      "note": "M4 counts unresolved provenance/schema traceability flags per risk field, not confirmed semantic hallucinations. The legacy hallucinations_found field is kept for compatibility and equals traceability_flag_count. Use semantic_hallucination_count (from M1) for generated risks with no GT match."
+    }
+  },
+  "targets": {
+    "m1_risk_name_recall": 0.85,
+    "m2_rpn_tier_accuracy": 0.9,
+    "m3_critical_factor_match": 0.8,
+    "m4_hallucinations": 0.0
+  },
+  "near_misses": [],
+  "hierarchy_verification": {
+    "note": "IRMS-style layout: domains (Study / Vendor / Study Site / Other) contain risks; each risk lists controls. M1 pairs risks within domain when domains are present; this block compares benchmark control_count to len(controls) per matched pair.",
+    "by_domain": {
+      "ground_truth_risk_rows": {
+        "study risks": 10,
+        "vendor risks": 7,
+        "study site risks": 3
+      },
+      "generated_risk_rows": {
+        "study risks": 10,
+        "vendor risks": 7,
+        "study site risks": 3
+      },
+      "m1_matched_pairs": {
+        "study risks": 10,
+        "vendor risks": 7,
+        "study site risks": 3
+      }
+    },
+    "per_risk_control_alignment": [
+      {
+        "gt_risk_id": "SR-03125",
+        "gt_risk_name": "Data / Data Reliability",
+        "gt_domain": "study risks",
+        "gt_control_count": 2,
+        "generated_control_count": 2,
+        "control_count_match": true
+      },
+      {
+        "gt_risk_id": "SR-03128",
+        "gt_risk_name": "Investigator / Staff Conduct",
+        "gt_domain": "study risks",
+        "gt_control_count": 0,
+        "generated_control_count": 2,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "SR-03123",
+        "gt_risk_name": "AE / SAE Management",
+        "gt_domain": "study risks",
+        "gt_control_count": 0,
+        "generated_control_count": 3,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "SR-03131",
+        "gt_risk_name": "Participant / Caregiver Trial Conduct",
+        "gt_domain": "study risks",
+        "gt_control_count": 0,
+        "generated_control_count": 3,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "SR-03132",
+        "gt_risk_name": "Participant Safety",
+        "gt_domain": "study risks",
+        "gt_control_count": 0,
+        "generated_control_count": 2,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "SR-03133",
+        "gt_risk_name": "Protocol Compliance",
+        "gt_domain": "study risks",
+        "gt_control_count": 2,
+        "generated_control_count": 2,
+        "control_count_match": true
+      },
+      {
+        "gt_risk_id": "SR-03134",
+        "gt_risk_name": "Sample Management",
+        "gt_domain": "study risks",
+        "gt_control_count": 0,
+        "generated_control_count": 2,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "SR-03135",
+        "gt_risk_name": "Timelines / Resources",
+        "gt_domain": "study risks",
+        "gt_control_count": 0,
+        "generated_control_count": 2,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "SR-03126",
+        "gt_risk_name": "Enrollment Criteria",
+        "gt_domain": "study risks",
+        "gt_control_count": 0,
+        "generated_control_count": 3,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "SR-03127",
+        "gt_risk_name": "Informed Consent",
+        "gt_domain": "study risks",
+        "gt_control_count": 0,
+        "generated_control_count": 2,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "VR-00113",
+        "gt_risk_name": "Sample Management",
+        "gt_domain": "vendor risks",
+        "gt_control_count": 1,
+        "generated_control_count": 0,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "VR-00009",
+        "gt_risk_name": "Data / Data Reliability",
+        "gt_domain": "vendor risks",
+        "gt_control_count": 2,
+        "generated_control_count": 0,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "VR-00400",
+        "gt_risk_name": "ICH Compliance",
+        "gt_domain": "vendor risks",
+        "gt_control_count": 2,
+        "generated_control_count": 0,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "VR-05777",
+        "gt_risk_name": "Data Privacy",
+        "gt_domain": "vendor risks",
+        "gt_control_count": 2,
+        "generated_control_count": 0,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "VR-07019",
+        "gt_risk_name": "Payments",
+        "gt_domain": "vendor risks",
+        "gt_control_count": 1,
+        "generated_control_count": 0,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "VR-00008",
+        "gt_risk_name": "Information Security / IP",
+        "gt_domain": "vendor risks",
+        "gt_control_count": 1,
+        "generated_control_count": 0,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "VR-00007",
+        "gt_risk_name": "Participant / Caregiver Trial Conduct",
+        "gt_domain": "vendor risks",
+        "gt_control_count": 1,
+        "generated_control_count": 0,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "SSR-06985",
+        "gt_risk_name": "Investigator / Staff Conduct",
+        "gt_domain": "study site risks",
+        "gt_control_count": 1,
+        "generated_control_count": 0,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "SSR-07037",
+        "gt_risk_name": "Investigator / Staff Conduct",
+        "gt_domain": "study site risks",
+        "gt_control_count": 1,
+        "generated_control_count": 0,
+        "control_count_match": false
+      },
+      {
+        "gt_risk_id": "SSR-07504",
+        "gt_risk_name": "Protocol Compliance",
+        "gt_domain": "study site risks",
+        "gt_control_count": 1,
+        "generated_control_count": 0,
+        "control_count_match": false
+      }
+    ],
+    "control_count_match_rate": 0.1,
+    "pairs_with_gt_control_count": 20
+  },
+  "metadata_validation": {
+    "passed": false,
+    "issues": [
+      {
+        "code": "risks_above_196_mismatch",
+        "message": "risk_profile_summary.risks_above_196 is 1 but 4 risks have RPN > 196."
+      }
+    ],
+    "actual_total_risks": 20,
+    "actual_risks_above_196": 4
+  },
+  "hallucination_report": {
+    "study_id": "C5091017",
+    "provenance_defect_count": 41,
+    "traceability_flag_count": 41,
+    "semantic_hallucination_count": 0,
+    "hallucinations_found": 41,
+    "flagged_fields": [
+      {
+        "field_path": "risks_monitored[0] ('Investigator / Staff Conduct').usdm_drivers[0]",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "2: Risk factors for progression to severe disease based on age brackets",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[0] ('Investigator / Staff Conduct').associated_causes[0].usdm_trigger",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "2: Risk factors for progression to severe disease based on age brackets",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[2] ('Participant / Caregiver Trial Conduct').usdm_drivers[0]",
+        "value": {
+          "entity": "ComplexitySignal",
+          "signal": "epro_instrument_count=8",
+          "usdm_id": "N/A"
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'ComplexitySignal' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[2] ('Participant / Caregiver Trial Conduct').usdm_drivers[1]",
+        "value": {
+          "entity": "Study Intervention",
+          "signal": "Ibuzatrelvir 600 mg orally twice daily for 5 days",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Study Intervention' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[2] ('Participant / Caregiver Trial Conduct').associated_causes[2].usdm_trigger",
+        "value": {
+          "entity": "Study Intervention",
+          "signal": "Ibuzatrelvir 600 mg orally twice daily for 5 days",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Study Intervention' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[3] ('Participant Safety').usdm_drivers[0]",
+        "value": {
+          "entity": "Population",
+          "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[3] ('Participant Safety').associated_causes[0].usdm_trigger",
+        "value": {
+          "entity": "Population",
+          "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[4] ('Protocol Compliance').usdm_drivers[0]",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[4] ('Protocol Compliance').associated_causes[0].usdm_trigger",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[5] ('Sample Management').usdm_drivers[0]",
+        "value": {
+          "entity": "ComplexitySignal",
+          "signal": "has_pk=true",
+          "usdm_id": "N/A"
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'ComplexitySignal' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[6] ('Timelines / Resources').usdm_drivers[0]",
+        "value": {
+          "entity": "Population",
+          "signal": "Planned enrollment target: 2330",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[6] ('Timelines / Resources').associated_causes[0].usdm_trigger",
+        "value": {
+          "entity": "Population",
+          "signal": "Planned enrollment target: 2330",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[7] ('Enrollment Criteria').usdm_drivers[1]",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "2: Risk factors for progression to severe disease based on age brackets",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[7] ('Enrollment Criteria').usdm_drivers[2]",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[7] ('Enrollment Criteria').associated_causes[2].usdm_trigger",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "2: Risk factors for progression to severe disease based on age brackets",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[7] ('Enrollment Criteria').associated_causes[3].usdm_trigger",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[8] ('Informed Consent').usdm_drivers[0]",
+        "value": {
+          "entity": "Population",
+          "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[8] ('Informed Consent').associated_causes[0].usdm_trigger",
+        "value": {
+          "entity": "Population",
+          "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "vendor_risks[0] ('Sample Management').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[0] ('Sample Management').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "vendor_risks[1] ('Data / Data Reliability').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[1] ('Data / Data Reliability').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "vendor_risks[2] ('ICH Compliance').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[2] ('ICH Compliance').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "vendor_risks[3] ('Data Privacy').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[3] ('Data Privacy').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "vendor_risks[4] ('Payments').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[4] ('Payments').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "vendor_risks[5] ('Information Security / IP').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[5] ('Information Security / IP').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "vendor_risks[6] ('Participant / Caregiver Trial Conduct').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[6] ('Participant / Caregiver Trial Conduct').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "study_site_risks[0] ('Investigator / Staff Conduct').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "study_site_risks[0] ('Investigator / Staff Conduct').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "study_site_risks[1] ('Investigator / Staff Conduct').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "study_site_risks[1] ('Investigator / Staff Conduct').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "study_site_risks[2] ('Protocol Compliance').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "study_site_risks[2] ('Protocol Compliance').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "critical_factors[1] ('Adverse Event (AE) / Serious Adverse Event (SAE)').usdm_sources.critical_process[0]",
+        "value": {
+          "entity": "NarrativeSection",
+          "signal": "Potential Cases of Acute Kidney Injury",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'NarrativeSection' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "critical_factors[2] ('Data Integrity and Reliability of Trial Results').usdm_sources.critical_data[1]",
+        "value": {
+          "entity": "ComplexitySignal",
+          "signal": "8 ePRO instruments",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'ComplexitySignal' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "critical_factors[2] ('Data Integrity and Reliability of Trial Results').usdm_sources.critical_process[0]",
+        "value": {
+          "entity": "StudyDesign",
+          "signal": "DOUBLE BLIND",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'StudyDesign' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      }
+    ],
+    "traceability_flags": [
+      {
+        "field_path": "risks_monitored[0] ('Investigator / Staff Conduct').usdm_drivers[0]",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "2: Risk factors for progression to severe disease based on age brackets",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[0] ('Investigator / Staff Conduct').associated_causes[0].usdm_trigger",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "2: Risk factors for progression to severe disease based on age brackets",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[2] ('Participant / Caregiver Trial Conduct').usdm_drivers[0]",
+        "value": {
+          "entity": "ComplexitySignal",
+          "signal": "epro_instrument_count=8",
+          "usdm_id": "N/A"
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'ComplexitySignal' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[2] ('Participant / Caregiver Trial Conduct').usdm_drivers[1]",
+        "value": {
+          "entity": "Study Intervention",
+          "signal": "Ibuzatrelvir 600 mg orally twice daily for 5 days",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Study Intervention' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[2] ('Participant / Caregiver Trial Conduct').associated_causes[2].usdm_trigger",
+        "value": {
+          "entity": "Study Intervention",
+          "signal": "Ibuzatrelvir 600 mg orally twice daily for 5 days",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Study Intervention' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[3] ('Participant Safety').usdm_drivers[0]",
+        "value": {
+          "entity": "Population",
+          "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[3] ('Participant Safety').associated_causes[0].usdm_trigger",
+        "value": {
+          "entity": "Population",
+          "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[4] ('Protocol Compliance').usdm_drivers[0]",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[4] ('Protocol Compliance').associated_causes[0].usdm_trigger",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[5] ('Sample Management').usdm_drivers[0]",
+        "value": {
+          "entity": "ComplexitySignal",
+          "signal": "has_pk=true",
+          "usdm_id": "N/A"
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'ComplexitySignal' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[6] ('Timelines / Resources').usdm_drivers[0]",
+        "value": {
+          "entity": "Population",
+          "signal": "Planned enrollment target: 2330",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[6] ('Timelines / Resources').associated_causes[0].usdm_trigger",
+        "value": {
+          "entity": "Population",
+          "signal": "Planned enrollment target: 2330",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[7] ('Enrollment Criteria').usdm_drivers[1]",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "2: Risk factors for progression to severe disease based on age brackets",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[7] ('Enrollment Criteria').usdm_drivers[2]",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[7] ('Enrollment Criteria').associated_causes[2].usdm_trigger",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "2: Risk factors for progression to severe disease based on age brackets",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[7] ('Enrollment Criteria').associated_causes[3].usdm_trigger",
+        "value": {
+          "entity": "Eligibility Criterion",
+          "signal": "3: Confirmed SARS-CoV-2 within 1 day, symptom onset within 5 days, and at",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Eligibility Criterion' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[8] ('Informed Consent').usdm_drivers[0]",
+        "value": {
+          "entity": "Population",
+          "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "risks_monitored[8] ('Informed Consent').associated_causes[0].usdm_trigger",
+        "value": {
+          "entity": "Population",
+          "signal": "This study will recruit symptomatic, non-hospitalized COVID-19 infected adults and adolescents who are at risk of progression to severe disease. Risk factors may include advanced age, obesity, cigarette smoking, diabetes, moderate immunosuppression, chronic lung disease and cardiovascular disease, among others. Participants will also need to be unable to receive nirmatrelvir/ritonavir as SoC for reasons such as intolerance, drug interactions, unavailability or refusal based on concerns around its safety and tolerability profile. Patients with uncontrolled medical conditions, severe immunosuppression, or severe COVID-19 that requires hospitalization at presentation will not be able to participate in this trial.",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'Population' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "vendor_risks[0] ('Sample Management').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[0] ('Sample Management').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "vendor_risks[1] ('Data / Data Reliability').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[1] ('Data / Data Reliability').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "vendor_risks[2] ('ICH Compliance').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[2] ('ICH Compliance').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "vendor_risks[3] ('Data Privacy').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[3] ('Data Privacy').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "vendor_risks[4] ('Payments').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[4] ('Payments').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "vendor_risks[5] ('Information Security / IP').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[5] ('Information Security / IP').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "vendor_risks[6] ('Participant / Caregiver Trial Conduct').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "vendor_risks[6] ('Participant / Caregiver Trial Conduct').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "study_site_risks[0] ('Investigator / Staff Conduct').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "study_site_risks[0] ('Investigator / Staff Conduct').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "study_site_risks[1] ('Investigator / Staff Conduct').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "study_site_risks[1] ('Investigator / Staff Conduct').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "study_site_risks[2] ('Protocol Compliance').intelligence.benchmark_source",
+        "value": null,
+        "rule": "intelligence.benchmark_source must be non-null and non-empty"
+      },
+      {
+        "field_path": "study_site_risks[2] ('Protocol Compliance').usdm_drivers",
+        "value": null,
+        "rule": "usdm_drivers must be a non-empty list"
+      },
+      {
+        "field_path": "critical_factors[1] ('Adverse Event (AE) / Serious Adverse Event (SAE)').usdm_sources.critical_process[0]",
+        "value": {
+          "entity": "NarrativeSection",
+          "signal": "Potential Cases of Acute Kidney Injury",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'NarrativeSection' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "critical_factors[2] ('Data Integrity and Reliability of Trial Results').usdm_sources.critical_data[1]",
+        "value": {
+          "entity": "ComplexitySignal",
+          "signal": "8 ePRO instruments",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'ComplexitySignal' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      },
+      {
+        "field_path": "critical_factors[2] ('Data Integrity and Reliability of Trial Results').usdm_sources.critical_process[0]",
+        "value": {
+          "entity": "StudyDesign",
+          "signal": "DOUBLE BLIND",
+          "usdm_id": ""
+        },
+        "rule": "Reference must resolve to a USDM node by id or (instanceType, name) match",
+        "trace_status": "unresolved",
+        "matched_node_id": null,
+        "candidates": [],
+        "reason": "Claimed instanceType 'StudyDesign' not present in USDM (available: Abbreviation, Activity, Address, AdministrableProduct, Administration, AliasCode, BiomedicalConcept, Code…)."
+      }
+    ],
+    "out_of_scope_not_penalized": [],
+    "pass": false,
+    "note": "M4 counts unresolved provenance/schema traceability flags per risk field, not confirmed semantic hallucinations. The legacy hallucinations_found field is kept for compatibility and equals traceability_flag_count. Use semantic_hallucination_count (from M1) for generated risks with no GT match."
+  },
+  "gt_risk_exists": true,
+  "gt_cf_exists": true,
+  "usdm_trace": {
+    "usdm_loaded": true,
+    "usdm_path": "C:\\Users\\jahna\\Downloads\\new_C509017\\USDM_C5091017_final.json",
+    "usdm_node_count": 1319,
+    "usdm_instance_types": [
+      "Abbreviation",
+      "Activity",
+      "Address",
+      "AdministrableProduct",
+      "Administration",
+      "AliasCode",
+      "BiomedicalConcept",
+      "Code",
+      "CommentAnnotation",
+      "DocumentContentReference",
+      "Duration",
+      "EligibilityCriterion",
+      "Encounter",
+      "Endpoint",
+      "Estimand",
+      "ExtensionAttribute",
+      "ExtensionClass",
+      "GeographicScope",
+      "GovernanceDate",
+      "Indication",
+      "Ingredient",
+      "IntercurrentEvent",
+      "InterventionalStudyDesign",
+      "NarrativeContent",
+      "Objective",
+      "Organization",
+      "Quantity",
+      "Range",
+      "ScheduleTimeline",
+      "ScheduleTimelineExit",
+      "ScheduledActivityInstance",
+      "Study",
+      "StudyAmendment",
+      "StudyAmendmentReason",
+      "StudyArm",
+      "StudyCell",
+      "StudyChange",
+      "StudyDesignPopulation",
+      "StudyElement",
+      "StudyEpoch"
+    ]
+  },
+  "eval_metadata": {
+    "study_id": "C5091017",
+    "scenario": 1,
+    "eval_date": "2026-05-06",
+    "eval_timestamp_utc": "2026-05-06T21:05:59.669847Z",
+    "config_version": "1.0",
+    "config_file": "risk_profile_eval_config.yaml",
+    "generator_version": "1.0",
+    "ta": "INFECTIOUS",
+    "phase": "PHASE III",
+    "ground_truth_sources": [
+      "risk_profile_ground_truth.csv",
+      "critical_factors_ground_truth.csv"
+    ],
+    "generator_json_reference": "C5091017_RiskProfile.json",
+    "generator_json_path": "C:\\Users\\jahna\\Downloads\\new_C509017\\RISK_PROFILE\\C5091017_RiskProfile.json",
+    "risk_ground_truth_csv_path": "C:\\Users\\jahna\\OneDrive\\Desktop\\Pfizer\\risk_profile_eval\\data\\risk_profile_ground_truth.csv",
+    "critical_factors_ground_truth_csv_path": "C:\\Users\\jahna\\OneDrive\\Desktop\\Pfizer\\risk_profile_eval\\data\\critical_factors_ground_truth.csv",
+    "out_of_scope_exclusions": [
+      "general_information.risk_manager",
+      "general_information.approved_by",
+      "general_information.approval_date",
+      "risk_id"
+    ],
+    "usdm_protocol_json_path": "C:\\Users\\jahna\\Downloads\\new_C509017\\USDM_C5091017_final.json"
+  }
+}

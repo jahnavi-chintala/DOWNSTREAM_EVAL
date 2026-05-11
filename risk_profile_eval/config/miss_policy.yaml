@@ -1,0 +1,35 @@
+# Risk Profile — Field Provenance Policy (Scenario 1 miss explanation)
+#
+# Class meanings: see ppid_py/miss_policy.yaml for the full definitions.
+
+product: RISK_PROFILE
+default_class: INFERRED
+default_anchors: [Study, StudyDesign]
+
+# Risk rows are matched by `risk_name`. A missed risk means GT had a risk
+# that the generator did not emit.
+fields:
+  risk_name:
+    class: INFERRED
+    anchors: [Endpoint, StudyPopulation, Assessment, Procedure]
+  risk_category:
+    class: STRUCTURAL
+    required_type: Endpoint
+  drivers:
+    class: DIRECT
+    required_type: Endpoint        # resolved per-driver using ref.entity
+  associated_cause:
+    class: DIRECT
+    required_type: Endpoint
+  mitigation_plan:
+    class: INFERRED
+    anchors: [Procedure, Endpoint]
+  rpn:
+    class: COMPUTED
+  likelihood:
+    class: COMPUTED
+  severity:
+    class: COMPUTED
+  benchmark_source:
+    class: STRUCTURAL
+    required_type: Reference       # external doc ref; rarely present in USDM

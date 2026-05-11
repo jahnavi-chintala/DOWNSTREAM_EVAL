@@ -44,9 +44,9 @@ export const PRODUCTS: Record<ProductKey, ProductDef> = {
     key: "pipd",
     label: "PIPD",
     prefix: "/pipd",
-    tagline: "Protocol Impact & Patient Deviation evaluation.",
+    tagline: "Potential Important Protocol Deviations (PIPD).",
     description:
-      "Scenario-driven evaluation of the PIPD generator output. Reports signal verdicts, remediation quality and stakeholder-ready notes.",
+      "PIPD is the Potential Important Protocol Deviations deliverable. Evaluates the generator’s deviation register vs ground truth: M1–M6 metrics, signal verdicts (scenario 2), near-miss/semantic review, and stakeholder-ready reports.",
     metrics: "M1–M6 · signals · remediation notes",
     fields: [
       {

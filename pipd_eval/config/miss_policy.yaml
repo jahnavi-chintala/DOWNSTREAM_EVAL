@@ -1,0 +1,44 @@
+# PIPD — Field Provenance Policy (Scenario 1 miss explanation)
+#
+# Every GT field the scorer may mark as "missed" is declared here with one of:
+#   DIRECT     — field should be copied / lightly rephrased from a specific USDM
+#                node (type + text substring match is enforced).
+#   STRUCTURAL — field depends on the *existence* of a USDM class, but text is
+#                generator-produced (only type presence is enforced).
+#   INFERRED   — field is derived from one or more USDM anchors; no text match.
+#                USDM is blamed only if NONE of the anchor types exist.
+#   COMPUTED   — fully heuristic / editorial; no USDM expectation.
+#
+# Anything not listed falls through to `default_class`.
+
+product: PIPD
+default_class: INFERRED
+default_anchors: [Study, StudyDesign]
+
+# PIPD eval groups subcategories under 6 top-level categories:
+# 1: Eligibility, 2: Population, 3: Endpoints, 4: Intervention, 5: Design, 6: Other
+categories:
+  eligibility:
+    class: DIRECT
+    required_type: EligibilityCriterion
+    aliases: [inclusion, exclusion, inclusion_criteria, exclusion_criteria, criteria]
+  population:
+    class: DIRECT
+    required_type: StudyPopulation
+    aliases: [demographics, baseline]
+  endpoints:
+    class: DIRECT
+    required_type: Endpoint
+    aliases: [primary_endpoint, secondary_endpoint, exploratory_endpoint]
+  interventions:
+    class: DIRECT
+    required_type: StudyIntervention
+    aliases: [treatment, arm, dosing]
+  design:
+    class: STRUCTURAL
+    required_type: StudyDesign
+    aliases: [randomization, blinding, duration]
+  other:
+    class: INFERRED
+    anchors: [StudyObjective, Endpoint]
+    aliases: [rationale, justification, background, objective]

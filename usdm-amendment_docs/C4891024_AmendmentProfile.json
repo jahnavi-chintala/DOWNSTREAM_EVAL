@@ -1,0 +1,637 @@
+{
+  "instanceType": "AmendmentProfile",
+  "id": "ap-c4891024-001",
+  "studyId": "C4891024",
+  "studyTitle": "TACTIVE-U: An Interventional Safety and Efficacy Phase 1b/2, Open-Label Umbrella Study to Investigate Tolerability, PK, and Antitumor Activity of Vepdegestrant (ARV-471/PF-07850327), an Oral Proteolysis Targeting Chimera, in Combination with Other Anticancer Treatments in Participants Aged 18 and Older with ER+ Advanced or Metastatic Breast Cancer, Sub-Study C (ARV-471 in Combination with Samuraciclib)",
+  "therapeuticArea": "Oncology",
+  "phase": "Ph 1b",
+  "indication": "Participants with ER+/HER2- advanced/metastatic breast cancer (A/MBC)",
+  "investigationalProduct": "ARV-471",
+  "baseProtocolVersion": "Final Protocol Amendment 2",
+  "generatedDate": "2026-04-27",
+  "generatorVersion": "1.0.0",
+  "benchmarkSource": "amendment_benchmarks.yaml v1.0 - Oncology / Ph_III block (9 training studies, 31 amendments)",
+  "profileSummary": {
+    "predictedAmendmentCount": {
+      "min": 3,
+      "max": 3,
+      "basis": "Rounded from historical average 3.44 amendments per study across 9 training studies."
+    },
+    "dominantCategory": "Multiple",
+    "dominantCategoryRate": 0.84,
+    "regulatoryDrivenProbability": 0.65,
+    "safetyDrivenProbability": 0.13,
+    "avgPredictedChangesPerAmendment": 68,
+    "highRiskEntities": [
+      "StudyProcedure",
+      "StudyIntervention",
+      "StudyEndpoint"
+    ],
+    "overallConfidence": "Medium",
+    "confidenceBasis": "9 Oncology Ph III training studies provide directionally reliable patterns for this prediction.",
+    "scopeNote": "v1 predictions cover Global and major market country-specific changes (EU, China). Minor market country-specific changes remain out of scope."
+  },
+  "predictedAmendments": [
+    {
+      "amendmentNumber": 1,
+      "predictedTiming": "~6-12 months post first patient enrolled",
+      "predictedCategory": "Multiple",
+      "predictedRegulatoryDriven": true,
+      "predictedSafetyDriven": false,
+      "predictedRationale": "Historical Oncology Phase III amendments most frequently impact Eligibility Criteria, Study Intervention, and Study Procedures. This predicted amendment groups EU and global changes following the clarification patterns observed in the benchmark data.",
+      "confidence": "High",
+      "predictedChanges": [
+        {
+          "changeNumber": 1,
+          "usdmEntity": "EligibilityCriteria",
+          "protocolSection": "5.2",
+          "sectionTitle": "Exclusion Criteria",
+          "languagePattern": "Addition",
+          "originalText": "Participants in visceral crisis at risk of life-threatening complications in the short term. Participants with active bleeding, history of hemolytic anemia or marrow aplasia. Participants with newly diagnosed or symptomatic brain metastases. Refractory nausea and vomiting and other gastrointestinal (GI) conditions precluding adequate absorption of study interventions. History of any other malignancies within the past three years, except for (1) adequately treated basal or squamous cell carcinoma of the skin and (2) curatively treated in situ carcinoma of the cervix. 5.2. Exclusion Criteria 1. Participants in visceral crisis at risk of life-threatening complications in the short term, including participants with massive uncontrolled effusions (pleural, pericardial, and/or peritoneal), pulmonary lymphangitis, and liver involvement 50%.",
+          "proposedText": "Add an EU-specific exclusion criterion stating that participants with known hypersensitivity to ARV-471 or any excipient are not eligible for enrollment.",
+          "changeRationale": "Regulatory-driven EU eligibility clarifications are explicitly represented in the training data and are triggered when eligibility language is present in a benchmark block with high regulatory pressure.",
+          "confidence": "Medium",
+          "benchmarkBasis": "EU pattern triggered because regulatory_driven_rate=0.65 and eligibility criteria were extracted from the USDM. Direct training evidence is sourced from B7981028 Amendment 4.",
+          "scope": "EU",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "EligibilityCriteria",
+              "field": "exclusionCriteria",
+              "value": "Participants in visceral crisis at risk of life-threatening complications in the short term. Participants with active bleeding, history of hemolytic anemia or marrow aplasia. Participants with newly diagnosed or symptomatic brain metastases. Refractory nausea and vomiting and other gastrointestinal (GI) conditions precluding adequate absorption of study interventions. History of any other malignancies within the past three years, except for (1) adequately treated basal or squamous cell carcinoma of the skin and (2) curatively treated in situ carcinoma of the cervix. 5.2. Exclusion Criteria 1. Participants in visceral crisis at risk of life-threatening complications in the short term, including participants with massive uncontrolled effusions (pleural, pericardial, and/or peritoneal), pulmonary lymphangitis, and liver involvement 50%.",
+              "protocol_section": "5.2",
+              "section_title": "Exclusion Criteria",
+              "extraction_path": "versions[0].studyDesigns[0].eligibilityCriteria[?criterionType='Exclusion']"
+            },
+            "yaml_match": {
+              "benchmark_key": "Oncology.Ph_III.usdm_entity_rates.EligibilityCriteria",
+              "benchmark_value": 0.06,
+              "yaml_file": "amendment_benchmarks.yaml",
+              "yaml_version": "1.0"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "B7981028",
+                "amendment_number": 4,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Addition",
+                "match_strength": "Direct",
+                "overall_rationale": null,
+                "change_rationale": "To address a query from Regulatory Authorities (EU) and add a specific exclusion criterion regarding hypersensitivity to any component of the study drug.",
+                "original_text": "--",
+                "proposed_text": "Added Exclusion Criterion #15 Hypersensitivity to the active substance(s) or to any"
+              },
+              {
+                "study_folder": "C1071007",
+                "amendment_number": 2,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Addition",
+                "match_strength": "Direct",
+                "overall_rationale": null,
+                "change_rationale": "Avoid conflict with drugs recommended in infection prophylaxis guidance",
+                "original_text": "--",
+                "proposed_text": "Added HCV testing at screening To be consistent with exclusion criterion No.15"
+              }
+            ],
+            "corroborating_signals": [],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "amendment_count": 31,
+              "entity_rate": 0.06,
+              "pattern_rate": 0.1,
+              "confidence_interval_note": "n>=8 training studies - rates carry approximately +/-15% uncertainty.",
+              "corroboration_count": 0,
+              "corroboration_sources": []
+            }
+          }
+        },
+        {
+          "changeNumber": 2,
+          "usdmEntity": "StudyIntervention",
+          "protocolSection": "6.1",
+          "sectionTitle": "Study Intervention Administration",
+          "languagePattern": "Clarification",
+          "originalText": "ARV-471 will be administered as 100 mg tablets (dose level 100 mg or 200 mg QD) to participants. During the combination treatment period, participants will receive ARV-471 in combination with samuraciclib in 28-day cycles. In the DDI Assessment Cohort(s), participants will receive ARV-471 as monotherapy after samuraciclib monotherapy and before starting the 28-day cycle combination treatment period. ARV-471 will be administered orally, continuously on 28-day cycles according to the SoA. The participant should take ARV-471 in the morning with food, at approximately the same time. If a participant misses a day of treatment or vomits any time after taking a dose, the participant should not double-up, make up the dose, or make it up, but resume dosing on the next day of the dosing cycle as prescribed. If a participant inadvertently takes 1 extra dose during a single dosing day, the participant must inform the investigator; the investigator should contact the study medical monitor and closely monitor the participant for any AEs. Oral Route of Administration Once Daily 100 mg QD; 200 mg QD",
+          "proposedText": "ARV-471 will be administered as 100 mg tablets (dose level 100 mg or 200 mg QD) to participants. During the combination treatment period, participants will receive ARV-471 in combination with samuraciclib in 28-day cycles. In the DDI Assessment Cohort(s), participants will receive ARV-471 as monotherapy after samuraciclib monotherapy and before starting the 28-day cycle combination treatment period. ARV-471 will be administered orally, continuously on 28-day cycles according to the SoA. The participant should take ARV-471 in the morning with food, at approximately the same time. If a participant misses a day of treatment or vomits any time after taking a dose, the participant should not double-up, make up the dose, or make it up, but resume dosing on the next day of the dosing cycle as prescribed. If a participant inadvertently takes 1 extra dose during a single dosing day, the participant must inform the investigator; the investigator should contact the study medical monitor and closely monitor the participant for any AEs. Oral Route of Administration Once Daily 100 mg QD; 200 mg QD. Clarify route-specific administration steps, handling instructions, and participant counseling before dosing. Clarify fed or fasted conditions and the required timing of meals around dosing.",
+          "changeRationale": "Administration language is commonly refined after site activation to minimize avoidable dosing deviations.",
+          "confidence": "High",
+          "benchmarkBasis": "StudyIntervention rate 0.11 in benchmark block; dominant pattern Clarification. Generated with Tier 2 template logic using the extracted USDM wording.",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "StudyIntervention",
+              "field": "administrationInstructions",
+              "value": "ARV-471 will be administered as 100 mg tablets (dose level 100 mg or 200 mg QD) to participants. During the combination treatment period, participants will receive ARV-471 in combination with samuraciclib in 28-day cycles. In the DDI Assessment Cohort(s), participants will receive ARV-471 as monotherapy after samuraciclib monotherapy and before starting the 28-day cycle combination treatment period. ARV-471 will be administered orally, continuously on 28-day cycles according to the SoA. The participant should take ARV-471 in the morning with food, at approximately the same time. If a participant misses a day of treatment or vomits any time after taking a dose, the participant should not double-up, make up the dose, or make it up, but resume dosing on the next day of the dosing cycle as prescribed. If a participant inadvertently takes 1 extra dose during a single dosing day, the participant must inform the investigator; the investigator should contact the study medical monitor and closely monitor the participant for any AEs. Oral Route of Administration Once Daily 100 mg QD; 200 mg QD",
+              "protocol_section": "6.1",
+              "section_title": "Study Intervention Administration",
+              "extraction_path": "versions[0].studyInterventions[*].administrations[*]"
+            },
+            "yaml_match": {
+              "benchmark_key": "Oncology.Ph_III.usdm_entity_rates.StudyIntervention",
+              "benchmark_value": 0.11,
+              "yaml_file": "amendment_benchmarks.yaml",
+              "yaml_version": "1.0"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C2321014",
+                "amendment_number": 2,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct",
+                "overall_rationale": null,
+                "change_rationale": "Study Arm(s)",
+                "original_text": "--",
+                "proposed_text": "Study Arms and Duration: Physician’s choice: enzalutamide: Participants will receive enzalutamide 160 mg QD. Cycles are 28 days; and treatment will be administered until confirmed disease progression, unacceptable toxicity, withdrawal of consent, lost to follow-up, or study termination. Physician’s choice docetaxel: Participants will receive docetaxel at a dose of 75 mg/m2 IV every 21 days, for up to a maximum of 10 cycles. Docetaxel is given in combination with prednisone or prednisolone, 5 mg BID for 21 days, and premedication of oral dexamethasone 8 mg at 12 hours, 3 hours, and 1 hour (or IV dexamethasone per standard of care) before the docetaxel infusion. Treatment will be administered until confirmed disease progression, unacceptable toxicity, withdrawal of consent, or lost to follow-up or study termination."
+              },
+              {
+                "study_folder": "C1071006",
+                "amendment_number": 4,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct",
+                "overall_rationale": null,
+                "change_rationale": "--",
+                "original_text": "Prophylactic post-medication oral dexamethasone 4 mg (or equivalent) mustmay be administered after at least the first 3 doses of daratumumab, approximately 24 hours after daratumumab dosing. at the discretion of the investigator (see Darzalex-Faspro Prescribing Information).",
+                "proposed_text": "Prophylactic post-medication oral dexamethasone 4 mg (or equivalent) may be administered after at least the first 3 doses of daratumumab, approximately 24 hours after daratumumab dosing at the discretion of the investigator (see Darzalex-Faspro Prescribing Information)."
+              }
+            ],
+            "corroborating_signals": [],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "amendment_count": 31,
+              "entity_rate": 0.11,
+              "pattern_rate": 0.85,
+              "confidence_interval_note": "n>=8 training studies - rates carry approximately +/-15% uncertainty.",
+              "corroboration_count": 0,
+              "corroboration_sources": []
+            }
+          }
+        },
+        {
+          "changeNumber": 3,
+          "usdmEntity": "StudyProcedure",
+          "protocolSection": "8.1",
+          "sectionTitle": "Schedule of Activities",
+          "languagePattern": "Clarification",
+          "originalText": "Combination Treatment Phase 1 Cycle = 28 days Visits on Day 1 of every 2 cycles (1 cycle = 28 days). All assessments should be performed prior to study intervention administration, unless otherwise specified. Day 1 of every 2 cycles ±4d Post-Treatment Follow-up Follow up visit will be performed at least 28 days from last dose of study intervention OR prior to the initiation of any new anticancer therapy whichever comes first. The SAE reporting period is 28 days from last dose regardless of the initiation of a new anticancer therapy. At least 28 days from last dose of study intervention or prior to initiation of any new anticancer therapy, whichever comes first +7d",
+          "proposedText": "Combination Treatment Phase 1 Cycle = 28 days Visits on Day 1 of every 2 cycles (1 cycle = 28 days). All assessments should be performed prior to study intervention administration, unless otherwise specified. Day 1 of every 2 cycles ±4d Post-Treatment Follow-up Follow up visit will be performed at least 28 days from last dose of study intervention OR prior to the initiation of any new anticancer therapy whichever comes first. The SAE reporting period is 28 days from last dose regardless of the initiation of a new anticancer therapy. At least 28 days from last dose of study intervention or prior to initiation of any new anticancer therapy, whichever comes first +7d. Clarify which assessments may occur within the permitted visit windows and which procedures must remain on the nominal day.",
+          "changeRationale": "Visit window changes are among the most common procedural clarifications in the training set.",
+          "confidence": "High",
+          "benchmarkBasis": "StudyProcedure rate 0.63 in benchmark block; dominant pattern Clarification. Generated with Tier 2 template logic using the extracted USDM wording.",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "StudyProcedure",
+              "field": "visitWindow",
+              "value": "Combination Treatment Phase 1 Cycle = 28 days Visits on Day 1 of every 2 cycles (1 cycle = 28 days). All assessments should be performed prior to study intervention administration, unless otherwise specified. Day 1 of every 2 cycles ±4d Post-Treatment Follow-up Follow up visit will be performed at least 28 days from last dose of study intervention OR prior to the initiation of any new anticancer therapy whichever comes first. The SAE reporting period is 28 days from last dose regardless of the initiation of a new anticancer therapy. At least 28 days from last dose of study intervention or prior to initiation of any new anticancer therapy, whichever comes first +7d",
+              "protocol_section": "8.1",
+              "section_title": "Schedule of Activities",
+              "extraction_path": "versions[0].studyDesigns[0].scheduleTimelines[*].timings[*]"
+            },
+            "yaml_match": {
+              "benchmark_key": "Oncology.Ph_III.usdm_entity_rates.StudyProcedure",
+              "benchmark_value": 0.63,
+              "yaml_file": "amendment_benchmarks.yaml",
+              "yaml_version": "1.0"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C4221016",
+                "amendment_number": 4,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct",
+                "overall_rationale": null,
+                "change_rationale": "Q6W After ~24 Months (after completion of pembro)",
+                "original_text": "--",
+                "proposed_text": "Visit Identifier Abbreviations used in this table may be found in Appendix 13 Screen- ing Treatment Period Post-Treatment Period Notes/ Protocol Section Screen- ing Cycle 1 Cycle 2 Subsequent Cycles Q12W EOT Follow-up Q3W First ~24 Months (while receiving pembro) Surviv al Follow -up (see Section 8.1.3) Day -28 to -1 Day 8 Day 15 Visit Window ±1D ±1D ± 3D ±1D ±1D ± 3D ± 7D ± 7D ± 7D + 7D + 7D ± 14D Administrative Procedures Informed Consent"
+              },
+              {
+                "study_folder": "C2321014",
+                "amendment_number": 3,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct",
+                "overall_rationale": null,
+                "change_rationale": "Section 1.3 Schedule of Activities, Table 2",
+                "original_text": "--",
+                "proposed_text": "the reference date for all time points Increased visit window for C4 D1 and beyond to +/- 3 days for Arm B participants receiving docetaxel Provides more flexibility to participants and aligns with the visit window in Cycles 1 to 3."
+              }
+            ],
+            "corroborating_signals": [],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "amendment_count": 31,
+              "entity_rate": 0.63,
+              "pattern_rate": 0.85,
+              "confidence_interval_note": "n>=8 training studies - rates carry approximately +/-15% uncertainty.",
+              "corroboration_count": 0,
+              "corroboration_sources": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "amendmentNumber": 2,
+      "predictedTiming": "~12-18 months post first patient enrolled",
+      "predictedCategory": "Multiple",
+      "predictedRegulatoryDriven": true,
+      "predictedSafetyDriven": true,
+      "predictedRationale": "Historical Oncology Phase III amendments frequently address Eligibility Criteria, Safety Assessments, and Study Intervention. This predicted amendment groups global changes following the clarification patterns observed in the benchmark data, with an emphasis on safety and regulatory expectations.",
+      "confidence": "Medium",
+      "predictedChanges": [
+        {
+          "changeNumber": 1,
+          "usdmEntity": "SafetyAssessment",
+          "protocolSection": "8.3",
+          "sectionTitle": "Study Assessments and Procedures",
+          "languagePattern": "Addition",
+          "originalText": "5.2. Exclusion Criteria 9. Any medical or psychiatric condition including recent (within the past year) or active suicidal ideation/behavior or laboratory abnormality that may increase the risk of study participation or, in the investigator’s judgment, make the participant inappropriate for the study or any social situations that would limit study compliance.",
+          "proposedText": "5.2. Exclusion Criteria 9. Any medical or psychiatric condition including recent (within the past year) or active suicidal ideation/behavior or laboratory abnormality that may increase the risk of study participation or, in the investigator’s judgment, make the participant inappropriate for the study or any social situations that would limit study compliance. Add standardized administration, escalation, and documentation requirements for positive responses, including same-day safety follow-up.",
+          "changeRationale": "Safety assessment language is often expanded when structured suicide risk monitoring is included in the protocol.",
+          "confidence": "Medium",
+          "benchmarkBasis": "SafetyAssessment rate 0.02 in benchmark block; dominant pattern Clarification. Generated with Tier 2 template logic using the extracted USDM wording.",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "SafetyAssessment",
+              "field": "cssrsSpecification",
+              "value": "5.2. Exclusion Criteria 9. Any medical or psychiatric condition including recent (within the past year) or active suicidal ideation/behavior or laboratory abnormality that may increase the risk of study participation or, in the investigator’s judgment, make the participant inappropriate for the study or any social situations that would limit study compliance.",
+              "protocol_section": "8.3",
+              "section_title": "Study Assessments and Procedures",
+              "extraction_path": "versions[0].narrativeContentItems[*].text"
+            },
+            "yaml_match": {
+              "benchmark_key": "Oncology.Ph_III.usdm_entity_rates.SafetyAssessment",
+              "benchmark_value": 0.02,
+              "yaml_file": "amendment_benchmarks.yaml",
+              "yaml_version": "1.0"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C2321003",
+                "amendment_number": 4,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct",
+                "overall_rationale": null,
+                "change_rationale": "--",
+                "original_text": "Medical Conditions: 1. Any medical or psychiatric condition including recent (within the past year) or active suicidal ideation/behavior or laboratory abnormality that may increase the risk of study participation or, in the investigator’s judgment, make the participant inappropriate for the study.",
+                "proposed_text": "Medical Conditions:"
+              },
+              {
+                "study_folder": "C4891001",
+                "amendment_number": 1,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Addition",
+                "match_strength": "Indirect",
+                "overall_rationale": null,
+                "change_rationale": "Table 1 and additional details related to pre- screening.",
+                "original_text": "--",
+                "proposed_text": "Section 8.2.1.4. Alternative Facilities for Tumor Assessment Section 8.3.3.1. Alternative Facilities for Electrocardiograms"
+              }
+            ],
+            "corroborating_signals": [],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "amendment_count": 31,
+              "entity_rate": 0.02,
+              "pattern_rate": 0.1,
+              "confidence_interval_note": "n>=8 training studies - rates carry approximately +/-15% uncertainty.",
+              "corroboration_count": 0,
+              "corroboration_sources": []
+            }
+          }
+        },
+        {
+          "changeNumber": 2,
+          "usdmEntity": "StudyIntervention",
+          "protocolSection": "6.1",
+          "sectionTitle": "Study Intervention Administration",
+          "languagePattern": "Clarification",
+          "originalText": "ARV-471 will be administered as 100 mg tablets (dose level 100 mg or 200 mg QD) to participants. During the combination treatment period, participants will receive ARV-471 in combination with samuraciclib in 28-day cycles. In the DDI Assessment Cohort(s), participants will receive ARV-471 as monotherapy after samuraciclib monotherapy and before starting the 28-day cycle combination treatment period. ARV-471 will be administered orally, continuously on 28-day cycles according to the SoA. The participant should take ARV-471 in the morning with food, at approximately the same time. If a participant misses a day of treatment or vomits any time after taking a dose, the participant should not double-up, make up the dose, or make it up, but resume dosing on the next day of the dosing cycle as prescribed. If a participant inadvertently takes 1 extra dose during a single dosing day, the participant must inform the investigator; the investigator should contact the study medical monitor and closely monitor the participant for any AEs. Once Daily",
+          "proposedText": "ARV-471 will be administered as 100 mg tablets (dose level 100 mg or 200 mg QD) to participants. During the combination treatment period, participants will receive ARV-471 in combination with samuraciclib in 28-day cycles. In the DDI Assessment Cohort(s), participants will receive ARV-471 as monotherapy after samuraciclib monotherapy and before starting the 28-day cycle combination treatment period. ARV-471 will be administered orally, continuously on 28-day cycles according to the SoA. The participant should take ARV-471 in the morning with food, at approximately the same time. If a participant misses a day of treatment or vomits any time after taking a dose, the participant should not double-up, make up the dose, or make it up, but resume dosing on the next day of the dosing cycle as prescribed. If a participant inadvertently takes 1 extra dose during a single dosing day, the participant must inform the investigator; the investigator should contact the study medical monitor and closely monitor the participant for any AEs. Once Daily. Clarify dose interruption, reduction, and restart instructions using the protocol dose of 100 mg, including criteria for missed doses and toxicity management.",
+          "changeRationale": "Dose instruction amendments are frequently implemented after early execution experience or following feedback from health authorities.",
+          "confidence": "High",
+          "benchmarkBasis": "StudyIntervention rate 0.11 in benchmark block; dominant pattern Clarification. Generated with Tier 1 substitution using a USDM-derived value.",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "StudyIntervention",
+              "field": "dosageInstructions",
+              "value": "ARV-471 will be administered as 100 mg tablets (dose level 100 mg or 200 mg QD) to participants. During the combination treatment period, participants will receive ARV-471 in combination with samuraciclib in 28-day cycles. In the DDI Assessment Cohort(s), participants will receive ARV-471 as monotherapy after samuraciclib monotherapy and before starting the 28-day cycle combination treatment period. ARV-471 will be administered orally, continuously on 28-day cycles according to the SoA. The participant should take ARV-471 in the morning with food, at approximately the same time. If a participant misses a day of treatment or vomits any time after taking a dose, the participant should not double-up, make up the dose, or make it up, but resume dosing on the next day of the dosing cycle as prescribed. If a participant inadvertently takes 1 extra dose during a single dosing day, the participant must inform the investigator; the investigator should contact the study medical monitor and closely monitor the participant for any AEs. Once Daily",
+              "protocol_section": "6.1",
+              "section_title": "Study Intervention Administration",
+              "extraction_path": "versions[0].studyInterventions[*].administrations[*].dose"
+            },
+            "yaml_match": {
+              "benchmark_key": "Oncology.Ph_III.usdm_entity_rates.StudyIntervention",
+              "benchmark_value": 0.11,
+              "yaml_file": "amendment_benchmarks.yaml",
+              "yaml_version": "1.0"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C1071007",
+                "amendment_number": 4,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct",
+                "overall_rationale": null,
+                "change_rationale": "--",
+                "original_text": "As of the data cutoff date, the confirmed ORR was 63.6% (95% CI, 50.4, 75.1%).",
+                "proposed_text": "across SC dose levels from 215–1000 μg/kg (N=55). Efficacy data from these participants are described below."
+              },
+              {
+                "study_folder": "C4891002",
+                "amendment_number": 1,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct",
+                "overall_rationale": null,
+                "change_rationale": "• Not Applicable",
+                "original_text": "--",
+                "proposed_text": "Secondary • To evaluate safety and tolerability of both dose levels. • Incidence of AEs and SAEs • Incidence of laboratory abnormalities. • Incidence of ECG abnormalities. • Progression-free survival (PFS),Objective Response (OR: confirmed CR or PR) by investigator assessment per RECIST v1.1. • Clinical Benefit Response (CBR: confirmed CR or PR at any time or SD or non-CR/non- PD ≥24 weeks) by investigator assessment per RECIST v 1.1. • Duration of Response, defined as the time from the datefirst documentation of randomizationCR or PR to the date of the first documented disease progressiondocumentation of PD, as determined by investigator assessment per RECIST v1.1, or death due to any cause, whichever occurs first."
+              }
+            ],
+            "corroborating_signals": [],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "amendment_count": 31,
+              "entity_rate": 0.11,
+              "pattern_rate": 0.85,
+              "confidence_interval_note": "n>=8 training studies - rates carry approximately +/-15% uncertainty.",
+              "corroboration_count": 0,
+              "corroboration_sources": []
+            }
+          }
+        },
+        {
+          "changeNumber": 3,
+          "usdmEntity": "EligibilityCriteria",
+          "protocolSection": "5.2",
+          "sectionTitle": "Exclusion Criteria",
+          "languagePattern": "Clarification",
+          "originalText": "Participants in visceral crisis at risk of life-threatening complications in the short term. Participants with active bleeding, history of hemolytic anemia or marrow aplasia. Participants with newly diagnosed or symptomatic brain metastases. Refractory nausea and vomiting and other gastrointestinal (GI) conditions precluding adequate absorption of study interventions. History of any other malignancies within the past three years, except for (1) adequately treated basal or squamous cell carcinoma of the skin and (2) curatively treated in situ carcinoma of the cervix. 5.2. Exclusion Criteria 1. Participants in visceral crisis at risk of life-threatening complications in the short term, including participants with massive uncontrolled effusions (pleural, pericardial, and/or peritoneal), pulmonary lymphangitis, and liver involvement 50%.",
+          "proposedText": "Participants in visceral crisis at risk of life-threatening complications in the short term. Participants with active bleeding, history of hemolytic anemia or marrow aplasia. Participants with newly diagnosed or symptomatic brain metastases. Refractory nausea and vomiting and other gastrointestinal (GI) conditions precluding adequate absorption of study interventions. History of any other malignancies within the past three years, except for (1) adequately treated basal or squamous cell carcinoma of the skin and (2) curatively treated in situ carcinoma of the cervix. 5.2. Exclusion Criteria 1. Participants in visceral crisis at risk of life-threatening complications in the short term, including participants with massive uncontrolled effusions (pleural, pericardial, and/or peritoneal), pulmonary lymphangitis, and liver involvement 50%. Clarify required diagnostic confirmation, permitted exceptions, and any product-specific washout or safety restrictions.",
+          "changeRationale": "Historical exclusion criteria changes are typically regulator-driven clarifications that reduce screening ambiguity without altering the study objective.",
+          "confidence": "Medium",
+          "benchmarkBasis": "EligibilityCriteria rate 0.06 in benchmark block; dominant pattern Clarification. Generated with Tier 2 template logic using the extracted USDM wording.",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "EligibilityCriteria",
+              "field": "exclusionCriteria",
+              "value": "Participants in visceral crisis at risk of life-threatening complications in the short term. Participants with active bleeding, history of hemolytic anemia or marrow aplasia. Participants with newly diagnosed or symptomatic brain metastases. Refractory nausea and vomiting and other gastrointestinal (GI) conditions precluding adequate absorption of study interventions. History of any other malignancies within the past three years, except for (1) adequately treated basal or squamous cell carcinoma of the skin and (2) curatively treated in situ carcinoma of the cervix. 5.2. Exclusion Criteria 1. Participants in visceral crisis at risk of life-threatening complications in the short term, including participants with massive uncontrolled effusions (pleural, pericardial, and/or peritoneal), pulmonary lymphangitis, and liver involvement 50%.",
+              "protocol_section": "5.2",
+              "section_title": "Exclusion Criteria",
+              "extraction_path": "versions[0].studyDesigns[0].eligibilityCriteria[?criterionType='Exclusion']"
+            },
+            "yaml_match": {
+              "benchmark_key": "Oncology.Ph_III.usdm_entity_rates.EligibilityCriteria",
+              "benchmark_value": 0.06,
+              "yaml_file": "amendment_benchmarks.yaml",
+              "yaml_version": "1.0"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C1071007",
+                "amendment_number": 4,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct",
+                "overall_rationale": null,
+                "change_rationale": "To establish baseline lung imaging within 7 days prior to randomization to exclude participants with developing respiratory infection.",
+                "original_text": "--",
+                "proposed_text": "Synopsis, Exclusion Criteria; 2.3.1 Risk Assessment, 5.2 Exclusion Criteria Clarified that active infection must be resolved at least 21 days prior to enrollment. Participants treated with systemic anti-infectious agents within 28 days prior to enrollment are not eligible. Prophylactic use of systemic agents is permitted."
+              },
+              {
+                "study_folder": "C4891001",
+                "amendment_number": 3,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Indirect",
+                "overall_rationale": null,
+                "change_rationale": "--",
+                "original_text": " Participants with newly diagnosed brain metastasis or symptomatic CNS metastases, carcinomatous meningitis, or leptomeningeal disease as indicated by clinical symptoms, cerebral edema, and/or progressive growth. Participants with a history of CNS metastases or cord compression are eligible if they have been definitively treated (e.g., radiotherapy, stereotactic surgery) and clinically stable (including participants with residual CNS symptoms/deficits) off enzyme-inducing anticonvulsants and steroids for at least 14 days prior to randomization.  Prior treatment with:",
+                "proposed_text": " Participants with newly diagnosed brain metastasis or symptomatic CNScentral nervous system (CNS) metastases, carcinomatous meningitis, or leptomeningeal disease as indicated by clinical symptoms, cerebral edema, and/or progressive growth. Participants with a history of CNS metastases or cord compression are eligible if they have been definitively treated (e.g., radiotherapy, stereotactic surgery) and clinically stable (including participants with residual CNS symptoms/deficits) off enzyme-inducing anticonvulsants and steroids for at least 14 days prior to randomization."
+              }
+            ],
+            "corroborating_signals": [],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "amendment_count": 31,
+              "entity_rate": 0.06,
+              "pattern_rate": 0.85,
+              "confidence_interval_note": "n>=8 training studies - rates carry approximately +/-15% uncertainty.",
+              "corroboration_count": 0,
+              "corroboration_sources": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "amendmentNumber": 3,
+      "predictedTiming": "~18-24 months post first patient enrolled",
+      "predictedCategory": "Multiple",
+      "predictedRegulatoryDriven": true,
+      "predictedSafetyDriven": false,
+      "predictedRationale": "Historical Oncology Phase III amendments commonly address Administrative updates and Eligibility Criteria. This predicted amendment groups global changes following the clarification patterns observed in the benchmark data.",
+      "confidence": "Medium",
+      "predictedChanges": [
+        {
+          "changeNumber": 1,
+          "usdmEntity": "EligibilityCriteria",
+          "protocolSection": "5.1",
+          "sectionTitle": "Inclusion Criteria",
+          "languagePattern": "Clarification",
+          "originalText": "Participants must be patients with ER+/HER2- A/MBC, who have been previously treated with up to 2 lines of prior therapies for advanced/metastatic disease including 1 line of any prior CDK4/6 inhibitor-based regimen. The current A/MBC disease must have at least 1 measurable lesion as per RECIST v1.1. 5.1. Inclusion Criteria 1. Participants aged 18 years or older (or the minimum age of consent in accordance with local regulations) at screening. Refer to Appendix 4 for reproductive criteria for male (Section 10.4.1) and female (Section 10.4.4) participants. 5.1. Inclusion Criteria 3. Prior anticancer therapies: Phase 1b and DDI Assessment Cohort(s): Up to 2 lines of prior therapies for advanced/metastatic disease: ≤1 prior chemotherapy (no antibody-drug conjugates permitted). ≤2 prior endocrine-based therapies. No prior experimental endocrine therapy (eg, SERD, CERAN, PROTAC, SERCA) or elacestrant permitted. 1, and only 1, line of any prior CDK4/6 inhibitor-based regimen required (independent of the setting eg, adjuvant or advanced/metastatic). ARV-471 (PF-07850327) Participants must have documented objective disease progression while on or within 6 months after the end of the most recent therapy. Participants must have received an aromatase inhibitor in combination with a CDK4/6 inhibitor as the line of therapy preceding study entry for: Locally advanced or metastatic disease, participants must have received at least 6 months clinical benefit on this line of therapy to be eligible. Participants who received 6 months CDK4/6 inhibitor due to tolerability issues may still enter the study provided at least 6 months aromatase inhibitor was received. Adjuvant treatment, if the disease-free interval between initiation of endocrine therapy and first line treatment of locally advanced or metastatic disease was >24 months. 5.1. Inclusion Criteria 4. Participants must have at least 1 measurable lesion as defined by RECIST v1.1. Participants with bone lesions only can be included if at least 1 bone lesion has a measurable component as for RECIST v1.1 (see Appendix 11). 5.1. Inclusion Criteria 5. ECOG PS ≤1, no deterioration over the previous 2 weeks.",
+          "proposedText": "Participants must be patients with ER+/HER2- A/MBC, who have been previously treated with up to 2 lines of prior therapies for advanced/metastatic disease including 1 line of any prior CDK4/6 inhibitor-based regimen. The current A/MBC disease must have at least 1 measurable lesion as per RECIST v1.1. 5.1. Inclusion Criteria 1. Participants aged 18 years or older (or the minimum age of consent in accordance with local regulations) at screening. Refer to Appendix 4 for reproductive criteria for male (Section 10.4.1) and female (Section 10.4.4) participants. 5.1. Inclusion Criteria 3. Prior anticancer therapies: Phase 1b and DDI Assessment Cohort(s): Up to 2 lines of prior therapies for advanced/metastatic disease: ≤1 prior chemotherapy (no antibody-drug conjugates permitted). ≤2 prior endocrine-based therapies. No prior experimental endocrine therapy (eg, SERD, CERAN, PROTAC, SERCA) or elacestrant permitted. 1, and only 1, line of any prior CDK4/6 inhibitor-based regimen required (independent of the setting eg, adjuvant or advanced/metastatic). ARV-471 (PF-07850327) Participants must have documented objective disease progression while on or within 6 months after the end of the most recent therapy. Participants must have received an aromatase inhibitor in combination with a CDK4/6 inhibitor as the line of therapy preceding study entry for: Locally advanced or metastatic disease, participants must have received at least 6 months clinical benefit on this line of therapy to be eligible. Participants who received 6 months CDK4/6 inhibitor due to tolerability issues may still enter the study provided at least 6 months aromatase inhibitor was received. Adjuvant treatment, if the disease-free interval between initiation of endocrine therapy and first line treatment of locally advanced or metastatic disease was >24 months. 5.1. Inclusion Criteria 4. Participants must have at least 1 measurable lesion as defined by RECIST v1.1. Participants with bone lesions only can be included if at least 1 bone lesion has a measurable component as for RECIST v1.1 (see Appendix 11). 5.1. Inclusion Criteria 5. ECOG PS ≤1, no deterioration over the previous 2 weeks. Clarify that this criterion must be satisfied at Screening and reconfirmed before randomization or first dose, as applicable.",
+          "changeRationale": "Eligibility criteria amendments commonly refine operational interpretation of entry criteria to support consistent screening and facilitate health authority review.",
+          "confidence": "Medium",
+          "benchmarkBasis": "EligibilityCriteria rate 0.06 in benchmark block; dominant pattern Clarification. Generated with Tier 2 template logic using the extracted USDM wording.",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "EligibilityCriteria",
+              "field": "inclusionCriteria",
+              "value": "Participants must be patients with ER+/HER2- A/MBC, who have been previously treated with up to 2 lines of prior therapies for advanced/metastatic disease including 1 line of any prior CDK4/6 inhibitor-based regimen. The current A/MBC disease must have at least 1 measurable lesion as per RECIST v1.1. 5.1. Inclusion Criteria 1. Participants aged 18 years or older (or the minimum age of consent in accordance with local regulations) at screening. Refer to Appendix 4 for reproductive criteria for male (Section 10.4.1) and female (Section 10.4.4) participants. 5.1. Inclusion Criteria 3. Prior anticancer therapies: Phase 1b and DDI Assessment Cohort(s): Up to 2 lines of prior therapies for advanced/metastatic disease: ≤1 prior chemotherapy (no antibody-drug conjugates permitted). ≤2 prior endocrine-based therapies. No prior experimental endocrine therapy (eg, SERD, CERAN, PROTAC, SERCA) or elacestrant permitted. 1, and only 1, line of any prior CDK4/6 inhibitor-based regimen required (independent of the setting eg, adjuvant or advanced/metastatic). ARV-471 (PF-07850327) Participants must have documented objective disease progression while on or within 6 months after the end of the most recent therapy. Participants must have received an aromatase inhibitor in combination with a CDK4/6 inhibitor as the line of therapy preceding study entry for: Locally advanced or metastatic disease, participants must have received at least 6 months clinical benefit on this line of therapy to be eligible. Participants who received 6 months CDK4/6 inhibitor due to tolerability issues may still enter the study provided at least 6 months aromatase inhibitor was received. Adjuvant treatment, if the disease-free interval between initiation of endocrine therapy and first line treatment of locally advanced or metastatic disease was >24 months. 5.1. Inclusion Criteria 4. Participants must have at least 1 measurable lesion as defined by RECIST v1.1. Participants with bone lesions only can be included if at least 1 bone lesion has a measurable component as for RECIST v1.1 (see Appendix 11). 5.1. Inclusion Criteria 5. ECOG PS ≤1, no deterioration over the previous 2 weeks.",
+              "protocol_section": "5.1",
+              "section_title": "Inclusion Criteria",
+              "extraction_path": "versions[0].studyDesigns[0].eligibilityCriteria[?criterionType='Inclusion']"
+            },
+            "yaml_match": {
+              "benchmark_key": "Oncology.Ph_III.usdm_entity_rates.EligibilityCriteria",
+              "benchmark_value": 0.06,
+              "yaml_file": "amendment_benchmarks.yaml",
+              "yaml_version": "1.0"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C4891001",
+                "amendment_number": 3,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct",
+                "overall_rationale": null,
+                "change_rationale": "- The collection of a de novo biopsy may impact the participant’s safety if clinically contraindicated. The implemented changes are not likely to impact the scientific value of the trial or the patient’s safety.",
+                "original_text": " Participants aged 18 years or older (or the minimum age of consent in accordance with local regulations) at screening. a. Female participants under 60 years of age, with cessation of regular menses for 12 consecutive months and with no alternative medical cause, must have a FSH level within the post-menopausal level, as per local laboratory reference range.",
+                "proposed_text": " Participants aged 18 years or older (or the minimum age of consent in accordance with local regulations) at screening."
+              },
+              {
+                "study_folder": "C1071006",
+                "amendment_number": 2,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct",
+                "overall_rationale": null,
+                "change_rationale": "--",
+                "original_text": "3. Part 1 only: Participant with RRMM who had received 1-2 prior lines of MM therapy including exposed to at least one IMiD and exposed to at least one PI (See Appendix 16). Part 2 only: Participant has NDMM and is transplant-ineligible as defined by age ≥65 years or is transplant-ineligible as defined by age <65 years due to comorbidities impacting the possibility of transplant.",
+                "proposed_text": "3. Part 1 only: Participant with NDMM or RRMM who had. NDMM participant must be transplant-ineligible as defined by age ≥65 years or transplant-ineligible as defined by age <65 years with comorbidities impacting the possibility of transplant. Participants with RRMM must have received 1-2 prior lines of MM therapy including exposed to at least one IMiD and exposed to at least one PI (See Appendix 16Appendix 17)."
+              }
+            ],
+            "corroborating_signals": [],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "amendment_count": 31,
+              "entity_rate": 0.06,
+              "pattern_rate": 0.85,
+              "confidence_interval_note": "n>=8 training studies - rates carry approximately +/-15% uncertainty.",
+              "corroboration_count": 0,
+              "corroboration_sources": []
+            }
+          }
+        },
+        {
+          "changeNumber": 2,
+          "usdmEntity": "Administrative",
+          "protocolSection": "Multiple",
+          "sectionTitle": "Protocol Template Updates",
+          "languagePattern": "Correction",
+          "originalText": "Final Protocol Amendment 2",
+          "proposedText": "Update administrative references tied to Final Protocol Amendment 2, including document history, template wording, and internal cross-references that changed in the amendment package.",
+          "changeRationale": "Administrative updates are expected whenever the protocol template baseline shifts, even though they occur at a relatively low frequency.",
+          "confidence": "Medium",
+          "benchmarkBasis": "Administrative rate 0.01 in benchmark block; dominant pattern Clarification. Generated with Tier 2 template logic using the extracted USDM wording.",
+          "scope": "Global",
+          "lineage": {
+            "usdm_signal": {
+              "entity": "Administrative",
+              "field": "templateReference",
+              "value": "Final Protocol Amendment 2",
+              "protocol_section": "Multiple",
+              "section_title": "Protocol Template Updates",
+              "extraction_path": "versions[0].versionIdentifier"
+            },
+            "yaml_match": {
+              "benchmark_key": "Oncology.Ph_III.usdm_entity_rates.Administrative",
+              "benchmark_value": 0.01,
+              "yaml_file": "amendment_benchmarks.yaml",
+              "yaml_version": "1.0"
+            },
+            "training_evidence": [
+              {
+                "study_folder": "C4891001",
+                "amendment_number": 2,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Direct",
+                "overall_rationale": null,
+                "change_rationale": "To align with Sponsor protocol template. Section 1.1 Synopsis",
+                "original_text": "--",
+                "proposed_text": "ClinicalTrials.gov ID has been added. To provide the ClinicalTrials.gov ID Cover page Section 1.1 Synopsis Synopsis has been streamlined and some further details (e.g. assessments) added."
+              },
+              {
+                "study_folder": "C1071007",
+                "amendment_number": 2,
+                "csv_file": "amendment_changes_ground_truth.csv",
+                "language_pattern": "Clarification",
+                "match_strength": "Indirect",
+                "overall_rationale": null,
+                "change_rationale": "Updated to reflect that participants will enter the study with PR or better.",
+                "original_text": "--",
+                "proposed_text": "Measurable disease required at diagnosis and not study entry."
+              }
+            ],
+            "corroborating_signals": [],
+            "confidence_basis": {
+              "training_study_count": 9,
+              "amendment_count": 31,
+              "entity_rate": 0.01,
+              "pattern_rate": 0.0,
+              "confidence_interval_note": "n>=8 training studies - rates carry approximately +/-15% uncertainty.",
+              "corroboration_count": 0,
+              "corroboration_sources": []
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "amendmentRiskMatrix": [
+    {
+      "usdmEntity": "StudyProcedure",
+      "historicalRate": 0.63,
+      "riskLevel": "High",
+      "typicalPattern": "Clarification",
+      "rationale": "63% of changes affect StudyProcedure. Primarily visit windows, assessment procedures, and Schedule of Activities clarifications."
+    },
+    {
+      "usdmEntity": "StudyIntervention",
+      "historicalRate": 0.11,
+      "riskLevel": "Medium",
+      "typicalPattern": "Clarification",
+      "rationale": "11% of changes affect StudyIntervention. Primarily administration, dose handling, and concomitant therapy clarifications."
+    },
+    {
+      "usdmEntity": "StudyEndpoint",
+      "historicalRate": 0.1,
+      "riskLevel": "Medium",
+      "typicalPattern": "Clarification",
+      "rationale": "10% of changes affect StudyEndpoint. Often endpoint definition clarifications or additions."
+    },
+    {
+      "usdmEntity": "EligibilityCriteria",
+      "historicalRate": 0.06,
+      "riskLevel": "Low-Medium",
+      "typicalPattern": "Clarification",
+      "rationale": "6% of changes affect EligibilityCriteria. Typically regulatory-driven clarifications to inclusion and exclusion criteria text."
+    },
+    {
+      "usdmEntity": "StudyPopulation",
+      "historicalRate": 0.05,
+      "riskLevel": "Low-Medium",
+      "typicalPattern": "Clarification",
+      "rationale": "5% of changes affect StudyPopulation. Population or enrollment clarifications informed by recruitment realities."
+    },
+    {
+      "usdmEntity": "SafetyAssessment",
+      "historicalRate": 0.02,
+      "riskLevel": "Low",
+      "typicalPattern": "Clarification",
+      "rationale": "2% of changes affect SafetyAssessment. Often safety monitoring additions driven by regulator or investigator brochure updates."
+    },
+    {
+      "usdmEntity": "StudyDesign",
+      "historicalRate": 0.01,
+      "riskLevel": "Low",
+      "typicalPattern": "Clarification",
+      "rationale": "1% of changes affect StudyDesign. Rare and usually limited to wording alignments or operational corrections."
+    },
+    {
+      "usdmEntity": "Administrative",
+      "historicalRate": 0.01,
+      "riskLevel": "Low",
+      "typicalPattern": "Clarification",
+      "rationale": "1% of changes affect Administrative. Administrative or template refresh changes to keep the protocol aligned with Pfizer standards."
+    }
+  ],
+  "confidenceFramework": {
+    "High": "entity_rate >= 0.10, at least two training evidences, and direct match or corroboration support.",
+    "Medium": "entity_rate >= 0.05 with at least one training evidence, or any direct training match.",
+    "Low — Needs Clinical Review": "thin benchmark support or only a single indirect evidence source.",
+    "Needs Clinical Review": "Tier 3 placeholder text or content requiring clinical team completion."
+  }
+}

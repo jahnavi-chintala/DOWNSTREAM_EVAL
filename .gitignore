@@ -38,6 +38,15 @@ Pfizerconfidential*/
 pipd_ground_truth.csv
 generator_eval_outputs/
 
+# Local eval batches / artefacts (SDLC hygiene)
+pipd_eval/eval_outputs/
+scenario2*/
+eva_docs*/
+eva_docs_rerun*/
+eva_docs_rerun_gtcheck/
+D_Evals/
+pipd_risk/
+
 # Optional: uncomment if those trees should stay local-only
 # Protocls_USDM/
 # USDM_EVAL/

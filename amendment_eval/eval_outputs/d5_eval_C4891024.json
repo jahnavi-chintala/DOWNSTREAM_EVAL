@@ -1,0 +1,112 @@
+{
+  "study_id": "C4891024",
+  "eval_date": "2026-04-26",
+  "generator_version": "1.0.0",
+  "eval_framework_version": "1.0",
+  "overall_status": "PASS",
+  "metrics": {
+    "m3": {
+      "score": 0.0,
+      "target": 0.0,
+      "status": "PASS",
+      "hallucinations": [],
+      "total_predicted_changes": 8
+    },
+    "m4": {
+      "score": 1.0,
+      "target": 1.0,
+      "status": "PASS",
+      "compliant_changes": 8,
+      "total_changes": 8,
+      "lineage_gaps": [],
+      "contamination_issues": []
+    }
+  },
+  "ground_truth_source": "No amendment summary PDFs available for C4891024",
+  "analysis": {
+    "note": "M1/M2/M5 not evaluated — no ground truth for C4891024. M3 and M4 evaluated on generated JSON only."
+  },
+  "per_change_scores": [
+    {
+      "amendment_number": 1,
+      "change_number": 1,
+      "usdm_entity": "EligibilityCriteria",
+      "scope": "EU",
+      "language_pattern": "Addition",
+      "confidence": "Medium",
+      "lineage_complete": true,
+      "is_hallucination": false
+    },
+    {
+      "amendment_number": 1,
+      "change_number": 2,
+      "usdm_entity": "StudyIntervention",
+      "scope": "Global",
+      "language_pattern": "Clarification",
+      "confidence": "High",
+      "lineage_complete": true,
+      "is_hallucination": false
+    },
+    {
+      "amendment_number": 1,
+      "change_number": 3,
+      "usdm_entity": "StudyProcedure",
+      "scope": "Global",
+      "language_pattern": "Clarification",
+      "confidence": "High",
+      "lineage_complete": true,
+      "is_hallucination": false
+    },
+    {
+      "amendment_number": 2,
+      "change_number": 1,
+      "usdm_entity": "SafetyAssessment",
+      "scope": "Global",
+      "language_pattern": "Addition",
+      "confidence": "Medium",
+      "lineage_complete": true,
+      "is_hallucination": false
+    },
+    {
+      "amendment_number": 2,
+      "change_number": 2,
+      "usdm_entity": "StudyIntervention",
+      "scope": "Global",
+      "language_pattern": "Clarification",
+      "confidence": "High",
+      "lineage_complete": true,
+      "is_hallucination": false
+    },
+    {
+      "amendment_number": 2,
+      "change_number": 3,
+      "usdm_entity": "EligibilityCriteria",
+      "scope": "Global",
+      "language_pattern": "Clarification",
+      "confidence": "Medium",
+      "lineage_complete": true,
+      "is_hallucination": false
+    },
+    {
+      "amendment_number": 3,
+      "change_number": 1,
+      "usdm_entity": "EligibilityCriteria",
+      "scope": "Global",
+      "language_pattern": "Clarification",
+      "confidence": "Medium",
+      "lineage_complete": true,
+      "is_hallucination": false
+    },
+    {
+      "amendment_number": 3,
+      "change_number": 2,
+      "usdm_entity": "Administrative",
+      "scope": "Global",
+      "language_pattern": "Correction",
+      "confidence": "Medium",
+      "lineage_complete": true,
+      "is_hallucination": false
+    }
+  ],
+  "eval_runtime_seconds": 0.0
+}

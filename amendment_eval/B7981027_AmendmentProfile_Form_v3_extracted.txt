@@ -1,0 +1,46 @@
+=== B7981027_AmendmentProfile_Form_v3.docx ===
+
+P1: A PHASE 3 RANDOMIZED, DOUBLE-BLIND, PLACEBO-CONTROLLED STUDY TO EVALUATE THE EFFICACY AND SAFETY OF RITLECITINIB (PF-06651600) IN PEDIATRIC AND ADULT PARTICIPANTS WITH ALOPECIA AREATA
+P3: Document History
+P5: This document is an AI-generated draft amendment profile for Protocol B7981027. Predicted amendments are derived from historical benchmark patterns across 3 I&I Phase III training studies (7 amendments). All predicted changes require clinical team review and validation before use in any regulatory submission. Country-specific predictions (EU, China) are included where patterns are directly observed in the training set.
+P6: Protocol Amendment Summary of Changes Table
+P7: Predicted Amendment 1 (~6-12 months post first patient enrolled)
+P8: Overall Rationale for the Amendment: Regulatory authority (EU/UK) requests for clarification of eligibility criteria and protocol procedures. Based on historical I&I Ph III pattern: 57% of amendments are regulatory-driven with clarification as dominant change type (91% of individual changes). Country-specific regulatory requirements (EU body weight threshold, China HBV/HIV testing) predicted based on pediatric I&I study pattern.
+P10: Protocol Amendment Summary of Changes Table
+P11: Predicted Amendment 2 (~12-18 months post first patient enrolled)
+P12: Overall Rationale for the Amendment: Operational amendments driven by site feedback and enrollment experience. Procedure window adjustments and assessment clarifications are the dominant pattern in I&I Ph III Amendment 2. Operational category rate: 29% in training set.
+
+=== TABLE 0 ===
+R0: Document || Version Date
+R1: Predicted Amendment 1 (Draft) || ~6–12 months post FPI (predicted)
+R2: Predicted Amendment 2 (Draft) || ~12–18 months post FPI (predicted)
+R3: Base Protocol (v0) || 18 June 2024
+
+=== TABLE 1 ===
+R0: Description of Change || Brief Rationale || Section # and Name
+R1: Substantial Modification(s) || Substantial Modification(s) || Substantial Modification(s)
+R2: Applicable to All Countries || Applicable to All Countries || Applicable to All Countries
+R3: Study Assessments and Procedures | SALT score assessed at Screening and as specified in Schedule of Activities. SALT assessment must be performed by a trained and certified rater. Rater certification must be completed prior to first participant assessment. || Addition of rater certification requirement — operational clarification to ensure consistency of SALT scoring across global sites. || Section 8.3. Study Assessments and Procedures
+R4: Applicable to Countries in EU || Applicable to Countries in EU || Applicable to Countries in EU
+R5: Exclusion Criteria | Added exclusion criterion: Hypersensitivity to the active substance(s) or to any of the excipients of the investigational product. || To address a query from Regulatory Authorities (EU) and add a specific exclusion criterion regarding hypersensitivity to any component of the study drug. || Section 5.2. Exclusion Criteria
+R6: Inclusion Criteria | For sites in EU member countries: Minimum body weight of ≥17 kg at the time of the screening visit. || To address a query from Regulatory Authorities (EU) and specify a minimum body weight for inclusion in the trial. || Section 5.1. Inclusion Criteria
+R7: Specific to China || Specific to China || Specific to China
+R8: Administrative Procedures | Estimated total blood volume sampling collection approximately 65 ml, with no change in the number of sample collections per schedule of activities. || Total blood volume revised based on confirmation from central lab vendor and to be compliant with country-specific requirements of increased frequency of Hepatitis B virus testing every 3 months and additional blood sampling collection for HIV testing. || Section 8.1. Administrative Procedures
+R9: Non-Substantial Modification(s) || Non-Substantial Modification(s) || Non-Substantial Modification(s)
+R10: Applicable to All Countries || Applicable to All Countries || Applicable to All Countries
+R11: Inclusion Criteria | Age 12 years or older at the time of informed consent/assent (with a minimum of approximately 20% of the total participants between the ages of 12 and 17 years, inclusive) || Regulatory clarification to specify age range is inclusive — consistent with EU/UK regulatory guidance on pediatric eligibility language. || Section 5.1. Inclusion Criteria
+R12: Exclusion Criteria | History of or current diagnosis of active tuberculosis (TB). Participants with a history of latent tuberculosis who have completed appropriate treatment per local guidelines may be eligible at the discretion of the investigator. || Clarification to align with evolving regulatory guidance on TB screening in JAK inhibitor studies. Addition of latent TB language consistent with ritlecitinib IB updates. || Section 5.2. Exclusion Criteria
+R13: Schedule of Activities | Blood volume collected per visit as specified in Schedule of Activities. Total estimated blood volume for the study does not exceed [X] mL. || Regulatory requirement to specify total blood volume — consistent with I&I Ph III Amendment 1 pattern: 'revise the estimated total blood volume' cited in training study overall_rationale. || Section 8.1. Schedule of Activities
+R14: Study Intervention Administration | Ritlecitinib 50 mg once daily or matching placebo administered orally with or without food. || Clarification of food effect guidance for oral administration — common operational clarification in JAK inhibitor protocols. || Section 6.1. Study Intervention Administration
+
+=== TABLE 2 ===
+R0: Description of Change || Brief Rationale || Section # and Name
+R1: Substantial Modification(s) || Substantial Modification(s) || Substantial Modification(s)
+R2: Applicable to All Countries || Applicable to All Countries || Applicable to All Countries
+R3: Protocol Template Updates | Incorporated current Pfizer protocol template requirements across SAE reporting, safety sections, and data quality assurance sections. || To align with current Pfizer protocol template and requirements — standard administrative update observed in all I&I Ph III training amendments. || Section Multiple. Protocol Template Updates
+R4: Screen Failures | [Text removed — screen failure data reporting on CRF now required] || Screen failure data is required to be reported on the CRF to ensure transparent reporting to meet CONSORT publishing requirements and respond to regulatory authority queries. || Section 5.4. Screen Failures
+R5: Non-Substantial Modification(s) || Non-Substantial Modification(s) || Non-Substantial Modification(s)
+R6: Applicable to All Countries || Applicable to All Countries || Applicable to All Countries
+R7: Schedule of Activities | Visit window: ±7 days. If a visit cannot be completed within the specified window due to site or participant circumstances, the investigator should contact the medical monitor. || Clarification of visit window exception handling — standard operational amendment observed in all I&I Ph III training studies. || Section 8.1. Schedule of Activities
+R8: Study Assessments and Procedures | C-SSRS to be administered at Screening (lifetime version) and as specified in Schedule of Activities (since last visit version). The baseline C-SSRS assessment must capture lifetime suicidal ideation and behavior history. || C-SSRS lifetime versus since-last-visit version specification — a known operational gap in pediatric JAK inhibitor studies. Aligns with FDA pediatric safety requirements. || Section 8.3. Study Assessments and Procedures
+R9: Administrative Procedures | [CLINICAL TEAM TO COMPLETE] || Operational clarifications driven by site feedback — specific content requires 12-month enrollment data. || Section 8.2. Administrative Procedures

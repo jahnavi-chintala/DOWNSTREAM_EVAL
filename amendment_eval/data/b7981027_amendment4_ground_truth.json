@@ -1,0 +1,71 @@
+{
+  "study_id": "B7981027",
+  "amendment_number": 4,
+  "amendment_date": "07 Oct 2025",
+  "source": "B7981027 Amendment 4 Summary of Change PDF",
+  "actual_category": "Multiple",
+  "global_changes": [
+    {
+      "usdm_entity": "StudyProcedure",
+      "scope": "Global",
+      "description": "Blood volume corrected ~50ml to ~61ml"
+    },
+    {
+      "usdm_entity": "StudyProcedure",
+      "scope": "Global",
+      "description": "Removed non-reporting of screen failure data on CRF"
+    },
+    {
+      "usdm_entity": "StudyProcedure",
+      "scope": "Global",
+      "description": "Corrected Schwartz equation k constant for male children <12yr"
+    },
+    {
+      "usdm_entity": "StudyProcedure",
+      "scope": "Global",
+      "description": "Added palatability assessment guidance at Week 18"
+    },
+    {
+      "usdm_entity": "SafetyAssessment",
+      "scope": "Global",
+      "description": "Protocol template updates — SAE reporting, safety sections"
+    }
+  ],
+  "country_changes": [
+    {
+      "usdm_entity": "EligibilityCriteria",
+      "scope": "EU",
+      "description": "Added Exclusion Criterion #15 — hypersensitivity to IP"
+    },
+    {
+      "usdm_entity": "EligibilityCriteria",
+      "scope": "EU",
+      "description": "Added Inclusion Criterion #5 — min body weight >=17kg EU sites"
+    },
+    {
+      "usdm_entity": "StudyProcedure",
+      "scope": "China",
+      "description": "Blood volume updated ~50ml to ~65ml for China HBV/HIV"
+    },
+    {
+      "usdm_entity": "StudyProcedure",
+      "scope": "China",
+      "description": "Human genetic resource sample requirements added"
+    },
+    {
+      "usdm_entity": "StudyProcedure",
+      "scope": "China",
+      "description": "QTcF worksheet clarification"
+    },
+    {
+      "usdm_entity": "StudyProcedure",
+      "scope": "Czech Republic",
+      "description": "HBV-DNA testing requirements added"
+    },
+    {
+      "usdm_entity": "StudyProcedure",
+      "scope": "Czech Republic",
+      "description": "HCV-RNA testing requirements added"
+    }
+  ]
+}

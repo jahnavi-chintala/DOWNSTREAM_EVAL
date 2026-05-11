@@ -52,7 +52,7 @@ export interface TracingBlock {
   truncated?: boolean;
 }
 
-/** PIPD: M1 near-miss pair (algorithmic numbering / truncation / paraphrase tiers). */
+/** PIPD (Potential Important Protocol Deviations): M1 near-miss pair (algorithmic numbering / truncation / paraphrase tiers). */
 export interface PipdAlgoNearMissPair {
   gt_text?: string | null;
   generated_text?: string | null;

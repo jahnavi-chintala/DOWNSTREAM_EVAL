@@ -1,5 +1,5 @@
 """
-Single-port gateway for all four protocol evals (Risk, PIPD, CMP, DMP).
+Single-port gateway for all four protocol evals (Risk, PIPD = Potential Important Protocol Deviations, CMP, DMP).
 
 Mounts each product's upload UI and API under a path prefix:
   /risk/..., /pipd/..., /cmp/..., /dmp/...
@@ -57,6 +57,7 @@ _CONFLICTING_MODULE_NAMES = (
     "run_eval",
     "eval_scenario1",
     "eval_scenario2",
+    "miss_explanation",
     "protocol_study_id",
     "align_to_reference",
     "reference_shape_verify",
@@ -69,13 +70,19 @@ def _clear_conflicts() -> None:
         sys.modules.pop(name, None)
 
 
+def _routes_file(root: Path) -> Path:
+    """Resolve the browser upload / session routes module inside an evaluator package."""
+    for candidate in (root / "api" / "routes.py", root / "api" / "eval_upload_routes.py", root / "eval_upload_routes.py"):
+        if candidate.is_file():
+            return candidate
+    raise FileNotFoundError(f"Missing routes module under {root}")
+
+
 def _register_eval_module(app: FastAPI, module_id: str, folder: str, route_prefix: str) -> None:
     root = (_pfizer_root() / folder).resolve()
     if not root.is_dir():
         raise FileNotFoundError(f"Eval repo not found: {root} (set PFIZER_ROOT)")
-    path = root / "eval_upload_routes.py"
-    if not path.is_file():
-        raise FileNotFoundError(f"Missing {path}")
+    path = _routes_file(root)
 
     unique_name = f"eval_upload_{module_id}"
     root_str = str(root)
@@ -108,24 +115,26 @@ def _register_eval_module(app: FastAPI, module_id: str, folder: str, route_prefi
         _skip_prewarm_names = {
             "__init__",
             "eval_upload_routes",
+            "routes",
             "api",
             "align_to_reference",
             "reference_shape_verify",
         }
-        for py in sorted(root.glob("*.py")):
+        for py in sorted(root.rglob("*.py")):
+            parts = py.relative_to(root).parts
+            if "__pycache__" in parts or "tests" in parts:
+                continue
             name = py.stem
             if name in _skip_prewarm_names:
                 continue
             if any(name.startswith(p) for p in _skip_prewarm_prefixes):
                 continue
-            if name in sys.modules:
+            mod_name = ".".join(py.relative_to(root).with_suffix("").parts)
+            if mod_name in sys.modules:
                 continue
             try:
-                importlib.import_module(name)
+                importlib.import_module(mod_name)
             except BaseException:  # noqa: BLE001 - best-effort prewarm
-                # Some modules run argparse / network / sys.exit at import
-                # time; skipping them is fine as they're not referenced by
-                # the upload handlers.
                 pass
 
         mod.register_eval_upload_routes(app, route_prefix=route_prefix)
@@ -143,7 +152,7 @@ def _register_eval_module(app: FastAPI, module_id: str, folder: str, route_prefi
 
 app = FastAPI(
     title="Protocol eval gateway",
-    description="Risk Profile, PIPD, CMP, and DMP evaluations on one port",
+    description="Risk Profile, PIPD (Potential Important Protocol Deviations), CMP, and DMP evaluations on one port",
     version="1.0.0",
 )
 app.add_middleware(
@@ -176,9 +185,9 @@ for _pfx, _pkey in (("/risk", "risk"), ("/pipd", "pipd"), ("/cmp", "cmp"), ("/dm
 
 for _mid, _dir, _pfx in (
     ("risk", "risk_profile_eval", "/risk"),
-    ("pipd", "ppid_py", "/pipd"),
-    ("cmp", "cmd_py", "/cmp"),
-    ("dmp", "DMP_py", "/dmp"),
+    ("pipd", "pipd_eval", "/pipd"),
+    ("cmp", "cmp_eval", "/cmp"),
+    ("dmp", "dmp_eval", "/dmp"),
 ):
     _register_eval_module(app, _mid, _dir, _pfx)
 
@@ -226,7 +235,7 @@ Study ids must match. Optional ground-truth files default to each repo&rsquo;s p
 <label>Product
 <select id="product" style="margin-top:.35rem;font-size:1rem">
   <option value="/risk">Risk Profile</option>
-  <option value="/pipd">PIPD</option>
+  <option value="/pipd">PIPD (Potential Important Protocol Deviations)</option>
   <option value="/cmp">CMP</option>
   <option value="/dmp">DMP</option>
 </select>
@@ -241,7 +250,7 @@ Study ids must match. Optional ground-truth files default to each repo&rsquo;s p
   <label>critical_factors_ground_truth.csv <input type="file" id="factors" accept=".csv"></label>
 </div>
 <div id="opt-pipd" class="opts" style="display:none">
-  <strong>PIPD — optional</strong>
+  <strong>PIPD (Potential Important Protocol Deviations) — optional</strong>
   <label>pipd_ground_truth CSV <input type="file" id="gt" accept=".csv"></label>
   <label>deviation_subcategories CSV <input type="file" id="dev" accept=".csv"></label>
 </div>
@@ -418,7 +427,7 @@ function renderPreview(j) {
 
 const labels = {
   '/risk': 'Generator (Risk Profile) JSON',
-  '/pipd': 'PIPD JSON',
+  '/pipd': 'PIPD (Potential Important Protocol Deviations) JSON',
   '/cmp': 'CMP JSON',
   '/dmp': 'DMP JSON'
 };

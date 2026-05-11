@@ -1,0 +1,350 @@
+{
+  "study_id": "B7981027",
+  "eval_date": "2026-04-25",
+  "generator_version": "1.0",
+  "eval_framework_version": "1.0",
+  "ground_truth_source": "B7981027 Amendment 4 Summary of Change PDF (07 Oct 2025)",
+  "overall_status": "PASS",
+  "metrics": {
+    "m1_global": {
+      "score": 0.8,
+      "target": 0.6,
+      "status": "PASS",
+      "numerator": 4,
+      "denominator": 5
+    },
+    "m1_country": {
+      "score": 1.0,
+      "target": 0.4,
+      "status": "PASS",
+      "numerator": 7,
+      "denominator": 7
+    },
+    "m2": {
+      "score": 0.75,
+      "target": 0.75,
+      "status": "PASS",
+      "predicted_categories": [
+        "Multiple",
+        "Operational"
+      ],
+      "actual_category": "Multiple"
+    },
+    "m3": {
+      "score": 0.0,
+      "target": 0.0,
+      "status": "PASS",
+      "hallucinations": [],
+      "total_predicted_changes": 13
+    },
+    "m4": {
+      "score": 1.0,
+      "target": 1.0,
+      "status": "PASS",
+      "compliant_changes": 13,
+      "lineage_gaps": [],
+      "contamination_issues": []
+    },
+    "m5": {
+      "score": 0.833,
+      "target": 0.7,
+      "status": "PASS",
+      "high_confidence_detail": [
+        {
+          "change": "Amend 1 Ch3",
+          "entity": "StudyProcedure",
+          "scope": "Global",
+          "confidence": "High",
+          "matched": true
+        },
+        {
+          "change": "Amend 1 Ch6",
+          "entity": "EligibilityCriteria",
+          "scope": "EU",
+          "confidence": "High",
+          "matched": true
+        },
+        {
+          "change": "Amend 1 Ch7",
+          "entity": "EligibilityCriteria",
+          "scope": "EU",
+          "confidence": "High",
+          "matched": true
+        },
+        {
+          "change": "Amend 2 Ch1",
+          "entity": "StudyProcedure",
+          "scope": "Global",
+          "confidence": "High",
+          "matched": true
+        },
+        {
+          "change": "Amend 2 Ch2",
+          "entity": "StudyProcedure",
+          "scope": "Global",
+          "confidence": "High",
+          "matched": true
+        },
+        {
+          "change": "Amend 2 Ch4",
+          "entity": "Administrative",
+          "scope": "Global",
+          "confidence": "High",
+          "matched": false
+        }
+      ]
+    }
+  },
+  "m1_global_detail": [
+    {
+      "actual_entity": "StudyProcedure",
+      "scope": "Global",
+      "description": "Blood volume corrected ~50ml to ~61ml",
+      "matched": true
+    },
+    {
+      "actual_entity": "StudyProcedure",
+      "scope": "Global",
+      "description": "Removed non-reporting of screen failure data on CRF",
+      "matched": true
+    },
+    {
+      "actual_entity": "StudyProcedure",
+      "scope": "Global",
+      "description": "Corrected Schwartz equation k constant for male children <12yr",
+      "matched": true
+    },
+    {
+      "actual_entity": "StudyProcedure",
+      "scope": "Global",
+      "description": "Added palatability assessment guidance at Week 18",
+      "matched": true
+    },
+    {
+      "actual_entity": "SafetyAssessment",
+      "scope": "Global",
+      "description": "Protocol template updates \u2014 SAE reporting, safety sections",
+      "matched": false
+    }
+  ],
+  "m1_country_detail": [
+    {
+      "actual_entity": "EligibilityCriteria",
+      "scope": "EU",
+      "description": "Added Exclusion Criterion #15 \u2014 hypersensitivity to IP",
+      "matched": true
+    },
+    {
+      "actual_entity": "EligibilityCriteria",
+      "scope": "EU",
+      "description": "Added Inclusion Criterion #5 \u2014 min body weight >=17kg EU sites",
+      "matched": true
+    },
+    {
+      "actual_entity": "StudyProcedure",
+      "scope": "China",
+      "description": "Blood volume updated ~50ml to ~65ml for China HBV/HIV",
+      "matched": true
+    },
+    {
+      "actual_entity": "StudyProcedure",
+      "scope": "China",
+      "description": "Human genetic resource sample requirements added",
+      "matched": true
+    },
+    {
+      "actual_entity": "StudyProcedure",
+      "scope": "China",
+      "description": "QTcF worksheet clarification",
+      "matched": true
+    },
+    {
+      "actual_entity": "StudyProcedure",
+      "scope": "Czech Republic",
+      "description": "HBV-DNA testing requirements added",
+      "matched": true
+    },
+    {
+      "actual_entity": "StudyProcedure",
+      "scope": "Czech Republic",
+      "description": "HCV-RNA testing requirements added",
+      "matched": true
+    }
+  ],
+  "per_change_scores": [
+    {
+      "amendment_number": 1,
+      "change_number": 1,
+      "usdm_entity": "EligibilityCriteria",
+      "scope": "Global",
+      "language_pattern": "Clarification",
+      "confidence": "Medium",
+      "lineage_complete": true,
+      "is_hallucination": false,
+      "matched_to_amendment4": true
+    },
+    {
+      "amendment_number": 1,
+      "change_number": 2,
+      "usdm_entity": "EligibilityCriteria",
+      "scope": "Global",
+      "language_pattern": "Clarification",
+      "confidence": "Low \u2014 Needs Clinical Review",
+      "lineage_complete": true,
+      "is_hallucination": false,
+      "matched_to_amendment4": true
+    },
+    {
+      "amendment_number": 1,
+      "change_number": 3,
+      "usdm_entity": "StudyProcedure",
+      "scope": "Global",
+      "language_pattern": "Clarification",
+      "confidence": "High",
+      "lineage_complete": true,
+      "is_hallucination": false,
+      "matched_to_amendment4": true
+    },
+    {
+      "amendment_number": 1,
+      "change_number": 4,
+      "usdm_entity": "StudyProcedure",
+      "scope": "Global",
+      "language_pattern": "Addition",
+      "confidence": "Medium",
+      "lineage_complete": true,
+      "is_hallucination": false,
+      "matched_to_amendment4": true
+    },
+    {
+      "amendment_number": 1,
+      "change_number": 5,
+      "usdm_entity": "StudyIntervention",
+      "scope": "Global",
+      "language_pattern": "Clarification",
+      "confidence": "Medium",
+      "lineage_complete": true,
+      "is_hallucination": false,
+      "matched_to_amendment4": false
+    },
+    {
+      "amendment_number": 1,
+      "change_number": 6,
+      "usdm_entity": "EligibilityCriteria",
+      "scope": "EU",
+      "language_pattern": "Addition",
+      "confidence": "High",
+      "lineage_complete": true,
+      "is_hallucination": false,
+      "matched_to_amendment4": true
+    },
+    {
+      "amendment_number": 1,
+      "change_number": 7,
+      "usdm_entity": "EligibilityCriteria",
+      "scope": "EU",
+      "language_pattern": "Addition",
+      "confidence": "High",
+      "lineage_complete": true,
+      "is_hallucination": false,
+      "matched_to_amendment4": true
+    },
+    {
+      "amendment_number": 1,
+      "change_number": 8,
+      "usdm_entity": "StudyProcedure",
+      "scope": "China",
+      "language_pattern": "Substitution",
+      "confidence": "Medium",
+      "lineage_complete": true,
+      "is_hallucination": false,
+      "matched_to_amendment4": true
+    },
+    {
+      "amendment_number": 2,
+      "change_number": 1,
+      "usdm_entity": "StudyProcedure",
+      "scope": "Global",
+      "language_pattern": "Clarification",
+      "confidence": "High",
+      "lineage_complete": true,
+      "is_hallucination": false,
+      "matched_to_amendment4": true
+    },
+    {
+      "amendment_number": 2,
+      "change_number": 2,
+      "usdm_entity": "StudyProcedure",
+      "scope": "Global",
+      "language_pattern": "Clarification",
+      "confidence": "High",
+      "lineage_complete": true,
+      "is_hallucination": false,
+      "matched_to_amendment4": true
+    },
+    {
+      "amendment_number": 2,
+      "change_number": 3,
+      "usdm_entity": "StudyProcedure",
+      "scope": "Global",
+      "language_pattern": "Clarification",
+      "confidence": "Needs Clinical Review",
+      "lineage_complete": true,
+      "is_hallucination": false,
+      "matched_to_amendment4": true
+    },
+    {
+      "amendment_number": 2,
+      "change_number": 4,
+      "usdm_entity": "Administrative",
+      "scope": "Global",
+      "language_pattern": "Addition",
+      "confidence": "High",
+      "lineage_complete": true,
+      "is_hallucination": false,
+      "matched_to_amendment4": false
+    },
+    {
+      "amendment_number": 2,
+      "change_number": 5,
+      "usdm_entity": "StudyProcedure",
+      "scope": "Global",
+      "language_pattern": "Removal",
+      "confidence": "Medium",
+      "lineage_complete": true,
+      "is_hallucination": false,
+      "matched_to_amendment4": true
+    }
+  ],
+  "analysis": {
+    "m1_global_missed": [
+      "Protocol template updates \u2014 SAE reporting, safety sections"
+    ],
+    "m1_country_missed": [],
+    "m5_unvalidated_analysis": "Visit window (Ch1 Amend2) and C-SSRS (Ch2 Amend2) are valid I&I Ph III patterns \u2014 not in Amendment 4 specifically but likely in Amendments 1-3. Administrative/template (Ch4 Amend2) not matched to SafetyAssessment in Amendment 4.",
+    "coverage_gaps": [
+      "Schwartz equation k constant correction \u2014 factual error, not predictable from base protocol",
+      "Palatability assessment guidance \u2014 operational detail, not predictable",
+      "Czech Republic HBV/HCV requirements \u2014 minor market, out of scope v1",
+      "China QTcF clarification \u2014 country-specific operational, out of scope v1"
+    ],
+    "go_no_go": "GO \u2014 all hard-fail gates cleared. M3=0.0 (no hallucinations), M4=1.0 (all lineage complete), M1_global=0.80 (above 0.60 target).",
+    "improvement_actions": [
+      {
+        "priority": "LOW",
+        "action": "Add Administrative entity to YAML entity_rates to improve SafetyAssessment/Administrative disambiguation",
+        "impact": "M5 0.833 \u2192 potentially 1.0"
+      },
+      {
+        "priority": "LOW",
+        "action": "Request Amendments 1-3 summary PDFs from Pfizer to complete M5 evaluation",
+        "impact": "M5 calibration would be validated on visit window and C-SSRS predictions"
+      },
+      {
+        "priority": "LOW",
+        "action": "Add China QTcF and human genetic resource patterns to China-specific training block post-hackathon",
+        "impact": "M1_country improvement on future studies"
+      }
+    ]
+  }
+}

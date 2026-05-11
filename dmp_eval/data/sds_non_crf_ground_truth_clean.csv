@@ -1,0 +1,293 @@
+study_folder,therapeutic_area,phase,data_type,vendor_name,data_review_tier,split
+B7981027,I&I,Ph III,LAB,PPD,Critical,verify
+B7981027,I&I,Ph III,Severity of Alopecia Tool (SALT),Signant Health,Supportive,verify
+B7981027,I&I,Ph III,Eyelash Assessment (ELA),Signant Health,Supportive,verify
+B7981027,I&I,Ph III,Eyebrow Assessment (EBA),Signant Health,Supportive,verify
+B7981027,I&I,Ph III,Patient’s Global Impression of Change (PGI-C),Signant Health,Critical,verify
+B7981027,I&I,Ph III,Alopecia Areata Patient Priority Outcomes (AAPPO),Signant Health,Supportive,verify
+B7981027,I&I,Ph III,Patient-Reported Outcomes Measurement Information System(PROMIS)® Parent Proxy Anxiety symptoms,Signant Health,Supportive,verify
+B7981027,I&I,Ph III,Patient-Reported Outcomes Measurement Information System(PROMIS)® Parent Proxy Depressive symptoms,Signant Health,Supportive,verify
+B7981027,I&I,Ph III,,,Supportive,verify
+B7981027,I&I,Ph III,Columbia Suicide Severity Rating Scale (C-SSRS) Pediatric Version Baseline,Signant Health,,verify
+B7981027,I&I,Ph III,Columbia Suicide Severity Rating Scale (C-SSRS) Pediatric Version Baseline Post,Signant Health,,verify
+B7981027,I&I,Ph III,Baseline,,Supportive,verify
+B7981027,I&I,Ph III,"Behavior Rating Inventory of Executive Function®, Second Edition (BRIEF®2)",Signant Health,Supportive,verify
+B7981027,I&I,Ph III,Modified Children’s Dermatology Life Quality Index (CDLQI),Signant Health,Supportive,verify
+B7981027,I&I,Ph III,Tanner staging,Signant Health,Supportive,verify
+B7981027,I&I,Ph III,Acceptability and Palatability Questionnaire,Signant Health,Supportive,verify
+B7981027,I&I,Ph III,Biomarker: IP-10 (CXCL-10),QPS,Critical,verify
+B7981027,I&I,Ph III,"Biomarker: Fluorescence-activated cell sorting lymphocyte subsets T, B, and NK (FACS TBNK)",PPD,Critical,verify
+B7981027,I&I,Ph III,Adjudication Data,Clario,Supportive,verify
+B7981027,I&I,Ph III,Rash Assessment(imagine data),Canfield,Supportive,verify
+B7981028,I&I,Ph III,"LAB (Hematology, Blood chemistry, HBV, HCV, HIV, VZV IgG Ab, QFT,",PPD,Critical,train
+B7981028,I&I,Ph III,"viral screen, Urinalysis, Microscopic analysis and urine culture) Fluorescence-Activated Cell Sorting - T-cell, B-cell and NK cell (FACS -",PPD,Supportive,train
+B7981028,I&I,Ph III,TBNK) Induced protein 10 - C-X-C Motif Chemokine Ligand 10 [IP-10 (CXCL-10)],QPS,Supportive,train
+B7981028,I&I,Ph III,Severity of Alopecia Tool (SALT),Signant Health,Critical,train
+B7981028,I&I,Ph III,Columbia Suicide Severity Rating Scale (C-SSRS) Pediatric Version Children’s,Signant Health,Supportive,train
+B7981028,I&I,Ph III,Baseline/Screening Columbia Suicide Severity Rating Scale (C-SSRS) Pediatric Version Children’s,Signant Health,Supportive,train
+B7981028,I&I,Ph III,Since Last Visit Childhood Depression Rating Scale – Revised (CDRS-R),Signant Health,Supportive,train
+B7981028,I&I,Ph III,Patient Reported Outcomes Measurement Information System (PROMIS),Signant Health,Supportive,train
+B7981028,I&I,Ph III,Parent Proxy Anxiety symptoms Patient Reported Outcomes Measurement Information System (PROMIS),Signant Health,Supportive,train
+B7981028,I&I,Ph III,Parent Proxy Depressive symptoms Behavior Rating Inventory of Executive Function (BRIEF),Signant Health,Supportive,train
+B7981028,I&I,Ph III,Modified Children's Dermatology Life Quality Index (CDLQI),Signant Health,Supportive,train
+B7981028,I&I,Ph III,Patient Global Impression of Change (PGI-C),Signant Health,Critical,train
+B7981028,I&I,Ph III,Eyebrow assessment (EBA) assessment,Signant Health,Supportive,train
+B7981028,I&I,Ph III,Eyelash assessment (ELA) assessment,Signant Health,Supportive,train
+B7981028,I&I,Ph III,Tanner staging,Signant Health,Supportive,train
+B7981028,I&I,Ph III,Rash Assessment,Canfield,Supportive,train
+B7981028,I&I,Ph III,Adjudication Data,Clario,Critical,train
+B7981032,I&I,Ph III,LAB,Covance,Critical,train
+B7981032,I&I,Ph III,LSMCCAPS,Covance,Critical,train
+B7981032,I&I,Ph III,VARD,PPD,Critical,train
+B7981032,I&I,Ph III,VARD,VRD,Critical,train
+B7981040,I&I,Ph III,IRT,ICON IRT,Critical,train
+B7981040,I&I,Ph III,Photography,Canfield,Critical,train
+B7981040,I&I,Ph III,Adjudication,Clario,Critical,train
+B7981040,I&I,Ph III,Central lab,ICON Labs,Critical,train
+B7981040,I&I,Ph III,PROs,Signant Health & RWS Life Sciences,Critical,train
+B7981040,I&I,Ph III,VASI,Signant Health,Critical,train
+B7981040,I&I,Ph III,,ICON central Lab (during study storage),,train
+B7981040,I&I,Ph III,PK,,Critical,train
+B7981040,I&I,Ph III,,LabCorp Shanghai (analysis/long-term storage),,train
+B7981040,I&I,Ph III,,QPS LLC (Global samples),,train
+B7981040,I&I,Ph III,(PD) Biomarker-IP10,,Critical,train
+B7981040,I&I,Ph III,,UPP (China samples),,train
+B7981041,I&I,Unknown,Dermatology Life Quality Index (DLQI),Signant Health,Critical,train
+B7981041,I&I,Unknown,Hospital Anxiety and Depression Scale (HAD),Signant Health,Critical,train
+B7981041,I&I,Unknown,Vitiligo Noticeability Scale (VNS),Signant Health,Critical,train
+B7981041,I&I,Unknown,ABBREVIATED TREATMENT SATISFACTION QUESTIONNAIRE FOR,Signant Health,Critical,train
+B7981041,I&I,Unknown,MEDICATION (ATSQM) EuroQol 5 Dimensional Health State Questionnaire (E5D) Youth (EQ5D Youth),Signant Health,Critical,train
+B7981041,I&I,Unknown,EuroQol 5 Dimensional Health State Questionnaire-5L (EQ5D5L),Signant Health,Critical,train
+B7981041,I&I,Unknown,Work Productivity and Activity Impairment Questionnaire (WPAQ),Signant Health,Critical,train
+B7981041,I&I,Unknown,Columbia Suicide-Severity Rating Scale (CSSR),Signant Health,Critical,train
+B7981041,I&I,Unknown,Children's Dermatology Life Quality Index,Signant Health,Critical,train
+B7981041,I&I,Unknown,(CDLQI) VITILIGO AREA SCORING INDEX,Signant Health,Critical,train
+B7981041,I&I,Unknown,(VASI),,,train
+B7981080,I&I,Ph III,IRT,Impala,Critical,train
+B7981080,I&I,Ph III,Photography,Canfield,Critical,train
+B7981080,I&I,Ph III,Adjudication,Clario,Critical,train
+B7981080,I&I,Ph III,Central lab,LabCorp,Critical,train
+B7981080,I&I,Ph III,PROs,Signant Heath,Critical,train
+B7981080,I&I,Ph III,VASI,Signant Heath,Critical,train
+B7981080,I&I,Ph III,PK,LabCorp,Critical,train
+B7981080,I&I,Ph III,(PD) Biomarker-IP10,QPS LLC (Global samples) UPP (China samples),Critical,train
+B7981080,I&I,Ph III,eDosing Diary,Signant Heath,Critical,train
+B7981094,I&I,Ph III,PK,York Bioanalytical Solutions (non China sites),Critical,train
+B7981094,I&I,Ph III,PK,Labcorp Shanghai (China sites),Critical,train
+B7981094,I&I,Ph III,LAB,ICON Labs,Critical,train
+B7981094,I&I,Ph III,Adjudication Data,Clario,Critical,train
+B7981094,I&I,Ph III,Photography,Canfield Scientific Inc,Supportive,train
+C1071003,Oncology,Ph III,ePRO,Signant Health,,verify
+C1071003,Oncology,Ph III,central lab,LabCorp,,verify
+C1071003,Oncology,Ph III,PK,PPD,,verify
+C1071003,Oncology,Ph III,PD,PPD,,verify
+C1071003,Oncology,Ph III,sBCMA,PPD,,verify
+C1071003,Oncology,Ph III,BMA for MRD,Adaptive Biotechnologies,,verify
+C1071003,Oncology,Ph III,BMA for Molecular Profiling/Saliva for,GerPersonalis,,verify
+C1071003,Oncology,Ph III,BMB for BCMA levels,CellCarta,,verify
+C1071003,Oncology,Ph III,Blood for TCR,Adaptive Biotechnologies,,verify
+C1071003,Oncology,Ph III,Blood for circulating proteins,OLINK,,verify
+C1071003,Oncology,Ph III,BICR,Calyx,,verify
+C1071004,Oncology,Ph II,ePRO,Signant,,train
+C1071004,Oncology,Ph II,PF-06863135 PK,PPD,,train
+C1071004,Oncology,Ph II,Anti-PF-06863135,PPD,,train
+C1071004,Oncology,Ph II,Nirogacestat PK,PPD,,train
+C1071004,Oncology,Ph II,Lenalidomide PK,Syneos,,train
+C1071004,Oncology,Ph II,Blood Sample for sBCMA,PPD,,train
+C1071004,Oncology,Ph II,(free and total sBCMA) Bone Marrow Aspirate MRD determination,Adaptive Biotechnologies,,train
+C1071004,Oncology,Ph II,MBIO17L (Biomarker sample storage),ICON,,train
+C1071004,Oncology,Ph II,LB CAPS for Circulating Proteins,Fulgent Genetics,,train
+C1071005,Oncology,Ph III,ePRO,Signant Health,,verify
+C1071005,Oncology,Ph III,BICR,ICON Medical Imaging (IMI),,verify
+C1071005,Oncology,Ph III,"Disease Assessment Central Labs (SPEP, SIFE, UPEP, UIFE, FLC, Igs)",ICON,,verify
+C1071005,Oncology,Ph III,MBIOGS - BMA for MRD,"Adaptive Biotechnologies (analysis), ICON (storage)",,verify
+C1071005,Oncology,Ph III,MBIOGS - BMA Molecular Profiling,"Personalis (analysis), ICON (storage)",,verify
+C1071005,Oncology,Ph III,MBIOGS - BMB for BCMA levels and/or immune cell biomarkers,"CellCarta (analysis - China Only), TBD (Analysis - non-China), ICON (storage)",,verify
+C1071005,Oncology,Ph III,MBIOGS - Blood Sample for MRD,"TBD (analysis), ICON (storage)",,verify
+C1071005,Oncology,Ph III,,"Sequanta (analysis - Part 2 China subjects only), Fulgent (analysis - Part 2 Non-China",,verify
+C1071005,Oncology,Ph III,MBIO - Blood for Circulating Proteins,"subjects only), ICON (storage)",,verify
+C1071005,Oncology,Ph III,MBIOGS - Blood for TCR Sequencing,"BGI (analysis - Part 2 China only), ICON (storage)",,verify
+C1071005,Oncology,Ph III,MBIO - Blood for Immune Cell Profiling - Flow Cytometry (Part 1 only),CellCarta,,verify
+C1071005,Oncology,Ph III,MBIOGS - Blood for Immune Cell Profiling - Molecular Sequencing (Part 2 only),"TBD (analysis), ICON (storage)",,verify
+C1071005,Oncology,Ph III,MBIOGS - Saliva for germline comparator,"Personalis (analysis), ICON (storage)",,verify
+C1071005,Oncology,Ph III,PK and Immunogenicity (ADA/Nab) - Elranatamab and sBCMA (Free & Total),"PPD (analysis all non-China), PPD Suahou (analysis China only), ICON (storage)",,verify
+C1071005,Oncology,Ph III,PK - Daratumumab,"ICON (analysis all non-China), UPP (analysis China only), ICON (storage)",,verify
+C1071005,Oncology,Ph III,Immunogenicity for Daratumumab (ADA/Nab),"Syneos (analysis), ICON (storage)",,verify
+C1071006,Oncology,Ph III,ePRO,Signant Health,,train
+C1071006,Oncology,Ph III,Biomarker - Archival BMA,Adaptive Biotechnologies,,train
+C1071006,Oncology,Ph III,Biomarker - Fresh BMA/BMB,Adaptive Biotechnologies,,train
+C1071006,Oncology,Ph III,Biomarker - BMB for BCMA/other biomarkers,Adaptive Biotechnologies,,train
+C1071006,Oncology,Ph III,Biomarker - Blood for MRD,Adaptive Biotechnologies,,train
+C1071006,Oncology,Ph III,Biomarker - Serum for Circulating Proteins,Adaptive Biotechnologies,,train
+C1071006,Oncology,Ph III,Biomarker - Blood for TCR,Adaptive Biotechnologies,,train
+C1071006,Oncology,Ph III,Biomarker - Serum for ICP,Adaptive Biotechnologies,,train
+C1071006,Oncology,Ph III,Biomarker - Saliva Sample germline comarator,Adaptive Biotechnologies,,train
+C1071006,Oncology,Ph III,Biomarker - BMA for MRD & Molecular profiling,Adaptive Biotechnologies,,train
+C1071006,Oncology,Ph III,Biomarker - Alternative BMA,Adaptive Biotechnologies,,train
+C1071006,Oncology,Ph III,Biomarker - Unplanned,Adaptive Biotechnologies,,train
+C1071006,Oncology,Ph III,Central Lab - BICR in part 2 only,ICON Medical Imaging & Cardiac Safety Solutions,,train
+C1071006,Oncology,Ph III,BMA Cytogenetics - FISH and/or Karyotyping- stratification,ICON - contract with analytical lab (Neogenomics),,train
+C1071006,Oncology,Ph III,BMA Cytogenetics - FISH and/or Karyotyping- stratification,Hematogenix,,train
+C1071006,Oncology,Ph III,Central Lab - Serum quantitaive Immunoglobulins,ICON,,train
+C1071006,Oncology,Ph III,Central Lab - SPEP,ICON,,train
+C1071006,Oncology,Ph III,Central Lab - SIFE,ICON,,train
+C1071006,Oncology,Ph III,Central Lab- Daratumumab-specific SIFE (part 2 only),ICON,,train
+C1071006,Oncology,Ph III,Central Lab - FLC,ICON,,train
+C1071006,Oncology,Ph III,Central Lab - UPEP,ICON,,train
+C1071006,Oncology,Ph III,Central Lab - UIFE,ICON,,train
+C1071006,Oncology,Ph III,PK - Elranatamab,PPD,,train
+C1071006,Oncology,Ph III,PK - Lenalidomide,Syneos,,train
+C1071006,Oncology,Ph III,PK - Daratumumab,ICON,,train
+C1071006,Oncology,Ph III,PD - sBCMA,PPD,,train
+C1071006,Oncology,Ph III,PD - ADA/Nab - ELRA,PPD,,train
+C1071006,Oncology,Ph III,PD - ADA/Nab - DARA,Syneos,,train
+C1071015,Oncology,N/A,NA,NA,NA,train
+C2321014,Oncology,Ph III,Safety lab (LB003),PPD,Critical,train
+C2321014,Oncology,Ph III,BPI‑SF,Signant Health,Critical,train
+C2321014,Oncology,Ph III,FACT-P,Signant Health,Critical,train
+C2321014,Oncology,Ph III,EQ-5D-5L,Signant Health,Critical,train
+C2321014,Oncology,Ph III,PRO-CTCAE,Signant Health,Critical,train
+C2321014,Oncology,Ph III,FACT-GP5,Signant Health,Critical,train
+C2321014,Oncology,Ph III,BICR imaging,Clario,Critical,train
+C2321014,Oncology,Ph III,Biomarker -TUMOR TISSUE,TBD,Supportive,train
+C2321014,Oncology,Ph III,Biomarker - GERMLINE CONTROL,TBD,Supportive,train
+C2321014,Oncology,Ph III,Biomarker - ctDNA,TBD,Supportive,train
+C2321014,Oncology,Ph III,Biomarker - cfRNA,TBD,Supportive,train
+C2321014,Oncology,Ph III,Biomarker - SERUM BIOMARKERS,TBD,Supportive,train
+C2321014,Oncology,Ph III,PK,,Critical,train
+C2321014,Oncology,Ph III,,Alliance Pharma Inc,,train
+C2321014,Oncology,Ph III,Hepatitis Tests (MB19LCDASH),PPD,Supportive,train
+C2321014,Oncology,Ph III,Biomarker sample collection Data ((MB17LCDASH),PPD,Supportive,train
+C3651003,Cardio/Met,Ph II,Safety lab,LabCorp,Critical,train
+C3651003,Cardio/Met,Ph II,GDF-15 (Roche assay),LabCorp,Critical,train
+C3651003,Cardio/Met,Ph II,Digital: Physical activity,Precision Digital Health,Critical,train
+C3651003,Cardio/Met,Ph II,PRO: Cancer-Related Cachexia Symptom diary,Signant Health,Critical,train
+C3651003,Cardio/Met,Ph II,PRO: PROMIS-Fatigue 7a,Signant Health,Supportive,train
+C3651003,Cardio/Met,Ph II,PRO: PROMIS-Physical Function 8c,Signant Health,Supportive,train
+C3651003,Cardio/Met,Ph II,PRO: FAACT,Signant Health,Critical,train
+C3651003,Cardio/Met,Ph II,PRO: Patient Global Impression of Severity (PGI-S),Signant Health,Supportive,train
+C3651003,Cardio/Met,Ph II,PRO: Patient Global Impression of Change (PGI-C),Signant Health,Supportive,train
+C3651003,Cardio/Met,Ph II,,"ICON (previous name ""Philips Pharma",,train
+C3651003,Cardio/Met,Ph II,Bone Body Composition,,Supportive,train
+C3651003,Cardio/Met,Ph II,,"Solutions"")",,train
+C3651003,Cardio/Met,Ph II,Pharmacokinetics (PF-06946860),ICON,Critical,train
+C3651003,Cardio/Met,Ph II,Pharmacokinetics (PF-06946860),United-Power Pharma Tech,Critical,train
+C3651003,Cardio/Met,Ph II,"Immunogenicity (ADA, NAB)",ICON,Critical,train
+C3651003,Cardio/Met,Ph II,Free GDF-15 (Pfizer assay),ICON,Critical,train
+C3651003,Cardio/Met,Ph II,Total GDF-15 (Pfizer assay),Q Squared Solutions,Critical,train
+C3651003,Cardio/Met,Ph II,C Reactive Protein,Pfizer New Haven CRU,Supportive,train
+C3651021,Cardio/Met,Ph III,"Safety lab (LBCaPS) - Hematology, Chemistry, Circulating Biomarker:",LabCorp,Critical,verify
+C3651021,Cardio/Met,Ph III,pre-albumin and IL-6 Safety lab -Hepatitis serology test (MB19L),LabCorp,Critical,verify
+C3651021,Cardio/Met,Ph III,Safety lab - Hepatitis serology test (IS003L),LabCorp,Critical,verify
+C3651021,Cardio/Met,Ph III,PK PD sample tracking metadata,LabCorp,Supportive,verify
+C3651021,Cardio/Met,Ph III,,1. ICON Laboratory Services,,verify
+C3651021,Cardio/Met,Ph III,,"2. UPP (United-Power Pharma Tech (in Beijing,",Supportive,verify
+C3651021,Cardio/Met,Ph III,Pharmacokinetics unbound,China). ),,verify
+C3651021,Cardio/Met,Ph III,Total GDF-15 (Pfizer assay),IQVIA Laboratories.,Supportive,verify
+C3651021,Cardio/Met,Ph III,Innunogenicity: ADA and Nab,ICON Laboratory Services,Supportive,verify
+C3651021,Cardio/Met,Ph III,GDF-15 (Non-Pfizer assay),LabCorp,Supportive,verify
+C3651021,Cardio/Met,Ph III,"Tumor tissue mutation analysis (Whole Blood Matched Normal, FFPE",tumTBD,Supportive,verify
+C3651021,Cardio/Met,Ph III,circulating tumor DNA (ctNDA),TBD,Supportive,verify
+C3651021,Cardio/Met,Ph III,Blinded Independent Central Review - Tumor Identification (TUBR),ICON,Critical,verify
+C3651021,Cardio/Met,Ph III,Blinded Independent Central Review - Tumor Results (TRBR),ICON,Critical,verify
+C3651021,Cardio/Met,Ph III,Blinded Independent Central Review - Disease Response and Cl,ICON,Critical,verify
+C3651021,Cardio/Met,Ph III,Classification (RSBR) Blinded Independent Central Review - Comments (COBR),ICON,Critical,verify
+C3651021,Cardio/Met,Ph III,Bone Body Composition,ICON,Critical,verify
+C3651021,Cardio/Met,Ph III,Physical Activity Monitoring,Actigraph,Critical,verify
+C3651021,Cardio/Met,Ph III,Comfort and Wearability Questionnaire,Signant Health,Supportive,verify
+C3651021,Cardio/Met,Ph III,Walking Aid Questionnaire,Signant Health,Supportive,verify
+C3651021,Cardio/Met,Ph III,PROMIS-Pfycical Function 8c,Signant Health,Critical,verify
+C3651021,Cardio/Met,Ph III,,Signant Health,,verify
+C3651021,Cardio/Met,Ph III,PROMIS-Fatigue 7a,,Critical,verify
+C3651021,Cardio/Met,Ph III,Functional Assessment of AnorexiaCachexia Treatment (FAACT),Signant Health,Critical,verify
+C3651021,Cardio/Met,Ph III,Patient’s Global Impression of Severity (PGI-S),Signant Health,Supportive,verify
+C3651021,Cardio/Met,Ph III,Patient’s Global Impression of Change (PGI-C),Signant Health,Supportive,verify
+C3651021,Cardio/Met,Ph III,Patient-Reported Outcomes version of the Common Terminology,Signant Health,Critical,verify
+C3651021,Cardio/Met,Ph III,Criteria for Adverse Events (PRO-CTCAE) Functional Assessment of Chronic Illness Therapy (FACIT) GP5,Signant Health,Critical,verify
+C3671013,Vaccines,Ph III,Vaccines Symptom Diary,Signant Health,Critical,train
+C3671013,Vaccines,Ph III,Immunogenicity,VRED (Vaccine Research and Early Development),Critical,train
+C3671058,Vaccines,Ph III,eDiary,Signant Health,Critical,train
+C3671058,Vaccines,Ph III,Immunogenicity (Serum),VRD,Critical,train
+C3671058,Vaccines,Ph III,Immunogenicity (Serum),TruLab,Critical,train
+C4221015,Oncology,Ph III,LAB,CELL CARTA,Critical,train
+C4221015,Oncology,Ph III,LAB,PPD (central lab),Critical,train
+C4221015,Oncology,Ph III,IRT,IMPALA,Critical,train
+C4221015,Oncology,Ph III,Image,Parexel (CALYX),Critical,train
+C4221015,Oncology,Ph III,ePRO,Signant,Critical,train
+C4221015,Oncology,Ph III,PK,PPD Laboratories,Critical,train
+C4221015,Oncology,Ph III,PK,"Wuxi, Shanghai, China",Critical,train
+C4221015,Oncology,Ph III,PK,"Covance Shanghai, China",Critical,train
+C4221015,Oncology,Ph III,PK,"Synoes Health, Quebec, Canada",Critical,train
+C4221016,Oncology,Ph III,Imaging,Calyx,Critical,train
+C4221016,Oncology,Ph III,Safety (core) lab Data Type Acquisition Dataset Name: LB003,"PPD Global Central Labs, LLC",Critical,train
+C4221016,Oncology,Ph III,Archival Tumor Biopsy (FFPE block or slides) or Fresh Tumor Biopsy (FFPE block or slides),Foundation Medicine (FMI),Supportive,train
+C4221016,Oncology,Ph III,Pfizer PrepD1,"BioStorage Technologies, Inc",Supportive,train
+C4221016,Oncology,Ph III,Whole blood control,"PPD Global Central Labs, LLC",Supportive,train
+C4221016,Oncology,Ph III,Blood for longitudinalctDNAanalysis,"PPD Middleton, WI",Supportive,train
+C4221016,Oncology,Ph III,Blood for ctDNABRAFV600E/K companion diagnostic,Guardant,Critical,train
+C4221016,Oncology,Ph III,Blood for immune cell profiling,Pfizer Oncology Clinical Research Lab,Supportive,train
+C4221016,Oncology,Ph III,Blood for circulating protein and metabolomics analysis,TBD,Supportive,train
+C4221016,Oncology,Ph III,Blood forTCR sequencing,Adaptive Biotech,Supportive,train
+C4221016,Oncology,Ph III,Blood for encorafenib/ binimetinib PK (SLI),"PPD, Middleton, WI",Critical,train
+C4221016,Oncology,Ph III,Blood for encorafenib/ binimetinib PK (Phase 3),"PPD, Middleton, WI",Critical,train
+C4221016,Oncology,Ph III,ePRO: EORTC QLQ-C30 FACT-M EQ-5D-5L,Yprime,Critical,train
+C4221016,Oncology,Ph III,"PGIS and PGIC Data Type Acquisition Dataset Name: QSE5D011, QSFAC159, QSPGI033 and QSEOR080 PDL-LI immunohostochemistry/ CD8",Discovery Life sciences,Critical,train
+C4221016,Oncology,Ph III,On-study biopsy (Phase 3 only; optional),"PPD Global Central Labs, LLC",Critical,train
+C4221026,Oncology,N/A,NA,NA,NA,train
+C4591048,Vaccines,Ph III,Immunogenecity,VRD,Critical,train
+C4591048,Vaccines,Ph III,,,Critical,train
+C4591048,Vaccines,Ph III,eDiary,Signant Health,,train
+C4591048,Vaccines,Ph III,Nasal Swab,VRD,Critical,train
+C4591076,Vaccines,Ph III,Reactogenicity eDiary,SIGNANT HEALTH,Critical,train
+C4591076,Vaccines,Ph III,Immunogenicity,TRULAB,Critical,train
+C4591076,Vaccines,Ph III,"Immunogenicity (200_VARD2L_A, 200_VARD2L_S)",VRD,Critical,train
+C4601003,Vaccines,Ph III,Lyme manifestation photos,Canfield Scientific,Critical,train
+C4601003,Vaccines,Ph III,,Vaccines Research and,,train
+C4601003,Vaccines,Ph III,Microbiology Culture - Borrelia Isolate,Development (VRD),Critical,train
+C4601003,Vaccines,Ph III,,Vaccines Research and,,train
+C4601003,Vaccines,Ph III,"Biopsy, Synovial Fluid and CSF samples",Development (VRD),Critical,train
+C4601003,Vaccines,Ph III,Microbiology Culture - Biopsy samples,IHMA,Critical,train
+C4601003,Vaccines,Ph III,eDiary,Yprime,Critical,train
+C4601003,Vaccines,Ph III,Adjudication,WCG,Critical,train
+C4891002,Oncology,Ph III,PK,TBD,Critical,train
+C4891002,Oncology,Ph III,Biomarker - Tissue,TBD,Critical,train
+C4891002,Oncology,Ph III,Biomarker - Blood,TBD,Critical,train
+C4891002,Oncology,Ph III,EPRO,TBD,Supportive,train
+C4891006,Oncology,Ph II,ARV-471 PK Sample Analysis,LabCorp Singapore,Critical,train
+C4891006,Oncology,Ph II,Abemaciclib PK Sample Analysis,Syneos Health,Critical,train
+C4891006,Oncology,Ph II,Biomarker - Plasma (ctDNA),Guardant Health,Critical,train
+C4891006,Oncology,Ph II,Biomarker - Serum (Thymidine Kinase),Q-Squared Solutions,Critical,train
+C4891006,Oncology,Ph II,Biomarker - Tissue,Foundation Medicine,Critical,train
+C4891023,Oncology,Ph II,ARV-471 PK Sample Analysis,LabCorp Singapore,Critical,verify
+C4891023,Oncology,Ph II,Ribociclib PK Sample Analysis,Syneos Health,Critical,verify
+C4891023,Oncology,Ph II,Biomarker - Plasma (ctDNA),Guardant Health,Critical,verify
+C4891023,Oncology,Ph II,Biomarker - Serum,Q-Squared Solutions,Critical,verify
+C4891023,Oncology,Ph II,Biomarker - Tissue,Foundation Medicine,Critical,verify
+C4891024,Oncology,Ph II,PK- ARV-471 and ARV-473,Labcorp Singapore,Critical,train
+C4891024,Oncology,Ph II,PK- Samuraciclib,Alderley Analytical,Critical,train
+C4891024,Oncology,Ph II,Biomarker – Blood (ctDNA),Guardant Health,Critical,train
+C4891024,Oncology,Ph II,Biomarker - Tissue,Foundation Medicine Inc.,Critical,train
+C4891024,Oncology,Ph II,PGx,TBD,Critical,train
+C4891024,Oncology,Ph II,eCoA,IQVIA,Supportive,train
+C4891026,Oncology,Ph II,PK- ARV-471 and ARV-473,Labcorp Singapore,Critical,train
+C4891026,Oncology,Ph II,PK- PF-07220060,PPD,Critical,train
+C4891026,Oncology,Ph II,Biomarker – Blood (ctDNA),Guardant Health and Jince Lab,Critical,train
+C4891026,Oncology,Ph II,Biomarker - Tissue,Foundation Medicine Inc.,Critical,train
+C4891026,Oncology,Ph II,eCoA,IQVIA,Supportive,train
+C3671059,Vaccines,Ph III,NO_SDS_RCC_TEMPLATE,,,verify
+C4591081,Vaccines,Ph III,NO_SDS_RCC_TEMPLATE,,,verify
+C5091017,Vaccines,Ph III,eDiary,Signant Health,,verify
+C5091017,Vaccines,Ph III,e-Diary - EQ5D5L,Signant Health,,verify
+C5091017,Vaccines,Ph III,e-Diary - WPAI,Signant Health,,verify
+C5091017,Vaccines,Ph III,e-Diary - Long COVID-19 Signs and Symptoms,Signant Health,,verify
+C5091017,Vaccines,Ph III,e-Diary - Daily COVID-19 Signs and Symptoms,Signant Health,,verify
+C5091017,Vaccines,Ph III,e-Diary - Dosing,Signant Health,,verify
+C5091017,Vaccines,Ph III,PGI,Signant Health,,verify
+C5091017,Vaccines,Ph III,eDiary - PROMIS,Signant Health,,verify
+C5091017,Vaccines,Ph III,Central Lab,PPD,,verify
+C5091017,Vaccines,Ph III,"Safety Lab - Hematology, Blood Chemistry",PPD,,verify
+C5091017,Vaccines,Ph III,Immunogenicity (IS) SARS-CoV-2 serology,PPD,,verify
+C5091017,Vaccines,Ph III,"Retained Research Sample Prep B2.5, R1, and Prep D1",PPD,,verify
+C5091017,Vaccines,Ph III,PK Sample (Ibuzatrelvir),York Bioanalytical Solutions LTD/Labcorp,,verify
+C5091017,Vaccines,Ph III,Viral Load,University of Washington (UoW),,verify
+C5091017,Vaccines,Ph III,SARS-CoV-2 Viral RNA (China),Teddy Lab,,verify

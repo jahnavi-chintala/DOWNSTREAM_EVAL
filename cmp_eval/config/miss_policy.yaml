@@ -1,0 +1,44 @@
+# CMP — Field Provenance Policy (Scenario 1 miss explanation)
+#
+# Class meanings: see ppid_py/miss_policy.yaml for the full definitions.
+# CMP content is mostly INFERRED: KRIs/QTLs are derived from risks which
+# themselves derive from USDM endpoints/assessments.
+
+product: CMP
+default_class: INFERRED
+default_anchors: [Endpoint, Assessment]
+
+sections:
+  global_kris:
+    class: INFERRED
+    anchors: [Endpoint, Assessment, Procedure]
+  study_specific_kris:
+    class: INFERRED
+    anchors: [Endpoint, Assessment, Procedure]
+  qtls:
+    # QTL parameters name real protocol endpoints → DIRECT with fallback
+    class: DIRECT
+    required_type: Endpoint
+
+fields:
+  kri_label:
+    class: INFERRED
+    anchors: [Endpoint, Assessment]
+  kri_definition:
+    class: INFERRED
+    anchors: [Endpoint, Procedure]
+  threshold_value:
+    class: COMPUTED
+  expectation_pct:
+    class: COMPUTED
+  tolerance_limit_pct:
+    class: COMPUTED
+  data_source:
+    class: STRUCTURAL
+    required_type: DataAcquisition
+  qtl_name:
+    class: DIRECT
+    required_type: Endpoint
+  iqmp_risk_id:
+    class: STRUCTURAL
+    required_type: Reference

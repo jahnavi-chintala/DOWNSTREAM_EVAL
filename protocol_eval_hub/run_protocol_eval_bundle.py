@@ -11,7 +11,7 @@ Convention
     optional: USDM_*.json, other protocol-specific JSON (ID cross-check only)
     optional: protocol_manifest.yaml  — explicit filenames (see example in repo)
 
-Ground truth CSVs / eval configs stay in each project (ppid_py, risk_profile_eval, cmd_py)
+Ground truth CSVs / eval configs stay in each project (pipd_eval, risk_profile_eval, cmp_eval, dmp_eval)
 unless you override paths with CLI flags.
 
 USDM protocol JSON
@@ -19,7 +19,7 @@ USDM protocol JSON
   • **PIPD:** Optional but recommended. Scenario 1 M4 checks non-null ``usdm_entity_id`` values
     against the protocol graph when USDM JSON loads. Scenario 2 and USDM provenance blocks use
     ``pipd_usdm_support.resolve_usdm_protocol_path`` (``PIPD_USDM_JSON``, ``data/usdm_protocol_*.json``).
-    The bundle runner passes ``--usdm_json`` to ``ppid_py/run_eval.py`` when it finds
+    The bundle runner passes ``--usdm_json`` to ``pipd_eval/scripts/run_eval.py`` when it finds
     ``*USDM*.json`` / ``usdm*.json`` in the bundle or ``files.usdm`` in ``protocol_manifest.yaml``.
   • **Risk Profile / CMP:** Eval CLIs do not take a separate USDM file; traceability is inside
     the generator JSON (``usdm_sources``, ``usdm_drivers``, etc.).
@@ -94,10 +94,10 @@ def _pfizer_root() -> Path:
 def _repo_paths() -> Dict[str, Path]:
     root = _pfizer_root()
     return {
-        "ppid_py": root / "ppid_py",
+        "pipd_eval": root / "pipd_eval",
         "risk_profile_eval": root / "risk_profile_eval",
-        "cmd_py": root / "cmd_py",
-        "dmp_py": root / "DMP_py",
+        "cmp_eval": root / "cmp_eval",
+        "dmp_eval": root / "dmp_eval",
     }
 
 
@@ -361,16 +361,20 @@ def run_one_bundle(bundle_dir: Path, args: argparse.Namespace, *, multi_bundle: 
     proto_out.mkdir(parents=True, exist_ok=True)
 
     py = sys.executable
-    ppid = repos["ppid_py"]
+    ppid = repos["pipd_eval"]
     risk = repos["risk_profile_eval"]
-    cmd = repos["cmd_py"]
-    dmp = repos.get("dmp_py") or (_pfizer_root() / "DMP_py")
+    cmd = repos["cmp_eval"]
+    dmp = repos["dmp_eval"]
 
     pipd_gt = args.pipd_ground_truth or (ppid / "data" / "pipd_ground_truth.csv")
-    pipd_bench = args.pipd_deviation_benchmarks or (_pfizer_root() / "pipd_risk" / "deviation_subcategories.csv")
+    _bench_clean = ppid / "data" / "deviation_subcategories_clean.csv"
+    _bench_raw = ppid / "data" / "deviation_subcategories.csv"
+    pipd_bench = args.pipd_deviation_benchmarks or (
+        _bench_clean if _bench_clean.is_file() else _bench_raw
+    )
     risk_gt_r = args.risk_ground_truth_risks or (risk / "data" / "risk_profile_ground_truth.csv")
     risk_gt_f = args.risk_ground_truth_factors or (risk / "data" / "critical_factors_ground_truth.csv")
-    cmp_cfg = args.cmp_config or (cmd / "eval_config" / "cmp_eval_config.yaml")
+    cmp_cfg = args.cmp_config or (cmd / "config" / "cmp_eval_config.yaml")
     dmp_cfg = args.dmp_config or (dmp / "eval_config" / "dmp_eval_config.yaml")
     dmp_gt_json = args.dmp_ground_truth or (dmp / "data" / "dmp_ground_truth_clean.json")
     dmp_sds_csv = args.dmp_sds_ground_truth or (dmp / "data" / "sds_non_crf_ground_truth_clean.csv")
@@ -385,7 +389,7 @@ def run_one_bundle(bundle_dir: Path, args: argparse.Namespace, *, multi_bundle: 
         out_json = proto_out / f"{stem_pipd}.json"
         argv = [
             py,
-            str(ppid / "run_eval.py"),
+            str(ppid / "scripts" / "run_eval.py"),
             "--generator_json",
             str(files["pipd"]),
             "--ground_truth",
@@ -411,7 +415,7 @@ def run_one_bundle(bundle_dir: Path, args: argparse.Namespace, *, multi_bundle: 
     if not args.skip_risk and files.get("risk_profile"):
         argv = [
             py,
-            str(risk / "run_eval.py"),
+            str(risk / "scripts" / "run_eval.py"),
             "--generator_json",
             str(files["risk_profile"]),
             "--ground_truth_risks",
@@ -431,7 +435,7 @@ def run_one_bundle(bundle_dir: Path, args: argparse.Namespace, *, multi_bundle: 
     if not args.skip_cmp and files.get("cmp"):
         argv = [
             py,
-            str(cmd / "eval_d3_cmp.py"),
+            str(cmd / "core" / "eval_d3_cmp.py"),
             "--input",
             str(files["cmp"]),
             "--study-id",
@@ -439,11 +443,11 @@ def run_one_bundle(bundle_dir: Path, args: argparse.Namespace, *, multi_bundle: 
             "--config",
             str(cmp_cfg),
             "--kri-gt",
-            str(cmd / "Data" / "cmp_kri_ground_truth.csv"),
+            str(cmd / "data" / "cmp_kri_ground_truth.csv"),
             "--qtl-gt",
-            str(cmd / "Data" / "cmp_qtl_ground_truth.csv"),
+            str(cmd / "data" / "cmp_qtl_ground_truth.csv"),
             "--study-meta",
-            str(cmd / "Data" / "cmp_study_metadata.csv"),
+            str(cmd / "data" / "cmp_study_metadata.csv"),
             "--output-dir",
             str(proto_out),
             "--artifact-stem",
@@ -455,7 +459,7 @@ def run_one_bundle(bundle_dir: Path, args: argparse.Namespace, *, multi_bundle: 
         out_json = proto_out / f"{stem_dmp}.json"
         argv = [
             py,
-            str(dmp / "eval_d4_dmp.py"),
+            str(dmp / "core" / "eval_d4_dmp.py"),
             "--input",
             str(files["dmp"]),
             "--study-id",
@@ -553,7 +557,7 @@ def main() -> int:
         "--allow-pipd-scenario2",
         action="store_true",
         help="Run PIPD Scenario 2 when the study is not in verify ground truth. "
-        "Default: pass --scenario1-only to ppid_py/run_eval.py (skip PIPD for those studies).",
+        "Default: pass --scenario1-only to pipd_eval/scripts/run_eval.py (skip PIPD for those studies).",
     )
     ap.add_argument("--pipd-ground-truth", type=Path, default=None)
     ap.add_argument("--pipd-deviation-benchmarks", type=Path, default=None)

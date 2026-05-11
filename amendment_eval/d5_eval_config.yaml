@@ -1,0 +1,65 @@
+eval_d5:
+  version: '1.0'
+  study_id: B7981027
+  generated_date: '2026-04-25'
+  verify_set:
+  - B7981027
+  - C4891023
+  - C1071003
+  - C1071005
+  - C3651021
+  - C4591081
+  - C3671059
+  - C5091017
+  ground_truth:
+    amendment_header_csv: data/amendment_header_ground_truth.csv
+    amendment_changes_csv: data/amendment_changes_ground_truth.csv
+    b7981027_amendment4_json: data/b7981027_amendment4_ground_truth.json
+  metric_targets:
+    m1_global: 0.6
+    m1_country: 0.4
+    m2: 0.75
+    m3: 0.0
+    m4: 1.0
+    m5: 0.7
+  hard_fail_metrics:
+  - m3
+  - m4
+  hard_fail_threshold_m1: 0.4
+  allowed_usdm_entities:
+  - EligibilityCriteria
+  - StudyIntervention
+  - StudyEndpoint
+  - SafetyAssessment
+  - StudyProcedure
+  - StudyPopulation
+  - StudyDesign
+  - Administrative
+  allowed_confidence_values:
+  - High
+  - Medium
+  - Low — Needs Clinical Review
+  - Needs Clinical Review
+  allowed_scopes:
+  - Global
+  - EU
+  - China
+  allowed_language_patterns:
+  - Clarification
+  - Addition
+  - Removal
+  - Substitution
+  - Tightening
+  - Relaxation
+  - Correction
+  - Unknown
+  m1_near_miss_entities:
+    StudyProcedure:
+    - StudyDesign
+    - Administrative
+    EligibilityCriteria:
+    - StudyPopulation
+    SafetyAssessment:
+    - StudyProcedure
+    StudyIntervention:
+    - StudyProcedure
